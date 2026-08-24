@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #FAF8F3;
+      }
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+      /* Root */
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        background: #FAF8F3;
+        overflow: hidden;
+      }
+
+      /* Clips — framework controls visibility via class="clip" */
+      .clip {
+        position: absolute;
+        inset: 0;
+        overflow: visible;
+      }
+
+      /* Font families */
+      .fraunces { font-family: 'Fraunces', Georgia, serif; font-weight: 600; }
+      .mono { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-variant-numeric: tabular-nums; }
+      .inter { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+      /* Brand colors */
+      .c-pine { color: #2F5D4E; }
+      .c-pine-deep { color: #223F35; }
+      .c-ochre { color: #A85A24; }
+      .c-ink { color: #1B1F1D; }
+      .c-ink-muted { color: #565A55; }
+      .c-bg { background: #FAF8F3; }
+      .c-bg-alt { background: #F1EDE2; }
+      .c-rule { border-color: #DBD5C4; }
+
+      /* Logo / Wordmark */
+      .wordmark {
+        position: absolute;
+        top: 48px;
+        left: 48px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        z-index: 100;
+      }
+      .logo-mark { width: 48px; height: 48px; }
+      .logo-text {
+        font-family: 'Fraunces', Georgia, serif;
+        font-weight: 600;
+        font-size: 1.15rem;
+        color: #2F5D4E;
+        letter-spacing: -0.01em;
+        margin-left: 8px;
+      }
+      .logo-tag {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.62rem;
+        letter-spacing: 0.08em;
+        color: #565A55;
+        text-transform: uppercase;
+        margin-left: 8px;
+        display: none;
+      }
+
+      /* Typography */
+      .title-h1 {
+        font-family: 'Fraunces', Georgia, serif;
+        font-weight: 600;
+        font-size: 3.2rem;
+        color: #2F5D4E;
+        letter-spacing: -0.015em;
+        line-height: 1.1;
+      }
+      .title-h2 {
+        font-family: 'Fraunces', Georgia, serif;
+        font-weight: 600;
+        font-size: 2.5rem;
+        color: #2F5D4E;
+        letter-spacing: -0.01em;
+        line-height: 1.12;
+      }
+      .subtitle {
+        font-family: 'Fraunces', Georgia, serif;
+        font-weight: 400;
+        font-size: 1.8rem;
+        color: #565A55;
+        line-height: 1.15;
+      }
+      .stat-hero {
+        font-family: 'IBM Plex Mono', 'Courier New', monospace;
+        font-weight: 700;
+        font-size: 5.5rem;
+        color: #2F5D4E;
+        letter-spacing: -0.01em;
+        line-height: 0.82;
+      }
+      .stat-mid {
+        font-family: 'IBM Plex Mono', 'Courier New', monospace;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #2F5D4E;
+      }
+      .stat-sm {
+        font-family: 'IBM Plex Mono', 'Courier New', monospace;
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+      .body-text {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 400;
+        font-size: 1.1rem;
+        line-height: 1.55;
+      }
+      .eyebrow {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #2F5D4E;
+      }
+      .formula {
+        font-family: 'IBM Plex Mono', 'Courier New', monospace;
+        font-size: 1.1rem;
+        color: #1B1F1D;
+      }
+
+      /* Frame wrapper — centered content */
+      .frame-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        max-width: 1400px;
+        pointer-events: none;
+      }
+      .frame-wrap.left { text-align: left; transform: translate(-50%, -50%); }
+      .frame-wrap.left > * { text-align: left; }
+
+      /* Stat cards */
+      .stat-card {
+        background: #F1EDE2;
+        border: 1px solid #DBD5C4;
+        border-left: 3px solid #2F5D4E;
+        border-radius: 3px;
+        padding: 18px 22px;
+        margin: 0 14px;
+        min-width: 180px;
+        text-align: center;
+      }
+      .stat-card .value {
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: #1B1F1D;
+        margin-bottom: 6px;
+        font-variant-numeric: tabular-nums;
+      }
+      .stat-card-primary .value { color: #2F5D4E; }
+      .stat-card .desc {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.78rem;
+        line-height: 1.4;
+        color: #565A55;
+      }
+
+      /* Phase-out bar */
+      .phaseout-bar {
+        position: relative;
+        width: 800px;
+        height: 44px;
+        border: 1.5px solid #1B1F1D;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      .zone {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        font-weight: 700;
+        color: #1B1F1D;
+      }
+      .zone-full { left: 0; background: rgba(47, 93, 78, 0.18); }
+      .zone-partial { left: 40%; background: rgba(168, 90, 36, 0.28); }
+      .zone-none { left: 75%; background: rgba(86, 90, 85, 0.22); }
+      .raise-callout {
+        background: #A85A24;
+        color: #FAF8F3;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 8px 22px;
+        border-radius: 999px;
+        margin-top: 28px;
+      }
+
+      /* Options */
+      .option-tag {
+        display: inline-block;
+        background: #F1EDE2;
+        border: 1px solid #DBD5C4;
+        border-left: 3px solid #2F5D4E;
+        border-radius: 3px;
+        padding: 10px 22px;
+        margin: 0 10px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.9rem;
+        color: #1B1F1D;
+      }
+
+      /* Progress bar */
+      #progress-fill {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        background: #2F5D4E;
+        width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="20"
+      data-width="1920"
+      data-height="1080"
+    >
+      <!-- Background (track 1) -->
+      <div id="bg" class="clip" data-start="0" data-duration="20" data-track-index="1">
+        <div style="position: absolute; inset: 0; background: #FAF8F3;"></div>
+      </div>
+
+      <!-- Logo (always visible) -->
+      <div class="wordmark" id="logo-main">
+        <svg class="logo-mark" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 76 L32 76 L32 58 L50 58 L50 40 L68 40 L68 24 L86 24 L86 16"
+            fill="none"
+            stroke="#2F5D4E"
+            stroke-width="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span class="logo-text">Compound Lane</span>
+      </div>
+
+      <!-- Frame 1: Hook (track 2, 0-4s) -->
+      <div id="frame-1" class="clip" data-start="0" data-duration="4" data-track-index="2">
+        <div class="frame-wrap">
+          <h1 class="title-h1" id="f1-title" style="margin-bottom: 16px;">Roth IRA Income Limits</h1>
+          <p class="subtitle" id="f1-subtitle" style="margin-bottom: 64px;">The 2026 Math</p>
+          <div class="stat-hero" id="f1-stat">$7,500</div>
+        </div>
+      </div>
+
+      <!-- Frame 2: Thresholds (track 3, 4-8s) -->
+      <div id="frame-2" class="clip" data-start="4" data-duration="4" data-track-index="3">
+        <div class="frame-wrap">
+          <h2 class="title-h2" id="f2-title">Phase-out Thresholds</h2>
+          <div id="f2-stats" style="display: flex; justify-content: center; gap: 24px; margin-top: 32px;">
+            <div class="stat-card stat-card-primary" id="f2-card-1">
+              <div class="value">$7,500</div>
+              <div class="desc">2026 Roth IRA Limit</div>
+            </div>
+            <div class="stat-card" id="f2-card-2">
+              <div class="value">$153K → $168K</div>
+              <div class="desc">Single Phase-out</div>
+            </div>
+            <div class="stat-card" id="f2-card-3">
+              <div class="value">$242K → $252K</div>
+              <div class="desc">Married Joint</div>
+            </div>
+          </div>
+          <p class="body-text c-ochre" id="f2-windows" style="margin-top: 24px; font-size: 1.1rem;">
+            Phase-out windows: $15K single · $10K joint
+          </p>
+        </div>
+      </div>
+
+      <!-- Frame 3: Phase-out Bar (track 4, 8-12s) -->
+      <div id="frame-3" class="clip" data-start="8" data-duration="4" data-track-index="4">
+        <div class="frame-wrap">
+          <h2 class="title-h2" id="f3-title" style="margin-bottom: 32px;">Phase-out Windows</h2>
+          <div id="f3-bar" style="margin: 0 auto; position: relative;">
+            <div class="phaseout-bar">
+              <div class="zone zone-full" id="zone-full">
+                <span class="zone-text">Full</span>
+              </div>
+              <div class="zone zone-partial" id="zone-partial">
+                <span class="zone-text">Partial</span>
+              </div>
+              <div class="zone zone-none" id="zone-none">
+                <span class="zone-text">None</span>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; width: 800px; margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #565A55;">
+              <span>$153K</span>
+              <span>$168K</span>
+              <span>$242K</span>
+              <span>$252K</span>
+            </div>
+          </div>
+          <div class="raise-callout" id="f3-callout" style="margin-top: 28px;">A $5K raise → 50% cut</div>
+          <p class="formula" id="f3-formula" style="margin-top: 24px;">
+            Allowed = (top − MAGI) ÷ range × $7,500
+          </p>
+        </div>
+      </div>
+
+      <!-- Frame 4: Impact (track 5, 12-16s) -->
+      <div id="frame-4" class="clip" data-start="12" data-duration="4" data-track-index="5">
+        <div class="frame-wrap">
+          <h2 class="title-h2" id="f4-title">Half Your Growth</h2>
+          <div class="stat-hero" id="f4-stat" style="margin-top: 24px; font-size: 4.5rem;">$3,750</div>
+          <p class="body-text c-ink-muted" id="f4-sub" style="margin-top: 24px;">
+            Half the limit — half the long-term growth
+          </p>
+          <div id="f4-comparison" style="display: flex; justify-content: center; align-items: flex-end; gap: 48px; margin-top: 32px; font-family: 'IBM Plex Mono', monospace;">
+            <div>
+              <div class="stat-sm c-ochre" id="f4-val-low">$354K</div>
+              <div class="eyebrow" style="color: #565A55; margin-top: 4px;">At 7% for 30 years</div>
+            </div>
+            <div style="width: 2px; background: #DBD5C4; height: 60px;"></div>
+            <div>
+              <div class="stat-sm c-pine" id="f4-val-high">$708K</div>
+              <div class="eyebrow" style="color: #565A55; margin-top: 4px;">Full contribution</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frame 5: CTA (track 6, 16-20s) -->
+      <div id="frame-5" class="clip" data-start="16" data-duration="4" data-track-index="6">
+        <div class="frame-wrap">
+          <h2 class="title-h2" id="f5-title">Over the Limit?</h2>
+          <div id="f5-options" style="margin: 32px 0;">
+            <span class="option-tag" id="f5-opt-1">Backdoor Roth</span>
+            <span class="option-tag" id="f5-opt-2">Max 401(k) — $24,500</span>
+            <span class="option-tag" id="f5-opt-3">Taxable brokerage</span>
+          </div>
+          <div class="title-h1 c-pine" id="f5-cta" style="margin-top: 16px;">compoundlane.com</div>
+        </div>
+      </div>
+
+      <!-- Progress bar (track 7) -->
+      <div id="progress" class="clip" data-start="0" data-duration="20" data-track-index="7">
+        <div id="progress-fill"></div>
+      </div>
+
+      <!-- Audio -->
+      <audio
+        id="vo"
+        src="audio/voiceover.wav"
+        data-start="0"
+        data-duration="18.9"
+        data-track-index="10"
+        data-volume="1"
+        preload="auto"
+      ></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      /* ===== Progress bar ===== */
+      tl.fromTo(
+        "#progress-fill",
+        { width: 0 },
+        { width: "100%", duration: 20, ease: "none" },
+        0
+      );
+
+      /* ===== Frame 1: Hook (0–4s) ===== */
+      tl.fromTo(
+        "#logo-main",
+        { opacity: 0, y: -10 },
+        { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
+        0.1
+      );
+      tl.fromTo(
+        "#f1-title",
+        { opacity: 0, y: -30 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+        0.4
+      );
+      tl.fromTo(
+        "#f1-subtitle",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.3 },
+        1.2
+      );
+      tl.fromTo(
+        "#f1-stat",
+        { opacity: 0, y: 80, scale: 0.5 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "back.out(1.7)" },
+        0.9
+      );
+
+      /* ===== Frame 2: Thresholds (4–8s) ===== */
+      tl.fromTo(
+        "#f2-title",
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 0.4 },
+        4.1
+      );
+      tl.fromTo(
+        "#f2-card-1",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
+        4.5
+      );
+      tl.fromTo(
+        "#f2-card-2",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
+        4.8
+      );
+      tl.fromTo(
+        "#f2-card-3",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" },
+        5.1
+      );
+      tl.fromTo(
+        "#f2-windows",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.3 },
+        5.6
+      );
+
+      /* ===== Frame 3: Phase-out Bar (8–12s) ===== */
+      tl.fromTo(
+        "#f3-title",
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 0.4 },
+        8.1
+      );
+      tl.fromTo(
+        "#zone-full",
+        { width: "0%" },
+        { width: "40%", duration: 0.6, ease: "power2.inOut" },
+        8.5
+      );
+      tl.fromTo(
+        "#zone-partial",
+        { width: "0%" },
+        { width: "35%", duration: 0.6, ease: "power2.inOut" },
+        9.1
+      );
+      tl.fromTo(
+        "#zone-none",
+        { width: "0%" },
+        { width: "25%", duration: 0.6, ease: "power2.inOut" },
+        9.7
+      );
+      tl.fromTo(
+        "#f3-callout",
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.7)" },
+        10.8
+      );
+      tl.fromTo(
+        "#f3-formula",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.3 },
+        11.5
+      );
+
+      /* ===== Frame 4: Impact (12–16s) ===== */
+      tl.fromTo(
+        "#f4-title",
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 0.4 },
+        12.1
+      );
+      tl.fromTo(
+        "#f4-stat",
+        { opacity: 0, scale: 0.3 },
+        { opacity: 1, scale: 1, duration: 1, ease: "back.out(1.7)" },
+        12.8
+      );
+      tl.fromTo(
+        "#f4-sub",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.3 },
+        13.8
+      );
+      tl.fromTo(
+        "#f4-comparison",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
+        14.2
+      );
+
+      /* ===== Frame 5: CTA (16–20s) ===== */
+      tl.fromTo(
+        "#f5-title",
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 0.4 },
+        16.1
+      );
+      tl.fromTo(
+        "#f5-opt-1",
+        { opacity: 0, x: -40 },
+        { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" },
+        16.5
+      );
+      tl.fromTo(
+        "#f5-opt-2",
+        { opacity: 0, x: -40 },
+        { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" },
+        16.7
+      );
+      tl.fromTo(
+        "#f5-opt-3",
+        { opacity: 0, x: -40 },
+        { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" },
+        16.9
+      );
+      tl.fromTo(
+        "#f5-cta",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "back.out(1.7)" },
+        17.5
+      );
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

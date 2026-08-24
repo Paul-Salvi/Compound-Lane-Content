@@ -1,0 +1,14 @@
+{
+  "name": "target-date-funds",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.10 preview",
+    "check": "npx --yes hyperframes@0.8.10 check",
+    "render": "npx --yes hyperframes@0.8.10 render",
+    "publish": "npx --yes hyperframes@0.8.10 publish"
+  },
+  "devDependencies": {
+    "@hyperframes/core": "^0.8.10"
+  }
+}

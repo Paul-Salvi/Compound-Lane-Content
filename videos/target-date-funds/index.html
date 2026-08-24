@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <title>Compound Lane — Target Date Funds</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; }
+      body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #FAF8F3; }
+
+      /* Root */
+      #root { position: relative; width: 1080px; height: 1920px; background: #FAF8F3; overflow: hidden; }
+
+      /* Clips */
+      .clip { position: absolute; inset: 0; overflow: visible; }
+
+      /* Frame wrapper — centers content */
+      .fw {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -51%);
+        text-align: center;
+        width: 100%;
+        max-width: 880px;
+        padding: 0 40px;
+      }
+
+      /* Logo (always visible) */
+      .wordmark {
+        position: absolute;
+        top: 32px;
+        left: 32px;
+        display: flex;
+        align-items: center;
+        z-index: 100;
+        pointer-events: none;
+      }
+      .logo-mark { width: 32px; height: 32px; flex-shrink: 0; }
+      .logo-text {
+        font-family: 'Fraunces', Georgia, serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: #2F5D4E;
+        letter-spacing: -0.01em;
+        margin-left: 8px;
+      }
+
+      /* Typography */
+      .t-h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 52px; color: #2F5D4E; letter-spacing: -0.015em; line-height: 1.1; }
+      .t-h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 36px; color: #2F5D4E; letter-spacing: -0.01em; line-height: 1.15; }
+      .t-sub { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 24px; color: #565A55; line-height: 1.25; }
+      .t-body { font-family: 'Inter', -apple-system, sans-serif; font-size: 22px; color: #565A55; line-height: 1.55; }
+      .t-caption { font-family: 'Inter', sans-serif; font-size: 16px; color: #565A55; line-height: 1.5; }
+      .t-stat { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-weight: 700; font-size: 72px; color: #2F5D4E; line-height: 0.95; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+      .t-stat-sm { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 48px; color: #2F5D4E; line-height: 0.85; }
+      .t-mono { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; }
+
+      /* Colors */
+      .c-pine { color: #2F5D4E; } .c-ochre { color: #A85A24; }
+      .c-ink { color: #1B1F1D; } .c-muted { color: #565A55; }
+
+      /* Stat cards */
+      .stat-card {
+        background: #F1EDE2;
+        border: 1px solid #DBD5C4;
+        border-left: 3px solid #2F5D4E;
+        border-radius: 3px;
+        padding: 18px;
+        text-align: center;
+      }
+      .stat-card .value { font-family: 'IBM Plex Mono', monospace; font-size: 30px; font-weight: 700; color: #1B1F1D; margin-bottom: 4px; font-variant-numeric: tabular-nums; }
+      .stat-card .desc { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.4; color: #565A55; }
+      .stat-card.ochre { border-left-color: #A85A24; }
+
+      /* Frame 2: inside grid */
+      .inside-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      /* Frame 3: glide path bars */
+      .glide { width: 100%; max-width: 720px; margin: 0 auto; text-align: left; }
+      .glide-row { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+      .glide-age {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1B1F1D;
+        width: 120px;
+        flex-shrink: 0;
+        text-align: right;
+      }
+      .glide-track { flex: 1; height: 44px; position: relative; }
+      .glide-bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 14px;
+      }
+      .glide-bar.pine { background: #2F5D4E; }
+      .glide-bar.oc { background: #A85A24; }
+      .glide-pct {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 19px;
+        font-weight: 700;
+        color: #FAF8F3;
+        opacity: 0;
+      }
+      .glide-axis {
+        margin-left: 136px;
+        border-top: 1.5px solid #1B1F1D;
+        padding-top: 8px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 13px;
+        color: #565A55;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* Frame 4: fee table */
+      .fee-table { width: 100%; max-width: 720px; margin: 0 auto; border: 1px solid #DBD5C4; border-radius: 3px; overflow: hidden; background: #FFFFFF; }
+      .fee-row {
+        display: grid;
+        grid-template-columns: 1.6fr 0.9fr 0.9fr;
+        padding: 13px 18px;
+        border-bottom: 1px solid #DBD5C4;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 18px;
+        color: #1B1F1D;
+        align-items: center;
+      }
+      .fee-row:last-child { border-bottom: none; }
+      .fee-row.head { background: #F1EDE2; font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; color: #565A55; }
+      .fee-row .r { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+      .fee-row.idx .r { color: #2F5D4E; }
+      .fee-row.act .r { color: #A85A24; }
+      .fee-row .t { text-align: right; font-size: 14px; color: #565A55; }
+
+      /* Frame 5/6 */
+      .vs-row { display: flex; gap: 16px; width: 100%; max-width: 680px; margin: 0 auto; }
+      .vs-row .stat-card { flex: 1; }
+      .formula { font-family: 'IBM Plex Mono', monospace; font-size: 18px; color: #565A55; margin-top: 26px; font-variant-numeric: tabular-nums; }
+      .outcome { display: flex; align-items: baseline; justify-content: center; gap: 40px; margin-top: 8px; }
+      .outcome .o-lbl { font-family: 'IBM Plex Mono', monospace; font-size: 17px; margin-top: 10px; }
+      .divider-v { width: 2px; background: #DBD5C4; height: 90px; align-self: center; }
+
+      /* Frame 7 */
+      .year-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto 12px;
+        background: #F1EDE2;
+        border: 1px solid #DBD5C4;
+        border-left: 3px solid #2F5D4E;
+        border-radius: 3px;
+        padding: 14px 24px;
+      }
+      .year-card .age { font-family: 'Inter', sans-serif; font-size: 20px; color: #565A55; }
+      .year-card .yr { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 30px; color: #2F5D4E; font-variant-numeric: tabular-nums; }
+
+      /* Progress bar */
+      #progress-fill { position: absolute; bottom: 0; left: 0; height: 4px; background: #2F5D4E; width: 0; }
+
+      /* Vertical stack helper */
+      .vstack { display: flex; flex-direction: column; align-items: center; }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-lq6u" id="root" data-composition-id="main" data-start="0" data-duration="37" data-width="1080" data-height="1920">
+
+      <!-- Background (track 1, 0-37s) -->
+      <div data-hf-id="hf-zhvy" id="bg" class="clip" data-start="0" data-duration="37" data-track-index="1">
+        <div data-hf-id="hf-f1wu" style="position: absolute; inset: 0; background: #FAF8F3;"></div>
+      </div>
+
+      <!-- Logo (always visible) -->
+      <div data-hf-id="hf-2j2y" class="wordmark" id="logo-main">
+        <svg data-hf-id="hf-aoyb" class="logo-mark" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+          <path data-hf-id="hf-9f0s" d="M10 76 L32 76 L32 58 L50 58 L50 40 L68 40 L68 24 L86 24 L86 16" fill="none" stroke="#2F5D4E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span data-hf-id="hf-7v0l" class="logo-text">Compound Lane</span>
+      </div>
+
+      <!-- Frame 1: Hook (track 2, 0-4.5s) -->
+      <div data-hf-id="hf-km4i" id="frame-1" class="clip" data-start="0" data-duration="4.5" data-track-index="2">
+        <div data-hf-id="hf-z28l" class="fw">
+          <h1 data-hf-id="hf-gnfr" class="t-h1" id="f1-title" style="margin-bottom: 14px;">Target Date Funds</h1>
+          <p data-hf-id="hf-1k3s" class="t-sub" id="f1-sub" style="margin-top: 28px; margin-bottom: 48px;">One fund. Auto-rebalanced.</p>
+          <div data-hf-id="hf-mxvl" class="t-stat" id="f1-stat">90% → 50% → 30%</div>
+          <p data-hf-id="hf-z4r1" class="t-caption c-muted" id="f1-note" style="margin-top: 28px;">stocks at age 30 · retirement · +7 yrs</p>
+        </div>
+      </div>
+
+      <!-- Frame 2: What It Is (track 3, 4.5-9s) -->
+      <div data-hf-id="hf-b0fd" id="frame-2" class="clip" data-start="4.5" data-duration="4.5" data-track-index="3">
+        <div data-hf-id="hf-qcsp" class="fw">
+          <h2 data-hf-id="hf-cmtd" class="t-h2" id="f2-title" style="margin-bottom: 36px;">What's Inside</h2>
+          <div data-hf-id="hf-tp7g" class="inside-grid" id="f2-grid">
+            <div data-hf-id="hf-ne6k" class="stat-card" id="f2-card-1"><div data-hf-id="hf-ziak" class="value">Stocks</div><div data-hf-id="hf-ms2e" class="desc">US index fund</div></div>
+            <div data-hf-id="hf-w22f" class="stat-card" id="f2-card-2"><div data-hf-id="hf-lp3o" class="value">Stocks</div><div data-hf-id="hf-j641" class="desc">International index</div></div>
+            <div data-hf-id="hf-s3ye" class="stat-card" id="f2-card-3"><div data-hf-id="hf-7sjj" class="value">Bonds</div><div data-hf-id="hf-k516" class="desc">US index fund</div></div>
+            <div data-hf-id="hf-2zg1" class="stat-card" id="f2-card-4"><div data-hf-id="hf-sjzz" class="value">Bonds</div><div data-hf-id="hf-c97p" class="desc">International index</div></div>
+          </div>
+          <p data-hf-id="hf-m1s9" class="t-body" id="f2-sub" style="margin-top: 36px;">Rebalancing is automatic — you never touch it.</p>
+        </div>
+      </div>
+
+      <!-- Frame 3: Glide Path (track 4, 9-15s) -->
+      <div data-hf-id="hf-qwi8" id="frame-3" class="clip" data-start="9" data-duration="6" data-track-index="4">
+        <div data-hf-id="hf-rjps" class="fw">
+          <h2 data-hf-id="hf-7ftw" class="t-h2" id="f3-title" style="margin-bottom: 44px;">The Glide Path</h2>
+          <div data-hf-id="hf-krsz" class="glide" id="f3-chart">
+            <div data-hf-id="hf-2ipd" class="glide-row" id="grow-30">
+              <span data-hf-id="hf-nkiw" class="glide-age">Age 30</span>
+              <div data-hf-id="hf-be7l" class="glide-track"><div data-hf-id="hf-hg3c" class="glide-bar pine" id="bar-30"><span data-hf-id="hf-coh8" class="glide-pct" id="pct-30">90% stocks</span></div></div>
+            </div>
+            <div data-hf-id="hf-24lz" class="glide-row" id="grow-65">
+              <span data-hf-id="hf-n6za" class="glide-age">Age 65</span>
+              <div data-hf-id="hf-fqn9" class="glide-track"><div data-hf-id="hf-a8lm" class="glide-bar oc" id="bar-65"><span data-hf-id="hf-lytr" class="glide-pct" id="pct-65">50%</span></div></div>
+            </div>
+            <div data-hf-id="hf-ebsv" class="glide-row" id="grow-72">
+              <span data-hf-id="hf-jn6a" class="glide-age">Age 72</span>
+              <div data-hf-id="hf-gxkc" class="glide-track"><div data-hf-id="hf-mhem" class="glide-bar oc" id="bar-72"><span data-hf-id="hf-gw1h" class="glide-pct" id="pct-72">30%</span></div></div>
+            </div>
+            <div data-hf-id="hf-9gwa" class="glide-axis" id="f3-axis"><span data-hf-id="hf-tzpu">0%</span><span data-hf-id="hf-msui">100% stocks</span></div>
+          </div>
+          <p data-hf-id="hf-nv1g" class="t-caption c-muted" id="f3-note" style="margin-top: 36px;">More growth while you're young — less risk near retirement</p>
+        </div>
+      </div>
+
+      <!-- Frame 4: What It Costs (track 5, 15-20s) -->
+      <div data-hf-id="hf-3n0k" id="frame-4" class="clip" data-start="15" data-duration="5" data-track-index="5">
+        <div data-hf-id="hf-r5er" class="fw">
+          <h2 data-hf-id="hf-cr8q" class="t-h2" id="f4-title" style="margin-bottom: 36px;">What It Costs</h2>
+          <div data-hf-id="hf-auyk" class="fee-table" id="f4-table">
+            <div data-hf-id="hf-qao2" class="fee-row head" id="f4-head"><span data-hf-id="hf-dtw7">Fund series</span><span data-hf-id="hf-noqs" class="r">Ratio</span><span data-hf-id="hf-pm7v" class="t">Type</span></div>
+            <div data-hf-id="hf-57l0" class="fee-row idx" id="f4-r1"><span data-hf-id="hf-mdbt">Vanguard 2060</span><span data-hf-id="hf-572a" class="r">0.08%</span><span data-hf-id="hf-ildl" class="t">Index</span></div>
+            <div data-hf-id="hf-dvgv" class="fee-row idx" id="f4-r2"><span data-hf-id="hf-e9qq">Schwab Target</span><span data-hf-id="hf-l946" class="r">0.08%</span><span data-hf-id="hf-3o99" class="t">Index</span></div>
+            <div data-hf-id="hf-9xcu" class="fee-row idx" id="f4-r3"><span data-hf-id="hf-uy5l">Fidelity Freedom</span><span data-hf-id="hf-briz" class="r">0.12%</span><span data-hf-id="hf-4v6c" class="t">Index</span></div>
+            <div data-hf-id="hf-177y" class="fee-row act" id="f4-r4"><span data-hf-id="hf-bgsz">T. Rowe Price</span><span data-hf-id="hf-87z3" class="r">~0.63%</span><span data-hf-id="hf-39fx" class="t">Active</span></div>
+          </div>
+          <p data-hf-id="hf-1qed" class="t-caption" id="f4-sub" style="margin-top: 30px;"><span data-hf-id="hf-4qim" class="c-pine">Index 0.08–0.12%</span> · <span data-hf-id="hf-980s" class="c-ochre">Active 0.60%+</span> — about 8x the cost</p>
+        </div>
+      </div>
+
+      <!-- Frame 5: Fee Gap (track 6, 20-24.5s) -->
+      <div data-hf-id="hf-havm" id="frame-5" class="clip" data-start="20" data-duration="4.5" data-track-index="6">
+        <div data-hf-id="hf-tmgp" class="fw vstack">
+          <h2 data-hf-id="hf-1znt" class="t-h2" id="f5-title" style="margin-bottom: 40px;">Same $50K Balance</h2>
+          <div data-hf-id="hf-e9u5" class="vs-row" id="f5-cards">
+            <div data-hf-id="hf-s99d" class="stat-card" id="f5-card-1">
+              <div data-hf-id="hf-xojl" class="value c-pine">$40/yr</div>
+              <div data-hf-id="hf-5yuc" class="desc">at the 0.08% index fee</div>
+            </div>
+            <div data-hf-id="hf-hbrx" class="stat-card ochre" id="f5-card-2">
+              <div data-hf-id="hf-sjt1" class="value c-ochre">$315/yr</div>
+              <div data-hf-id="hf-qfkx" class="desc">at the ~0.63% active fee</div>
+            </div>
+          </div>
+          <p data-hf-id="hf-nyu9" class="t-caption c-muted" id="f5-cap" style="margin-top: 36px;">Nearly 8x the cost — no guarantee of better returns</p>
+        </div>
+      </div>
+
+      <!-- Frame 6: Compound Cost (track 7, 24.5-30s) -->
+      <div data-hf-id="hf-ams0" id="frame-6" class="clip" data-start="24.5" data-duration="5.5" data-track-index="7">
+        <div data-hf-id="hf-i5l9" class="fw vstack">
+          <h2 data-hf-id="hf-b2el" class="t-stat c-ochre" id="f6-title" style="font-size: 88px;">$187K LOST</h2>
+          <p data-hf-id="hf-yz1t" class="t-sub" id="f6-sub" style="margin-top: 28px;">to fees over 30 years — not the market</p>
+          <div data-hf-id="hf-uw49" class="outcome" id="f6-outcome">
+            <div data-hf-id="hf-7dm4" style="text-align:center;">
+              <div data-hf-id="hf-r7d9" class="t-stat-sm c-pine" id="f6-stat-pine">$217K</div>
+              <div data-hf-id="hf-88el" class="o-lbl c-pine" id="f6-pine-lbl">0.08% fee</div>
+            </div>
+            <div data-hf-id="hf-74gy" class="divider-v" id="f6-div"></div>
+            <div data-hf-id="hf-ni2s" style="text-align:center;">
+              <div data-hf-id="hf-qntq" class="t-stat-sm c-ochre" id="f6-stat-och">$190K</div>
+              <div data-hf-id="hf-jj5z" class="o-lbl c-ochre" id="f6-och-lbl">0.63% fee</div>
+            </div>
+          </div>
+          <p data-hf-id="hf-2cai" class="formula" id="f6-formula">$50K at 7% for 30 years — same market, different fee</p>
+        </div>
+      </div>
+
+      <!-- Frame 7: How to Choose (track 8, 30-32.5s) -->
+      <div data-hf-id="hf-dcoj" id="frame-7" class="clip" data-start="30" data-duration="2.5" data-track-index="8">
+        <div data-hf-id="hf-jcic" class="fw vstack">
+          <h2 data-hf-id="hf-hbr7" class="t-h2" id="f7-title" style="margin-bottom: 12px;">Pick Your Year</h2>
+          <p data-hf-id="hf-ou6v" class="t-sub" id="f7-sub" style="margin-top: 20px; margin-bottom: 40px;">The year you turn 65–67</p>
+          <div data-hf-id="hf-f90u" class="year-card" id="f7-card-1"><span data-hf-id="hf-kge5" class="age">Age 30 today</span><span data-hf-id="hf-ehly" class="yr">→ 2060</span></div>
+          <div data-hf-id="hf-bawt" class="year-card" id="f7-card-2"><span data-hf-id="hf-4dnu" class="age">Age 40 today</span><span data-hf-id="hf-1059" class="yr">→ 2050</span></div>
+          <div data-hf-id="hf-aj90" class="year-card" id="f7-card-3"><span data-hf-id="hf-w1vb" class="age">Age 50 today</span><span data-hf-id="hf-08hg" class="yr">→ 2040</span></div>
+        </div>
+      </div>
+
+      <!-- Frame 8: CTA (track 9, 32.5-37s) -->
+      <div data-hf-id="hf-q750" id="frame-8" class="clip" data-start="32.5" data-duration="4.5" data-track-index="9">
+        <div data-hf-id="hf-p5vm" class="fw">
+          <div data-hf-id="hf-qfkr" class="t-h1 c-pine" id="f8-cta">compoundlane.com</div>
+          <p data-hf-id="hf-4501" class="t-caption c-muted" id="f8-sub" style="margin-top: 16px;">Glide path · Fees · Choosing your year</p>
+        </div>
+      </div>
+
+      <!-- Progress bar (track 10, 0-37s) -->
+      <div data-hf-id="hf-o03c" id="progress" class="clip" data-start="0" data-duration="37" data-track-index="10">
+        <div data-hf-id="hf-c4bu" id="progress-fill"></div>
+      </div>
+
+      <!-- Audio (no clip class, track 11) -->
+      <audio data-hf-id="hf-9ybd" id="vo" src="audio/voiceover.wav" data-start="0" data-duration="33.02" data-track-index="11" data-volume="1" preload="auto" data-media-start="0"></audio>
+
+      <!-- BGM bed: 10s track looped 4x to cover 37s (no clip class, tracks 12-15) -->
+      <audio data-hf-id="hf-bgm1" id="bgm1" src="audio/bgm.wav" data-start="0" data-duration="9.94" data-track-index="12" data-volume="0.12" preload="auto"></audio>
+      <audio data-hf-id="hf-bgm2" id="bgm2" src="audio/bgm.wav" data-start="9.94" data-duration="9.94" data-track-index="13" data-volume="0.12" preload="auto"></audio>
+      <audio data-hf-id="hf-bgm3" id="bgm3" src="audio/bgm.wav" data-start="19.88" data-duration="9.94" data-track-index="14" data-volume="0.12" preload="auto"></audio>
+      <audio data-hf-id="hf-bgm4" id="bgm4" src="audio/bgm.wav" data-start="29.82" data-duration="7.18" data-track-index="15" data-volume="0.12" preload="auto"></audio>
+
+      <!-- SFX: audioldm-generated reveal cues (no clip class, tracks 16-19, volume 0.35) -->
+      <audio data-hf-id="hf-sfx1" id="sfx-chime" src="assets/sfx/sfx-chime.wav" data-start="0.9" data-duration="5" data-track-index="16" data-volume="0.35" preload="auto"></audio>
+      <audio data-hf-id="hf-sfx2" id="sfx-impact" src="assets/sfx/sfx-impact.wav" data-start="10.9" data-duration="4" data-track-index="17" data-volume="0.35" preload="auto"></audio>
+      
+      <audio data-hf-id="hf-sfx4" id="sfx-downer" src="assets/sfx/sfx-downer.wav" data-start="25.4" data-duration="4" data-track-index="19" data-volume="0.35" preload="auto"></audio>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      /* ===== Progress bar ===== */
+      tl.fromTo("#progress-fill", { width: "0%" }, { width: "100%", duration: 37, ease: "none" }, 0);
+
+      /* ===== Logo ===== */
+      tl.fromTo("#logo-main", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.1);
+
+      /* ===== Frame 1: Hook (0-4.5s) ===== */
+      tl.fromTo("#f1-title", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 0.4);
+      tl.fromTo("#f1-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 1.0);
+      tl.fromTo("#f1-stat", { opacity: 0, y: 80, scale: 0.4 }, { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: "back.out(1.7)" }, 0.9);
+      tl.fromTo("#f1-note", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 1.9);
+
+      /* ===== Frame 2: What's Inside (4.5-9s) ===== */
+      tl.fromTo("#f2-title", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 4.7);
+      tl.fromTo("#f2-card-1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 5.2);
+      tl.fromTo("#f2-card-2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 5.45);
+      tl.fromTo("#f2-card-3", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 5.7);
+      tl.fromTo("#f2-card-4", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 5.95);
+      tl.fromTo("#f2-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 7.0);
+
+      /* ===== Frame 3: Glide Path (9-15s) ===== */
+      tl.fromTo("#f3-title", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 9.2);
+      tl.fromTo("#bar-30", { width: "0%" }, { width: "90%", duration: 0.7, ease: "power2.inOut" }, 10.0);
+      tl.fromTo("#bar-65", { width: "0%" }, { width: "50%", duration: 0.7, ease: "power2.inOut" }, 11.0);
+      tl.fromTo("#bar-72", { width: "0%" }, { width: "30%", duration: 0.7, ease: "power2.inOut" }, 12.0);
+      tl.fromTo("#pct-30", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 10.6);
+      tl.fromTo("#pct-65", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 11.6);
+      tl.fromTo("#pct-72", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 12.6);
+      tl.fromTo("#f3-axis", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 12.8);
+      tl.fromTo("#f3-note", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 13.4);
+
+      /* ===== Frame 4: What It Costs (15-20s) ===== */
+      tl.fromTo("#f4-title", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 15.2);
+      tl.fromTo("#f4-head", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 15.7);
+      tl.fromTo("#f4-r1", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, 15.9);
+      tl.fromTo("#f4-r2", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, 16.2);
+      tl.fromTo("#f4-r3", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, 16.5);
+      tl.fromTo("#f4-r4", { opacity: 0, x: -24, scale: 1.02 }, { opacity: 1, x: 0, scale: 1, duration: 0.4, ease: "power2.out" }, 17.0);
+      tl.fromTo("#f4-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 18.3);
+
+      /* ===== Frame 5: Fee Gap (20-24.5s) ===== */
+      tl.fromTo("#f5-title", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 20.2);
+      tl.fromTo("#f5-card-1", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.7)" }, 21.0);
+      tl.fromTo("#f5-card-2", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.7)" }, 21.7);
+      tl.fromTo("#f5-cap", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 23.0);
+
+      /* ===== Frame 6: Compound Cost (24.5-30s) ===== */
+      tl.fromTo("#f6-title", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.7)" }, 24.9);
+      tl.fromTo("#f6-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 25.8);
+      tl.fromTo("#f6-outcome", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 26.6);
+      tl.fromTo("#f6-formula", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 28.2);
+
+      /* ===== Frame 7: Pick Your Year (30-32.5s) ===== */
+      tl.fromTo("#f7-title", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 30.2);
+      tl.fromTo("#f7-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 30.8);
+      tl.fromTo("#f7-card-1", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out" }, 31.1);
+      tl.fromTo("#f7-card-2", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out" }, 31.35);
+      tl.fromTo("#f7-card-3", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power2.out" }, 31.6);
+
+      /* ===== Frame 8: CTA (32.5-37s) ===== */
+      tl.fromTo("#f8-cta", { opacity: 0, y: 30, scale: 0.85 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(1.7)" }, 33.2);
+      tl.fromTo("#f8-sub", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 34.0);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Ratios Explained - Compound Lane</title>
+    <!-- Import a realistic handwriting font -->
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #e2e8f0;
+            --paper-color: #fdfbf7;
+            --grid-color: #cbd5e1;
+            --text-dark: #1e293b;
+            --text-muted: #475569;
+            --primary-red: #dc2626;
+            --primary-green: #16a34a;
+            --accent-blue: #2563eb;
+            --highlight-yellow: rgba(254, 240, 138, 0.8);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Kalam', cursive;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .notebook-page {
+            background-color: var(--paper-color);
+            /* Realistic graph paper grid */
+            background-image:
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+            width: 100%;
+            max-width: 900px;
+            padding: 3rem 4rem;
+            border-radius: 2px 8px 8px 2px;
+            box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1), inset 3px 0 10px rgba(0, 0, 0, 0.05);
+            border-left: 3px solid #ef4444;
+            /* Red margin line */
+            position: relative;
+            overflow: hidden;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--text-dark);
+            padding-bottom: 1rem;
+            transform: rotate(-0.5deg);
+        }
+
+        .brand {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.1;
+        }
+
+        h1 span {
+            font-size: 1.6rem;
+            color: var(--text-muted);
+            margin-left: 0.5rem;
+        }
+
+        .sub-tagline {
+            color: var(--primary-red);
+            font-size: 1.4rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border: 3px solid var(--text-dark);
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+            transform: rotate(3deg);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* --- Hand-drawn Flowchart Styles --- */
+        .flowchart {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hand-drawn-border {
+            /* CSS hack to create a sketched, imperfect border */
+            border-radius: 2px 255px 3px 25px / 255px 5px 225px 3px;
+            background: transparent;
+        }
+
+        .circle-node {
+            width: 110px;
+            height: 110px;
+            border: 4px solid var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1.1;
+            background: rgba(22, 163, 74, 0.05);
+            /* Slight fill */
+            transform: rotate(-2deg);
+        }
+
+        .circle-node .gross {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .circle-node .sub {
+            font-size: 1rem;
+        }
+
+        .arrow-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90px;
+        }
+
+        .arrow-text {
+            color: var(--primary-red);
+            font-size: 1.1rem;
+            margin-bottom: -10px;
+            transform: rotate(-2deg);
+        }
+
+        .account-box {
+            border: 4px solid var(--text-dark);
+            padding: 1rem;
+            text-align: center;
+            width: 170px;
+            transform: rotate(1deg);
+            background: var(--paper-color);
+        }
+
+        .account-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .account-box hr {
+            border: none;
+            border-top: 2px solid var(--primary-red);
+            margin: 0.5rem 0;
+            transform: rotate(-1deg);
+        }
+
+        .expense-text {
+            color: var(--primary-red);
+            font-size: 1.2rem;
+        }
+
+        .compound-box {
+            border: 3px solid var(--primary-green);
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: rotate(-1deg);
+            background: rgba(22, 163, 74, 0.05);
+            position: relative;
+            margin-top: -30px;
+            /* Offset to mimic the image layout */
+        }
+
+        .compound-text {
+            color: var(--primary-green);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        /* --- Hand-drawn Blue Rule Box --- */
+        .blue-rule-box {
+            border: 4px solid var(--accent-blue);
+            padding: 1rem 1.5rem;
+            display: inline-block;
+            transform: rotate(-0.5deg);
+            background: rgba(37, 99, 235, 0.05);
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 650px;
+        }
+
+        .rule-main {
+            font-size: 1.8rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .rule-sub {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            font-weight: normal;
+        }
+
+        /* --- Calculators & Basics --- */
+        .basics-box h3 {
+            color: var(--primary-red);
+            font-size: 1.5rem;
+            text-decoration: underline;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+        }
+
+        .calculator-container {
+            border: 3px solid #cbd5e1;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 2px 255px 3px 25px / 255px 5px 225px 3px;
+            transform: rotate(0.5deg);
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            display: block;
+        }
+
+        .input-group input {
+            padding: 0.2rem 0.5rem;
+            border: none;
+            border-bottom: 2px solid var(--text-dark);
+            background: transparent;
+            font-size: 1.5rem;
+            font-family: 'Kalam', cursive;
+            width: 100%;
+            outline: none;
+        }
+
+        .results-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            max-width: 450px;
+            font-size: 1.6rem;
+        }
+
+        .result-row.low-fee {
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .result-row.high-fee {
+            color: var(--primary-red);
+        }
+
+        .lost-banner {
+            background: linear-gradient(104deg, rgba(254, 240, 138, 0) 0.9%, rgba(254, 240, 138, 1) 2.4%, rgba(254, 240, 138, 0.5) 5.8%, rgba(254, 240, 138, 0.9) 93%, rgba(254, 240, 138, 0.7) 96%, rgba(254, 240, 138, 0) 98%);
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            transform: rotate(-1.5deg);
+        }
+
+        .lost-amount {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            border-top: 2px dashed var(--text-muted);
+            padding-top: 1rem;
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="notebook-page">
+        <header>
+            <div class="brand">Compound Lane Notes</div>
+            <h1>Expense Ratios <span>(in plain English)</span></h1>
+            <div class="sub-tagline">The fee that quietly eats your returns.</div>
+        </header>
+
+        <section>
+            <h2><span class="section-num">1</span> What It Actually Is</h2>
+            <div class="basics-box">
+                <h3>The Basics:</h3>
+                <ul>
+                    <li>A yearly fee, taken as a % of your balance</li>
+                    <li>Fund earns a return, subtracts fee, pays you the rest</li>
+                    <li>Charged daily: ~ 1/365th of the rate, each day</li>
+                </ul>
+            </div>
+            <div class="faves-box" style="margin-top: 1.5rem;">
+                <h3>💡 Cheap Index Funds:</h3>
+                <table class="ticker-table">
+                    <tr>
+                        <td class="ticker-name">VOO</td>
+                        <td class="ticker-rate">0.03%</td>
+                    </tr>
+                    <tr>
+                        <td class="ticker-name">FXAIX</td>
+                        <td class="ticker-rate">0.015%</td>
+                    </tr>
+                    <tr>
+                        <td class="ticker-name">VTTSX (target-date)</td>
+                        <td class="ticker-rate">0.08%</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 2 Repurposed to Match Your Image -->
+        <section>
+            <h2><span class="section-num">2</span> See The Fee In Action</h2>
+
+            <!-- Hand-drawn Flowchart -->
+            <div class="flowchart">
+                <div class="circle-node">
+                    <span class="gross">7%</span>
+                    <span class="sub">gross<br>market<br>return</span>
+                </div>
+
+                <div class="arrow-container">
+                    <span class="arrow-text">pays fee</span>
+                    <svg width="80" height="30" viewBox="0 0 80 30">
+                        <path d="M 0 15 Q 15 20 30 12 Q 45 18 60 14 Q 68 15 72 15" fill="none" stroke="#1e293b"
+                            stroke-width="3" stroke-linecap="round" />
+                        <polygon points="70 8, 80 15, 70 22" fill="#1e293b" />
+                    </svg>
+                </div>
+
+                <div class="account-box hand-drawn-border">
+                    <div class="account-title">Your Account</div>
+                    <hr>
+                    <div class="expense-text">- expense ratio</div>
+                </div>
+
+                <div class="arrow-container" style="width: 70px;">
+                    <svg width="70" height="30" viewBox="0 0 70 30">
+                        <path d="M 0 15 Q 15 10 30 16 Q 45 12 55 15 Q 60 15 62 15" fill="none" stroke="#1e293b"
+                            stroke-width="3" stroke-linecap="round" />
+                        <polygon points="60 8, 70 15, 60 22" fill="#1e293b" />
+                    </svg>
+                </div>
+
+                <div class="compound-box hand-drawn-border">
+                    <!-- Squiggly Growth Chart Line -->
+                    <svg width="120" height="50" viewBox="0 0 120 50" style="margin-left: -50px; margin-bottom: -15px;">
+                        <path d="M 0 45 Q 15 40 25 42 Q 45 30 55 35 Q 75 15 90 20 Q 105 5 120 5" fill="none"
+                            stroke="#16a34a" stroke-width="4" stroke-linecap="round" />
+                    </svg>
+                    <div class="compound-text">compounds for you</div>
+                </div>
+            </div>
+
+            <!-- Hand-drawn Blue Highlight Rule Box -->
+            <div class="blue-rule-box hand-drawn-border">
+                <div class="rule-main">0.03% – 0.12% = good, for an index fund</div>
+                <div class="rule-sub">under 0.10% excellent · over 0.50% expensive</div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section>
+            <h2><span class="section-num">3</span> The Fee-Drag Math</h2>
+            <div class="calculator-container hand-drawn-border">
+                <div class="calc-grid">
+                    <div class="input-group">
+                        <label>Starting Principal ($)</label>
+                        <input type="number" id="principal" value="100000" step="5000">
+                    </div>
+                    <div class="input-group">
+                        <label>Market Return (%)</label>
+                        <input type="number" id="return" value="7" step="0.5">
+                    </div>
+                    <div class="input-group">
+                        <label>Years</label>
+                        <input type="number" id="years" value="30">
+                    </div>
+                </div>
+
+                <div class="results-box">
+                    <div class="result-row low-fee">
+                        <span>✓ 0.03% Fee:</span>
+                        <span id="low-fee-total">$761,230</span>
+                    </div>
+                    <div class="result-row high-fee">
+                        <span>✕ 1.00% Fee:</span>
+                        <span id="high-fee-total">$574,349</span>
+                    </div>
+                </div>
+
+                <div class="lost-banner">
+                    <div class="lost-amount" id="lost-total">$187,000 LOST</div>
+                    <div style="font-size: 1.2rem;">to the fee — not the market!</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div><a href="https://www.compoundlane.com">compoundlane.com</a></div>
+            <div style="text-align: right;">Education, not advice.</div>
+        </footer>
+    </div>
+
+    <script>
+        const principalInput = document.getElementById('principal');
+        const returnInput = document.getElementById('return');
+        const yearsInput = document.getElementById('years');
+        const lowFeeTotalEl = document.getElementById('low-fee-total');
+        const highFeeTotalEl = document.getElementById('high-fee-total');
+        const lostTotalEl = document.getElementById('lost-total');
+
+        function calculateDrag() {
+            const P = parseFloat(principalInput.value) || 0;
+            const r = (parseFloat(returnInput.value) || 0) / 100;
+            const t = parseInt(yearsInput.value) || 0;
+
+            const rateLow = r - 0.0003;
+            const rateHigh = r - 0.0100;
+
+            const totalLow = P * Math.pow(1 + rateLow, t);
+            const totalHigh = P * Math.pow(1 + rateHigh, t);
+            const lost = totalLow - totalHigh;
+
+            lowFeeTotalEl.textContent = '$' + Math.round(totalLow).toLocaleString();
+            highFeeTotalEl.textContent = '$' + Math.round(totalHigh).toLocaleString();
+            lostTotalEl.textContent = '$' + Math.round(lost).toLocaleString() + " LOST";
+        }
+
+        [principalInput, returnInput, yearsInput].forEach(input => {
+            input.addEventListener('input', calculateDrag);
+        });
+        calculateDrag();
+    </script>
+</body>
+
+</html>

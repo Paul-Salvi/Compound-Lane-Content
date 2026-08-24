@@ -1,0 +1,27 @@
+# --- Node / npm ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- HyperFrames build / render output ---
+renders/
+.hyperframes/
+.thumbnails/
+.waveform-cache/
+capture/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editors / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+.agents/

@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(ls -la videos/ 2>nul; echo \"---\"; ls -la videos/roth-ira-promo/ 2>nul; echo \"---\"; find videos/ -type f 2>nul)",
+      "Shell(npx hyperframes --version 2>&1; echo \"---\"; npx hyperframes --help 2>&1 | head -20)",
+      "Shell(npx --yes hyperframes@0.8.10 --version 2>&1)",
+      "Shell(npx --yes hyperframes@0.8.10 init \"videos/roth-ira-promo\" --non-interactive --example=blank --skill=product-launch-video 2>&1)",
+      "Shell(copy:*)",
+      "Shell(npx --yes hyperframes@0.8.10 auth status 2>&1; echo \"EXIT_CODE: $?\")",
+      "Shell(if:*)",
+      "Shell(npx --yes hyperframes@0.8.10 tts \"$(cat audio/voiceover_script.txt)\" --voice am_michael -o audio/voiceover.wav --speed 1.0 2>&1)",
+      "Shell(python --version 2>&1; echo \"---\"; python3 --version 2>&1; echo \"---\"; which python 2>&1)",
+      "Shell(pip:*)",
+      "Shell(where python 2>&1; echo \"---\"; where python3 2>&1; echo \"---\"; python -c \"import kokoro_onnx; print('kokoro OK')\" 2>&1; echo \"---\"; python -c \"import soundfile; print('soundfile OK')\" 2>&1)",
+      "Shell()",
+      "powershell",
+      "Shell(HYPERFRAMES_PYTHON=\"C:\\Users\\plslv\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" npx --yes hyperframes@0.8.10 tts \"$(cat audio/voiceover_script.txt)\" --voice am_michael -o audio/voiceover.wav --speed 1.0 2>&1)",
+      "Shell(dir audio\\ 2>&1; echo \"---\"; npx --yes hyperframes@0.8.10 check 2>&1)",
+      "Shell(dir:*)",
+      "Shell(npx hyperframes@0.8.10 check 2>&1)",
+      "Shell(npx hyperframes@0.8.10 render --fps 30 2>&1)",
+      "Shell(fsutil reparsepoint query CLAUDE.md 2>&1; echo \"---\"; dir /b /s CLAUDE.md AGENTS.md 2>&1 | findstr /i claude; echo \"---\"; fc AGENTS.md CLAUDE.md 2>&1)",
+      "Shell(npx hyperframes init \"videos/401k-vesting\" --non-interactive --example=blank --skill=product-launch-video 2>&1)",
+      "Shell(set:*)",
+      "Shell(npx hyperframes@0.8.10 tts Your 401k match can vanish when you leave — if you're not vested. Your own contributions are always 100% yours. The match may not be. Cliff vesting: zero percent for two years, then 100% at year three. Graded: 20% per year, 100% at year six. Leave at 2.5 years on a cliff? The entire ,500 match is forfeited. On graded at year two — keep only 20%. That's ,600 lost. A year of service is 1,000 hours of work. Check your SPD for your exact schedule. Full math at compoundlane.com. --voice am_michael --speed 1.25 -o audio/voiceover.wav 2 >& 1)",
+      "Shell(npx hyperframes@0.8.10 render 2>&1)",
+      "Shell(tasklist:*)",
+      "Shell(findstr:*)",
+      "agent_output",
+      "Shell(npx hyperframes check)",
+      "Shell(npx hyperframes render --fps 30)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
