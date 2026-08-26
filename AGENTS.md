@@ -30,6 +30,16 @@ The domain skills (`/hyperframes-core`, `/hyperframes-animation`, `/hyperframes-
 > everything already installed — neither pulls the full set. Restart the agent session so
 > newly installed skills load.
 
+## Visual Notes vs Video — Which Workflow?
+
+| Need | Workflow |
+|---|---|
+| Static hand-drawn infographic (IG/Pinterest save asset) | `docs/visual-notes-prompt-system.md` + `GUIDE.md §17` + `templates/notebook-v2.html` → `projects/{slug}/02-visual/{slug}.html` → headless screenshot → PNG. No `npm run render`. `input/sample.html` is a throwaway preview mirror. |
+| Motion promo reel (VO + BGM + GSAP) | `GUIDE.md §3–§16` + HyperFrames contract (`npm run check` / `render`) |
+| Both from one article | Start with §17 JSON (Stage 1 → `projects/{slug}/01-content/{slug}.json`), render the visual page, then reuse the same JSON for the reel (`GUIDE.md §17.6` → `03-video/`) |
+
+Full routing, mapping table, and validation: `GUIDE.md §17` + `docs/visual-notes-prompt-system.md`. Prefer saved local HTML (`projects/{slug}/01-source/source.html`) over URL fetch per taste.
+
 ## Commands
 
 ```bash
@@ -101,7 +111,7 @@ Fix all errors before presenting the result. Warnings should be reviewed before 
 
 ## Video Production Guide
 
-**Full workflow reference:** See `GUIDE.md` at the repo root for the comprehensive production handbook.
+**Full workflow reference:** See `GUIDE.md` at the repo root for the comprehensive production handbook (video: §3–§16, visual notes: §17).
 
 ### Essential commands not in the default script set
 
@@ -123,6 +133,16 @@ npx hyperframes capture "<url>" --project .   # capture a website (requires web 
 6. Copy `index.html` from the guide template; swap content per frame
 7. `npx hyperframes check` → fix all errors → repeat
 8. `npx hyperframes render --fps 30`
+
+### Speed workflow (visual notes static page)
+
+1. Run Stage 1 prompt (`docs/visual-notes-prompt-system.md`, Variant B if `input/3/...html` exists) on the article → save JSON to `projects/{slug}/01-content/{slug}.json`
+2. Spot-check every number in `body` vs the article (fact-check gate — blocking; see `GUIDE.md §17.2`)
+3. Update `projects/{slug}/02-visual/{slug}.html` per JSON: fork `templates/notebook-v2.html` (global template), inject header (`handle`/`title`/`series_label`/`page_label`) + one `<section>` per concept using the `visual_type → component` mapping (`GUIDE.md §17.3` table); mirror to `input/sample.html` for a quick preview if needed
+4. Keep fixed 1080×1920 canvas, no scroll — dense pages use 2-up flex rows + smaller type (body 1.2rem, h2 1.6rem, 40px blobs) per `GUIDE.md §17.4`
+5. Headless screenshot → PNG: `msedge.exe --headless --disable-gpu --window-size=1080,1920 --screenshot=projects/{slug}/02-visual/{slug}.png "file:///…/projects/{slug}/02-visual/{slug}.html"` (or `temp/after.png` for a throwaway — see `GUIDE.md §17.5`)
+6. If a reel is also needed: scaffold `projects/{slug}/03-video/` (or `videos/{slug}/`) from the `templates/notebook-v2.html` recipe, wire VO/BGM/SFX per `GUIDE.md §8` + `§17.6` (spotlight dim + pen-circle, no camera zoom)
+7. Validate: read `projects/{slug}/02-visual/{slug}.png` back; video variant additionally `npm run check` (video only)
 
 ### Monolith vs. sub-compositions
 
@@ -150,7 +170,7 @@ Fill this out for each project to keep things moving at lightning speed:
 
 ```
 □ Source:  URL _____  OR  local file _____  (dont webfetch — paste content)
-□ Type:    promo / explainer / motion-graphic / caption-overlay / other: _____
+□ Type:    promo / explainer / motion-graphic / caption-overlay / visual-notes / other: _____
 □ Length:  ___s  (under 10s? over 60s?)
 □ Format:  landscape 1920×1080 / portrait 1080×1920 / square 1080×1080
 □ Voice:   yes / no  (if yes, male am_michael / female af_sky)
@@ -162,6 +182,10 @@ Fill this out for each project to keep things moving at lightning speed:
 □ Key data: _____  (3-5 numbers/stats to feature)
 □ CTA:     destination URL or call-to-action _____
 □ Don'ts:  _____  (what NOT to include or say)
+□ Visual notes (if Type=visual-notes): JSON path projects/{slug}/01-content/{slug}.json OR article URL _____ (local file preferred)
+□ Output:  static PNG only / video reel / both  (portrait 1080×1920 default)
+□ Fact-check: numbers sourced per docs/visual-notes-prompt-system.md gate? yes / pending
+□ Project: projects/{slug}/ (or videos/{slug}/ for pure promo)
 ```
 
 ### Audio setup (Windows)

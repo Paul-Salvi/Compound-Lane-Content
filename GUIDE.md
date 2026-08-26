@@ -1,6 +1,8 @@
 # HyperFrames Video Production Guide
 
-A field manual for producing Compound Lane promo reels and educational videos at speed. This guide captures the **exact workflow**, **contract rules**, **pitfalls**, and **shortcuts** discovered building the first promo (Roth IRA Income Limits, 20s).
+A field manual for producing Compound Lane promo reels, educational videos, and **visual study-notes** at speed. This guide captures the **exact workflow**, **contract rules**, **pitfalls**, and **shortcuts** discovered building the first promo (Roth IRA Income Limits, 20s) plus the hand-drawn notebook system (`input/sample.html` + `docs/visual-notes-prompt-system.md`).
+
+> **Which workflow do I need?** Motion promo reel with VO/BGM/GSAP → §3–§16. Static hand-drawn infographic (IG/Pinterest save asset) → **§17**. Both from the same article → start with §17 JSON, then feed §3–§16.
 
 ---
 
@@ -22,6 +24,7 @@ A field manual for producing Compound Lane promo reels and educational videos at
 14. [Check, Fix, Render](#14-check-fix-render)
 15. [Common Pitfalls & Gotchas](#15-common-pitfalls--gotchas)
 16. [Speed Tips](#16-speed-tips)
+17. [Visual Notes (Study Notes) System](#17-visual-notes-study-notes-system)
 
 ---
 
@@ -162,6 +165,9 @@ When you have local source material:
 - Create `capture/extracted/` files by hand
 - Copy the logo SVG to `assets/`
 - Build `frame.md` from the brand tokens directly
+
+### Visual notes source (static infographics)
+For **visual notes** (hand-drawn study-notes infographics — see `docs/visual-notes-prompt-system.md` + `GUIDE.md §17`), the source is the **JSON spec** produced by Stage 1 — not a capture. Prefer the **local HTML file** variant (Variant B, `input/3/...html`) over URL fetch per taste ("dont webfetch"). See §17 for the `visual_type → component` mapping and deterministic `input/sample.html` render path.
 
 ---
 
@@ -634,6 +640,15 @@ Fonts are fetched and cached by the HyperFrames compiler. They work in both `che
 | Eyebrow/label | 0.72rem (12px) | IBM Plex Mono | `--pine` |
 | Formula | 1.1rem (18px) | IBM Plex Mono | `--ink` |
 
+### Which Palette Where (don't mix)
+
+| Lane | Canonical file | Fonts | Palette | Use when |
+|---|---|---|---|---|
+| **Site / article template** | Graphite Mono system | Fraunces (headlines) · IBM Plex Mono (numbers) · Inter (body) | `--paper #FAF8F3` / `--pine #2F5D4E` / `--ochre #A85A24` | Web article pages — never for notes assets |
+| **Visual notes + notebook reels** | `templates/notebook-v2.html` (global template) → `projects/{slug}/02-visual/{slug}.html` (project render; `input/sample.html` throwaway) | Caveat 500/600/700 + Patrick Hand only (`--font-script`/`--font-hand`) | warm paper `oklch(97.5% .008 85)` · rule `oklch(85% .045 250)` at 41px · inks: `--ink-navy 42% .16 268` / `--ink-maroon 50% .18 25` / `--ink-green 50% .13 158` / `--ink-yellow 85% .13 95` · filters `rough-a/b/c` + `.ink` multiply · `.watermark` 700×700 | IG/Pinterest save assets + hand-drawn video reels |
+
+Mixing the two (e.g. Fraunces inside `input/sample.html`, or `ink-navy` inside a promo stat card) is a style bug — keep lanes separate. Full notebook recipe: `GUIDE.md §17` + `docs/visual-notes-prompt-system.md` Stage 2 + taste #31/#49–#52.
+
 ---
 
 ## 12. Frame Patterns Library
@@ -941,6 +956,103 @@ Every `<audio>` needs `data-track-index` + `data-duration` (or it's ignored), an
 13. **10s BGM loop** — generate a 10s bed with `mc ai play -m musicgen-small -p "<mood>" -d 10`, copy it to `audio/bgm.wav`, and place 3–4 back-to-back `<audio>` instances to cover the cut. Faster iteration than one full-length track, and the loop seam is masked by the VO + SFX.
 
 14. **SFX per reveal, not per frame** — pick 3–5 key beats (hook, data reveal, warning stat, CTA) and generate one short cue each with `audioldm-s-full-v2`. Sync `data-start` to the visual landing, keep them at `0.35` volume. Too many cues sound like a game; too few feel flat.
+
+---
+
+## 17. Visual Notes (Study Notes) System
+
+Hand-drawn notebook infographics (IG/Pinterest "save this" assets + optional reel variant) — the **second lane** alongside video promos (§3–§16). Source of truth: **`docs/visual-notes-prompt-system.md`** (2-stage prompts) + **`templates/notebook-v2.html`** (global v2 template, mirrored at `input/sample_v2.html`) → **`projects/{slug}/02-visual/{slug}.html`** (project render; `input/sample.html` is a throwaway mirror). Same JSON feeds both a static PNG and, optionally, an animated reel. New projects scaffold under `projects/` — see §17.4.
+
+### 17.1 When to use which
+
+| Need | Workflow |
+|---|---|
+| Flat hand-drawn infographic (no motion, no VO) | This section (§17): JSON → `input/sample.html` → headless screenshot → PNG |
+| Motion promo reel (VO + BGM + GSAP) | §3–§16 video workflow (HyperFrames contract, `npm run check`, `render`) |
+| Both from one article | Start with §17 JSON (Stage 1), render the static page, then reuse the same JSON for the reel (see §17.6) |
+
+Decision rule: if the deliverable must be screenshotted, saved, and pinned — it's visual notes. If it must be watched with narration — it's video. No `npm run render` for static notes.
+
+### 17.2 Input — the JSON spec
+
+Stage 1 (`docs/visual-notes-prompt-system.md`) produces:
+
+```
+handle, title (ALL CAPS ≤45 chars), series_label, page_label (if multi-page),
+total_pages, concepts[] { number, title (2-5 words), body (25-35 words), visual_type, visual_spec }, sources_footer
+```
+
+`visual_type` in `none | diagram | table | comparison | callout`. Prefer **Variant B** (local HTML file, e.g. `input/3/...html`) over URL fetch per taste ("dont webfetch") when a saved copy exists — pasted `visible_text.txt` + `asset-descriptions.md` produce the same JSON. Multi-page: flat JSON with `total_pages` + `page_label`; run Stage 2 once per page, incrementing the circled page number.
+
+**Fact-checking gate (blocking):** every stat/number in `body` must trace to the article or its cited sources. Do NOT send Stage 1 JSON to Stage 2 (or to `input/sample.html`) until you've spot-checked the numbers against the source. The extraction step can compress or slightly misstate a stat.
+
+### 17.3 Renderer — `templates/notebook-v2.html` is global template; per-project render at `projects/{slug}/02-visual/{slug}.html` (`input/sample_v2.html` mirror, `input/sample.html` throwaway)
+
+`templates/notebook-v2.html` (mirrored at `input/sample_v2.html`) is the ground truth for v2 style (warm paper, `Caveat`+`Patrick Hand` only, `ink-yellow`, 41px rule, `rough-a/b/c`, `.watermark`). Each new article scaffolds `projects/{slug}/`: fork the template into `02-visual/{slug}.html`, inject 6 concepts from `01-content/{slug}.json`. Keep the v2 recipe intact; content swaps are the only edits. `input/sample.html` is just a quick-preview copy of the latest project render.
+
+**`visual_type → component` mapping (v2 classes — use exactly these):**
+
+| `visual_type` | Component(s) in `input/sample.html` (v2) | When to use |
+|---|---|---|
+| `table` | `.ledger` (3-col) / `.ledger.four-col` (4-col for Strategy/Avg/Value/Gap) / `.ledger.two-col` — `ledger-head` + `ledger-row`, `warn` = `--ink-yellow` wash + maroon text, `rule-line` wavy svg under head | 3+ options compared (rollover destinations, fee tiers) |
+| `comparison` | `.compare-row` → ` .compare-card.direct` (navy) vs `.compare-card.indirect` (maroon) + `.vs-mark` | Exactly 2 choices (Roth vs Traditional, spreading cash vs paycheck) |
+| `callout` | `.warning-box` (maroon) / `.warning-box.tip` (green) — `.heading` + `.text` | Single most important gotcha/tip (one per page max) |
+| `diagram` | `.flow-row` 6-col grid: `.flow-node.n1/.n2/.n3` + `.flow-label` + `.flow-arrow` | Process/sequence (what happens step-by-step) |
+| `none` | Plain `.lede` (no visual) | Concept needs no graphic |
+
+Header per page: `.brand` (`@compoundlane · notes`, top-right script) → `.kicker` (maroon text + wavy underline svg) → `h1` (with `.hl::before` `--ink-yellow` block) → optional page_label. Center `.watermark` (`assests/logo.svg`, 700×700, `opacity .11`, `multiply`, `z-index 0`) behind all `.ink` content — very subtle, in both `sample_v2.html` + `sample.html`. Footer: `sources_footer` (916px, dashed navy ticks) + `compoundlane.com` script link.
+
+When swapping in new article content: keep `input/sample_v2.html` variables, inks, ruled lines, `rough-a/b/c`, paper grain, per-blob `b1`..`b6` radii, and `.ink` multiply **unchanged** — only swap header/concepts. Dense pages: v2 `main gap 15px` + `lede 22px` is tighter than v1; if overflow, shave `lede` 22→21px or `ledger-row` padding 4→3px — stay single fixed page, never scroll. No `duo-row` in v2. Drop the `<script>` block when no interactivity is needed.
+
+### 17.4 Canvas, layout & file conventions
+
+- **Fixed canvas 1080×1920** — `body` + `.notebook-page` locked to `width:1080px; height:1920px; overflow:hidden` (taste #32). No scrolling, no page movement — compress to fit. `1080×1350` (4:5) only when explicitly requested for an IG feed crop.
+- **Multi-page:** sequential static images with incremented circled page number (`1 / total_pages`, `2 / total_pages`, …), not scroll or long page. Video compresses to one fixed page instead.
+- **Project scaffold — when you receive a new article URL/local file, create:**
+
+  ```
+  projects/{slug}/                          # kebab-case slug (e.g. dollar-cost-averaging)
+    01-source/source.html                   # saved article HTML (Variant B input)
+    01-source/source_files/                 # _files bundle (css2, logo.svg) if present
+    01-content/{slug}.json                  # Stage 1 JSON — single source of truth
+    02-visual/{slug}.html                   # fork of input/sample_v2.html, 6 concepts injected
+    02-visual/{slug}.png                    # headless screenshot (or temp/ for quick check)
+    03-video/                               # optional HyperFrames reel (same JSON)
+  ```
+
+  Global template at `templates/notebook-v2.html` (mirrored at `input/sample_v2.html`); `input/sample.html` is a throwaway mirror of the latest `02-visual` for fast preview. First example: `projects/dollar-cost-averaging/` (migrated from `input/4` + `input/dollar-cost-averaging.json` + `input/sample.html`).
+- **Legacy paths** (`input/<slug>.json`, `input/sample.html` as canonical) are retired — use `projects/{slug}/` going forward. Existing `input/` files are kept as archive until you delete them.
+
+### 17.5 Validation (static — no HyperFrames)
+
+Static notes do **not** use `npm run check` / `render` (that's the HyperFrames contract, §10). Validate with a headless screenshot and visual read-back:
+
+```powershell
+# Windows — PowerShell — project render (preferred)
+msedge.exe --headless --disable-gpu --window-size=1080,1920 --screenshot=projects/{slug}/02-visual/{slug}.png "file:///D:/content-creator/video/init-video/projects/{slug}/02-visual/{slug}.html"
+# Throwaway preview still works:
+# msedge.exe --headless --disable-gpu --window-size=1080,1920 --screenshot=temp/after.png "file:///D:/content-creator/video/init-video/input/sample.html"
+
+# Then read the PNG back in the session and inspect it.
+# Also sanity-check any JS-rendered values against expected outputs (proves script untouched).
+```
+
+Pass criteria: full page visible, no scroll, no overflow, footer near the bottom edge, ruled lines at 41px bound to text via `repeating-linear-gradient`, contrast AA in all states. If also building the reel, additionally run `npm run check` on `videos/<slug>/` (video only, 0 errors).
+
+### 17.6 Video variant from the same JSON (optional)
+
+Reuse the Stage 1 JSON for a notebook-style reel — same visual language, now animated:
+
+- **Preset:** `frame.md` → `preset: notebook-handwritten` (see `videos/target-date-funds/frame.md`).
+- **Motion:** no camera zoom (taste #33 — zoom crops neighbors on dense infographics). Use **spotlight dim** (non-active sections → opacity 0.32, active → 1.0, `power2.inOut` 0.5s) + **red pen-circle draw** (`pathLength="1"` → `strokeDashoffset` 1→0) per VO section, then clear dim for the final CTA. Logo stays visible throughout. Draw-in is pure opacity + path draws (no `y` slide).
+- **Audio:** per §8 — VO via Kokoro (`audio/tts_script.txt` → `audio/voiceover.wav`), BGM 10s loop (`musicgen-small`, `data-volume 0.12`), SFX 4–5s cues (`audioldm-s-full-v2`, `data-volume 0.35` at key beats).
+- **Pitfall:** style must pass WCAG AA **while dimmed** — never render light text inside colored bars (fails at 0.32 opacity).
+
+### 17.7 Notebook recipe (quick reference — full tokens in `templates/notebook-v2.html`)
+
+Warm paper `oklch(97.5% .008 85)` / shade `oklch(93% .015 80)` · rule `oklch(85% .045 250)` at **41px** (transparent) / **43px** (rule) + warm vignettes; outer `html,body #3a3a3a` + `.desk-shadow` · inks: `ink-navy 42% .16 268`, `ink-body 44% .1 264`, `text-muted 54% .05 262`, `ink-maroon 50% .18 25`, `ink-green 50% .13 158`, `ink-yellow 85% .13 95` · fonts: `Patrick Hand` (body/ledger) + `Caveat 500/600/700` (numbers/headings) via `--font-hand`/`--font-script` only · 3 filters `rough-a` (0.022/3/seed4/1.6), `rough-b` (0.035/2/seed17/1.15), `rough-c` (0.016/4/seed29/2) + `.ink {multiply; text-shadow}` · paper-grain `::before` opacity .38 (gamma 2.6, seed11, multiply) · per-blob `b1`..`b6` unique radii/rotations (-6deg..7deg), card radii per type · `.watermark` 700×700 `assests/logo.svg` `opacity .11` `multiply` center `translate(-50%,-50%)`.
+
+If this summary and `templates/notebook-v2.html` diverge, **the template wins**.
 
 ---
 

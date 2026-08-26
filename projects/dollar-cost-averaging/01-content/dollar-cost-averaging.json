@@ -1,0 +1,82 @@
+{
+  "handle": "@compoundlane",
+  "title": "DOLLAR-COST AVERAGING: DOES IT WORK?",
+  "series_label": "DOLLAR-COST AVERAGING: 6 THINGS TO KNOW",
+  "page_label": "",
+  "total_pages": 1,
+  "concepts": [
+    {
+      "number": 1,
+      "title": "What DCA Means",
+      "body": "DCA means investing the same dollars on a schedule — like $833 each month for 12 months to deploy $10,000 — not all at once. You buy fewer shares when prices are high and more when low, smoothing your average cost.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "SPREADING CASH",
+        "left_points": ["You have $10k today", "$833/mo for 12 months", "Cash sits out → cash drag"],
+        "right_label": "INVESTING FROM INCOME",
+        "right_points": ["You invest each paycheck", "No cash held back", "No drag — ideal DCA"]
+      }
+    },
+    {
+      "number": 2,
+      "title": "The 68% Rule",
+      "body": "Vanguard and Schwab tested rolling 12-month periods from the 1920s onward. Lump sum beat 12-month DCA about two-thirds of the time — about 68% — because markets rise more often than they fall.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Study", "Finding", "Why it wins"],
+        "rows": [
+          ["Vanguard", "~2/3 win", "Stocks rise more"],
+          ["Schwab", "~68% win", "Time in > timing"],
+          ["Edge", "~32% to DCA", "When markets fall"]
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "$10,000 Head-to-Head",
+      "body": "At a steady 7% for illustration, $10,000 invested day one grows to ~$10,700 after 12 months. DCA at end-of-month grows to ~$10,327. The ~$373 gap is not a fee — it is cash drag from money waiting in cash.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Strategy", "Avg invested", "Value at 12 mo", "Gap"],
+        "rows": [
+          ["Lump sum now", "$10,000", "~$10,700", "—"],
+          ["DCA 12 mo (end)", "~$4,583", "~$10,327", "~$373 drag"],
+          ["DCA 12 mo (start)", "~$5,417", "~$10,387", "~$313 drag"]
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "See The Cash Drag",
+      "body": "Lump sum earns a full year on the whole $10,000. DCA at end-of-month earns about half a year on average — the first $833 earns ~11 months, the last ~0. Later blocks earn less time in the market.",
+      "visual_type": "diagram",
+      "visual_spec": {
+        "nodes": ["$10k day 1", "Fully invested 12 mo", "~$10,700"],
+        "arrow_labels": ["DCA: ~$4,583 avg", "gap ~$373"]
+      }
+    },
+    {
+      "number": 5,
+      "title": "When DCA Helps vs Hurts",
+      "body": "DCA helps when you would otherwise stay in cash from fear, or when markets drop right after — less was invested before the fall. It hurts whenever markets rise while cash waits; that ~10% nominal return is the persistent cost.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "DCA HELPS",
+        "left_points": ["You'd stay in cash otherwise", "Softens worst outcomes", "Wins ~32% when markets fall"],
+        "right_label": "DCA HURTS",
+        "right_points": ["Markets rise more often", "~10% nominal left behind", "Cash drag every up year"]
+      }
+    },
+    {
+      "number": 6,
+      "title": "Use It Right",
+      "body": "Automate paycheck investing on payday — no drag. For windfalls, pick a short window (immediate to 6 months) and stick to it. Park waiting cash in yield and check your target, not the entry price.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "TIP",
+        "callout_text": "Windfall? Invest promptly or DCA 3–6 months max. Salary? Invest each paycheck — that's drag-free DCA."
+      }
+    }
+  ],
+  "sources_footer": "Sourced from SEC, FINRA, Vanguard, Charles Schwab, S&P 500 1928–2025"
+}

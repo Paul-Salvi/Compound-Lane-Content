@@ -11,6 +11,7 @@ renders/
 .thumbnails/
 .waveform-cache/
 capture/
+videos/
 
 # --- OS ---
 .DS_Store
@@ -23,5 +24,6 @@ desktop.ini
 *.swp
 *.swo
 
-
 .agents/
+
+
