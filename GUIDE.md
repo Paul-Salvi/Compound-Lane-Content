@@ -33,8 +33,8 @@ A field manual for producing Compound Lane promo reels, educational videos, and 
 For when you need a video yesterday:
 
 ```
-1. npx hyperframes init "videos/<name>" --non-interactive --example=blank --skill=product-launch-video
-2. cd videos/<name>
+1. npx hyperframes init "projects/<slug>/03-video" --non-interactive --example=blank --skill=product-launch-video
+2. cd projects/<slug>/03-video
 3. Write BRIEF.md (5 lines, YAML frontmatter)
 4. Write STORYBOARD.md (N frames, 4s each, 20s total)
 5. Write SCRIPT.md (5 VO lines, ~30 words total)
@@ -94,7 +94,7 @@ Render uses headless Chromium with `--use-gl=angle --use-angle=d3d11`. Hardware 
 ### Create a new project
 ```bash
 cd <repo-root>
-npx hyperframes init "videos/<kebab-case-name>" \
+npx hyperframes init "projects/<slug>/03-video" \
   --non-interactive \
   --example=blank \
   --skill=product-launch-video
@@ -102,22 +102,26 @@ npx hyperframes init "videos/<kebab-case-name>" \
 
 This creates:
 ```
-videos/<name>/
-├── AGENTS.md          # The product-launch-video workflow
-├── BRIEF.md           # Locked intent (you write this)
-├── CLAUDE.md          # Auto-generated, mirrors AGENTS.md
-├── SCRIPT.md          # Locked voiceover (you write this)
-├── STORYBOARD.md      # Frame plan (you write this)
-├── frame.md           # Design spec (you write this or use build-frame.mjs)
-├── hyperframes.json   # Project config (auto-generated)
-├── index.html         # The composition (you write this)
-├── meta.json          # Project metadata (auto-generated)
-├── package.json       # NPM scripts (auto-generated)
-├── audio/             # TTS and BGM output
-├── capture/           # Source extraction
-│   └── extracted/     # tokens.json, visible-text.txt, asset-descriptions.md
-├── compositions/      # Sub-composition files (if modular)
-└── assets/            # Logo, images, etc.
+projects/<slug>/
+├── 01-source/         # Article source (HTML + files) — see §17 for visual notes
+├── 01-content/        # Stage-1 JSON (single source of truth)
+├── 02-visual/         # Static PNG/HTML render (visual notes)
+└── 03-video/          # ← The video project
+    ├── AGENTS.md      # The product-launch-video workflow
+    ├── BRIEF.md       # Locked intent (you write this)
+    ├── CLAUDE.md      # Auto-generated, mirrors AGENTS.md
+    ├── SCRIPT.md      # Locked voiceover (you write this)
+    ├── STORYBOARD.md  # Frame plan (you write this)
+    ├── frame.md       # Design spec (you write this or use build-frame.mjs)
+    ├── hyperframes.json   # Project config (auto-generated)
+    ├── index.html     # The composition (you write this)
+    ├── meta.json      # Project metadata (auto-generated)
+    ├── package.json   # NPM scripts (auto-generated)
+    ├── audio/         # TTS and BGM output
+    ├── capture/       # Source extraction
+    │   └── extracted/ # tokens.json, visible-text.txt, asset-descriptions.md
+    ├── compositions/  # Sub-composition files (if modular)
+    └── assets/        # Logo, images, etc.
 ```
 
 ### Verify the init worked
@@ -363,7 +367,7 @@ The TTS command outputs: `Generated Xs of speech`. For a 20s video, aim for 18�
 2. **Regenerate** the WAV from the file (same command as generation):
    ```powershell
    $env:HYPERFRAMES_PYTHON="C:\Users\plslv\AppData\Local\Programs\Python\Python311\python.exe"
-   cd videos\<name>
+   cd projects\<slug>\03-video
    npx --yes hyperframes@0.8.10 tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.25 -o audio/voiceover.wav
    ```
 3. **Sync the duration:** read the new duration (`npx hyperframes tts` prints "Generated Xs of speech", or `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/voiceover.wav`) and update `data-duration` on the `<audio id="vo">` element in `index.html`.
@@ -1037,13 +1041,13 @@ msedge.exe --headless --disable-gpu --window-size=1080,1920 --screenshot=project
 # Also sanity-check any JS-rendered values against expected outputs (proves script untouched).
 ```
 
-Pass criteria: full page visible, no scroll, no overflow, footer near the bottom edge, ruled lines at 41px bound to text via `repeating-linear-gradient`, contrast AA in all states. If also building the reel, additionally run `npm run check` on `videos/<slug>/` (video only, 0 errors).
+Pass criteria: full page visible, no scroll, no overflow, footer near the bottom edge, ruled lines at 41px bound to text via `repeating-linear-gradient`, contrast AA in all states. If also building the reel, additionally run `npm run check` on `projects/<slug>/03-video/` (video only, 0 errors).
 
 ### 17.6 Video variant from the same JSON (optional)
 
 Reuse the Stage 1 JSON for a notebook-style reel — same visual language, now animated:
 
-- **Preset:** `frame.md` → `preset: notebook-handwritten` (see `videos/target-date-funds/frame.md`).
+- **Preset:** `frame.md` → `preset: notebook-handwritten` (see `projects/target-date-funds/03-video/frame.md`).
 - **Motion:** no camera zoom (taste #33 — zoom crops neighbors on dense infographics). Use **spotlight dim** (non-active sections → opacity 0.32, active → 1.0, `power2.inOut` 0.5s) + **red pen-circle draw** (`pathLength="1"` → `strokeDashoffset` 1→0) per VO section, then clear dim for the final CTA. Logo stays visible throughout. Draw-in is pure opacity + path draws (no `y` slide).
 - **Audio:** per §8 — VO via Kokoro (`audio/tts_script.txt` → `audio/voiceover.wav`), BGM 10s loop (`musicgen-small`, `data-volume 0.12`), SFX 4–5s cues (`audioldm-s-full-v2`, `data-volume 0.35` at key beats).
 - **Pitfall:** style must pass WCAG AA **while dimmed** — never render light text inside colored bars (fails at 0.32 opacity).

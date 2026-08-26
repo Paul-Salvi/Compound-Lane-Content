@@ -210,7 +210,7 @@ projects/{slug}/
   # msedge.exe --headless --disable-gpu --window-size=1080,1920 --screenshot=temp/after.png "file:///D:/content-creator/video/init-video/input/sample.html"
   ```
   Read back the PNG to verify. Keep the canvas fixed 1080×1920 with no scroll.
-- **Video reuse:** the same JSON can feed `projects/{slug}/03-video/` (or `videos/{slug}/`) via the notebook-handwritten preset — see `GUIDE.md §17` (spotlight dim 0.32 + red pen-circle draw, no camera zoom).
+- **Video reuse:** the same JSON feeds `projects/{slug}/03-video/` via the notebook-handwritten preset — see `GUIDE.md §17` (spotlight dim 0.32 + red pen-circle draw, no camera zoom).
 
 **Canonical reference:** `templates/notebook-v2.html` is the ground truth for v2 style (warm paper, Patrick Hand/Caveat, `ink-yellow`, 41px rule, `rough-a/b/c`, `.watermark`) — mirrored at `input/sample_v2.html`. `input/sample.html` is a throwaway render. If this doc and the template diverge, **the template wins**. Project renders at `projects/{slug}/02-visual/` inherit v2.
 

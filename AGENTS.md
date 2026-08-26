@@ -125,7 +125,7 @@ npx hyperframes capture "<url>" --project .   # capture a website (requires web 
 
 ### Speed workflow (20s promo reel)
 
-1. `npx hyperframes init "videos/<name>" --non-interactive --example=blank --skill=product-launch-video`
+1. `npx hyperframes init "projects/<slug>/03-video" --non-interactive --example=blank --skill=product-launch-video` (then `cd projects/<slug>/03-video`)
 2. Write `BRIEF.md` (YAML frontmatter, 6–8 lines — see GUIDE.md section 5)
 3. Write `STORYBOARD.md` (5 frames × 4s — see GUIDE.md section 6)
 4. Write `SCRIPT.md` (~30 words total, see GUIDE.md section 7)
@@ -141,7 +141,7 @@ npx hyperframes capture "<url>" --project .   # capture a website (requires web 
 3. Update `projects/{slug}/02-visual/{slug}.html` per JSON: fork `templates/notebook-v2.html` (global template), inject header (`handle`/`title`/`series_label`/`page_label`) + one `<section>` per concept using the `visual_type → component` mapping (`GUIDE.md §17.3` table); mirror to `input/sample.html` for a quick preview if needed
 4. Keep fixed 1080×1920 canvas, no scroll — dense pages use 2-up flex rows + smaller type (body 1.2rem, h2 1.6rem, 40px blobs) per `GUIDE.md §17.4`
 5. Headless screenshot → PNG: `msedge.exe --headless --disable-gpu --window-size=1080,1920 --screenshot=projects/{slug}/02-visual/{slug}.png "file:///…/projects/{slug}/02-visual/{slug}.html"` (or `temp/after.png` for a throwaway — see `GUIDE.md §17.5`)
-6. If a reel is also needed: scaffold `projects/{slug}/03-video/` (or `videos/{slug}/`) from the `templates/notebook-v2.html` recipe, wire VO/BGM/SFX per `GUIDE.md §8` + `§17.6` (spotlight dim + pen-circle, no camera zoom)
+6. If a reel is also needed: scaffold `projects/{slug}/03-video/` from the `templates/notebook-v2.html` recipe, wire VO/BGM/SFX per `GUIDE.md §8` + `§17.6` (spotlight dim + pen-circle, no camera zoom)
 7. Validate: read `projects/{slug}/02-visual/{slug}.png` back; video variant additionally `npm run check` (video only)
 
 ### Monolith vs. sub-compositions
@@ -185,7 +185,7 @@ Fill this out for each project to keep things moving at lightning speed:
 □ Visual notes (if Type=visual-notes): JSON path projects/{slug}/01-content/{slug}.json OR article URL _____ (local file preferred)
 □ Output:  static PNG only / video reel / both  (portrait 1080×1920 default)
 □ Fact-check: numbers sourced per docs/visual-notes-prompt-system.md gate? yes / pending
-□ Project: projects/{slug}/ (or videos/{slug}/ for pure promo)
+□ Project: projects/{slug}/ (video always at `projects/{slug}/03-video/`)
 ```
 
 ### Audio setup (Windows)
