@@ -1,0 +1,81 @@
+{
+  "handle": "@compoundlane",
+  "title": "HOW MUCH TO SAVE: 6 THINGS TO KNOW",
+  "series_label": "HOW MUCH TO SAVE FOR RETIREMENT: 6 THINGS TO KNOW",
+  "page_label": "",
+  "total_pages": 1,
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The 15% Rule",
+      "body": "Save 15% of your gross income for retirement. It's the standard starting target — not magic, but a useful starting line. A 4% employer match counts toward that 15%, so an 11% personal contribution plus a 4% match hits the target.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "TIP",
+        "callout_text": "Save 15% of gross income. A 4% employer match counts — contribute 11% yourself and you hit 15% total."
+      }
+    },
+    {
+      "number": 2,
+      "title": "Why 15% Works",
+      "body": "At a 7% after-inflation return, $7,500 saved every year for 30 years grows to roughly $762,000 (IRS 2026 IRA limit × 30 years at 7%, hypothetical). The 15% rule is built on that same compounding arithmetic over a full career.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Variable", "Figure", "Source"],
+        "rows": [
+          ["S&P 500 avg return", "~10% before / ~7% after inflation", "S&P 500, 1928–2025"],
+          ["2026 401(k) limit", "$24,500 ($32,500 at 50+)", "IRS IR-2025-111"],
+          ["2026 IRA limit", "$7,500 ($8,600 at 50+)", "IRS IR-2025-111"],
+          ["$7,500 × 30 yrs @ 7%", "~$762,000", "Compound interest on S&P data"]
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Your $1M Example",
+      "body": "To reach $1,000,000 in 30 years with $10,000 saved today at 7%, you need about $753/month. That's roughly $281,000 of your own contributions — the other $719,000 is compounding. Same target at 5% needs $1,148/month; at 9%, $466/month.",
+      "visual_type": "diagram",
+      "visual_spec": {
+        "nodes": ["$10k saved", "$753/mo for 30 yr", "$1,000,000"],
+        "arrow_labels": ["$281k from you", "$719k from compounding"]
+      }
+    },
+    {
+      "number": 4,
+      "title": "The 4% Rule",
+      "body": "Once you retire, the 4% rule says withdraw 4% of your portfolio in year one, then adjust that dollar amount for inflation each year. A $1,000,000 portfolio supports roughly $40,000/year. Rooted in the 1998 Trinity study of historical returns.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Portfolio at retirement", "Annual income at 4%"],
+        "rows": [
+          ["$500,000", "$20,000"],
+          ["$1,000,000", "$40,000"],
+          ["$1,500,000", "$60,000"]
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "title": "What Actually Matters",
+      "body": "The number that matters is yours — based on your spending, not your income. A couple earning $120K but spending $70K needs far less than one spending every dollar. Use the Retirement Goal Calculator to turn your real target into a monthly amount.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "SPEND-BASED TARGET",
+        "left_points": ["Use your real spending", "Subtract Social Security", "Usually lower than feared"],
+        "right_label": "INCOME-BASED TARGET",
+        "right_points": ["Replace your full salary", "Over-shoots for most", "Causes excess saving"]
+      }
+    },
+    {
+      "number": 6,
+      "title": "Put It On Autopilot",
+      "body": "Figure your target → calculate the monthly amount → automate it into your 401(k) and IRA. Get the match first (the cheapest money you'll ever get), then fund the IRA, then return to the 401(k). Run the calculator once; automate forever.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "TIP",
+        "callout_text": "Match first, then IRA, then back to 401(k). Automate the monthly amount — the math only works if you don't have to decide each month."
+      }
+    }
+  ],
+  "sources_footer": "Sourced from IRS IR-2025-111, S&P 500 1928–2025, Trinity Study (1998), Vanguard VOO fact sheet"
+}

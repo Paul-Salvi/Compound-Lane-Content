@@ -1,0 +1,83 @@
+{
+  "handle": "@compoundlane",
+  "title": "TRADITIONAL VS ROTH IRA: 6 THINGS TO KNOW",
+  "series_label": "TRADITIONAL IRA VS ROTH IRA: 6 THINGS TO KNOW",
+  "page_label": "",
+  "total_pages": 1,
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The One-Line Difference",
+      "body": "Traditional IRA: tax deduction now, taxed in retirement. <b>Roth IRA: no deduction now, tax-free in retirement.</b> Same $7,500 contribution limit in 2026 ($8,600 at 50+). The trade is when you want the IRS to take its cut — today or in 30 years.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "TRADITIONAL",
+        "left_points": ["Deduct now", "Taxed in retirement", "Lower tax bracket = better"],
+        "right_label": "ROTH",
+        "right_points": ["No deduction now", "Tax-free in retirement", "Higher tax bracket = better"]
+      }
+    },
+    {
+      "number": 2,
+      "title": "Traditional Deduction Income Limits",
+      "body": "The traditional IRA deduction phases out if you have a workplace retirement plan. <b>2026 single: $81,000–$91,000 MAGI</b>. <b>2026 married joint: $129,000–$149,000 MAGI</b>. Above the top, the deduction disappears — but you can still make nondeductible contributions.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Filing status", "Deduction floor", "Deduction top", "Window"],
+        "rows": [
+          ["Single (workplace plan)", "$81,000", "$91,000", "$10,000"],
+          ["Married joint (workplace plan)", "$129,000", "$149,000", "$20,000"],
+          ["Single (no workplace plan)", "Any income", "Full deduction", "—"],
+          ["Married (spouse has plan)", "$242,000", "$252,000", "$10,000"]
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Roth Contribution Income Limits",
+      "body": "Roth direct contributions phase out at higher incomes. <b>2026 single: $153,000–$168,000 MAGI</b>. <b>2026 married joint: $242,000–$252,000 MAGI</b>. Above the top, direct Roth is off — but a backdoor Roth (contribute to traditional, convert) still works.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Filing status", "Roth floor", "Roth top", "Window"],
+        "rows": [
+          ["Single", "$153,000", "$168,000", "$15,000"],
+          ["Married filing jointly", "$242,000", "$252,000", "$10,000"],
+          ["Married filing separately", "$0", "$10,000", "$10,000"]
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "RMDs: The Catch",
+      "body": "Traditional IRAs force <b>Required Minimum Distributions starting at age 73</b> (SECURE 2.0). You must withdraw a % each year and pay tax on it. Roth IRAs have no RMDs during the original owner's lifetime. Big difference for late-in-life tax planning.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "RMD RULE",
+        "callout_text": "Traditional IRA: forced withdrawals starting at 73. Roth IRA: no RMDs during your lifetime. SECURE 2.0 set the 73 age threshold."
+      }
+    },
+    {
+      "number": 5,
+      "title": "Which One Fits You",
+      "body": "General rule: <b>Roth when you expect higher future tax rates</b> (young, rising income). <b>Traditional when you expect lower future tax rates</b> (peak earner, expecting to retire lower). If unsure, the Roth tax-free compounding usually wins over 30+ year horizons.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "LEAN ROTH",
+        "left_points": ["Young / early career", "Rising income", "Long horizon (30+ yr)"],
+        "right_label": "LEAN TRADITIONAL",
+        "right_points": ["Peak earning years", "Expect lower retirement income", "Need the deduction now"]
+      }
+    },
+    {
+      "number": 6,
+      "title": "You Can Have Both",
+      "body": "No rule says choose one. Many people hold a traditional IRA for the upfront deduction, a Roth IRA for tax-free growth, and use the <b>$7,500 total IRA limit</b> across both. Backdoor Roth lets high earners convert nondeductible traditional contributions to Roth — same $7,500 cap, but no income limit on conversion.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "FYI",
+        "callout_text": "IRA limit ($7,500 in 2026) is shared across all your IRAs. Roth conversions don't count against the limit. Backdoor Roth works above the MAGI line."
+      }
+    }
+  ],
+  "sources_footer": "Sourced from IRS IR-2025-111, IRS Publication 590-A, IRS Publication 590-B (RMDs), SECURE 2.0 Act"
+}

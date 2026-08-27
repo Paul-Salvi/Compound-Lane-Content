@@ -1,0 +1,79 @@
+{
+  "handle": "@compoundlane",
+  "title": "OPEN A ROTH IRA: 6 THINGS TO KNOW",
+  "series_label": "HOW TO OPEN A ROTH IRA STEP BY STEP: 6 THINGS TO KNOW",
+  "page_label": "",
+  "total_pages": 1,
+  "concepts": [
+    {
+      "number": 1,
+      "title": "What A Roth IRA Does",
+      "body": "A Roth IRA is a retirement account where <b>your money grows tax-free and comes out tax-free in retirement</b>. You contribute after-tax dollars (no deduction today), but qualified withdrawals — including earnings — are tax-free. The trade: pay tax now, never pay tax on the growth.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "ROTH IN ONE LINE",
+        "callout_text": "Pay tax now. Never pay tax on the growth. Qualified withdrawals in retirement are tax-free — including decades of compounding."
+      }
+    },
+    {
+      "number": 2,
+      "title": "2026 Contribution Limits",
+      "body": "You can contribute up to <b>$7,500 to a Roth IRA in 2026</b>, or $8,600 if you're 50 or older (catch-up). The limit applies across all your IRAs combined — Roth, traditional, SEP. Earned income must equal or exceed what you contribute.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Item", "2026 figure", "Notes"],
+        "rows": [
+          ["Under 50", "$7,500", "Across all IRAs"],
+          ["50 and older", "$8,600", "Includes $1,100 catch-up"],
+          ["Catch-up amount", "$1,100", "50+ only"],
+          ["Earned income needed", "≥ contribution", "Wages or self-employment"]
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "The MAGI Phase-Out",
+      "body": "Roth eligibility phases out at higher incomes. <b>Single: $153,000–$168,000 MAGI</b> for 2026. <b>Married filing jointly: $242,000–$252,000</b>. Inside the window your limit shrinks proportionally. Above the top, direct contributions are off — use a backdoor Roth or 401(k).",
+      "visual_type": "diagram",
+      "visual_spec": {
+        "nodes": ["Below floor: full $7,500", "Inside window: partial", "Above top: $0"],
+        "arrow_labels": ["Single: $153K→$168K", "Joint: $242K→$252K"]
+      }
+    },
+    {
+      "number": 4,
+      "title": "Step 1: Pick The Brokerage",
+      "body": "Open the Roth IRA at a brokerage — Fidelity, Schwab, or Vanguard are the three big ones. The IRA itself is the same at each; the difference is the funds and tools you get. <b>All three offer index funds like FXAIX, VOO, or VTI at the lowest fees</b>. Pick by UI and fund lineup.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "TOP THREE",
+        "left_points": ["Fidelity — FXAIX at 0.015%", "Schwab — SCHB at 0.03%", "Vanguard — VOO/VTI at 0.03%"],
+        "right_label": "WHAT TO LOOK FOR",
+        "right_points": ["Low-cost index funds", "No account minimum", "Clean mobile app"]
+      }
+    },
+    {
+      "number": 5,
+      "title": "Steps 2-5: Fund And Invest",
+      "body": "(2) Open the Roth IRA online in ~10 minutes. (3) Link your bank account. (4) Transfer your contribution ($7,500 max for 2026). (5) Buy a low-cost S&P 500 index fund (FXAIX, VOO) or target date fund for your retirement year. The cash doesn't grow until you invest it.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "THE 4 REMAINING STEPS",
+        "left_points": ["Open the Roth IRA (~10 min)", "Link your bank", "Transfer up to $7,500"],
+        "right_label": "THEN",
+        "right_points": ["Buy an index fund", "Pick a target date fund", "Set auto-contribute"]
+      }
+    },
+    {
+      "number": 6,
+      "title": "Don't Leave It In Cash",
+      "body": "Cash in a Roth IRA earns interest but a fraction of what stocks return. <b>The S&P 500 has averaged ~10% annually since 1928</b> (about 7% after inflation). Investing the money is step 5 for a reason: the IRA wrapper means nothing if the cash sits. Buy VOO, FXAIX, or a target date fund the day you fund it.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "DON'T FORGET",
+        "callout_text": "Cash in a Roth IRA is safe but slow. Invest it in VOO, FXAIX, or a target date fund. The wrapper is the tax break; the fund is the growth."
+      }
+    }
+  ],
+  "sources_footer": "Sourced from IRS IR-2025-111, IRS Publication 590-A, Fidelity/Schwab/Vanguard account disclosures"
+}

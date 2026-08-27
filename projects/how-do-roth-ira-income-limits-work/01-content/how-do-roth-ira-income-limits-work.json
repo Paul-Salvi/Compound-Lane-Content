@@ -1,0 +1,81 @@
+{
+  "handle": "@compoundlane",
+  "title": "ROTH IRA INCOME LIMITS: 6 THINGS TO KNOW",
+  "series_label": "ROTH IRA INCOME LIMITS (2026): 6 THINGS TO KNOW",
+  "page_label": "",
+  "total_pages": 1,
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The 2026 Numbers",
+      "body": "In 2026 you can contribute the full $7,500 to a Roth IRA ($8,600 at 50+ with catch-up). The 2026 401(k) elective deferral limit is $24,500 ($32,500 at 50+). The two caps are separate — you can max both if you have the earned income.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Item", "2026 figure", "What it means"],
+        "rows": [
+          ["Roth IRA limit (under 50)", "$7,500", "Max across all IRAs"],
+          ["Catch-up at 50+", "$8,600", "$7,500 + $1,100 extra"],
+          ["401(k) elective limit", "$24,500", "Separate from IRA"],
+          ["401(k) at 50+", "$32,500", "Catch-up added"]
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "title": "MAGI Is The Gate",
+      "body": "Eligibility runs on Modified Adjusted Gross Income, not your salary. MAGI is your AGI plus add-backs — mainly foreign earned income exclusion, foreign housing amounts, and excluded income from Puerto Rico or American Samoa. For most people, MAGI equals AGI.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "TIP",
+        "callout_text": "MAGI ≈ AGI for most people. Pre-tax 401(k) contributions lower MAGI; a year-end bonus can push you over a threshold even if base salary is under it."
+      }
+    },
+    {
+      "number": 3,
+      "title": "The Phase-Out Ramp",
+      "body": "The phase-out is a ramp, not a cliff. Below the floor you get the full amount; inside, your limit shrinks proportionally; at or above the top, you get zero. Single window: $153K to $168K. Joint window: $242K to $252K. Married-separate: $0 to $10K.",
+      "visual_type": "diagram",
+      "visual_spec": {
+        "nodes": ["Below floor: full $7,500", "Inside range: partial", "At/above top: $0"],
+        "arrow_labels": ["Single: $153K → $168K", "Joint: $242K → $252K"]
+      }
+    },
+    {
+      "number": 4,
+      "title": "The Phase-Out Math",
+      "body": "The IRS formula is proportional: (top of range − your MAGI) ÷ range size × the limit. Single at $160,500: ($168,000 − $160,500) ÷ $15,000 × $7,500 = $3,750 allowed. Joint at $247,000: same idea, $5,000 ÷ $10,000 × $7,500 = $3,750.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Filing status", "Floor", "Top", "Window size"],
+        "rows": [
+          ["Single", "$153,000", "$168,000", "$15,000"],
+          ["Married filing jointly", "$242,000", "$252,000", "$10,000"],
+          ["Married filing separately", "$0", "$10,000", "$10,000"]
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "title": "Over The Top? 3 Options",
+      "body": "Above $168K single or $252K joint, you can't contribute directly — but Roth-style saving isn't over. Backdoor Roth: contribute to a traditional IRA, convert to Roth. Max the 401(k) ($24,500, no income cap). Or use a taxable brokerage for overflow — no MAGI test, same low-cost funds.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "OVER-TOP PATHS",
+        "left_points": ["Backdoor Roth: traditional IRA → convert", "Max 401(k): $24,500, no MAGI cap", "Taxable brokerage: no limits, no MAGI test"],
+        "right_label": "WATCH-OUTS",
+        "right_points": ["Backdoor: pro-rata aggregates IRAs", "Conversion is taxable on pre-tax dollars", "Taxable loses tax-free growth"]
+      }
+    },
+    {
+      "number": 6,
+      "title": "Inside The Window",
+      "body": "The partial still compounds. At 7% for 30 years, $3,750/year grows to roughly $354,000 — half the ~$708,000 from a full $7,500 (hypothetical, constant return). The window is narrow: a $5,000 raise inside the $15K single window cuts a third of your allowed amount.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "SOURCE",
+        "callout_text": "Single partial example: $3,750/yr × 30 yr at 7% → ~$354,000. Half the contribution, half the outcome. Estimate MAGI in the fall — a bonus can still push you into the window with time to adjust."
+      }
+    }
+  ],
+  "sources_footer": "Sourced from IRS IR-2025-111, IRS Notice 2025-111, IRS Publication 590-A (MAGI + conversion rules)"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "how-does-401k-vesting-work-if-i-leave-my-job-animate",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.11 preview",
+    "check": "npx --yes hyperframes@0.8.11 check",
+    "render": "npx --yes hyperframes@0.8.11 render",
+    "publish": "npx --yes hyperframes@0.8.11 publish"
+  }
+}

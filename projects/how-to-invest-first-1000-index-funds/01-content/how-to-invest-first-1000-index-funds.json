@@ -1,0 +1,77 @@
+{
+  "handle": "@compoundlane",
+  "title": "FIRST $1,000 IN INDEX FUNDS: 6 THINGS TO KNOW",
+  "series_label": "HOW TO INVEST YOUR FIRST $1,000 IN INDEX FUNDS: 6 THINGS TO KNOW",
+  "page_label": "",
+  "total_pages": 1,
+  "concepts": [
+    {
+      "number": 1,
+      "title": "Why Index Funds First",
+      "body": "An index fund holds every stock (or bond) in a market index in one ticker. S&P 500 funds own all 500 large US companies at once. You get instant diversification for the price of one trade — no stock-picking, no fund-manager guesses, low fees (0.03% for VOO).",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "START HERE",
+        "callout_text": "Index = one fund, hundreds of stocks. VOO owns 500 large US companies in one ticker at 0.03%. No picking, low fees, broad exposure."
+      }
+    },
+    {
+      "number": 2,
+      "title": "What $1,000 Can Do",
+      "body": "The S&P 500 has returned roughly 10% annually on average since 1928 — about 7% after inflation. $1,000 at 7% real return grows to about <b>$1,970 in 10 years</b> and $3,870 in 20 years (hypothetical, constant return). Not retirement money, but a real start. The point is the habit, not the headline number.",
+      "visual_type": "diagram",
+      "visual_spec": {
+        "nodes": ["$1,000 today", "7% real return", "$3,870 in 20 yr"],
+        "arrow_labels": ["Compounding", "Hypothetical"]
+      }
+    },
+    {
+      "number": 3,
+      "title": "The Two Best Fund Picks",
+      "body": "Two low-cost options cover nearly everyone: <b>VOO (Vanguard S&P 500 ETF, 0.03%)</b> and <b>FXAIX (Fidelity S&P 500 mutual fund, 0.015%)</b>. Both hold the same 500 stocks. Pick VOO for any brokerage, FXAIX inside a Fidelity account to skip the broker fee.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Ticker", "What it holds", "Expense ratio", "Where to buy"],
+        "rows": [
+          ["VOO", "S&P 500 stocks", "0.03%", "Any brokerage"],
+          ["FXAIX", "S&P 500 stocks", "0.015%", "Fidelity"],
+          ["VTI", "Total US market", "0.03%", "Any brokerage"],
+          ["FXAIX vs VOO", "Same 500 stocks", "0.015% vs 0.03%", "Fidelity vs any"]
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "Ups And Downs",
+      "body": "Stocks don't go straight up. The S&P 500 has been <b>positive in about 73% of calendar years</b> since 1928 — so down roughly one in four. In any given year you might see +25% (2023, 2024) or −37% (2008), −18% (2022). The longer you hold, the more often good years outweigh bad ones. That's the deal.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "REALITY CHECK",
+        "callout_text": "S&P 500 positive in about 73% of calendar years since 1928 — so down roughly one in four. Volatility is the price of the long-term return."
+      }
+    },
+    {
+      "number": 5,
+      "title": "The 5-Step Plan",
+      "body": "(1) Open a brokerage (Fidelity, Schwab, Vanguard). (2) Link your bank. (3) Deposit $1,000. (4) Buy VOO or FXAIX. (5) Set up an automatic monthly transfer — even $50 — to keep the habit. The first $1,000 is the hardest. The 100th is easy.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "DO",
+        "left_points": ["Open a brokerage", "Deposit $1,000", "Buy VOO or FXAIX"],
+        "right_label": "THEN",
+        "right_points": ["Set auto-transfer", "Add monthly", "Don't check daily"]
+      }
+    },
+    {
+      "number": 6,
+      "title": "Don't Time The Market",
+      "body": "Time in the market beats timing the market. The S&P 500 has been <b>positive in about 73% of calendar years</b> since 1928. The long-run return comes from staying invested through the bad years, not from waiting for the 'right' moment — most people who try to time end up missing the early-rebound days that drive the return.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "REMEMBER",
+        "callout_text": "S&P 500 positive in ~73% of calendar years since 1928. Your $1,000 works hardest when it stays put. Automate and stop watching."
+      }
+    }
+  ],
+  "sources_footer": "Sourced from Vanguard VOO/VTI fact sheets, Fidelity FXAIX prospectus, NYU Stern historical S&P 500 data, SEC investor.gov"
+}

@@ -40,6 +40,10 @@ The domain skills (`/hyperframes-core`, `/hyperframes-animation`, `/hyperframes-
 
 Full routing, mapping table, and validation: `GUIDE.md §17` + `docs/visual-notes-prompt-system.md`. Prefer saved local HTML (`projects/{slug}/01-source/source.html`) over URL fetch per taste.
 
+## Whiteboard Animation Lane
+
+The `03-Video-animate/` lane lives at `projects/{slug}/03-Video-animate/` and is built from `scripts/build-animate.mjs` (no VO, CSS keyframes only — stroke-draw, blob pop, fade-in). It reuses the same `01-content/{slug}.json` as the static visual notes and the narrated reel. See `CLAUDE.md` for the lane description, build CLI, audio conventions, and render command.
+
 ## Commands
 
 ```bash

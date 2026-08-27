@@ -1,0 +1,77 @@
+{
+  "handle": "@compoundlane",
+  "title": "401(K) VS BROKERAGE: 6 THINGS TO KNOW",
+  "series_label": "MAX 401(K) OR BROKERAGE ACCOUNT?: 6 THINGS TO KNOW",
+  "page_label": "",
+  "total_pages": 1,
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The 4-Step Priority List",
+      "body": "Order matters. (1) Get the full 401(k) match — that's a 50%-100% instant return. (2) Build a $1,000 emergency fund. (3) Max a Roth IRA ($7,500 in 2026). (4) Go back and max the 401(k) ($24,500). Only after all four should you send extra to a taxable brokerage.",
+      "visual_type": "diagram",
+      "visual_spec": {
+        "nodes": ["1. 401(k) match", "2. Emergency fund", "3. Roth IRA max"],
+        "arrow_labels": ["4. 401(k) max", "5. Brokerage"]
+      }
+    },
+    {
+      "number": 2,
+      "title": "Why Match Comes First",
+      "body": "An employer match is a guaranteed return on day one. A 50% match on your 6% contribution is an instant <b>50% gain before any market movement</b>. No investment in history reliably returns 50% on day one. Leaving match on the table is the most expensive 'savings' mistake.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "ALWAYS",
+        "callout_text": "401(k) match first. A 50% match is a 50% instant return — nothing in the market reliably gives you that. Always contribute enough to get the full match."
+      }
+    },
+    {
+      "number": 3,
+      "title": "2026 Limits Side By Side",
+      "body": "The two accounts have separate caps. <b>2026 401(k) elective limit: $24,500</b> ($32,500 at 50+). <b>2026 Roth IRA limit: $7,500</b> ($8,600 at 50+). You can max both if you have the earned income — they're not either/or. A $75,000 earner can put $32,000/yr away in tax-advantaged space.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Account", "2026 limit", "At 50+", "Income cap"],
+        "rows": [
+          ["401(k) elective", "$24,500", "$32,500", "None"],
+          ["Roth IRA", "$7,500", "$8,600", "Phases at $153K–$168K single"],
+          ["Roth IRA (joint)", "$7,500", "$8,600", "Phases at $242K–$252K"],
+          ["Combined max", "$32,000", "$41,100", "Earned income must cover"]
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "When Brokerage Wins",
+      "body": "A taxable brokerage has no contribution limit, no income limit, and no withdrawal penalty. <b>It's flexible in ways IRAs and 401(k)s aren't</b>. The cost: no upfront tax break and capital gains tax on profits. Use it for goals before age 59½ (house down payment, etc.) and overflow savings.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "BROKERAGE EDGE",
+        "left_points": ["No contribution cap", "No income limit", "No early-withdrawal penalty"],
+        "right_label": "BROKERAGE COST",
+        "right_points": ["No upfront tax deduction", "Capital gains tax on profits", "Dividends taxed yearly"]
+      }
+    },
+    {
+      "number": 5,
+      "title": "The $75,000 Salary Example",
+      "body": "A $75,000 earner who maxes both gets <b>$32,000/yr into tax-advantaged accounts</b> — $24,500 in the 401(k) plus $7,500 in the Roth IRA. Add a 4% employer match ($3,000) and the total is $35,000/yr. A 401(k)-only saver at the same salary is leaving 22% of that tax-advantaged space empty.",
+      "visual_type": "diagram",
+      "visual_spec": {
+        "nodes": ["$75K salary", "$24,500 401(k)", "$7,500 Roth IRA"],
+        "arrow_labels": ["+$3,000 match", "= $32,000 advantaged"]
+      }
+    },
+    {
+      "number": 6,
+      "title": "A Common Mistake",
+      "body": "Don't choose one. The error is treating 'max 401(k)' and 'open brokerage' as competing goals. The real order is: match → emergency fund → Roth IRA → 401(k) max → <b>then</b> brokerage. Skipping the Roth IRA to over-fund a 401(k) is leaving $7,500 of tax-free space on the table every year.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "REMEMBER",
+        "callout_text": "It's not 401(k) OR brokerage. It's match → Roth → 401(k) max → brokerage. Skipping the Roth IRA to over-fund a 401(k) is leaving tax-free space unused."
+      }
+    }
+  ],
+  "sources_footer": "Sourced from IRS IR-2025-111, IRS Publication 590-A, IRS Publication 575, FINRA Smart Investing"
+}
