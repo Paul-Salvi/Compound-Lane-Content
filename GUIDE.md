@@ -33,8 +33,8 @@ A field manual for producing Compound Lane promo reels, educational videos, and 
 For when you need a video yesterday:
 
 ```
-1. npx hyperframes init "projects/<slug>/03-video" --non-interactive --example=blank --skill=product-launch-video
-2. cd projects/<slug>/03-video
+1. npx hyperframes init "projects/<slug>/03-Video" --non-interactive --example=blank --skill=product-launch-video
+2. cd projects/<slug>/03-Video
 3. Write BRIEF.md (5 lines, YAML frontmatter)
 4. Write STORYBOARD.md (N frames, 4s each, 20s total)
 5. Write SCRIPT.md (5 VO lines, ~30 words total)
@@ -66,7 +66,7 @@ python -m pip install kokoro-onnx soundfile
 The `npx hyperframes tts` command needs Python at the path pointed to by `HYPERFRAMES_PYTHON`. On Windows, set it explicitly:
 ```powershell
 $env:HYPERFRAMES_PYTHON="C:\Users\plslv\AppData\Local\Programs\Python\Python311\python.exe"
-npx hyperframes tts "..." --voice am_michael -o audio/voiceover.wav --speed 1.25
+npx hyperframes tts "..." --voice am_michael -o audio/voiceover.wav --speed 1.15
 ```
 
 ### Node.js / npm
@@ -94,7 +94,7 @@ Render uses headless Chromium with `--use-gl=angle --use-angle=d3d11`. Hardware 
 ### Create a new project
 ```bash
 cd <repo-root>
-npx hyperframes init "projects/<slug>/03-video" \
+npx hyperframes init "projects/<slug>/03-Video" \
   --non-interactive \
   --example=blank \
   --skill=product-launch-video
@@ -106,7 +106,7 @@ projects/<slug>/
 ├── 01-source/         # Article source (HTML + files) — see §17 for visual notes
 ├── 01-content/        # Stage-1 JSON (single source of truth)
 ├── 02-visual/         # Static PNG/HTML render (visual notes)
-└── 03-video/          # ← The video project
+└── 03-Video/          # ← The video project
     ├── AGENTS.md      # The product-launch-video workflow
     ├── BRIEF.md       # Locked intent (you write this)
     ├── CLAUDE.md      # Auto-generated, mirrors AGENTS.md
@@ -270,7 +270,7 @@ Each frame's `voiceover` field must match the SCRIPT.md line for that frame. The
 ## 7. Scripting (SCRIPT.md)
 
 ### Constraints
-- 20s video ≈ **25–30 words** of spoken text (at 1.25× speed, am_michael voice)
+- 20s video ≈ **22–26 words** of spoken text (at 1.15× speed, am_michael voice)
 - Each frame gets **one short sentence** (5–8 words)
 - No jargon. Plain English.
 - End with CTA URL.
@@ -280,7 +280,7 @@ Each frame's `voiceover` field must match the SCRIPT.md line for that frame. The
 # SCRIPT — <project-name>
 
 **Voice:** am_michael (Kokoro local)
-**Voice settings:** speed 1.25 · natural pace
+**Voice settings:** speed 1.15 · natural pace (see `AUDIO_STYLE.md`)
 **Voice direction:** Clear, authoritative, educational — plain-English financial instruction.
 
 ---
@@ -302,7 +302,7 @@ Each frame's `voiceover` field must match the SCRIPT.md line for that frame. The
 | 4 | 12–16s | "A $5K raise inside that narrow window can halve your contribution." | 12 |
 | 5 | 16–20s | "Over the limit? Backdoor Roth or max your 401k. Full math at compoundlane.com." | 15 |
 
-Total: ~48 words → ~18s at 1.25× speed → fits in 20s with room for pauses.
+Total: ~48 words → ~21s at 1.15× speed → fits in 20s with room for pauses (will need to trim ~3 words or bump speed to 1.25 for a tighter fit).
 
 ### Writing tight VO for 20s
 If the VO comes out too long (>20s):
@@ -316,13 +316,18 @@ If the VO comes out too long (>20s):
 ```
 target_WordCount ≈ (duration_in_seconds × speed_multiplier × words_per_minute) / 60
 
-Example: 20s × 1.25 × 80_wpm / 60 = ~33 words
+Example: 20s × 1.15 × 80_wpm / 60 = ~31 words
 ```
-At am_michael's natural pace (~80 wpm at speed 1.0), 1.25× gives ~100 wpm.
+At am_michael's natural pace (~80 wpm at speed 1.0), 1.15× gives ~92 wpm; 1.25× gives ~100 wpm (use for tight cuts).
 
 ---
 
 ## 8. Audio (TTS)
+
+> **Before writing `tts_script.txt`**, read [`AUDIO_STYLE.md`](AUDIO_STYLE.md)
+> at the repo root. It contains the 7 rules + PR checklist that make
+> Kokoro sound human (Kokoro doesn't support SSML — punctuation is the
+> only prosody lever). Speed default is now `1.15` (down from `1.25`).
 
 ### Check auth status
 ```bash
@@ -344,7 +349,7 @@ pip install kokoro-onnx soundfile
 # Generate VO (write text to file first for safety with $ signs)
 echo "2026 Roth IRA limit: 7500. Full under 153K single, 242K joint. Phase-out windows: just 15K and 10K. A 5K raise inside that narrow window can halve your contribution. Over the limit? Backdoor Roth or max your 401k. Full math at compoundlane.com." > audio/tts_script.txt
 
-npx hyperframes tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.25 -o audio/voiceover.wav
+npx hyperframes tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.15 -o audio/voiceover.wav
 ```
 
 ### Voice recommendations (from `media-use` skill)
@@ -367,8 +372,8 @@ The TTS command outputs: `Generated Xs of speech`. For a 20s video, aim for 18�
 2. **Regenerate** the WAV from the file (same command as generation):
    ```powershell
    $env:HYPERFRAMES_PYTHON="C:\Users\plslv\AppData\Local\Programs\Python\Python311\python.exe"
-   cd projects\<slug>\03-video
-   npx --yes hyperframes@0.8.10 tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.25 -o audio/voiceover.wav
+   cd projects\<slug>\03-Video
+   npx --yes hyperframes@0.8.10 tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.15 -o audio/voiceover.wav
    ```
 3. **Sync the duration:** read the new duration (`npx hyperframes tts` prints "Generated Xs of speech", or `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/voiceover.wav`) and update `data-duration` on the `<audio id="vo">` element in `index.html`.
 4. **Re-run the check:** `npx hyperframes check` → fix any layout shifts from the changed VO length (frames may need re-timing if the speech got longer/shorter).
@@ -906,7 +911,7 @@ If using sub-compositions, `<link>` and `<style>` in `<head>` are **discarded** 
 The `video-creator` sub-agent may fail with "a required tool permission was denied." **Always be prepared to execute the workflow manually.** The agent is a convenience, not a requirement.
 
 ### Pitfall 10: TSP text length vs duration
-At 20s with am_michael @ 1.25×, you get ~33 words. Measure twice: generate the TTS, check the duration, and trim the script if needed. You can always re-render VO faster (speed 1.3–1.4) rather than rewriting.
+At 20s with am_michael @ 1.15×, you get ~30 words. Measure twice: generate the TTS, check the duration, and trim the script if needed. You can always re-render VO faster (speed 1.25–1.4) rather than rewriting.
 
 ### Pitfall 11: Portrait stat overlap
 Same principle as Pitfall 6 but worse in portrait — the narrower canvas (1080px wide) gives large stats more relative vertical footprint. **Fix:** `style="margin-top: 28px;"` on subtitle, `style="margin-bottom: 4px;"` on stat.
@@ -939,7 +944,7 @@ Every `<audio>` needs `data-track-index` + `data-duration` (or it's ignored), an
 
 3. **Reuse animation blocks** — the GSAP timeline patterns (from this guide) are copy-paste ready. Only change IDs and timestamps.
 
-4. **TTS speed trick** — start at speed 1.25. If too long, bump to 1.4. If too short, slow the animations to fill the gap.
+4. **TTS speed trick** — start at speed 1.15. If too long, bump to 1.4. If too short, slow the animations to fill the gap.
 
 5. **Font caching** — Google Fonts are cached to `~/.cache/hyperframes/fonts/`. First render is slower (downloads), subsequent renders are instant.
 
@@ -1021,7 +1026,7 @@ When swapping in new article content: keep `input/sample_v2.html` variables, ink
     01-content/{slug}.json                  # Stage 1 JSON — single source of truth
     02-visual/{slug}.html                   # fork of input/sample_v2.html, 6 concepts injected
     02-visual/{slug}.png                    # headless screenshot (or temp/ for quick check)
-    03-video/                               # optional HyperFrames reel (same JSON)
+    03-Video/                               # optional HyperFrames reel (same JSON)
   ```
 
   Global template at `templates/notebook-v2.html` (mirrored at `input/sample_v2.html`); `input/sample.html` is a throwaway mirror of the latest `02-visual` for fast preview. First example: `projects/dollar-cost-averaging/` (migrated from `input/4` + `input/dollar-cost-averaging.json` + `input/sample.html`).
@@ -1041,13 +1046,13 @@ msedge.exe --headless --disable-gpu --window-size=1080,1920 --screenshot=project
 # Also sanity-check any JS-rendered values against expected outputs (proves script untouched).
 ```
 
-Pass criteria: full page visible, no scroll, no overflow, footer near the bottom edge, ruled lines at 41px bound to text via `repeating-linear-gradient`, contrast AA in all states. If also building the reel, additionally run `npm run check` on `projects/<slug>/03-video/` (video only, 0 errors).
+Pass criteria: full page visible, no scroll, no overflow, footer near the bottom edge, ruled lines at 41px bound to text via `repeating-linear-gradient`, contrast AA in all states. If also building the reel, additionally run `npm run check` on `projects/<slug>/03-Video/` (video only, 0 errors).
 
 ### 17.6 Video variant from the same JSON (optional)
 
 Reuse the Stage 1 JSON for a notebook-style reel — same visual language, now animated:
 
-- **Preset:** `frame.md` → `preset: notebook-handwritten` (see `projects/target-date-funds/03-video/frame.md`).
+- **Preset:** `frame.md` → `preset: notebook-handwritten` (see `projects/target-date-funds/03-Video/frame.md`).
 - **Motion:** no camera zoom (taste #33 — zoom crops neighbors on dense infographics). Use **spotlight dim** (non-active sections → opacity 0.32, active → 1.0, `power2.inOut` 0.5s) + **red pen-circle draw** (`pathLength="1"` → `strokeDashoffset` 1→0) per VO section, then clear dim for the final CTA. Logo stays visible throughout. Draw-in is pure opacity + path draws (no `y` slide).
 - **Audio:** per §8 — VO via Kokoro (`audio/tts_script.txt` → `audio/voiceover.wav`), BGM 10s loop (`musicgen-small`, `data-volume 0.12`), SFX 4–5s cues (`audioldm-s-full-v2`, `data-volume 0.35` at key beats).
 - **Pitfall:** style must pass WCAG AA **while dimmed** — never render light text inside colored bars (fails at 0.32 opacity).

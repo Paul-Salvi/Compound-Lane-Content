@@ -117,7 +117,7 @@ Fix all errors before presenting the result. Warnings should be reviewed before 
 
 ```bash
 npx hyperframes auth status   # check HeyGen sign-in; falls back to local Kokoro TTS if signed out
-npx hyperframes tts "Hello" --voice am_michael --speed 1.15 -o audio/vo.wav   # local TTS (needs Python 3 + kokoro-onnx) — apply AUDIO_STYLE.md rules first
+npx hyperframes tts "Hello" --voice am_michael --speed 1.25 -o audio/vo.wav   # local TTS (needs Python 3 + kokoro-onnx)
 mc ai play -m musicgen-small -p "calm cinematic, soft strings, subtle piano, restrained percussion" -d 10    # local BGM via music-cli — 10s loop
 mc ai play -m audioldm-s-full-v2 -p "soft chime, warm bell, clean single tone" -d 5     # SFX reveal cue via music-cli (4-5s each)
 npx hyperframes capture "<url>" --project .   # capture a website (requires web credits)
@@ -129,7 +129,7 @@ npx hyperframes capture "<url>" --project .   # capture a website (requires web 
 2. Write `BRIEF.md` (YAML frontmatter, 6–8 lines — see GUIDE.md section 5)
 3. Write `STORYBOARD.md` (5 frames × 4s — see GUIDE.md section 6)
 4. Write `SCRIPT.md` (~30 words total, see GUIDE.md section 7)
-5. Generate TTS: `npx hyperframes tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.15 -o audio/voiceover.wav` (see `AUDIO_STYLE.md` for script-writing rules)
+5. Generate TTS: `npx hyperframes tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.25 -o audio/voiceover.wav`
 6. Copy `index.html` from the guide template; swap content per frame
 7. `npx hyperframes check` → fix all errors → repeat
 8. `npx hyperframes render --fps 30`
@@ -174,7 +174,7 @@ Fill this out for each project to keep things moving at lightning speed:
 □ Length:  ___s  (under 10s? over 60s?)
 □ Format:  landscape 1920×1080 / portrait 1080×1920 / square 1080×1080
 □ Voice:   yes / no  (if yes, male am_michael / female af_sky)
-□ Speed:   1.15 (default) / 1.25 / 1.3 / 1.4
+□ Speed:   1.0 / 1.25 / 1.3 / 1.4
 □ Brand:   name _____  primary color _____  secondary color _____  bg _____
 □ Fonts:   display _____  mono _____  body _____
 □ Logo:    path _____  (or "no logo")
@@ -198,8 +198,7 @@ pip install kokoro-onnx soundfile
 # ALWAYS write the VO text to audio/tts_script.txt FIRST (single source of truth)
 # so wording can be edited and the WAV regenerated without hunting for the text:
 echo "Your voiceover text here." > audio/tts_script.txt
-# (Apply AUDIO_STYLE.md rules first — em-dashes, varied length, spelled-out numbers, etc.)
-npx hyperframes tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.15 -o audio/voiceover.wav
+npx hyperframes tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.25 -o audio/voiceover.wav
 
 # Correct the voiceover: edit audio/tts_script.txt, re-run the tts command above,
 # then update data-duration on <audio id="vo"> in index.html to the new length
