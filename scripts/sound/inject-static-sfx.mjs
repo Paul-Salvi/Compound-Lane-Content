@@ -18,6 +18,15 @@ import { execSync } from "node:child_process";
 import {
   FLASH_DURATION,
   FLASH_FADE,
+  VO_DURATION,
+  HEADER_REVEAL,
+  C1_REVEAL,
+  C2_REVEAL,
+  C3_REVEAL,
+  C4_REVEAL,
+  C5_REVEAL,
+  C6_REVEAL,
+  OUTRO_REVEAL,
   INLINE_PATCH_FIELDS,
   MARKUP_PATCH_RULES,
 } from "./timing.mjs";
@@ -43,7 +52,8 @@ let html = await readFile(htmlPath, "utf8");
     // Match:   var <NAME> = <number>;
     // Tolerate optional trailing comment and whitespace.
     const re = new RegExp(`(var\\s+${name}\\s*=\\s*)([0-9]+(?:\\.[0-9]+)?)(\\s*;)`);
-    const value = { FLASH_DURATION, FLASH_FADE }[name];
+    const value = { FLASH_DURATION, FLASH_FADE, VO_DURATION,
+                    HEADER_REVEAL, C1_REVEAL, C2_REVEAL, C3_REVEAL, C4_REVEAL, C5_REVEAL, C6_REVEAL, OUTRO_REVEAL }[name];
     // Format the number so 1.0 stays "1.0" (JS Number(1.0).toString() === "1").
     // One decimal place is enough for second-level timing precision.
     const formatted = Number.isInteger(value) ? `${value}.0` : String(value);
@@ -168,12 +178,23 @@ const cleaned = block.trim();
       lastCueEnd = next + "</audio>".length;
       searchFrom = lastCueEnd;
     }
-    if (lastCueEnd === -1) {
-      console.error("[sound] could not find end of SFX block; aborting");
-      break;
+    let cutEnd;
+    if (lastCueEnd !== -1) {
+      cutEnd = lastCueEnd;
+      if (html[cutEnd] === "\n") cutEnd += 1;
+    } else {
+      // No </audio> follows the marker — this is a comment-only stub left
+      // over from a previous run when SFX_PROFILES was empty. Remove from
+      // the marker through the end of the comment ("-->\n") so the next
+      // run starts clean.
+      const commentEnd = html.indexOf("-->", staticStart);
+      if (commentEnd === -1) {
+        console.error("[sound] could not find end of SFX block (no </audio> and no -->); aborting");
+        break;
+      }
+      cutEnd = commentEnd + 3;
+      if (html[cutEnd] === "\n") cutEnd += 1;
     }
-    let cutEnd = lastCueEnd;
-    if (html[cutEnd] === "\n") cutEnd += 1;
     html = html.slice(0, lineStart) + html.slice(cutEnd);
     removed += 1;
   }
@@ -190,10 +211,22 @@ if (voIdx === -1) {
   process.exit(3);
 }
 const voCloseIdx = html.indexOf("</audio>", voIdx) + "</audio>".length;
-const withStatic =
-  html.slice(0, voCloseIdx) +
-  "\n\n    " + cleaned + "\n  " +
-  html.slice(voCloseIdx);
 
-await writeFile(htmlPath, withStatic, "utf8");
-console.log(`wrote ${target} (${withStatic.length} bytes; static SFX block inserted)`);
+// If the emitted block has no actual <audio> cues (SFX_PROFILES is empty),
+// don't splice a comments-only stub into the HTML — just leave the
+// voiceover <audio> in place. The prior-static-block removal above
+// already cleaned up the old block, so the result is SFX-free. The
+// header comment does mention "<audio>" in prose, so count *opening
+// tags with a real attribute* (i.e. "<audio " followed by an id= or
+// data- attribute) rather than just any match.
+if (!/<audio\s[^>]*\sid=/.test(cleaned)) {
+  await writeFile(htmlPath, html, "utf8");
+  console.log(`wrote ${target} (${html.length} bytes; no SFX cues — static block omitted)`);
+} else {
+  const withStatic =
+    html.slice(0, voCloseIdx) +
+    "\n\n    " + cleaned + "\n  " +
+    html.slice(voCloseIdx);
+  await writeFile(htmlPath, withStatic, "utf8");
+  console.log(`wrote ${target} (${withStatic.length} bytes; static SFX block inserted)`);
+}

@@ -42,18 +42,14 @@ const ELEMENT_COUNTS = {
   footer: 3,    // .w (signoff, source) + a
 };
 
-// Volumes cut by 70% (multiplied by 0.3) on 2026-08-28 — previous levels
-// (0.14–0.28) were sitting above the BGM bed (0.12) and suppressing the
-// voiceover (1.0). New range: 0.042–0.084, well below the SFX convention
-// ceiling of 0.35 (per AGENTS.md "Effects sit under narration").
-const SFX_PROFILES = {
-  write:           { src: "pencil-write-1.mp3",     volume: 0.054 },
-  draw:            { src: "pencil-draw-loop-1.mp3", volume: 0.042 },
-  highlight:       { src: "marker-swipe-1.mp3",     volume: 0.066 },
-  cardReveal:      { src: "paper-place-1.mp3",      volume: 0.066 },
-  appear:          { src: "paper-place-1.mp3",      volume: 0.054 },
-  importantReveal: { src: "chime-bright-1.mp3",     volume: 0.084 },
-};
+// SFX disabled on 2026-08-28 — all profiles emptied. The emit loop below
+// no-ops for every action because the profile lookup returns undefined,
+// so the static <audio> block will be empty (0 cues on tracks 12+).
+// The inject step in inject-static-sfx.mjs removes any prior static SFX
+// block on the next run, so this is a one-shot purge + future-proofing.
+// To restore, re-add the profile entries and re-run
+// node scripts/sound/inject-static-sfx.mjs projects/.../index.html.
+const SFX_PROFILES = {};
 
 const out = [];
 let sfxTrackCursor = 12;
@@ -101,18 +97,24 @@ for (const row of schedule) {
       action = "write";
     }
     if (!action) continue;
+    // Skip actions with no profile entry (SFX disabled by emptying
+    // SFX_PROFILES — the loop no-ops and produces an empty <audio> block).
+    const p = SFX_PROFILES[action];
+    if (!p) continue;
     // Throttle writes to 1 per 1.5s window — same as the inline script.
     if (action === "write" && t - bucket.write < 1.5) continue;
     if (action === "cardReveal" && bucket.cardReveal !== 0) continue;
     bucket[action] = t;
-    const p = SFX_PROFILES[action];
     out.push({ start: t, duration: 0.6, action, track: sfxTrackCursor++, ...p });
   }
 }
 
 // Add the final emphasis at the closing line, just like the inline script.
-const lastTime = schedule[schedule.length - 1].start + OUTRO_REVEAL;
-out.push({ start: lastTime - OUTRO_REVEAL + 30, duration: 1.0, action: "importantReveal", track: sfxTrackCursor++, ...SFX_PROFILES.importantReveal });
+// Skip if the profile is missing (SFX disabled — see SFX_PROFILES above).
+if (SFX_PROFILES.importantReveal) {
+  const lastTime = schedule[schedule.length - 1].start + OUTRO_REVEAL;
+  out.push({ start: lastTime - OUTRO_REVEAL + 30, duration: 1.0, action: "importantReveal", track: sfxTrackCursor++, ...SFX_PROFILES.importantReveal });
+}
 
 // Emit a static block of <audio> elements.
 const lines = out.map((o) => {

@@ -29,16 +29,33 @@
 // ── Tunable constants (the only knobs in the system) ─────────────
 export const FLASH_DURATION       = 1.0;   // pre-roll: finished page shown for this many seconds before reveal
 export const FLASH_FADE           = 0.2;   // pre-roll fade-out duration at the end of FLASH_DURATION
-export const HEADER_REVEAL        = 8.0;   // intro section reveal (intro VO length)
-export const CONCEPT_REVEAL       = 11.0;  // per-concept reveal (each concept's VO length)
-export const OUTRO_REVEAL         = 32.4;  // outro section reveal (outro VO length + tail)
-export const VO_DURATION          = 106.4; // voiceover.mp3 length — must match the actual MP3
+export const VO_DURATION          = 136.0; // voiceover.mp3 length — must match the actual MP3
+
+// Per-section reveal durations, measured from the Paul/VibeVoice VO via
+// faster-whisper (per the audio-visual-sync rule in MEMORY.md). The script
+// has 8 sections (header + 6 concepts + footer) and the durations below are
+// the actual spans between paragraph boundaries in the regenerated MP3.
+// Change the script and re-measure; the cascade below will re-emit the
+// matching schedule.
+export const HEADER_REVEAL        = 5.0;   // intro ("Six things to know about DCA…")
+export const C1_REVEAL            = 18.0;  // c1  ("DCA means investing the same dollars…")
+export const C2_REVEAL            = 19.0;  // c2  ("Vanguard and Schwab tested…")
+export const C3_REVEAL            = 21.0;  // c3  ("$10,000 invested day one…")
+export const C4_REVEAL            = 17.0;  // c4  ("Lump sum earns a full year…")
+export const C5_REVEAL            = 20.0;  // c5  ("So when does DCA actually help…")
+export const C6_REVEAL            = 24.0;  // c6  ("How to use DCA right…")
+export const OUTRO_REVEAL         = 12.0;  // outro ("That's dollar-cost averaging…")
+
+// Backwards-compat: the original schedule used a single CONCEPT_REVEAL for
+// all 6 concepts. We now allow per-concept overrides, so define it as a
+// fallback for the (unlikely) path that reads the old name.
+export const CONCEPT_REVEAL = C1_REVEAL;
 
 // Derived (do not edit by hand)
-export const TOTAL_REVEAL  = HEADER_REVEAL + 6 * CONCEPT_REVEAL + OUTRO_REVEAL;
+export const TOTAL_REVEAL  = HEADER_REVEAL + C1_REVEAL + C2_REVEAL + C3_REVEAL + C4_REVEAL + C5_REVEAL + C6_REVEAL + OUTRO_REVEAL;
 export const COMPOSITION_DURATION = FLASH_DURATION + TOTAL_REVEAL;
 
-// ── Schedule (7 reveal groups) ────────────────────────────────────
+// ── Schedule (8 reveal groups) ────────────────────────────────────
 // Each row is a section. `start` is the time on the master timeline
 // when the section's reveal tweens begin, measured from t=0 (the
 // beginning of the flash pre-roll). `dur` is how long the reveal
@@ -46,13 +63,13 @@ export const COMPOSITION_DURATION = FLASH_DURATION + TOTAL_REVEAL;
 // composition after the 6 concepts.
 export const schedule = [
   { key: 'header', start: 0,                                       dur: HEADER_REVEAL  },
-  { key: 'c1',     start: HEADER_REVEAL,                           dur: CONCEPT_REVEAL },
-  { key: 'c2',     start: HEADER_REVEAL + 1 * CONCEPT_REVEAL,      dur: CONCEPT_REVEAL },
-  { key: 'c3',     start: HEADER_REVEAL + 2 * CONCEPT_REVEAL,      dur: CONCEPT_REVEAL },
-  { key: 'c4',     start: HEADER_REVEAL + 3 * CONCEPT_REVEAL,      dur: CONCEPT_REVEAL },
-  { key: 'c5',     start: HEADER_REVEAL + 4 * CONCEPT_REVEAL,      dur: CONCEPT_REVEAL },
-  { key: 'c6',     start: HEADER_REVEAL + 5 * CONCEPT_REVEAL,      dur: CONCEPT_REVEAL },
-  { key: 'footer', start: HEADER_REVEAL + 6 * CONCEPT_REVEAL,      dur: OUTRO_REVEAL   },
+  { key: 'c1',     start: HEADER_REVEAL,                           dur: C1_REVEAL      },
+  { key: 'c2',     start: HEADER_REVEAL + C1_REVEAL,               dur: C2_REVEAL      },
+  { key: 'c3',     start: HEADER_REVEAL + C1_REVEAL + C2_REVEAL,   dur: C3_REVEAL      },
+  { key: 'c4',     start: HEADER_REVEAL + C1_REVEAL + C2_REVEAL + C3_REVEAL,                                dur: C4_REVEAL      },
+  { key: 'c5',     start: HEADER_REVEAL + C1_REVEAL + C2_REVEAL + C3_REVEAL + C4_REVEAL,                      dur: C5_REVEAL      },
+  { key: 'c6',     start: HEADER_REVEAL + C1_REVEAL + C2_REVEAL + C3_REVEAL + C4_REVEAL + C5_REVEAL,           dur: C6_REVEAL      },
+  { key: 'footer', start: HEADER_REVEAL + C1_REVEAL + C2_REVEAL + C3_REVEAL + C4_REVEAL + C5_REVEAL + C6_REVEAL, dur: OUTRO_REVEAL   },
 ].map(row => ({ ...row, start: row.start + FLASH_DURATION }));
 
 // ── What the inject step patches in the inline <script> ──────────
@@ -65,7 +82,10 @@ export const schedule = [
 // here without also adding the corresponding `var <NAME> = N;` line
 // in index.html, and verify the line is a numeric literal (not an
 // expression) so the patcher's regex matches.
-export const INLINE_PATCH_FIELDS = ['FLASH_DURATION', 'FLASH_FADE'];
+export const INLINE_PATCH_FIELDS = [
+  'FLASH_DURATION', 'FLASH_FADE', 'VO_DURATION',
+  'HEADER_REVEAL', 'C1_REVEAL', 'C2_REVEAL', 'C3_REVEAL', 'C4_REVEAL', 'C5_REVEAL', 'C6_REVEAL', 'OUTRO_REVEAL',
+];
 
 // ── What the inject step patches in the static HTML markup ────────
 // These are HTML attribute values that have to match the constants
@@ -88,6 +108,10 @@ export const MARKUP_PATCH_RULES = [
   // across lines so we anchor on the unique id and seek to
   // data-start on the same tag (no `>` in between).
   { anchor: 'id="vo"', attr: 'data-start', value: FLASH_DURATION },
+  // The voiceover's data-duration must match the actual MP3 (VO_DURATION).
+  // Same tag as the data-start above, so we anchor on id="vo" and seek
+  // forward to data-duration on the same tag.
+  { anchor: 'id="vo"', attr: 'data-duration', value: VO_DURATION },
   // The body, #root, and #page-bg all span the entire composition.
   { anchor: '<body data-duration="', value: COMPOSITION_DURATION },
   { anchor: 'id="root"', attr: 'data-duration', value: COMPOSITION_DURATION },
