@@ -18,31 +18,15 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { schedule, OUTRO_REVEAL } from "./timing.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO = resolve(__dirname, "..", "..");
 
-// Replicate the schedule generation from the composition's inline
-// script. Kept in sync by hand — if the schedule changes, both must
-// change together. (The build script approach replaces this in a later
-// pass.)
-
-const FLASH_DURATION  = 2.0;
-const HEADER_REVEAL   = 8.0;
-const CONCEPT_REVEAL  = 11.0;
-const OUTRO_REVEAL    = 32.4;
-const COMPOSITION     = 108.4;
-
-const schedule = [
-  { key: "header", start: FLASH_DURATION + 0.0,  dur: HEADER_REVEAL  },
-  { key: "c1",     start: FLASH_DURATION + 8.0,  dur: CONCEPT_REVEAL },
-  { key: "c2",     start: FLASH_DURATION + 19.0, dur: CONCEPT_REVEAL },
-  { key: "c3",     start: FLASH_DURATION + 30.0, dur: CONCEPT_REVEAL },
-  { key: "c4",     start: FLASH_DURATION + 41.0, dur: CONCEPT_REVEAL },
-  { key: "c5",     start: FLASH_DURATION + 52.0, dur: CONCEPT_REVEAL },
-  { key: "c6",     start: FLASH_DURATION + 63.0, dur: CONCEPT_REVEAL },
-  { key: "footer", start: FLASH_DURATION + 74.0, dur: OUTRO_REVEAL   },
-];
+// Schedule is imported from ./timing.mjs — single source of truth.
+// The inline <script> in the composition HTML reads the same module
+// via inject-static-sfx.mjs, so changing timing.mjs and re-running
+// the build updates every consumer.
 
 // Approximate element counts per group (matches the inline script's
 // elementsFor() selector). Used to compute per-element delay and
@@ -58,13 +42,17 @@ const ELEMENT_COUNTS = {
   footer: 3,    // .w (signoff, source) + a
 };
 
+// Volumes cut by 70% (multiplied by 0.3) on 2026-08-28 — previous levels
+// (0.14–0.28) were sitting above the BGM bed (0.12) and suppressing the
+// voiceover (1.0). New range: 0.042–0.084, well below the SFX convention
+// ceiling of 0.35 (per AGENTS.md "Effects sit under narration").
 const SFX_PROFILES = {
-  write:           { src: "pencil-write-1.mp3",     volume: 0.18 },
-  draw:            { src: "pencil-draw-loop-1.mp3", volume: 0.14 },
-  highlight:       { src: "marker-swipe-1.mp3",     volume: 0.22 },
-  cardReveal:      { src: "paper-place-1.mp3",      volume: 0.22 },
-  appear:          { src: "paper-place-1.mp3",      volume: 0.18 },
-  importantReveal: { src: "chime-bright-1.mp3",     volume: 0.28 },
+  write:           { src: "pencil-write-1.mp3",     volume: 0.054 },
+  draw:            { src: "pencil-draw-loop-1.mp3", volume: 0.042 },
+  highlight:       { src: "marker-swipe-1.mp3",     volume: 0.066 },
+  cardReveal:      { src: "paper-place-1.mp3",      volume: 0.066 },
+  appear:          { src: "paper-place-1.mp3",      volume: 0.054 },
+  importantReveal: { src: "chime-bright-1.mp3",     volume: 0.084 },
 };
 
 const out = [];
