@@ -1,0 +1,47 @@
+{
+  "_about": "Paper-explainer SFX library. Each effect is generated via audioldm-s-full-v2 and stored as MP3 (96 kbps, 2s, stereo). The engine in scripts/sound/ reads this file to build the runtime registry. The bundled 19-file media-use library (UI/motion-graphic) is NOT used here — paper-explainer needs paper textures, not UI clicks.",
+  "_generated": "2026-08-27",
+  "_model": "audioldm-s-full-v2",
+  "_duration_s": 2,
+  "_format": "mp3 (libmp3lame 96k stereo, ~25 KB each)",
+  "pencil-write-1": {
+    "file": "pencil-write-1.mp3",
+    "duration": 2.0,
+    "description": "Soft pencil writing on paper, gentle scratchy stroke. The primary 'write' texture — fires during text-reveal animations."
+  },
+  "pencil-write-loop-1": {
+    "file": "pencil-write-loop-1.mp3",
+    "duration": 2.0,
+    "description": "Continuous pencil writing loop, sustained scratchy texture. Loops under long writing animations."
+  },
+  "pencil-draw-loop-1": {
+    "file": "pencil-draw-loop-1.mp3",
+    "duration": 2.0,
+    "description": "Pencil drawing a smooth line, continuous stroke, even pressure. Background texture for SVG stroke-draw animations."
+  },
+  "marker-swipe-1": {
+    "file": "marker-swipe-1.mp3",
+    "duration": 2.0,
+    "description": "Highlighter marker swiping across paper, soft squeak. Fires on .hl (yellow highlight) and underline animations."
+  },
+  "paper-place-1": {
+    "file": "paper-place-1.mp3",
+    "duration": 2.0,
+    "description": "Soft paper being placed on a desk, light thump. Fires when comparison cards / boxes / callouts land."
+  },
+  "soft-whoosh-1": {
+    "file": "soft-whoosh-1.mp3",
+    "duration": 2.0,
+    "description": "Gentle air whoosh, paper sliding, subtle. Fires on section reveal and scene transitions."
+  },
+  "soft-impact-1": {
+    "file": "soft-impact-1.mp3",
+    "duration": 2.0,
+    "description": "Soft impact accent, paper on paper, satisfying but quiet. Fires on emphasized reveals and circled conclusions."
+  },
+  "chime-bright-1": {
+    "file": "chime-bright-1.mp3",
+    "duration": 2.0,
+    "description": "Clear bright bell chime, single high note, sparkling. Fires on important-value reveals and final conclusions."
+  }
+}

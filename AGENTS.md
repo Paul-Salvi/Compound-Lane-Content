@@ -113,6 +113,16 @@ Fix all errors before presenting the result. Warnings should be reviewed before 
 5. Sub-compositions use `data-composition-src="compositions/file.html"` to reference other HTML files
   6. Only deterministic logic — no `Date.now()`, no `Math.random()`, no network fetches
 
+## Sound system (first-class SFX)
+
+The repo has a first-class sound effects system, not one-off `.media/sfx/scribble-1.mp3` ad-hoc drops. The single source of truth for the paper-explainer SFX library is `templates/audio/sfx/manifest.json` (8 paper-style cues generated via `audioldm-s-full-v2`). The engine that schedules them against the GSAP timeline lives at `scripts/sound/` (registry, resolver, controller, session, profile, bundle). Per-project wiring: copy the manifest's MP3s into `projects/{slug}/XX/.media/sfx/`, drop the bundled `sound.js` next to `index.html`, and the engine schedules the cues against `window.__timelines[compositionId]`.
+
+- **Add a new effect** → add an entry to `templates/audio/sfx/manifest.json`, generate the MP3, and the runtime picks it up.
+- **Add a new style profile** → fork `scripts/sound/profile-paper-explainer.mjs`, add a new mapping.
+- **Override per-clip** → emit `data-sound="action:write,intensity:emphasis"` on the clip; the resolver respects the override (see spec §6 precedence).
+
+> **Authoring a static SFX block**: HyperFrames' headless renderer only captures `<audio>` elements that exist in the static HTML source. Use `node scripts/sound/inject-static-sfx.mjs projects/{slug}/04-Video-final/index.html` to splice the declarative SFX block (tracks 12+) right after the voiceover (track 11). See `scripts/sound/emit-static-sfx.mjs` for the schedule table.
+
 ## Video Production Guide
 
 **Full workflow reference:** See `GUIDE.md` at the repo root for the comprehensive production handbook (video: §3–§16, visual notes: §17).

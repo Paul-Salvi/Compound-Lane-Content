@@ -64,6 +64,22 @@
       padding: 22px var(--right) 28px var(--left)
     }
 
+    /* Flash preview: full finished page overlay shown at t=0–2.0s,
+       fades to 0 by t=2.4s. Sits on top of the notebook so the
+       viewer sees the completed page before the whiteboard reveal. */
+    .flash-preview {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1080px;
+      height: 1920px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      z-index: 10
+    }
+
     .paper-grain::before {
       content: "";
       position: absolute;
@@ -626,10 +642,10 @@
   </style>
 </head>
 
-<body data-duration="106.4">
-  <div data-hf-id="hf-eygg" id="root" data-composition-id="dca-final" data-start="0" data-width="1080" data-height="1920" data-duration="106.4">
-    <!-- Frozen notebook page: visible the full 106.4s. -->
-    <div data-hf-id="hf-eygg" id="page-bg" class="desk-shadow clip" data-start="0" data-duration="106.4" data-track-index="0">
+<body data-duration="108.4">
+  <div data-hf-id="hf-eygg" id="root" data-composition-id="dca-final" data-start="0" data-width="1080" data-height="1920" data-duration="108.4">
+    <!-- Frozen notebook page: visible the full 108.4s. -->
+    <div data-hf-id="hf-eygg" id="page-bg" class="desk-shadow clip" data-start="0" data-duration="108.4" data-track-index="0">
       <div data-hf-id="hf-ft45" class="notebook-page paper-grain">
       <div data-hf-id="hf-65tt" class="watermark" aria-hidden="true"><svg data-hf-id="hf-1vk3" viewBox="0 0 96 96">
           <path data-hf-id="hf-i1bj" d="M10 76 L32 76 L32 58 L50 58 L50 40 L68 40 L68 24 L86 24 L86 16" fill="none"
@@ -825,18 +841,93 @@
     </div>
     </div>
 
+    <!-- Flash preview: full finished page visible from 0s, fades out
+         from 2.0s to 2.4s. Lives on top of the whiteboard reveal so
+         the viewer sees the completed notebook briefly, then watches
+         it being written. Track 1 (page-bg is track 0). -->
+    <div data-hf-id="hf-flsh" id="flash-preview" class="flash-preview clip"
+         data-start="0" data-duration="2.4" data-track-index="1"
+         style="background-image: url('public/flash-preview.png')"></div>
+
     <!-- ─── AUDIO TRACKS ───────────────────────────────────────
          Single voiceover track (intro + 6 concepts + outro,
          generated as one combined file from tts/*.txt).
          No music bed. Audio is on a separate track from the page
          clip; framework manages audio visibility directly. -->
 
-    <!-- Voiceover (track 11) — single combined 82.78s mp3 -->
+    <!-- Voiceover (track 11) — single combined 106.4s mp3, delayed
+         by 2.0s so it begins as the flash fades out and the
+         whiteboard reveal starts. -->
     <audio data-hf-id="hf-vo1" id="vo"
-           data-start="0" data-duration="106.4" data-track-index="11" data-volume="1"
+           data-start="2.0" data-duration="106.4" data-track-index="11" data-volume="1"
            src=".media/voiceover/voiceover.mp3"></audio>
+
+    <!-- ─── SFX CUES (paper-explainer, declarative) ───────
+         Each <audio> is one cue from the runtime sound schedule.
+         Track 11 = voiceover; SFX use 12+ to avoid same-track overlap.
+         Tracks are unique per cue; the renderer concatenates them. -->
+    <audio id="sfx-draw-t12" data-hf-id="hf-sfx-12" data-start="2.000" data-duration="0.600" data-track-index="12" data-volume="0.14" src="./.media/sfx/pencil-draw-loop-1.mp3"></audio>
+    <audio id="sfx-highlight-t13" data-hf-id="hf-sfx-13" data-start="3.000" data-duration="0.600" data-track-index="13" data-volume="0.22" src="./.media/sfx/marker-swipe-1.mp3"></audio>
+    <audio id="sfx-write-t14" data-hf-id="hf-sfx-14" data-start="4.000" data-duration="0.600" data-track-index="14" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t15" data-hf-id="hf-sfx-15" data-start="6.000" data-duration="0.600" data-track-index="15" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t16" data-hf-id="hf-sfx-16" data-start="8.000" data-duration="0.600" data-track-index="16" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t17" data-hf-id="hf-sfx-17" data-start="10.000" data-duration="0.600" data-track-index="17" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t18" data-hf-id="hf-sfx-18" data-start="11.571" data-duration="0.600" data-track-index="18" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t19" data-hf-id="hf-sfx-19" data-start="13.143" data-duration="0.600" data-track-index="19" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t20" data-hf-id="hf-sfx-20" data-start="14.714" data-duration="0.600" data-track-index="20" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-cardReveal-t21" data-hf-id="hf-sfx-21" data-start="16.286" data-duration="0.600" data-track-index="21" data-volume="0.22" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-write-t22" data-hf-id="hf-sfx-22" data-start="17.857" data-duration="0.600" data-track-index="22" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t23" data-hf-id="hf-sfx-23" data-start="19.429" data-duration="0.600" data-track-index="23" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t24" data-hf-id="hf-sfx-24" data-start="21.000" data-duration="0.600" data-track-index="24" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t25" data-hf-id="hf-sfx-25" data-start="22.833" data-duration="0.600" data-track-index="25" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t26" data-hf-id="hf-sfx-26" data-start="24.667" data-duration="0.600" data-track-index="26" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-draw-t27" data-hf-id="hf-sfx-27" data-start="25.583" data-duration="0.600" data-track-index="27" data-volume="0.14" src="./.media/sfx/pencil-draw-loop-1.mp3"></audio>
+    <audio id="sfx-appear-t28" data-hf-id="hf-sfx-28" data-start="26.500" data-duration="0.600" data-track-index="28" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t29" data-hf-id="hf-sfx-29" data-start="27.417" data-duration="0.600" data-track-index="29" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t30" data-hf-id="hf-sfx-30" data-start="28.333" data-duration="0.600" data-track-index="30" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t31" data-hf-id="hf-sfx-31" data-start="29.250" data-duration="0.600" data-track-index="31" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t32" data-hf-id="hf-sfx-32" data-start="30.167" data-duration="0.600" data-track-index="32" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t33" data-hf-id="hf-sfx-33" data-start="31.083" data-duration="0.600" data-track-index="33" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-write-t34" data-hf-id="hf-sfx-34" data-start="32.000" data-duration="0.600" data-track-index="34" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t35" data-hf-id="hf-sfx-35" data-start="33.571" data-duration="0.600" data-track-index="35" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t36" data-hf-id="hf-sfx-36" data-start="35.143" data-duration="0.600" data-track-index="36" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-draw-t37" data-hf-id="hf-sfx-37" data-start="35.929" data-duration="0.600" data-track-index="37" data-volume="0.14" src="./.media/sfx/pencil-draw-loop-1.mp3"></audio>
+    <audio id="sfx-appear-t38" data-hf-id="hf-sfx-38" data-start="36.714" data-duration="0.600" data-track-index="38" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t39" data-hf-id="hf-sfx-39" data-start="37.500" data-duration="0.600" data-track-index="39" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t40" data-hf-id="hf-sfx-40" data-start="38.286" data-duration="0.600" data-track-index="40" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t41" data-hf-id="hf-sfx-41" data-start="39.071" data-duration="0.600" data-track-index="41" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t42" data-hf-id="hf-sfx-42" data-start="39.857" data-duration="0.600" data-track-index="42" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t43" data-hf-id="hf-sfx-43" data-start="40.643" data-duration="0.600" data-track-index="43" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t44" data-hf-id="hf-sfx-44" data-start="41.429" data-duration="0.600" data-track-index="44" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-appear-t45" data-hf-id="hf-sfx-45" data-start="42.214" data-duration="0.600" data-track-index="45" data-volume="0.18" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-write-t46" data-hf-id="hf-sfx-46" data-start="43.000" data-duration="0.600" data-track-index="46" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t47" data-hf-id="hf-sfx-47" data-start="45.444" data-duration="0.600" data-track-index="47" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t48" data-hf-id="hf-sfx-48" data-start="47.889" data-duration="0.600" data-track-index="48" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-draw-t49" data-hf-id="hf-sfx-49" data-start="49.111" data-duration="0.600" data-track-index="49" data-volume="0.14" src="./.media/sfx/pencil-draw-loop-1.mp3"></audio>
+    <audio id="sfx-draw-t50" data-hf-id="hf-sfx-50" data-start="50.333" data-duration="0.600" data-track-index="50" data-volume="0.14" src="./.media/sfx/pencil-draw-loop-1.mp3"></audio>
+    <audio id="sfx-draw-t51" data-hf-id="hf-sfx-51" data-start="51.556" data-duration="0.600" data-track-index="51" data-volume="0.14" src="./.media/sfx/pencil-draw-loop-1.mp3"></audio>
+    <audio id="sfx-draw-t52" data-hf-id="hf-sfx-52" data-start="52.778" data-duration="0.600" data-track-index="52" data-volume="0.14" src="./.media/sfx/pencil-draw-loop-1.mp3"></audio>
+    <audio id="sfx-write-t53" data-hf-id="hf-sfx-53" data-start="54.000" data-duration="0.600" data-track-index="53" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t54" data-hf-id="hf-sfx-54" data-start="55.571" data-duration="0.600" data-track-index="54" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t55" data-hf-id="hf-sfx-55" data-start="57.143" data-duration="0.600" data-track-index="55" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t56" data-hf-id="hf-sfx-56" data-start="58.714" data-duration="0.600" data-track-index="56" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-cardReveal-t57" data-hf-id="hf-sfx-57" data-start="60.286" data-duration="0.600" data-track-index="57" data-volume="0.22" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-write-t58" data-hf-id="hf-sfx-58" data-start="61.857" data-duration="0.600" data-track-index="58" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t59" data-hf-id="hf-sfx-59" data-start="63.429" data-duration="0.600" data-track-index="59" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t60" data-hf-id="hf-sfx-60" data-start="65.000" data-duration="0.600" data-track-index="60" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t61" data-hf-id="hf-sfx-61" data-start="67.750" data-duration="0.600" data-track-index="61" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t62" data-hf-id="hf-sfx-62" data-start="70.500" data-duration="0.600" data-track-index="62" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-cardReveal-t63" data-hf-id="hf-sfx-63" data-start="73.250" data-duration="0.600" data-track-index="63" data-volume="0.22" src="./.media/sfx/paper-place-1.mp3"></audio>
+    <audio id="sfx-write-t64" data-hf-id="hf-sfx-64" data-start="76.000" data-duration="0.600" data-track-index="64" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t65" data-hf-id="hf-sfx-65" data-start="86.800" data-duration="0.600" data-track-index="65" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-write-t66" data-hf-id="hf-sfx-66" data-start="97.600" data-duration="0.600" data-track-index="66" data-volume="0.18" src="./.media/sfx/pencil-write-1.mp3"></audio>
+    <audio id="sfx-importantReveal-t67" data-hf-id="hf-sfx-67" data-start="106.000" data-duration="1.000" data-track-index="67" data-volume="0.28" src="./.media/sfx/chime-bright-1.mp3"></audio>
+  
+
+  
   </div>
 
+  <script src="sound.js"></script>
   <script>
     (function () {
       var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -908,22 +999,26 @@
         footer: Array.from(document.querySelectorAll('footer .w, footer a'))
       };
 
-      // Schedule: voiceover is 106.4s. Each concept reveal lasts 11s, header 8s,
-      // footer 32.4s — the long outro holds the sign-off line + source row
-      // while the voiceover speaks its two engagement CTAs (not drawn on frame).
-      var COMPOSITION_DURATION = 106.4;
+      // Schedule: voiceover is 106.4s, but the composition is 108.4s
+      // because of a 2.0s flash-preview pre-roll that shows the full
+      // finished page before the whiteboard reveal begins. Each concept
+      // reveal still lasts 11s, header 8s, footer 32.4s — they're just
+      // shifted by 2.0s so the voiceover (data-start=2.0) lands on cue.
+      var COMPOSITION_DURATION = 108.4;
+      var FLASH_DURATION = 2.0;  // flash visible 0–2.0s
+      var FLASH_FADE     = 0.4;  // flash fades 2.0–2.4s
       var HEADER_REVEAL  = 8.0;
       var CONCEPT_REVEAL = 11.0;
-      var OUTRO_REVEAL   = 32.4; // 106.4 - 74 = 32.4
+      var OUTRO_REVEAL   = 32.4; // 108.4 - 2.0 - 74 = 32.4
       var schedule = [
-        { key: 'header', start:  0.0, dur: HEADER_REVEAL  },
-        { key: 'c1',     start:  8.0, dur: CONCEPT_REVEAL },
-        { key: 'c2',     start: 19.0, dur: CONCEPT_REVEAL },
-        { key: 'c3',     start: 30.0, dur: CONCEPT_REVEAL },
-        { key: 'c4',     start: 41.0, dur: CONCEPT_REVEAL },
-        { key: 'c5',     start: 52.0, dur: CONCEPT_REVEAL },
-        { key: 'c6',     start: 63.0, dur: CONCEPT_REVEAL },
-        { key: 'footer', start: 74.0, dur: OUTRO_REVEAL   }
+        { key: 'header', start:  FLASH_DURATION + 0.0,  dur: HEADER_REVEAL  },
+        { key: 'c1',     start:  FLASH_DURATION + 8.0,  dur: CONCEPT_REVEAL },
+        { key: 'c2',     start:  FLASH_DURATION + 19.0, dur: CONCEPT_REVEAL },
+        { key: 'c3',     start:  FLASH_DURATION + 30.0, dur: CONCEPT_REVEAL },
+        { key: 'c4',     start:  FLASH_DURATION + 41.0, dur: CONCEPT_REVEAL },
+        { key: 'c5',     start:  FLASH_DURATION + 52.0, dur: CONCEPT_REVEAL },
+        { key: 'c6',     start:  FLASH_DURATION + 63.0, dur: CONCEPT_REVEAL },
+        { key: 'footer', start:  FLASH_DURATION + 74.0, dur: OUTRO_REVEAL   }
       ];
 
       var page = document.querySelector('.notebook-page');
@@ -936,9 +1031,32 @@
       window.__timelines = window.__timelines || {};
       var tl = gsap.timeline({ paused: true });
 
+      // 1a. Fade the flash preview out at FLASH_DURATION. Lives at the
+      //     very start of the timeline so the rest of the buildGroup
+      //     tweens (which start at FLASH_DURATION) layer on top of
+      //     a fading-out preview.
+      var flashEl = document.querySelector('.flash-preview');
+      if (flashEl) {
+        tl.to(flashEl, { opacity: 0, duration: FLASH_FADE, ease: 'power2.out' }, FLASH_DURATION);
+      }
+
       var pageRect = page.getBoundingClientRect();
       var firstPen = true;
       var lastElementTime = 0;
+
+      // ── SOUND SCHEDULE ─────────────────────────────────────────────
+      // The sound system (sound.js) reads window.__soundSchedule to know
+      // which animation actions to fire against which timeline range.
+      // Each row is { start, duration, action, seed }. The action is one
+      // of the keys in scripts/sound/profile-paper-explainer.mjs (e.g.
+      // "write", "draw", "cardReveal", "highlight", "drawCircle", etc.).
+      //
+      // We deliberately keep the sound schedule coarse-grained (one row
+      // per visual element-type) — per the spec §8, throttling prevents
+      // every individual letter from making noise, so we pick the
+      // dominant action per element and let the resolver expand
+      // compound actions (e.g. "draw" → drawStart + drawLoop + drawEnd).
+      window.__soundSchedule = [];
 
       // 2. Build the timeline per-group: each section reveals in turn, paced
       //    so per-element delay = groupDuration / elementCount. The voiceover
@@ -995,10 +1113,68 @@
 
       schedule.forEach(function (row) {
         buildGroup(groups[row.key], row.start, row.dur);
+        // Build a parallel sound schedule for the same group. One sound
+        // event per element-type, throttled to a max of one "write" per
+        // ~1.5s window and one "cardReveal" per concept.
+        var elements = groups[row.key];
+        var dur = row.dur;
+        var per = elements.length ? dur / elements.length : dur;
+        var soundBucket = { write: 0, draw: 0, cardReveal: 0, highlight: 0 };
+        elements.forEach(function (el, i) {
+          var t = row.start + i * per;
+          var action = null;
+          if (el.classList && el.classList.contains('w')) {
+            // Throttle write: skip if a recent write fired in this group.
+            if (t - soundBucket.write < 1.5) return;
+            action = 'write';
+            soundBucket.write = t;
+          } else if (el.matches && el.matches('path')) {
+            // Underline or ledger rule — single draw per element.
+            action = 'draw';
+          } else if (el.classList && el.classList.contains('hl')) {
+            action = 'highlight';
+          } else if (el.classList && (
+            el.classList.contains('compare-card') ||
+            el.classList.contains('warning-box') ||
+            el.classList.contains('flow-node')
+          )) {
+            // One placement per concept (first occurrence only).
+            if (soundBucket.cardReveal === 0) {
+              action = 'cardReveal';
+              soundBucket.cardReveal = t;
+            } else {
+              return;
+            }
+          } else if (el.classList && el.classList.contains('ledger-row')) {
+            // Soft pop for ledger rows.
+            action = 'appear';
+          } else {
+            return;
+          }
+          window.__soundSchedule.push({
+            start: t,
+            duration: 0.6,           // short clip; the resolver will loop
+            action: action,
+            seed: i,                 // deterministic playback-rate jitter
+          });
+        });
       });
+
+      
 
       // Pen fades out 0.25s before the composition ends.
       tl.to(pen, { opacity: 0, duration: 0.25 }, COMPOSITION_DURATION - 0.25);
+
+      // Final emphasis: gentle chime on the closing line ("That's dollar-cost averaging.")
+      var finalText = document.querySelector('.cta-signoff');
+      if (finalText) {
+        window.__soundSchedule.push({
+          start: lastElementTime + 0.3,
+          duration: 1.0,
+          action: 'importantReveal',
+          seed: 99,
+        });
+      }
 
       // 3. Register the paused timeline on the keyed timeline registry.
       window.__timelines["dca-final"] = tl;
