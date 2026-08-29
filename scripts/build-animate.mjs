@@ -23,6 +23,7 @@
 import { readFile, writeFile, mkdir, copyFile, readdir } from "node:fs/promises";
 import { join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { htmlEscape, deriveH1, calloutColorModifiers } from "./lib/build-helpers.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO = resolve(__dirname, "..");
@@ -42,14 +43,6 @@ const SFX_VOLUME = 0.35;
 // ─── helpers ─────────────────────────────────────────────────────────────────
 
 function fmt1(n) { return n.toFixed(1); }
-
-function htmlEscape(s) {
-  return String(s ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
 
 // Per-element stagger offsets within a single section.
 // 0.00 — num-blob pop
@@ -76,38 +69,6 @@ const SECTION_HEIGHTS = {
 };
 const SECTION_GAP = 15;
 const START_TOP = 210;
-
-// Reuse the same Heuristic from scripts/stage2-render.ps1 Get-H1
-function deriveH1(slug, json) {
-  const title = String(json.title ?? slug);
-  const cleaned = title.replace(/\s+6\s+THINGS\s+TO\s+KNOW\s*$/i, "");
-  if (cleaned.match(/^(.+?):\s*(.+)$/)) {
-    const left = cleaned.replace(/^(.+?):\s*.+$/, "$1").toLowerCase();
-    const right = cleaned.replace(/^.+?:\s*(.+)$/, "$1").toLowerCase();
-    return `${left}<br><span class="hl">${htmlEscape(right)}</span>`;
-  }
-  const parts = cleaned.split(/\s+/);
-  if (parts.length >= 4) {
-    const half = Math.floor(parts.length / 2);
-    const left = parts.slice(0, half).join(" ").toLowerCase();
-    const right = parts.slice(half).join(" ").toLowerCase();
-    return `${htmlEscape(left)}<br><span class="hl">${htmlEscape(right)}</span>`;
-  }
-  return htmlEscape(cleaned.toLowerCase());
-}
-
-// Heuristic from stage2-render.ps1 lines 28-40 — for callouts, color the num-blob + h2
-// maroon for warnings, green for "tip"-style headings, navy default.
-function calloutColorModifiers(heading) {
-  if (!heading) return { blobColor: "", h2Class: "" };
-  if (/TIP|START HERE|ONE-LINE|FORMULA|THE BOTTOM LINE/i.test(heading)) {
-    return { blobColor: ' style="color:var(--ink-green)"', h2Class: "c-green" };
-  }
-  if (/WATCH|WARNING|SOURCE|DON'T FORGET|REMEMBER|FYI|RMD RULE|60-DAY|ALWAYS|DEFAULT ANSWER|REALITY CHECK/i.test(heading)) {
-    return { blobColor: ' style="color:var(--ink-maroon)"', h2Class: "c-maroon" };
-  }
-  return { blobColor: "", h2Class: "" };
-}
 
 // Build the per-section HTML — the same four-case switch as stage2-render.ps1 Build-Section,
 // but emitting a clip-attribute section with data-start/data-duration/data-track-index and

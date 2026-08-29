@@ -1,29 +1,40 @@
-Six things to know about DCA — dollar-cost averaging.
+# intro
+# TODO: rewrite for TTS (numbers-as-words, punctuation for prosody) — see AUDIO_STYLE.md
+Six things to know about dollar-cost averaging.
 
-DCA means investing the same dollars on a schedule — not all at once.
-Like eight thirty three each month, for twelve months, to deploy ten thousand dollars.
-You buy fewer shares when prices are high. More when they're low.
+# concept1
+# TODO: rewrite for TTS — see AUDIO_STYLE.md
+DCA means investing the same dollars on a schedule — like $833 each month for 12 months to deploy $10,000 — not all at once. You buy fewer shares when prices are high and more when low, smoothing your average cost.
 
-Vanguard and Schwab tested rolling twelve-month windows going back to the nineteen twenties.
-Lump sum beat twelve-month DCA about sixty eight percent of the time.
-The reason is simple — markets rise more often than they fall.
+# concept2
+# TODO: rewrite for TTS — see AUDIO_STYLE.md
+Vanguard and Schwab tested rolling 12-month periods from the 1920s onward. Lump sum beat 12-month DCA about two-thirds of the time — about 68% — because markets rise more often than they fall.
 
-Ten thousand dollars invested day one grows to about ten thousand seven hundred after twelve months.
-DCA at end-of-month — the same ten thousand split into twelve checks — grows to about ten thousand three hundred twenty seven.
-That's cash drag, not a fee.
+# concept3
+# TODO: rewrite for TTS — see AUDIO_STYLE.md
+At a steady 7% for illustration, $10,000 invested day one grows to ~$10,700 after 12 months. DCA at end-of-month grows to ~$10,327. The ~$373 gap is not a fee — it is cash drag from money waiting in cash.
 
-Lump sum earns a full year on the whole ten thousand.
-DCA at end-of-month earns about half a year on average.
-Your first check earns roughly eleven months. Your last one — almost zero.
+# concept4
+# TODO: rewrite for TTS — see AUDIO_STYLE.md
+Lump sum earns a full year on the whole $10,000. DCA at end-of-month earns about half a year on average — the first $833 earns ~11 months, the last ~0. Later blocks earn less time in the market.
 
-So when does DCA actually help? When you'd otherwise sit in cash from fear — or when markets drop right after.
-At least you didn't deploy everything before the fall.
-When does it hurt? Whenever markets rise while your cash waits. That's most years.
+# concept5
+# TODO: rewrite for TTS — see AUDIO_STYLE.md
+DCA helps when you would otherwise stay in cash from fear, or when markets drop right after — less was invested before the fall. It hurts whenever markets rise while cash waits; that ~10% nominal return is the persistent cost.
 
-How to use DCA right. Automate your paycheck investing on payday — there's no drag, because the money was never in cash.
-For a windfall, invest promptly — or DCA a short window. Three to six months, max.
-Park any waiting cash in a high-yield account. And check your target, not the entry price.
+# concept6
+# TODO: rewrite for TTS — see AUDIO_STYLE.md
+Automate paycheck investing on payday — no drag. For windfalls, pick a short window (immediate to 6 months) and stick to it. Park waiting cash in yield and check your target, not the entry price.
 
+# outro
+# TODO: rewrite for TTS — see AUDIO_STYLE.md
 That's dollar-cost averaging.
-Did you know about DCA? Let me know in the comments.
+Did you know about this? Let me know in the comments.
 And if this was useful, hit save so you can come back to it.
+
+# ─────────────────────────────────────────────────────────────────────
+# TTS-ready script for VibeVoice/Paul. The build-video.mjs script
+# generated this from projects/{slug}/01-content/{slug}.json. The body
+# text is the JSON's body verbatim — apply the AUDIO_STYLE.md rules
+# (numbers-as-words, punctuation for prosody) before running regen.sh.
+# Worked example: projects/dollar-cost-averaging/04-video/tts_script.txt

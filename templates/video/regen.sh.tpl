@@ -18,7 +18,7 @@
 #                             back to the legacy `npx hyperframes tts` path
 #                             using the old TTS_VOICE / TTS_SPEED env vars)
 #
-# Project: dollar-cost-averaging (04-video composition)
+# Project: {{SLUG}} (04-video composition)
 
 set -euo pipefail
 

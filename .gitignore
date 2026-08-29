@@ -12,6 +12,11 @@ renders/
 .waveform-cache/
 capture/
 
+# --- Auto-time sidecar (regenerable via scripts/measure-vo-timing.mjs) ---
+# Cached faster-whisper output. The MP3 is tracked (it's the source of
+# truth); the JSON is the ASR transcript, regenerable on every re-run.
+projects/*/04-video/.media/voiceover/voiceover.json
+
 # --- OS ---
 .DS_Store
 Thumbs.db

@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1080, initial-scale=1920">
-  <title>DOLLAR-COST AVERAGING: DOES IT WORK? - Compound Lane</title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <title>{{PAGE_TITLE}}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&display=swap"
+    rel="stylesheet">
   <!-- GSAP for deterministic timeline rendering in HyperFrames -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <style>
@@ -641,48 +642,53 @@
   </style>
 </head>
 
-<body class="clip" data-duration="135.8">
-  <div data-hf-id="hf-u5px" id="root" data-composition-id="dollar-cost-averaging-video" data-start="0" data-width="1080" data-height="1920" data-duration="135.8">
+<body class="clip" data-duration="{{COMPOSITION_DURATION}}">
+  <div id="root" data-composition-id="{{COMPOSITION_ID}}" data-start="0" data-width="1080" data-height="1920" data-duration="{{COMPOSITION_DURATION}}">
     <!-- Frozen notebook page: visible the full composition duration. -->
-    <div data-hf-id="hf-7c5s" id="page-bg" class="desk-shadow clip" data-start="0" data-duration="135.8" data-track-index="0">
-      <div data-hf-id="hf-ft45" class="notebook-page paper-grain">
-      <div data-hf-id="hf-65tt" class="watermark" aria-hidden="true"><svg data-hf-id="hf-1vk3" viewBox="0 0 96 96">
-          <path data-hf-id="hf-i1bj" d="M10 76 L32 76 L32 58 L50 58 L50 40 L68 40 L68 24 L86 24 L86 16" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+    <div id="page-bg" class="desk-shadow clip" data-start="0" data-duration="{{COMPOSITION_DURATION}}" data-track-index="0">
+      <div class="notebook-page paper-grain">
+      <div class="watermark" aria-hidden="true"><svg viewBox="0 0 96 96">
+          <path d="M10 76 L32 76 L32 58 L50 58 L50 40 L68 40 L68 24 L86 24 L86 16" fill="none"
+            stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
         </svg></div>
-      <svg data-hf-id="hf-30au" aria-hidden="true" width="0" height="0" style="position:absolute">
-        <defs data-hf-id="hf-mh0t">
-          <filter data-hf-id="hf-6xxj" id="rough-a" x="-6%" y="-10%" width="112%" height="120%">
-            <feturbulence data-hf-id="hf-6wf1" type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="4" result="n" />
-            <fedisplacementmap data-hf-id="hf-7bw3" in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G" />
+      <svg aria-hidden="true" width="0" height="0" style="position:absolute">
+        <defs>
+          <filter id="rough-a" x="-6%" y="-10%" width="112%" height="120%">
+            <feturbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="4"
+              result="n" />
+            <fedisplacementmap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R"
+              yChannelSelector="G" />
           </filter>
-          <filter data-hf-id="hf-cio4" id="rough-b" x="-6%" y="-10%" width="112%" height="120%">
-            <feturbulence data-hf-id="hf-dbug" type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="17" result="n" />
-            <fedisplacementmap data-hf-id="hf-xbgh" in="SourceGraphic" in2="n" scale="1.15" xChannelSelector="R" yChannelSelector="G" />
+          <filter id="rough-b" x="-6%" y="-10%" width="112%" height="120%">
+            <feturbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="17"
+              result="n" />
+            <fedisplacementmap in="SourceGraphic" in2="n" scale="1.15" xChannelSelector="R"
+              yChannelSelector="G" />
           </filter>
-          <filter data-hf-id="hf-4byt" id="rough-c" x="-6%" y="-10%" width="112%" height="120%">
-            <feturbulence data-hf-id="hf-18w0" type="fractalNoise" baseFrequency="0.016" numOctaves="4" seed="29" result="n" />
-            <fedisplacementmap data-hf-id="hf-em5c" in="SourceGraphic" in2="n" scale="2" xChannelSelector="R" yChannelSelector="G" />
+          <filter id="rough-c" x="-6%" y="-10%" width="112%" height="120%">
+            <feturbulence type="fractalNoise" baseFrequency="0.016" numOctaves="4" seed="29"
+              result="n" />
+            <fedisplacementmap in="SourceGraphic" in2="n" scale="2" xChannelSelector="R"
+              yChannelSelector="G" />
           </filter>
         </defs>
       </svg>
-      <header data-hf-id="hf-hn90" class="ink">
-        <div data-hf-id="hf-l0r1" class="brand"><b data-hf-id="hf-wlws">@compoundlane</b> · notes</div><span data-hf-id="hf-tf4u" class="kicker rough2">dollar-cost averaging: 6 things to know<svg data-hf-id="hf-2myp" viewBox="0 0 300 10" preserveAspectRatio="none">
-            <path data-hf-id="hf-4cqw" d="M2,6 Q40,2 80,6 T160,5 T240,7 T298,4" fill="none" stroke-width="2" stroke-linecap="round" />
+      <header class="ink">
+        <div class="brand"><b>@compoundlane</b> · notes</div><span
+          class="kicker rough2">{{KICKER}}<svg
+            viewBox="0 0 300 10" preserveAspectRatio="none">
+            <path d="M2,6 Q40,2 80,6 T160,5 T240,7 T298,4" fill="none" stroke-width="2"
+              stroke-linecap="round" />
           </svg></span>
-        <h1 data-hf-id="hf-goey">dollar-cost averaging<br data-hf-id="hf-x5px"><span data-hf-id="hf-8ze3" class="hl">does it work?</span></h1>
+        <h1>{{H1}}</h1>
       </header>
-      <main data-hf-id="hf-1xgg">
-        <section data-hf-id="hf-8070-012" class="ink"><div data-hf-id="hf-8070-000" class="section-head"><span data-hf-id="hf-8070-001" class="num-blob b1 rough">1</span><h2 data-hf-id="hf-8070-002">What DCA Means</h2></div><p data-hf-id="hf-8070-003" class="lede">DCA means investing the same dollars on a schedule — like $833 each month for 12 months to deploy $10,000 — not all at once. You buy fewer shares when prices are high and more when low, smoothing your average cost.</p><div data-hf-id="hf-8070-00a" class="compare-row"><div data-hf-id="hf-8070-00b" class="compare-card direct rough2"><h4 data-hf-id="hf-8070-00c">SPREADING CASH</h4><ul data-hf-id="hf-8070-00d"><li data-hf-id="hf-8070-004">You have $10k today</li><li data-hf-id="hf-8070-005">$833/mo for 12 months</li><li data-hf-id="hf-8070-006">Cash sits out → cash drag</li></ul></div><div data-hf-id="hf-8070-00e" class="vs-mark">vs</div><div data-hf-id="hf-8070-00f" class="compare-card indirect rough2"><h4 data-hf-id="hf-8070-010">INVESTING FROM INCOME</h4><ul data-hf-id="hf-8070-011"><li data-hf-id="hf-8070-007">You invest each paycheck</li><li data-hf-id="hf-8070-008">No cash held back</li><li data-hf-id="hf-8070-009">No drag — ideal DCA</li></ul></div></div></section>
-        <section data-hf-id="hf-8070-02a" class="ink"><div data-hf-id="hf-8070-013" class="section-head"><span data-hf-id="hf-8070-014" class="num-blob b2 rough">2</span><h2 data-hf-id="hf-8070-015">The 68% Rule</h2></div><p data-hf-id="hf-8070-016" class="lede">Vanguard and Schwab tested rolling 12-month periods from the 1920s onward. Lump sum beat 12-month DCA about two-thirds of the time — about 68% — because markets rise more often than they fall.</p><div data-hf-id="hf-8070-026" class="ledger"><div data-hf-id="hf-8070-027" class="ledger-head"><span data-hf-id="hf-8070-017">Study</span><span data-hf-id="hf-8070-018">Finding</span><span data-hf-id="hf-8070-019">Why it wins</span></div><svg data-hf-id="hf-8070-028" class="rule-line rough2" viewBox="0 0 916 8" preserveAspectRatio="none"><path data-hf-id="hf-8070-029" d="M0,4 Q220,1 450,4 T916,3" fill="none" stroke="var(--ink-navy)" stroke-width="2" /></svg><div data-hf-id="hf-8070-01d" class="ledger-row"><b data-hf-id="hf-8070-01a">Vanguard</b><span data-hf-id="hf-8070-01b">~2/3 win</span><span data-hf-id="hf-8070-01c">Stocks rise more</span></div><div data-hf-id="hf-8070-021" class="ledger-row"><b data-hf-id="hf-8070-01e">Schwab</b><span data-hf-id="hf-8070-01f">~68% win</span><span data-hf-id="hf-8070-020">Time in &gt; timing</span></div><div data-hf-id="hf-8070-025" class="ledger-row"><b data-hf-id="hf-8070-022">Edge</b><span data-hf-id="hf-8070-023">~32% to DCA</span><span data-hf-id="hf-8070-024">When markets fall</span></div></div></section>
-        <section data-hf-id="hf-8070-046" class="ink"><div data-hf-id="hf-8070-02b" class="section-head"><span data-hf-id="hf-8070-02c" class="num-blob b3 rough">3</span><h2 data-hf-id="hf-8070-02d">$10,000 Head-to-Head</h2></div><p data-hf-id="hf-8070-02e" class="lede">At a steady 7% for illustration, $10,000 invested day one grows to ~$10,700 after 12 months. DCA at end-of-month grows to ~$10,327. The ~$373 gap is not a fee — it is cash drag from money waiting in cash.</p><div data-hf-id="hf-8070-042" class="ledger four-col"><div data-hf-id="hf-8070-043" class="ledger-head"><span data-hf-id="hf-8070-02f">Strategy</span><span data-hf-id="hf-8070-030">Avg invested</span><span data-hf-id="hf-8070-031">Value at 12 mo</span><span data-hf-id="hf-8070-032">Gap</span></div><svg data-hf-id="hf-8070-044" class="rule-line rough2" viewBox="0 0 916 8" preserveAspectRatio="none"><path data-hf-id="hf-8070-045" d="M0,4 Q220,1 450,4 T916,3" fill="none" stroke="var(--ink-navy)" stroke-width="2" /></svg><div data-hf-id="hf-8070-037" class="ledger-row"><b data-hf-id="hf-8070-033">Lump sum now</b><span data-hf-id="hf-8070-034">$10,000</span><span data-hf-id="hf-8070-035">~$10,700</span><span data-hf-id="hf-8070-036">—</span></div><div data-hf-id="hf-8070-03c" class="ledger-row"><b data-hf-id="hf-8070-038">DCA 12 mo (end)</b><span data-hf-id="hf-8070-039">~$4,583</span><span data-hf-id="hf-8070-03a">~$10,327</span><span data-hf-id="hf-8070-03b">~$373 drag</span></div><div data-hf-id="hf-8070-041" class="ledger-row"><b data-hf-id="hf-8070-03d">DCA 12 mo (start)</b><span data-hf-id="hf-8070-03e">~$5,417</span><span data-hf-id="hf-8070-03f">~$10,387</span><span data-hf-id="hf-8070-040">~$313 drag</span></div></div></section>
-        <section data-hf-id="hf-8070-056" class="ink"><div data-hf-id="hf-8070-047" class="section-head"><span data-hf-id="hf-8070-048" class="num-blob b4 rough">4</span><h2 data-hf-id="hf-8070-049">See The Cash Drag</h2></div><p data-hf-id="hf-8070-04a" class="lede">Lump sum earns a full year on the whole $10,000. DCA at end-of-month earns about half a year on average — the first $833 earns ~11 months, the last ~0. Later blocks earn less time in the market.</p><div data-hf-id="hf-8070-04b" class="flow-row"><div data-hf-id="hf-8070-04c" class="flow-node n1 rough2">$10k day 1</div><svg data-hf-id="hf-8070-04d" class="flow-arrow rough2" width="48" height="30" viewBox="0 0 48 30"><path data-hf-id="hf-8070-04e" d="M0,15 Q13,20 24,12 Q34,17 41,14" fill="none" stroke-width="3" stroke-linecap="round" /><polygon data-hf-id="hf-8070-04f" points="39,8 48,15 39,22" /></svg><div data-hf-id="hf-8070-050" class="flow-node n2 rough2">Fully invested 12 mo</div><div data-hf-id="hf-8070-051" class="flow-label">DCA: ~$4,583 avg<br data-hf-id="hf-rsrt">gap ~$373</div><svg data-hf-id="hf-8070-052" class="flow-arrow rough2" width="48" height="30" viewBox="0 0 48 30"><path data-hf-id="hf-8070-053" d="M0,15 Q13,10 24,17 Q34,11 41,15" fill="none" stroke-width="3" stroke-linecap="round" /><polygon data-hf-id="hf-8070-054" points="39,8 48,15 39,22" /></svg><div data-hf-id="hf-8070-055" class="flow-node n3 rough2">~$10,700</div></div></section>
-        <section data-hf-id="hf-8070-069" class="ink"><div data-hf-id="hf-8070-057" class="section-head"><span data-hf-id="hf-8070-058" class="num-blob b5 rough">5</span><h2 data-hf-id="hf-8070-059">When DCA Helps vs Hurts</h2></div><p data-hf-id="hf-8070-05a" class="lede">DCA helps when you would otherwise stay in cash from fear, or when markets drop right after — less was invested before the fall. It hurts whenever markets rise while cash waits; that ~10% nominal return is the persistent cost.</p><div data-hf-id="hf-8070-061" class="compare-row"><div data-hf-id="hf-8070-062" class="compare-card direct rough2"><h4 data-hf-id="hf-8070-063">DCA HELPS</h4><ul data-hf-id="hf-8070-064"><li data-hf-id="hf-8070-05b">You'd stay in cash otherwise</li><li data-hf-id="hf-8070-05c">Softens worst outcomes</li><li data-hf-id="hf-8070-05d">Wins ~32% when markets fall</li></ul></div><div data-hf-id="hf-8070-065" class="vs-mark">vs</div><div data-hf-id="hf-8070-066" class="compare-card indirect rough2"><h4 data-hf-id="hf-8070-067">DCA HURTS</h4><ul data-hf-id="hf-8070-068"><li data-hf-id="hf-8070-05e">Markets rise more often</li><li data-hf-id="hf-8070-05f">~10% nominal left behind</li><li data-hf-id="hf-8070-060">Cash drag every up year</li></ul></div></div></section>
-        <section data-hf-id="hf-8070-071" class="ink"><div data-hf-id="hf-8070-06a" class="section-head"><span data-hf-id="hf-8070-06b" class="num-blob b6 rough" style="color:var(--ink-green)">6</span><h2 data-hf-id="hf-8070-06c" class="c-green">Use It Right</h2></div><p data-hf-id="hf-8070-06d" class="lede">Automate paycheck investing on payday — no drag. For windfalls, pick a short window (immediate to 6 months) and stick to it. Park waiting cash in yield and check your target, not the entry price.</p><div data-hf-id="hf-8070-06e" class="warning-box tip rough"><div data-hf-id="hf-8070-06f" class="heading">TIP</div><div data-hf-id="hf-8070-070" class="text">Windfall? Invest promptly or DCA 3–6 months max. Salary? Invest each paycheck — that's drag-free DCA.</div></div></section>
+      <main>
+        {{SECTIONS}}
       </main>
-      <footer data-hf-id="hf-hsc6" class="ink">
-        <div data-hf-id="hf-d5zt" class="cta-line cta-signoff">That's dollar-cost averaging.</div>
-        <div data-hf-id="hf-yqbw" class="source-row">
-          <div data-hf-id="hf-gm8r" class="source">Sourced from SEC, FINRA, Vanguard, Charles Schwab, S&amp;P 500 1928–2025</div><a data-hf-id="hf-gvqh" href="https://www.compoundlane.com">compoundlane.com</a>
+      <footer class="ink">
+        <div class="cta-line cta-signoff">{{FOOTER_CTA}}</div>
+        <div class="source-row">
+          <div class="source">{{FOOTER_SOURCE}}</div><a href="https://www.compoundlane.com">compoundlane.com</a>
         </div>
       </footer>
     </div>
@@ -692,7 +698,9 @@
          from 1.0s to 1.2s. Lives on top of the whiteboard reveal so
          the viewer sees the completed notebook briefly, then watches
          it being written. Track 1 (page-bg is track 0). -->
-    <div data-hf-id="hf-v8w2" id="flash-preview" class="flash-preview clip" data-start="0" data-duration="1.2" data-track-index="1" style="background-image: url('public/flash-preview.png')"></div>
+    <div id="flash-preview" class="flash-preview clip"
+         data-start="0" data-duration="{{FLASH_TOTAL}}" data-track-index="1"
+         style="background-image: url('public/flash-preview.png')"></div>
 
     <!-- ─── AUDIO TRACKS ───────────────────────────────────────
          Single voiceover track (intro + N concepts + outro,
@@ -704,9 +712,11 @@
          by 1.0s so it begins as the flash fades out and the
          whiteboard reveal starts. data-duration is patched by
          inject-static-sfx.mjs to match the actual MP3. -->
-    <audio data-hf-id="hf-pejo" id="vo" data-start="1.0" data-duration="135.8" data-track-index="11" data-volume="1" src=".media/voiceover/voiceover.mp3"></audio>
+    <audio id="vo"
+           data-start="{{VO_START}}" data-duration="{{VO_DURATION}}" data-track-index="11" data-volume="1"
+           src="{{VO_SRC}}"></audio>
 
-    
+    {{SFX_AUDIO_BLOCK}}
   </div>
 
   <script src="sound.js"></script>
@@ -772,44 +782,7 @@
       // inject step (scripts/sound/inject-static-sfx.mjs) rewrites the
       // var declarations on every build to keep timing.mjs, the inline
       // schedule, and the static SFX <audio> block in lockstep.
-            var groups = {
-        header: (function () {
-          var hs = 'header';
-          return Array.from(document.querySelectorAll(
-            hs + ' .w, ' + hs + ' .num-blob, ' + hs + ' .kicker svg path, ' + hs + ' h1, ' + hs + ' h1 *'
-          ));
-        })(),
-        c1:     elementsFor('main > section:nth-of-type(1)'),
-        c2:     elementsFor('main > section:nth-of-type(2)'),
-        c3:     elementsFor('main > section:nth-of-type(3)'),
-        c4:     elementsFor('main > section:nth-of-type(4)'),
-        c5:     elementsFor('main > section:nth-of-type(5)'),
-        c6:     elementsFor('main > section:nth-of-type(6)'),
-        footer: Array.from(document.querySelectorAll('footer .w, footer a'))
-      };
-
-            var FLASH_DURATION = 1.0;   // flash visible 0–1.0s
-            var FLASH_FADE     = 0.2;   // flash fades 1.0–1.2s
-            var VO_DURATION    = 135.8; // voiceover.mp3 length — must match the actual MP3
-            var HEADER_REVEAL  = 5.0;   // intro section reveal duration
-            var C1_REVEAL      = 18.0;  // c1 reveal duration
-            var C2_REVEAL      = 19.0;  // c2 reveal duration
-            var C3_REVEAL      = 21.0;  // c3 reveal duration
-            var C4_REVEAL      = 17.0;  // c4 reveal duration
-            var C5_REVEAL      = 20.0;  // c5 reveal duration
-            var C6_REVEAL      = 24.0;  // c6 reveal duration
-            var OUTRO_REVEAL   = 10.8;   // outro section reveal duration
-            var COMPOSITION_DURATION = FLASH_DURATION + HEADER_REVEAL + C1_REVEAL + C2_REVEAL + C3_REVEAL + C4_REVEAL + C5_REVEAL + C6_REVEAL + OUTRO_REVEAL;
-      var schedule = (function () {
-        var keys = ['header','c1','c2','c3','c4','c5','c6','footer'];
-        var durs = [HEADER_REVEAL, C1_REVEAL, C2_REVEAL, C3_REVEAL, C4_REVEAL, C5_REVEAL, C6_REVEAL, OUTRO_REVEAL];
-        var t = FLASH_DURATION, out = [];
-        for (var i = 0; i < keys.length; i++) {
-          out.push({ key: keys[i], start: t, dur: durs[i] });
-          t += durs[i];
-        }
-        return out;
-      })();
+      {{SCHEDULE_AND_GROUPS}}
 
       var page = document.querySelector('.notebook-page');
       var pen = document.createElement('div');
@@ -967,7 +940,7 @@
       }
 
       // 3. Register the paused timeline on the keyed timeline registry.
-      window.__timelines["dollar-cost-averaging-video"] = tl;
+      window.__timelines["{{COMPOSITION_ID}}"] = tl;
     })();
   </script>
 
