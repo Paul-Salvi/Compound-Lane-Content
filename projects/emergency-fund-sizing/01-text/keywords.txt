@@ -1,0 +1,24 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Project: emergency-fund-sizing
+# Locked JSON: projects/emergency-fund-sizing/01-content/emergency-fund-sizing.json
+
+PRIMARY KEYWORD:
+emergency fund how much
+
+SECONDARY KEYWORDS (3-5):
+- how big should my emergency fund be
+- 3-6 months expenses rule
+- emergency fund self-employed
+- high-yield savings account rate 2026
+- where to keep emergency fund
+
+SEARCH INTENT:
+should I X (decision-support) — the user wants a number for THEIR situation, not a definition
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #emergencyfund #emergencyfundsizing #hysa #financialbuffer #cashreserves
+- Broad: #personalfinance (use sparingly — saturated)
+
+UNVERIFIED NOTE: Search volumes are unverified. Use judgment — these are the
+phrases a beginner would actually type, not marketing copy.

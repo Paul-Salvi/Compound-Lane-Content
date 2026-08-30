@@ -1,0 +1,24 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Project: emergency-fund-sizing
+# Locked JSON: projects/emergency-fund-sizing/01-content/emergency-fund-sizing.json
+# Every number traces to the JSON — no fabrication.
+
+POST (target 70-100 chars, hard cap 280):
+Emergency fund: how much? 45% of Americans can't cover 3 months. The 3-6
+month rule is a population average — not your number.
+
+(126 chars — within 280 cap, slightly above the 70-100 target; tweet is
+deliberately at the upper end to keep the stat + the corrective frame in one
+breath; could be trimmed to ~85 chars if a tighter version is preferred)
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen
+educational content, this isn't event/trend-based):
+[none — evergreen educational content, no event tie-in]
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut
+reach ~50%. Put it in a reply.
+
+Reply 1: Full breakdown: https://www.compoundlane.com
+Reply 2 (optional): 9-12 months if you're self-employed or commission-only —
+the 3-6 baseline is for W-2 dual income.

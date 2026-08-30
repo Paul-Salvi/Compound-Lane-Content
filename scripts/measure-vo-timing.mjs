@@ -80,8 +80,8 @@ function parseTtsScript(text) {
     const cleanedBody = body.replace(/# ─+[\s\S]*$/m, "").trim();
     sections.push({ key: m[1].toLowerCase(), text: cleanedBody });
   }
-  if (sections.length !== 8) {
-    throw new Error(`tts_script.txt has ${sections.length} section(s) (expected 8: intro + 6 concepts + outro)`);
+  if (sections.length < 3) {
+    throw new Error(`tts_script.txt has ${sections.length} section(s) (expected at least 3: intro + 1+ concepts + outro)`);
   }
   return sections;
 }
@@ -358,10 +358,11 @@ async function rewriteTimingMjs(timingPath, durations, voDuration) {
     { name: "C3_REVEAL",     value: durations.c3 },
     { name: "C4_REVEAL",     value: durations.c4 },
     { name: "C5_REVEAL",     value: durations.c5 },
-    { name: "C6_REVEAL",     value: durations.c6 },
-    { name: "OUTRO_REVEAL",  value: durations.footer },
-    { name: "VO_DURATION",   value: voDuration },
   ];
+  // C6_REVEAL is optional (only present when the project has 6 concepts).
+  if (durations.c6 != null) replacements.push({ name: "C6_REVEAL", value: durations.c6 });
+  replacements.push({ name: "OUTRO_REVEAL", value: durations.footer });
+  replacements.push({ name: "VO_DURATION", value: voDuration });
   for (const { name, value } of replacements) {
     const re = new RegExp(`(export const ${name}\\s*=\\s*)[\\d.]+`);
     if (!re.test(src)) {
@@ -428,7 +429,8 @@ async function main() {
   console.log(`[4/5] rewriting timing.mjs…`);
   const durations = computeDurations(aligned, voDuration);
   await rewriteTimingMjs(timingPath, durations, voDuration);
-  console.log(`      HEADER_REVEAL=${durations.header.toFixed(1)} C1..C6=${durations.c1.toFixed(1)},${durations.c2.toFixed(1)},${durations.c3.toFixed(1)},${durations.c4.toFixed(1)},${durations.c5.toFixed(1)},${durations.c6.toFixed(1)} OUTRO_REVEAL=${durations.footer.toFixed(1)} VO_DURATION=${voDuration.toFixed(1)}`);
+  const c6Part = durations.c6 != null ? `,${durations.c6.toFixed(1)}` : "";
+  console.log(`      HEADER_REVEAL=${durations.header.toFixed(1)} C1..C5=${durations.c1.toFixed(1)},${durations.c2.toFixed(1)},${durations.c3.toFixed(1)},${durations.c4.toFixed(1)},${durations.c5.toFixed(1)}${c6Part} OUTRO_REVEAL=${durations.footer.toFixed(1)} VO_DURATION=${voDuration.toFixed(1)}`);
 
   console.log(`[5/5] cascading to index.html via inject-static-sfx.mjs…`);
   await new Promise((resolve, reject) => {

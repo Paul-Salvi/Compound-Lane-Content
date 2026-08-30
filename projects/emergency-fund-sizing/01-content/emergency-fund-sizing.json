@@ -1,0 +1,70 @@
+{
+  "handle": "@compoundlane",
+  "title": "EMERGENCY FUND: HOW MUCH?",
+  "series_label": "EMERGENCY FUND SIZING: 5 THINGS TO KNOW",
+  "page_label": "",
+  "total_pages": 1,
+  "concepts": [
+    {
+      "number": 1,
+      "title": "Why Not 3–6 Months",
+      "body": "The 3–6 month rule is a population average, not your number. 45% of Americans can't cover 3 months of expenses — flat for two years. Your target depends on job type, income stability, and dependents. One formula, four answers.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "WARNING",
+        "callout_text": "45% of Americans can't cover 3 months of expenses (Fed SHED 2025, published 2026). 30% can't cover it by any means."
+      }
+    },
+    {
+      "number": 2,
+      "title": "The Formula",
+      "body": "Emergency fund = essential monthly expenses × target months. Essentials only: rent, utilities, groceries, insurance, minimum debt payments, transportation. Not your income. Not your total spending. The cheapest number wins.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "WRONG BASE",
+        "left_points": ["Uses gross income", "Includes eating out + subscriptions", "Inflates the target"],
+        "right_label": "RIGHT BASE",
+        "right_points": ["Essentials only", "Rent, food, insurance, transit", "Smaller fund, same safety"]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Pick Your Months",
+      "body": "FDIC baseline is 3–6 months. Dual income, both stable, low fixed costs → 3 months. Single stable income or dependents → 6 months. Self-employed, commission, or contract work → 9–12 months (industry consensus above FDIC baseline). Add 1–2 months if you have heavy fixed costs or a niche job.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Job type", "Target months"],
+        "rows": [
+          ["Dual income, both stable", "3"],
+          ["Single stable income", "6"],
+          ["Single income + dependents", "6–8"],
+          ["Self-employed / commission", "9–12"],
+          ["Variable income + heavy fixed", "9–12"]
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "Where to Park It",
+      "body": "High-yield savings account, not checking, not investing. Today's top HYSAs pay 4.20–4.50% APY (up to 5.00% intro at some banks) — a real yield, FDIC-insured, liquid in 1 day. PCE inflation is 2.7% (Fed FOMC March 2026), so your fund actually grows above inflation while it sits.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "CHECKING / INVESTING",
+        "left_points": ["Checking pays ~0%", "Investing can drop 30%+ in a year", "Both defeat the purpose"],
+        "right_label": "HIGH-YIELD SAVINGS",
+        "right_points": ["4.20–4.50% APY in 2026", "FDIC-insured, 1-day liquidity", "Beats 2.7% PCE inflation"]
+      }
+    },
+    {
+      "number": 5,
+      "title": "Build It in 3 Steps",
+      "body": "Step 1: Save one month of essentials first — your starter fund. Step 2: Automate weekly transfers to a separate HYSA. Step 3: Once the starter is hit, raise contributions until you reach your target. Don't invest the fund. Don't touch it for lifestyle.",
+      "visual_type": "diagram",
+      "visual_spec": {
+        "nodes": ["1 month starter", "automate weekly", "grow to target", "leave it alone"],
+        "arrow_labels": ["~30 days", "set + forget", "weeks–months", "no lifestyle pulls"]
+      }
+    }
+  ],
+  "sources_footer": "Sourced from Federal Reserve SHED 2025 (published 2026), Fed FOMC PCE March 2026, FDIC Money Smart, Bankrate weekly"
+}

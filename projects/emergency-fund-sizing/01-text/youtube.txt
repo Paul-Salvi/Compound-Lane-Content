@@ -1,0 +1,45 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Project: emergency-fund-sizing
+# Locked JSON: projects/emergency-fund-sizing/01-content/emergency-fund-sizing.json
+# Every number traces to the JSON — no fabrication.
+
+TITLE (target 50-60 chars, hard cap 100):
+Emergency Fund: How Much? The 3-6 Month Rule Is Wrong
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+45% of Americans can't cover 3 months of expenses. The 3-6 month rule is a
+population average — not your number. Here's the formula that picks your target.
+
+DESCRIPTION FULL (200-500 words):
+The 3-6 month rule is one-size-fits-all advice. The right emergency fund for
+YOU depends on job type, income stability, and dependents. This reel walks
+through the formula — essential monthly expenses × target months — and gives
+you a months-by-job-type table so you can stop guessing.
+
+What's inside:
+• The 1 formula: essentials × months (not income, not total spending)
+• 3 / 6 / 9-12 month tiers by job type (dual income, single, self-employed)
+• Where to park it: high-yield savings at 4.20-4.50% APY in 2026, beating
+  2.7% PCE inflation — not checking, not investing
+• A 3-step build sequence: starter fund → automate weekly → grow to target
+
+Sources: Federal Reserve SHED 2025 (published 2026), Fed FOMC PCE March 2026,
+FDIC Money Smart, Bankrate weekly.
+
+Educational content, not financial advice.
+
+Full breakdown: https://www.compoundlane.com
+
+HASHTAGS (3-5, placed at end of description; first 3 auto-display above title):
+#emergencyfund #personalfinance #hysa
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+emergency fund, how much emergency fund, 3-6 month rule, high-yield savings,
+HYSA, self-employed emergency fund, FDIC, personal finance, beginner investing
+
+CATEGORY / TYPE (Studio upload field — note for uploader):
+Category: Education
+Type: Problem walkthrough
+(paste contents of youtube-problems.txt into Studio "Problems" field at upload
+time — timecoded Q&A unlocks Google's LearningVideo structured data)

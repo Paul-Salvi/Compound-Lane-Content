@@ -1,0 +1,73 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Project: emergency-fund-sizing
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes are derived from the measured voiceover (.media/voiceover/voiceover.json
+# + scripts/measure-vo-timing.mjs output) and the per-section REVEAL constants in
+# projects/emergency-fund-sizing/04-video/timing.mjs. The schedule starts at
+# FLASH_DURATION = 1.0s (after the pre-roll) and runs through the full
+# COMPOSITION_DURATION ≈ 257s. Each question matches the section that begins at
+# that time on the master timeline.
+#
+# At upload: YouTube Studio → Details → Category: Education, Type: Problem
+# walkthrough, then paste these Q&A pairs into the "Problems" field.
+# Unlocks Google's LearningVideo structured data so individual sections
+# surface in Search as direct answers to specific queries.
+
+# Header (1.0–20.7s, dur ≈ 19.7s) — intro
+0:01 How much should I keep in an emergency fund?
+0:08 What is the 3-6 month rule for emergency fund?
+0:14 Is the 3-6 month rule one-size-fits-all?
+
+# Concept 1 (20.7–52.6s, dur ≈ 31.9s) — why 3-6 months is wrong
+0:21 Why is the 3-6 month emergency fund rule wrong?
+0:28 How many Americans can't cover 3 months of expenses?
+0:36 What factors decide your emergency fund target?
+0:46 Is there a formula for emergency fund size?
+
+# Concept 2 (52.6–79.0s, dur ≈ 26.4s) — the formula
+0:53 How do I calculate my emergency fund?
+1:04 What counts as essential expenses for emergency fund?
+1:12 Should I use my income to size my emergency fund?
+1:19 What's the cheapest correct emergency fund number?
+
+# Concept 3 (79.0–112.8s, dur ≈ 33.8s) — months by job type
+1:19 How many months of expenses should I save?
+1:25 How long should an emergency fund be for self-employed?
+1:35 How many months for single income with dependents?
+1:48 Is 3-6 months enough for variable income?
+
+# Concept 4 (112.8–147.1s, dur ≈ 34.3s) — where to park it
+1:53 Where should I keep my emergency fund?
+2:01 What's the best account for emergency fund?
+2:12 What is a high-yield savings account rate in 2026?
+2:25 Should I invest my emergency fund?
+2:37 Does emergency fund beat inflation in 2026?
+
+# Concept 5 (147.1–171.4s, dur ≈ 24.3s) — how to build it
+2:27 How do I build an emergency fund from zero?
+2:34 How much should my starter emergency fund be?
+2:42 Should I automate emergency fund savings?
+2:52 Can I use emergency fund for lifestyle?
+
+# Outro (171.4–255.1s, dur ≈ 83.7s) — closing
+2:51 How big should an emergency fund be in 2026?
+3:04 Where can I find the full emergency fund breakdown?
+
+# ─────────────────────────────────────────────────────────────────────
+# Notes:
+# - Questions are phrased as real beginner search queries (the same
+#   standard as the Stage 1 primary keyword — what someone would actually
+#   type into a search bar).
+# - Timecodes are off the master timeline (t=0 = start of flash pre-roll).
+#   Add the cue at the actual render time, not the section's mid-point;
+#   the first question in each section should land when the section header
+#   first appears on screen.
+# - The voiceover.mp3 is ~254s. The flash pre-roll adds 1.0s, so the
+#   composition total is ~257s. Questions above are pinned to section
+#   starts within that window.
+# - Stage 3 is a POST-RENDER step. The voiceover must be regenerated
+#   and the per-section REVEAL constants in timing.mjs must be measured
+#   (run scripts/measure-vo-timing.mjs) before these timecodes are
+#   trusted. The numbers above are derived from the first-pass regen
+#   and will drift if the script is trimmed/expanded.

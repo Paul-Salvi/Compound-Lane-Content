@@ -1,0 +1,53 @@
+# intro
+# TTS-ready for VibeVoice/Paul — see AUDIO_STYLE.md (numbers-as-words,
+# em-dashes for breath, one thought per line). Trimmed for ~30s reel.
+Five things to know about your emergency fund.
+
+# concept1
+# Why the 3–6 month rule is wrong — and what to use instead.
+Here's the catch.
+The three to six month rule is a population average — not your number.
+Forty five percent of Americans can't cover three months of expenses.
+Your target depends on your job, your income, and your dependents.
+One formula. Four answers.
+
+# concept2
+# The formula: essentials, not income.
+Emergency fund equals essential monthly expenses, times target months.
+Essentials only — rent, utilities, groceries, insurance, minimum debt, transit.
+Not your income. Not your total spending.
+The cheapest correct number wins.
+
+# concept3
+# Pick your months by job type.
+F-D-I-C baseline is three to six months.
+Dual income, both stable — three months.
+Single income or dependents — six months.
+Self-employed, commission, or contract — nine to twelve months.
+
+# concept4
+# Where to park it.
+High-yield savings. Not checking. Not investing.
+Today's top accounts pay four point two to four point five percent A-P-Y.
+P-C-E inflation is two point seven percent.
+Your fund actually grows above inflation while it waits.
+
+# concept5
+# How to build it.
+Step one — save one month of essentials first.
+Step two — automate weekly transfers to a separate account.
+Step three — raise contributions until you reach your target.
+Don't invest it. Don't touch it for lifestyle.
+
+# outro
+# Closing CTA + engagement prompts.
+That's your emergency fund.
+Did you know this? Let me know in the comments.
+Hit save if this was useful.
+
+# ─────────────────────────────────────────────────────────────────────
+# TTS-ready script for VibeVoice/Paul. The build-video.mjs script
+# generated this from projects/{slug}/01-content/{slug}.json. The body
+# text has been rewritten for TTS prosody per AUDIO_STYLE.md (numbers
+# spelled out, em-dashes for breath, softeners for hard beats, varied
+# sentence lengths). Source of truth for the spoken words.
