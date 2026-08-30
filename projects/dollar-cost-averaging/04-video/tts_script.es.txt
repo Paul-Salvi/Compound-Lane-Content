@@ -1,0 +1,33 @@
+# intro
+# TODO: traducir para doblaje (números como dígitos)
+Seis cosas que debes saber sobre el promedio de costo en dólares.
+
+# concept1
+# TODO: traducir para doblaje
+DCA significa invertir la misma cantidad de dólares en un horario — como $833 cada mes durante 12 meses para desplegar $10,000 — no todo de una vez. Compras menos acciones cuando los precios son altos y más cuando son bajos, suavizando tu costo promedio.
+
+# concept2
+# TODO: traducir para doblaje
+Vanguard y Schwab probaron períodos rodantes de 12 meses desde la década de 1920. La suma total venció al DCA de 12 meses aproximadamente dos tercios del tiempo — alrededor del 68% — porque los mercados suben más a menudo de lo que bajan.
+
+# concept3
+# TODO: traducir para doblaje
+A un 7% estable para ilustrar, $10,000 invertidos el día uno crecen a ~$10,700 después de 12 meses. El DCA a fin de mes crece a ~$10,327. La brecha de ~$373 no es una comisión — es el arrastre del efectivo que espera en caja.
+
+# concept4
+# TODO: traducir para doblaje
+La suma total gana un año completo sobre los $10,000. El DCA a fin de mes gana aproximadamente medio año en promedio — los primeros $833 ganan ~11 meses, los últimos ~0. Los bloques posteriores ganan menos tiempo en el mercado.
+
+# concept5
+# TODO: traducir para doblaje
+DCA ayuda cuando de otro modo te quedarías en efectivo por miedo, o cuando los mercados caen justo después — se invirtió menos antes de la caída. Perjudica cada vez que los mercados suben mientras el efectivo espera; ese ~10% de retorno nominal es el costo persistente.
+
+# concept6
+# TODO: traducir para doblaje
+Automatiza la inversión del salario el día de pago — sin arrastre. Para ganancias inesperadas, elige una ventana corta (inmediata a 6 meses) y mantenla. Estaciona el efectivo que espera en rendimiento y revisa tu objetivo, no el precio de entrada.
+
+# outro
+# TODO: traducir para doblaje
+Eso es el promedio de costo en dólares.
+¿Lo sabías? Cuéntame en los comentarios.
+Y si esto fue útil, dale guardar para que puedas volver.

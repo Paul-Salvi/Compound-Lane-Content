@@ -1,0 +1,17 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/one-thousand-decision-tree/04-video/index.html
+# (var FLASH_DURATION = 1.0; var schedule = ...). One Q&A per concept block —
+# aligns to the same section boundaries as the narrative arc.
+#
+# Total COMPOSITION_DURATION = 140.3s (header 10.5 + 4 concepts + outro 25.2).
+# At upload, paste the Q&A lines below (everything from "0:11" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field for
+# the LearningVideo structured data. Then set Category: Education and
+# Type: Problem walkthrough.
+
+0:11  Where should you keep an emergency fund before investing?
+0:44  Should you pay off debt before investing?
+1:08  How much can a Roth IRA save you in taxes?
+1:30  When should you use a regular taxable brokerage account?

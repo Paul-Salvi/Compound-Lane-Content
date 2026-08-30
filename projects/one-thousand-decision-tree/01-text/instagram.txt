@@ -1,0 +1,29 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/one-thousand-decision-tree/01-content/one-thousand-decision-tree.json
+# or the article sources (FDIC, IRS, Federal Reserve, Vanguard, Fidelity, S&P 500).
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Where to invest $1,000: cash buffer first, kill 8%+ debt, Roth IRA + S&P 500, then a regular brokerage. The order.
+
+[Char count: 120 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The first $1,000 isn't about picking the best stock. It's about the order.
+
+1. Cash first — $500–$1,000 in a high-yield savings account paying 4–5% (FDIC-insured). Optionality, not interest. Money you might need in 6 months has no business in the market.
+
+2. Kill debt over 8%. Credit cards run 22–28%. Every dollar on a 24% balance = a guaranteed 24% return. You will never beat that with an investment.
+
+3. Roth IRA + S&P 500. If you have earned income and you're under 50, this is the single best deal in personal finance. After-tax in, tax-free out. $7,000/year limit (2024). A low-cost index fund (VOO, VTSAX, FZROX) — expense ratio under 0.10%.
+
+4. Whatever's left → a regular brokerage. Same S&P 500 fund, no limit, no penalty before 59½. The flexible bucket.
+
+Not sexy. The actual order.
+
+Educational content, not financial advice.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "The $1,000 Decision Tree: 4 Steps" with a comparison card (checking vs high-yield savings), a debt-rate table (credit card 22–28%, BNPL 0–30%, student loan 5–7%, mortgage 6–8%), a Roth IRA tip callout, and a four-node flow diagram ($500 cash → $500 debt killed → $500 Roth IRA → $0–$500 brokerage) with yield, guaranteed return, tax-free compounding, and flexibility labels.
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#First1000 #RothIRA #S&P500 #HighYieldSavings #IndexFunds

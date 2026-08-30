@@ -1,0 +1,57 @@
+{
+  "handle": "@compoundlane",
+  "title": "I HAVE $1,000 — NOW WHAT?",
+  "series_label": "THE $1,000 DECISION TREE: 4 STEPS",
+  "page_label": "",
+  "total_pages": 1,
+  "concepts": [
+    {
+      "number": 1,
+      "title": "Cash First",
+      "body": "Before you invest a dollar, keep $500–$1,000 in a high-yield savings account. Not a checking account. A separate, FDIC-insured account paying 4–5%. The reason isn't interest — it's optionality. Money you might need in 6 months has no business being in the market.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "CHECKING ACCOUNT",
+        "left_points": ["Pays ~0% interest", "Easy to spend by accident", "No FDIC cushion beyond $250k"],
+        "right_label": "HIGH-YIELD SAVINGS",
+        "right_points": ["Pays 4–5% today", "Separate account, out of sight", "FDIC-insured, liquid in 1 day"]
+      }
+    },
+    {
+      "number": 2,
+      "title": "Kill Debt Over 8%",
+      "body": "Credit cards charge 22–28%. Buy-now-pay-later and store financing run 0–30%. Every dollar you pay down on a 24% balance is a guaranteed, tax-free, risk-free 24% return. You will never find an investment that reliably beats paying off that balance.",
+      "visual_type": "table",
+      "visual_spec": {
+        "columns": ["Debt type", "Typical rate", "Pay it down?"],
+        "rows": [
+          ["Credit card", "22–28%", "Yes — every dollar = 24% return"],
+          ["Buy-now-pay-later", "0–30%", "Yes if >8%"],
+          ["Student loan (federal)", "~5–7%", "No — invest instead"],
+          ["Mortgage", "~6–8%", "No — invest instead"]
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Roth IRA + S&P 500",
+      "body": "If you have earned income and you're under 50, a Roth IRA is the single best deal in personal finance. Money in after-tax, grows tax-free, comes out tax-free in retirement. Contribution limit is $7,000/year (2024). A low-cost S&P 500 index fund — VOO, VTSAX, or FZROX — gives you the 500 largest US companies for an expense ratio under 0.10%.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "TIP",
+        "callout_text": "Put $500 in a Roth IRA, pick a low-fee S&P 500 fund, automate monthly, don't touch for 30 years. Boring on purpose."
+      }
+    },
+    {
+      "number": 4,
+      "title": "Rest to Brokerage",
+      "body": "What's left — the final $0–$500 — goes into a regular taxable brokerage. Same S&P 500 fund, no tax break, but no contribution limit and no 59½ penalty if you need it early. This is the flexible bucket. Future monthly savings live here too.",
+      "visual_type": "diagram",
+      "visual_spec": {
+        "nodes": ["$500 cash", "$500 debt killed", "$500 Roth IRA", "$0–$500 brokerage"],
+        "arrow_labels": ["4–5% yield", "24% guaranteed", "tax-free 30 yrs", "no limit, flexible"]
+      }
+    }
+  ],
+  "sources_footer": "Sourced from FDIC, IRS, Federal Reserve, Vanguard, Fidelity, S&P 500"
+}

@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/one-thousand-decision-tree/01-content/one-thousand-decision-tree.json
+# or the article sources (FDIC, IRS, Vanguard, Fidelity, S&P 500).
+
+POST (target 70-100 chars, hard cap 280):
+Where to invest $1,000: 1) $500–$1k high-yield savings 2) kill debt over 8% 3) Roth IRA + S&P 500 4) rest to brokerage.
+
+[Char count: 130 — over 100-char target, retained because the 4-step order IS the value prop and a shorter version loses it. Trim to "Where to invest $1,000: cash, kill 8%+ debt, Roth IRA + S&P 500, brokerage. The order." (87 chars) if a tighter post is preferred.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+[leave blank — no trending or event-based tie-in for evergreen beginner-investing content]
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + why the order matters: https://compoundlane.com/i-have-1000-now-what"

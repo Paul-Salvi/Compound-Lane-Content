@@ -1,0 +1,25 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/dollar-cost-averaging/01-content/dollar-cost-averaging.json
+# or the cited primary sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Dollar-cost averaging: lump sum wins about 68% of the time. But DCA cuts regret. Here's the math on $10,000.
+
+[Char count: 122 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+Dollar-cost averaging means $833 a month for 12 months to deploy $10,000 — not all at once. You buy fewer shares when prices are high, more when low, smoothing your average cost.
+
+Vanguard and Schwab both tested rolling 12-month windows going back to the 1920s. Lump sum beat 12-month DCA about 68% of the time. Why? Markets rise more often than they fall — more time in = more compounding.
+
+At 7%, $10k day-one → ~$10,700. DCA end-of-month → ~$10,327. The ~$373 gap is cash drag, not a fee.
+
+The right way to DCA: automate paycheck investing on payday (no drag — money was never in cash). For windfalls, invest promptly or DCA 3–6 months max. Park waiting cash in yield.
+
+Educational content, not financial advice.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Dollar-Cost Averaging: 6 Things to Know" with a comparison card (Spreading Cash vs Investing from Income), a three-column study table (Vanguard, Schwab, edge case), a $10,000-vs-$833-per-month math table, a flow diagram showing cash drag, a DCA helps vs hurts comparison, and a tip callout for windfall vs paycheck DCA.
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#DollarCostAveraging #DCAvsLumpSum #CashDrag #IndexFunds #PersonalFinance

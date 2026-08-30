@@ -35,6 +35,8 @@ The domain skills (`/hyperframes-core`, `/hyperframes-animation`, `/hyperframes-
 | Need | Workflow |
 |---|---|
 | Static hand-drawn infographic (IG/Pinterest save asset) | `docs/visual-notes-prompt-system.md` + `GUIDE.md §17` + `templates/notebook-v2.html` → `projects/{slug}/02-visual/{slug}.html` → headless screenshot → PNG. No `npm run render`. `input/sample.html` is a throwaway preview mirror. |
+| Platform copy (keywords + YouTube description + Instagram caption + tweet + YouTube Learning structured data) for an existing article | `docs/text-prompt-engine-v2.md` + `node scripts/build-text.mjs <slug>` → fill in `projects/{slug}/01-text/{keywords,youtube,instagram,twitter,youtube-problems}.txt`. Terminal artifact — pasted at upload time. Every number must trace to `01-content/{slug}.json`. Stage 3 (youtube-problems.txt) is gated on the 04-video render producing section timecodes. |
+| Spanish subtitle file (`01-text/spanish-subs.srt`) for an existing video | Translate `04-video/tts_script.txt` to Spanish via Claude using the Stage 4 prompt in `docs/text-prompt-engine-v2.md`, save as `04-video/tts_script.es.txt` (preserve `# section` markers), then `node scripts/build-subs.mjs <slug>` → `projects/{slug}/01-text/spanish-subs.srt`. Uploaded to YouTube Studio → Subtitles → upload → set language "Spanish" → publish. Reuses `04-video/.media/voiceover/voiceover.json` (faster-whisper per-word timings) for clause-level alignment. |
 | Motion promo reel (VO + BGM + GSAP) | `GUIDE.md §3–§16` + HyperFrames contract (`npm run check` / `render`) |
 | Both from one article | Start with §17 JSON (Stage 1 → `projects/{slug}/01-content/{slug}.json`), render the visual page, then reuse the same JSON for the reel (`GUIDE.md §17.6` → `03-video/`) |
 
