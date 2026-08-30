@@ -34,6 +34,14 @@ Both lanes are driven by the same per-article JSON spec; the visual is the sourc
     └── {slug}/                    # one folder per article (kebab-case)
         ├── 01-source/             # raw saved HTML of the article
         ├── 01-content/{slug}.json # Stage 1 JSON — single source of truth
+        ├── 01-text/               # platform copy (YouTube/IG/Twitter) + keywords + Spanish subs (post 01-content)
+        │   ├── keywords.txt       # Stage 1 keyword research
+        │   ├── youtube.txt        # Stage 2 YT title/description/tags
+        │   ├── instagram.txt      # Stage 2 IG hook/caption/alt text
+        │   ├── twitter.txt        # Stage 2 tweet + reply-link note
+        │   ├── youtube-problems.txt  # Stage 3 (post-render) timecoded Q&A for YouTube Learning
+        │   ├── spanish-subs.srt   # Stage 4 (post-render) Spanish SRT for YouTube Studio upload
+        │   └── README.md          # per-project pointer to docs/text-prompt-engine-v2.md
         ├── 02-visual/             # rendered notebook HTML + PNG
         │   ├── {slug}.html        # forked from templates/notebook-v2.html
         │   └── {slug}.png         # headless screenshot
@@ -66,6 +74,8 @@ Both lanes are driven by the same per-article JSON spec; the visual is the sourc
 | You need to… | Read this first | Then this |
 |---|---|---|
 | Produce a static hand-drawn infographic from a new article | `docs/visual-notes-prompt-system.md` (Stage 1) | `GUIDE.md §17` (visual notes recipe) |
+| Generate platform copy (YouTube/IG/Twitter) for a new article | `docs/text-prompt-engine-v2.md` | `node scripts/build-text.mjs <slug>` (then fill the 5 txt files; Stage 3 is post-render) |
+| Generate a Spanish subtitle file for an existing video | `docs/text-prompt-engine-v2.md` §Stage 4 | translate `04-video/tts_script.txt` → `tts_script.es.txt`, then `node scripts/build-subs.mjs <slug>` |
 | Scaffold a `03-Video/` HyperFrames composition from an existing JSON | `AGENTS.md` (skills + commands) | `GUIDE.md §3–§16` (full video workflow) |
 | Add a 20s promo reel from scratch (URL or local file) | `AGENTS.md` → invoke `/product-launch-video` | `GUIDE.md §3–§16` for the contract |
 | Add an animated notebook reel reusing the visual-notes JSON | `AGENTS.md` → `/general-video` companion mode | `GUIDE.md §17.6` (video variant recipe) |
@@ -80,6 +90,8 @@ Both lanes are driven by the same per-article JSON spec; the visual is the sourc
 ## Core contract (these rules are enforced by the framework)
 
 These are the load-bearing rules from `AGENTS.md` + `GUIDE.md` §10 that all `03-Video/index.html` compositions must satisfy. If you only have time to read one section, read this one.
+
+**Numbers everywhere.** The "every number sourced" rule that gates `01-content/{slug}.json` (see `GUIDE.md §17.2`) also gates `01-text/*.txt` — the platform copy is a terminal artifact, but every figure in the YouTube description / IG caption / tweet / YouTube Learning Q&A must trace to the same locked JSON, never be invented. Apply the `docs/text-prompt-engine-v2.md` output checklist before considering `01-text/` complete.
 
 ### HyperFrames composition contract
 1. **Every timed element** needs `data-start`, `data-duration`, and `data-track-index`.
