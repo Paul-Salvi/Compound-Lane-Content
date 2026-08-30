@@ -35,10 +35,16 @@ The domain skills (`/hyperframes-core`, `/hyperframes-animation`, `/hyperframes-
 | Need | Workflow |
 |---|---|
 | Static hand-drawn infographic (IG/Pinterest save asset) | `docs/visual-notes-prompt-system.md` + `GUIDE.md §17` + `templates/notebook-v2.html` → `projects/{slug}/02-visual/{slug}.html` → headless screenshot → PNG. No `npm run render`. `input/sample.html` is a throwaway preview mirror. |
+| Platform copy (keywords + YouTube description + Instagram caption + tweet + YouTube Learning structured data) for an existing article | `docs/text-prompt-engine-v2.md` + `node scripts/build-text.mjs <slug>` → fill in `projects/{slug}/01-text/{keywords,youtube,instagram,twitter,youtube-problems}.txt`. Terminal artifact — pasted at upload time. Every number must trace to `01-content/{slug}.json`. Stage 3 (youtube-problems.txt) is gated on the 04-video render producing section timecodes. |
+| Spanish subtitle file (`01-text/spanish-subs.srt`) for an existing video | Translate `04-video/tts_script.txt` to Spanish via Claude using the Stage 4 prompt in `docs/text-prompt-engine-v2.md`, save as `04-video/tts_script.es.txt` (preserve `# section` markers), then `node scripts/build-subs.mjs <slug>` → `projects/{slug}/01-text/spanish-subs.srt`. Uploaded to YouTube Studio → Subtitles → upload → set language "Spanish" → publish. Reuses `04-video/.media/voiceover/voiceover.json` (faster-whisper per-word timings) for clause-level alignment. |
 | Motion promo reel (VO + BGM + GSAP) | `GUIDE.md §3–§16` + HyperFrames contract (`npm run check` / `render`) |
 | Both from one article | Start with §17 JSON (Stage 1 → `projects/{slug}/01-content/{slug}.json`), render the visual page, then reuse the same JSON for the reel (`GUIDE.md §17.6` → `03-video/`) |
 
 Full routing, mapping table, and validation: `GUIDE.md §17` + `docs/visual-notes-prompt-system.md`. Prefer saved local HTML (`projects/{slug}/01-source/source.html`) over URL fetch per taste.
+
+## Whiteboard Animation Lane
+
+The `03-Video-animate/` lane lives at `projects/{slug}/03-Video-animate/` and is built from `scripts/build-animate.mjs` (no VO, CSS keyframes only — stroke-draw, blob pop, fade-in). It reuses the same `01-content/{slug}.json` as the static visual notes and the narrated reel. See `CLAUDE.md` for the lane description, build CLI, audio conventions, and render command.
 
 ## Commands
 
@@ -108,6 +114,16 @@ Fix all errors before presenting the result. Warnings should be reviewed before 
 4. Videos use `muted` with a separate `<audio>` element for the audio track
 5. Sub-compositions use `data-composition-src="compositions/file.html"` to reference other HTML files
   6. Only deterministic logic — no `Date.now()`, no `Math.random()`, no network fetches
+
+## Sound system (first-class SFX)
+
+The repo has a first-class sound effects system, not one-off `.media/sfx/scribble-1.mp3` ad-hoc drops. The single source of truth for the paper-explainer SFX library is `templates/audio/sfx/manifest.json` (8 paper-style cues generated via `audioldm-s-full-v2`). The engine that schedules them against the GSAP timeline lives at `scripts/sound/` (registry, resolver, controller, session, profile, bundle). Per-project wiring: copy the manifest's MP3s into `projects/{slug}/XX/.media/sfx/`, drop the bundled `sound.js` next to `index.html`, and the engine schedules the cues against `window.__timelines[compositionId]`.
+
+- **Add a new effect** → add an entry to `templates/audio/sfx/manifest.json`, generate the MP3, and the runtime picks it up.
+- **Add a new style profile** → fork `scripts/sound/profile-paper-explainer.mjs`, add a new mapping.
+- **Override per-clip** → emit `data-sound="action:write,intensity:emphasis"` on the clip; the resolver respects the override (see spec §6 precedence).
+
+> **Authoring a static SFX block**: HyperFrames' headless renderer only captures `<audio>` elements that exist in the static HTML source. Use `node scripts/sound/inject-static-sfx.mjs projects/{slug}/04-Video-final/index.html` to splice the declarative SFX block (tracks 12+) right after the voiceover (track 11). See `scripts/sound/emit-static-sfx.mjs` for the schedule table.
 
 ## Video Production Guide
 

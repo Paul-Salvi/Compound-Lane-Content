@@ -1,0 +1,22 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/one-thousand-decision-tree/01-source/article.md
+# Every number below traces to projects/one-thousand-decision-tree/01-content/one-thousand-decision-tree.json
+# or the article sources (FDIC, IRS, Federal Reserve, Vanguard, Fidelity, S&P 500).
+
+PRIMARY KEYWORD:
+where to invest $1,000
+
+SECONDARY KEYWORDS (3-5):
+- first time investing 1000 dollars
+- what to do with 1000 dollars
+- roth ira s&p 500 fund (long-tail variant, 4+ words)
+- how to start investing with little money
+- high yield savings vs checking
+
+SEARCH INTENT:
+"how to X" (procedural) — primary intent is the order of operations for a first $1,000. Secondary: "what is X" (definitional — Roth IRA, high-yield savings) and "should I X" (decision-support — debt vs invest, Roth vs brokerage).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #first1000investing, #RothIRA, #highyieldsavings, #S&P500fund, #indexfundbeginner
+- Broad: #personalfinance (use sparingly — oversaturated in 2026)

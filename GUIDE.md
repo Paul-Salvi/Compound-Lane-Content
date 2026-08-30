@@ -1065,6 +1065,75 @@ If this summary and `templates/notebook-v2.html` diverge, **the template wins**.
 
 ---
 
+## 19. Sound System (First-Class SFX)
+
+The repo has a declarative, registry-driven sound system, not a one-off `.media/sfx/scribble-1.mp3` ad-hoc drop. The full design is in `docs/Sound Effects System.md` (1.2k lines, 19 sections). This section is the practical wiring guide.
+
+### 19.1 Single source of truth
+
+- **Library:** `templates/audio/sfx/manifest.json` — the 8 paper-explainer effects (pencil-write, pencil-draw-loop, marker-swipe, paper-place, soft-whoosh, soft-impact, chime-bright, plus a write-loop variant). Each is a 2s MP3 generated via `audioldm-s-full-v2` at 96kbps.
+- **Engine:** `scripts/sound/` — the sound vocabulary (registry.mjs), animation→sound resolver (resolver.mjs), session lifecycle (session.mjs), global mute/volume (controller.mjs), style profile (profile-paper-explainer.mjs), and the browser bundle template.
+- **Per-project copy:** the build copies the library's MP3s into `projects/{slug}/XX/.media/sfx/` (idempotent) and bundles the engine into `sound.js` next to `index.html`.
+
+### 19.2 Style profile — `paper-explainer`
+
+| Animation action | Effect | Volume | Loop |
+|---|---|---|---|
+| `write` (per word) | pencil-write | 0.18 | one-shot, throttled 1.5s |
+| `draw` (SVG path) | pencil-draw-loop | 0.14 | one-shot, fired at stroke start |
+| `highlight` (.hl) | marker-swipe | 0.22 | one-shot |
+| `cardReveal` (compare-card, warning-box, flow-node) | paper-place | 0.22 | one-shot, once per concept |
+| `appear` (ledger-row) | paper-place | 0.18 | one-shot |
+| `sectionReveal`, `transition` | soft-whoosh | 0.20 | one-shot |
+| `importantReveal` (closing CTA) | chime-bright | 0.28 | one-shot |
+
+The full mapping table is in `scripts/sound/profile-paper-explainer.mjs`.
+
+### 19.3 Wiring into a composition
+
+For a project like `dollar-cost-averaging/04-Video-final`:
+
+1. **Copy assets:** the build copies `templates/audio/sfx/*.mp3` to `projects/{slug}/04-Video-final/.media/sfx/`.
+2. **Bundle the engine:** `node scripts/sound/bundle.mjs projects/{slug}/04-Video-final/sound.js`.
+3. **Load it in `index.html`:** add `<script src="sound.js"></script>` near the top of `<body>`.
+4. **Walk the DOM:** either emit `data-sound` on individual elements, or push to `window.__soundSchedule = [{ start, duration, action, seed }, ...]` before `sound.js` boots.
+5. **Splice a static SFX block (required for headless render):** HyperFrames' renderer only captures `<audio>` elements that exist in the static HTML source. Run `node scripts/sound/inject-static-sfx.mjs projects/{slug}/04-Video-final/index.html` to splice 56 SFX `<audio>` cues (tracks 12–67) right after the voiceover (track 11). Each cue gets a unique `data-track-index` so the renderer concatenates them without overlap.
+
+### 19.4 Override precedence (spec §6)
+
+For per-clip overrides, emit `data-sound` with one of:
+
+- `data-sound="false"` → silence this clip.
+- `data-sound="action:write,intensity:emphasis"` → use the action from the profile, override the intensity.
+- `data-sound-events='[{...}, {...}]'` → hand-authored event list, fully declarative.
+
+### 19.5 Throttling and lifecycle (spec §8–§11)
+
+- **Throttle:** writes are throttled to 1 per 1.5s window so the cumulative sound stays musical, not spammy. Card-reveals are throttled to once per concept.
+- **Lifecycle:** loops stop exactly when the timeline reaches the clip's `data-start + data-duration`. `window.__sound.stopAll()` halts everything for a replay or scene change.
+- **Failure safety (spec §14):** every play call is wrapped — audio load failure, autoplay rejection, missing `AudioContext` all degrade silently. The visual timeline never breaks.
+
+### 19.6 Generation: re-sourcing a cue
+
+```bash
+# One-time per cue. Iterates on the prompt until it sounds right.
+mc ai play -m audioldm-s-full-v2 -p "soft pencil writing on paper, subtle scratch" -d 2 -o templates/audio/sfx/pencil-write-1.mp3
+
+# Re-bundle if you change registry.mjs / resolver.mjs / profile-paper-explainer.mjs:
+node scripts/sound/bundle.mjs projects/dollar-cost-averaging/04-Video-final/sound.js
+
+# Re-splice the static SFX block if you change the schedule:
+node scripts/sound/inject-static-sfx.mjs projects/dollar-cost-averaging/04-Video-final/index.html
+```
+
+### 19.7 When to reach for the sound system
+
+- **Promo reel with voiceover** (`03-Video/` or `04-Video-final/`) — wire up the full pipeline, since the runtime is already on a timeline.
+- **Whiteboard lane** (`03-Video-animate/`) — currently still uses the simple per-section scribble; a follow-up can wire it through the same registry without redesign.
+- **New style profile** — fork `scripts/sound/profile-paper-explainer.mjs` (e.g. `profile-ui-demo.mjs`), add a new mapping. The engine is profile-agnostic.
+
+---
+
 ## File: GUIDE.md location
 Save this at the repo root: `D:\content-creator\video\init-video\GUIDE.md`
 

@@ -1,0 +1,38 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/one-thousand-decision-tree/01-content/one-thousand-decision-tree.json
+# or the article sources (FDIC, IRS, Federal Reserve, Vanguard, Fidelity, S&P 500).
+
+TITLE (target 50-60 chars, hard cap 100):
+Where to Invest $1,000: 4 Steps (Cash, Debt, Roth, Brokerage)
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+You have $1,000 and no plan. Here's the order: cash buffer, kill 8%+ debt, Roth IRA + S&P 500, then a regular brokerage.
+
+DESCRIPTION FULL (200-500 words):
+You finally have $1,000 that isn't earmarked for rent. The question isn't "what's the best stock?" — it's "where does this money sit first?" Here's the order, in plain English.
+
+Step 1 — Cash first. Before you invest a dollar, keep $500–$1,000 in a high-yield savings account. Not a checking account. A separate, FDIC-insured account paying 4–5%. The reason isn't interest — it's optionality. Money you might need in 6 months has no business being in the market.
+
+Step 2 — Kill any debt over 8%. Credit cards charge 22–28%. Buy-now-pay-later runs 0–30%. Every dollar you pay down on a 24% balance is a guaranteed, tax-free, risk-free 24% return. You will never find an investment that reliably beats paying off that balance. Federal student loans (~5–7%) and mortgages (~6–8%) — invest instead of prepaying.
+
+Step 3 — Roth IRA + S&P 500. If you have earned income and you're under 50, a Roth IRA is the single best deal in personal finance. Money in after-tax, grows tax-free, comes out tax-free in retirement. Contribution limit is $7,000/year (2024). A low-cost S&P 500 index fund — VOO, VTSAX, or FZROX — gives you the 500 largest US companies for an expense ratio under 0.10%.
+
+Step 4 — Rest to a regular brokerage. Whatever's left, the final $0–$500, goes into a regular taxable brokerage. Same S&P 500 fund, no tax break, but no contribution limit and no 59½ penalty if you need it early. This is the flexible bucket. Future monthly savings live here too.
+
+Not sexy. Not fast. The actual order.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first; #Shorts is for categorization, doesn't count against the content-relevance 3-5):
+#First1000 #RothIRA #IndexFunds #PersonalFinance #HighYieldSavings
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+where to invest 1000 dollars, first time investing, Roth IRA S&P 500, high yield savings account, kill high interest debt, VOO VTSAX FZROX, expense ratio index fund, beginning investor, taxable brokerage, 4 percent rule retirement
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

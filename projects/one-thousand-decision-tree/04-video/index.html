@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, initial-scale=1920">
+  <title>I HAVE $1,000 — NOW WHAT? - Compound Lane</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&display=swap"
+    rel="stylesheet">
+  <!-- GSAP for deterministic timeline rendering in HyperFrames -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    :root {
+      --paper: oklch(97.5% .008 85);
+      --paper-shade: oklch(93% .015 80);
+      --rule: oklch(85% .045 250);
+      --ink-navy: oklch(42% .16 268);
+      --ink-body: oklch(44% .1 264);
+      --text-muted: oklch(54% .05 262);
+      --ink-maroon: oklch(50% .18 25);
+      --ink-green: oklch(50% .13 158);
+      --ink-yellow: oklch(85% .13 95);
+      --font-hand: 'Patrick Hand', cursive;
+      --font-script: 'Caveat', cursive;
+      --left: 76px;
+      --right: 68px;
+      --content: 936px
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html,
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #3a3a3a
+    }
+
+    body {
+      font-family: var(--font-hand);
+      color: var(--ink-body)
+    }
+
+    .desk-shadow {
+      width: 1080px;
+      height: 1920px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, .08), 0 18px 45px rgba(0, 0, 0, .28), 0 60px 90px rgba(0, 0, 0, .18)
+    }
+
+    .notebook-page {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--paper);
+      background-image: radial-gradient(140% 90% at 18% 8%, oklch(99% .006 85 / .9) 0%, transparent 55%), radial-gradient(120% 70% at 85% 100%, oklch(90% .02 70 / .55) 0%, transparent 60%), linear-gradient(to right, var(--paper-shade) 0, color-mix(in oklab, var(--paper-shade) 22%, transparent) 34px, transparent 69px), repeating-linear-gradient(to bottom, transparent 0, transparent 41px, color-mix(in oklab, var(--rule) 34%, transparent) 41px, color-mix(in oklab, var(--rule) 42%, transparent) 43px);
+      padding: 22px var(--right) 28px var(--left)
+    }
+
+    /* Flash preview: full finished page overlay shown at t=0–1.0s,
+       fades to 0 by t=1.2s. Sits on top of the notebook so the
+       viewer sees the completed page before the whiteboard reveal. */
+    .flash-preview {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1080px;
+      height: 1920px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      z-index: 10
+    }
+
+    .paper-grain::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .38;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.9' numOctaves='2' seed='11'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='gamma' amplitude='1' exponent='2.6' offset='0'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E")
+    }
+
+    .watermark {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 700px;
+      height: 700px;
+      transform: translate(-50%, -50%);
+      opacity: .11;
+      pointer-events: none;
+      z-index: 0;
+      mix-blend-mode: multiply
+    }
+
+    .watermark svg {
+      width: 100%;
+      height: 100%;
+      display: block
+    }
+
+    .watermark path {
+      stroke: var(--ink-navy)
+    }
+
+    svg {
+      overflow: visible
+    }
+
+    .ink {
+      mix-blend-mode: multiply;
+      text-shadow: -.45px -.45px 0 rgba(0, 0, 0, .12), .7px .7px 0 rgba(255, 255, 255, .5)
+    }
+
+    .rough {
+      filter: url(#rough-a)
+    }
+
+    .rough2 {
+      filter: url(#rough-b)
+    }
+
+    .rough3 {
+      filter: url(#rough-c)
+    }
+
+    header {
+      position: relative;
+      width: var(--content);
+      margin: 0 0 12px;
+      padding-top: 2px
+    }
+
+    .brand {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: var(--font-script);
+      font-size: 26px;
+      color: var(--text-muted);
+      transform: rotate(-1.2deg)
+    }
+
+    .brand b {
+      color: var(--ink-navy)
+    }
+
+    .kicker {
+      display: inline-block;
+      font-size: 24px;
+      line-height: 1.05;
+      color: var(--ink-maroon);
+      letter-spacing: .2px;
+      margin-top: 26px;
+      padding-bottom: 5px;
+      transform: rotate(.3deg);
+      position: relative
+    }
+
+    .kicker svg {
+      position: absolute;
+      left: -5px;
+      bottom: -5px;
+      width: calc(100% + 10px);
+      height: 10px
+    }
+
+    .kicker svg path {
+      stroke: var(--ink-maroon)
+    }
+
+    h1 {
+      font-family: var(--font-hand);
+      font-weight: 400;
+      font-size: 61px;
+      line-height: 1.02;
+      color: var(--ink-navy);
+      transform: rotate(-.35deg);
+      max-width: 900px;
+      margin-top: 10px
+    }
+
+    h1 .hl {
+      position: relative;
+      display: inline-block;
+      padding: 0 3px
+    }
+
+    h1 .hl::before {
+      content: "";
+      position: absolute;
+      left: -4px;
+      right: -6px;
+      top: 10%;
+      bottom: 5%;
+      background: var(--ink-yellow);
+      opacity: .8;
+      transform: rotate(-1.1deg);
+      z-index: -1;
+      border-radius: 40% 8% 45% 6%/65% 20% 70% 15%
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      min-height: 0
+    }
+
+    section {
+      position: relative
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px
+    }
+
+    .num-blob {
+      width: 39px;
+      height: 39px;
+      border: 3px solid currentColor;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      margin-right: 10px;
+      font-family: var(--font-script);
+      font-weight: 700;
+      font-size: 25px;
+      text-shadow: none
+    }
+
+    .b1 {
+      border-radius: 47% 42% 51% 44%/44% 48% 41% 53%;
+      transform: rotate(-6deg)
+    }
+
+    .b2 {
+      border-radius: 53% 44% 46% 51%/48% 40% 54% 42%;
+      transform: rotate(4deg)
+    }
+
+    .b3 {
+      border-radius: 42% 51% 44% 47%/55% 43% 46% 39%;
+      transform: rotate(-2deg)
+    }
+
+    .b4 {
+      border-radius: 50% 40% 55% 43%/41% 52% 38% 56%;
+      transform: rotate(7deg)
+    }
+
+    .b5 {
+      border-radius: 44% 53% 40% 49%/50% 44% 51% 39%;
+      transform: rotate(-4deg)
+    }
+
+    .b6 {
+      border-radius: 48% 46% 52% 41%/42% 50% 44% 53%;
+      transform: rotate(2deg)
+    }
+
+    h2 {
+      font-family: var(--font-hand);
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 1;
+      color: var(--ink-navy)
+    }
+
+    h2.c-maroon {
+      color: var(--ink-maroon)
+    }
+
+    h2.c-green {
+      color: var(--ink-green)
+    }
+
+    .lede {
+      font-size: 22px;
+      line-height: 1.18;
+      max-width: 916px;
+      margin-bottom: 7px
+    }
+
+    .lede b {
+      color: var(--ink-navy);
+      font-weight: 400
+    }
+
+    .doodle {
+      position: absolute;
+      font-family: var(--font-script);
+      color: var(--ink-maroon);
+      font-weight: 700
+    }
+
+    .ledger {
+      width: 100%;
+      max-width: 916px
+    }
+
+    .ledger-head,
+    .ledger-row {
+      display: grid;
+      grid-template-columns: 2fr 1.35fr 2.1fr;
+      column-gap: 18px
+    }
+
+    .ledger-head {
+      font-family: var(--font-script);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--ink-navy);
+      padding-bottom: 2px;
+      transform: rotate(-.25deg)
+    }
+
+    .ledger-row {
+      font-size: 19px;
+      line-height: 1.12;
+      padding: 4px 0;
+      align-items: baseline
+    }
+
+    .ledger-row b {
+      color: var(--ink-navy);
+      font-weight: 400
+    }
+
+    .ledger-row.warn {
+      position: relative
+    }
+
+    .ledger-row.warn::before {
+      content: "";
+      position: absolute;
+      left: -9px;
+      right: -8px;
+      top: 1px;
+      bottom: 1px;
+      background: var(--ink-yellow);
+      opacity: .63;
+      transform: rotate(-.45deg);
+      z-index: -1;
+      border-radius: 3px 24px 4px 20px/20px 4px 22px 3px
+    }
+
+    .ledger-row.warn b,
+    .ledger-row.warn span {
+      color: var(--ink-maroon)
+    }
+
+    .rule-line {
+      display: block;
+      width: 100%;
+      height: 7px;
+      margin-top: 1px
+    }
+
+    .ledger.four-col .ledger-head,
+    .ledger.four-col .ledger-row {
+      grid-template-columns: 1.6fr 1fr 1.15fr .85fr
+    }
+
+    .compare-row {
+      display: grid;
+      grid-template-columns: 1fr 34px 1fr;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      max-width: 916px
+    }
+
+    .compare-card {
+      border: 3px solid;
+      padding: 11px 16px 10px;
+      min-height: 132px
+    }
+
+    .compare-card.direct {
+      border-color: var(--ink-navy);
+      background: color-mix(in oklab, var(--ink-navy) 4%, transparent);
+      border-radius: 3px 30px 4px 22px/26px 4px 30px 3px;
+      transform: rotate(.55deg)
+    }
+
+    .compare-card.indirect {
+      border-color: var(--ink-maroon);
+      background: color-mix(in oklab, var(--ink-maroon) 4%, transparent);
+      border-radius: 26px 4px 30px 3px/3px 30px 4px 22px;
+      transform: rotate(-.7deg)
+    }
+
+    .compare-card h4 {
+      font-family: var(--font-script);
+      font-weight: 700;
+      font-size: 29px;
+      margin-bottom: 3px;
+      text-decoration: underline;
+      text-decoration-style: wavy;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px
+    }
+
+    .compare-card.direct h4 {
+      color: var(--ink-navy)
+    }
+
+    .compare-card.indirect h4 {
+      color: var(--ink-maroon)
+    }
+
+    .compare-card ul {
+      list-style: none
+    }
+
+    .compare-card li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 18px;
+      line-height: 1.15;
+      margin: 4px 0
+    }
+
+    .compare-card li::before {
+      content: "—";
+      position: absolute;
+      left: 0
+    }
+
+    .compare-card.direct li::before {
+      color: var(--ink-navy)
+    }
+
+    .compare-card.indirect li::before {
+      color: var(--ink-maroon)
+    }
+
+    .vs-mark {
+      font-family: var(--font-script);
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--text-muted);
+      text-align: center;
+      transform: rotate(-8deg)
+    }
+
+    .warning-box {
+      width: 916px;
+      border: 3px solid var(--ink-maroon);
+      border-radius: 4px 34px 3px 26px/30px 4px 34px 3px;
+      padding: 10px 17px 11px;
+      background: color-mix(in oklab, var(--ink-maroon) 5%, transparent);
+      transform: rotate(-.45deg)
+    }
+
+    .warning-box .heading {
+      font-family: var(--font-script);
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--ink-maroon);
+      line-height: 1
+    }
+
+    .warning-box .text {
+      font-size: 19px;
+      line-height: 1.22;
+      margin-top: 2px
+    }
+
+    .warning-box.tip {
+      border-color: var(--ink-green);
+      background: color-mix(in oklab, var(--ink-green) 5%, transparent)
+    }
+
+    .warning-box.tip .heading {
+      color: var(--ink-green)
+    }
+
+    .flow-row {
+      display: grid;
+      grid-template-columns: 155px 48px 145px 1fr 48px 170px;
+      gap: 10px;
+      align-items: center;
+      max-width: 916px
+    }
+
+    .flow-node {
+      border: 3px solid var(--ink-maroon);
+      padding: 9px;
+      text-align: center;
+      font-size: 22px;
+      color: var(--ink-maroon);
+      background: var(--paper)
+    }
+
+    .flow-node.n1 {
+      border-radius: 46% 40% 52% 44%/42% 50% 40% 54%;
+      transform: rotate(-2deg)
+    }
+
+    .flow-node.n2 {
+      border-radius: 4px 28px 3px 24px/24px 4px 28px 3px;
+      transform: rotate(1.5deg)
+    }
+
+    .flow-node.n3 {
+      border-radius: 30px 3px 26px 4px/3px 26px 4px 30px;
+      transform: rotate(-1deg);
+      border-color: var(--ink-body);
+      color: var(--ink-body)
+    }
+
+    .flow-node .sub {
+      display: block;
+      font-size: 17px;
+      color: var(--text-muted)
+    }
+
+    .flow-node .amount {
+      font-family: var(--font-script);
+      font-weight: 700;
+      font-size: 33px
+    }
+
+    .flow-label {
+      font-family: var(--font-script);
+      font-weight: 600;
+      font-size: 23px;
+      color: var(--ink-maroon);
+      text-align: center;
+      line-height: 1.02;
+      transform: rotate(-2deg)
+    }
+
+    .flow-arrow path {
+      stroke: var(--ink-maroon)
+    }
+
+    .flow-arrow polygon {
+      fill: var(--ink-maroon)
+    }
+
+    footer {
+      width: 916px;
+      margin-top: auto;
+      padding-top: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.05;
+      position: relative
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -3px;
+      right: -3px;
+      height: 5px;
+      background: repeating-linear-gradient(90deg, var(--ink-navy) 0, var(--ink-navy) 110px, transparent 110px, transparent 125px);
+      opacity: .32
+    }
+
+    footer .cta-line {
+      color: var(--ink-navy);
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 1.15;
+      text-align: center;
+      letter-spacing: .01em
+    }
+
+    footer .cta-signoff {
+      font-weight: 400;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--text-muted)
+    }
+
+    footer .source-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 18px;
+      padding-top: 4px
+    }
+
+    footer .source {
+      max-width: 700px
+    }
+
+    footer a {
+      color: var(--ink-navy);
+      text-decoration: underline;
+      white-space: nowrap;
+      font-family: var(--font-script);
+      font-size: 22px
+    }
+
+    .pen-tip {
+      position: absolute;
+      z-index: 60;
+      pointer-events: none;
+      opacity: 0;
+      left: 0;
+      top: 0;
+
+      /* Make the pen bigger. Adjust this number based on your image */
+      width: 150px;
+
+      /* GSAP animates x/y as translate transforms; xPercent/yPercent keep
+         the tip aligned to the page coordinate (tip is 10% from the left
+         edge and 90% from the top of the pen SVG). */
+
+      /* Adds a realistic shadow behind the real pen */
+      filter: drop-shadow(4px 10px 6px rgba(0, 0, 0, 0.4));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pen-tip {
+        display: none
+      }
+    }
+  </style>
+</head>
+
+<body class="clip" data-duration="140.29999999999998">
+  <div id="root" data-composition-id="one-thousand-decision-tree-video" data-start="0" data-width="1080" data-height="1920" data-duration="140.29999999999998">
+    <!-- Frozen notebook page: visible the full composition duration. -->
+    <div id="page-bg" class="desk-shadow clip" data-start="0" data-duration="140.29999999999998" data-track-index="0">
+      <div class="notebook-page paper-grain">
+      <div class="watermark" aria-hidden="true"><svg viewBox="0 0 96 96">
+          <path d="M10 76 L32 76 L32 58 L50 58 L50 40 L68 40 L68 24 L86 24 L86 16" fill="none"
+            stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg></div>
+      <svg aria-hidden="true" width="0" height="0" style="position:absolute">
+        <defs>
+          <filter id="rough-a" x="-6%" y="-10%" width="112%" height="120%">
+            <feturbulence type="fractalNoise" baseFrequency="0.022" numOctaves="3" seed="4"
+              result="n" />
+            <fedisplacementmap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R"
+              yChannelSelector="G" />
+          </filter>
+          <filter id="rough-b" x="-6%" y="-10%" width="112%" height="120%">
+            <feturbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="17"
+              result="n" />
+            <fedisplacementmap in="SourceGraphic" in2="n" scale="1.15" xChannelSelector="R"
+              yChannelSelector="G" />
+          </filter>
+          <filter id="rough-c" x="-6%" y="-10%" width="112%" height="120%">
+            <feturbulence type="fractalNoise" baseFrequency="0.016" numOctaves="4" seed="29"
+              result="n" />
+            <fedisplacementmap in="SourceGraphic" in2="n" scale="2" xChannelSelector="R"
+              yChannelSelector="G" />
+          </filter>
+        </defs>
+      </svg>
+      <header class="ink">
+        <div class="brand"><b>@compoundlane</b> · notes</div><span
+          class="kicker rough2">the $1,000 decision tree: 4 steps<svg
+            viewBox="0 0 300 10" preserveAspectRatio="none">
+            <path d="M2,6 Q40,2 80,6 T160,5 T240,7 T298,4" fill="none" stroke-width="2"
+              stroke-linecap="round" />
+          </svg></span>
+        <h1>i have $1,000<br><span class="hl">— now what?</span></h1>
+      </header>
+      <main>
+        <section data-hf-id="hf-d4ee-012" class="ink"><div data-hf-id="hf-d4ee-000" class="section-head"><span data-hf-id="hf-d4ee-001" class="num-blob b1 rough">1</span><h2 data-hf-id="hf-d4ee-002">Cash First</h2></div><p data-hf-id="hf-d4ee-003" class="lede">Before you invest a dollar, keep $500–$1,000 in a high-yield savings account. Not a checking account. A separate, FDIC-insured account paying 4–5%. The reason isn't interest — it's optionality. Money you might need in 6 months has no business being in the market.</p><div data-hf-id="hf-d4ee-00a" class="compare-row"><div data-hf-id="hf-d4ee-00b" class="compare-card direct rough2"><h4 data-hf-id="hf-d4ee-00c">CHECKING ACCOUNT</h4><ul data-hf-id="hf-d4ee-00d"><li data-hf-id="hf-d4ee-004">Pays ~0% interest</li><li data-hf-id="hf-d4ee-005">Easy to spend by accident</li><li data-hf-id="hf-d4ee-006">No FDIC cushion beyond $250k</li></ul></div><div data-hf-id="hf-d4ee-00e" class="vs-mark">vs</div><div data-hf-id="hf-d4ee-00f" class="compare-card indirect rough2"><h4 data-hf-id="hf-d4ee-010">HIGH-YIELD SAVINGS</h4><ul data-hf-id="hf-d4ee-011"><li data-hf-id="hf-d4ee-007">Pays 4–5% today</li><li data-hf-id="hf-d4ee-008">Separate account, out of sight</li><li data-hf-id="hf-d4ee-009">FDIC-insured, liquid in 1 day</li></ul></div></div></section>
+        <section data-hf-id="hf-d4ee-02e" class="ink"><div data-hf-id="hf-d4ee-013" class="section-head"><span data-hf-id="hf-d4ee-014" class="num-blob b2 rough">2</span><h2 data-hf-id="hf-d4ee-015">Kill Debt Over 8%</h2></div><p data-hf-id="hf-d4ee-016" class="lede">Credit cards charge 22–28%. Buy-now-pay-later and store financing run 0–30%. Every dollar you pay down on a 24% balance is a guaranteed, tax-free, risk-free 24% return. You will never find an investment that reliably beats paying off that balance.</p><div data-hf-id="hf-d4ee-02a" class="ledger"><div data-hf-id="hf-d4ee-02b" class="ledger-head"><span data-hf-id="hf-d4ee-017">Debt type</span><span data-hf-id="hf-d4ee-018">Typical rate</span><span data-hf-id="hf-d4ee-019">Pay it down?</span></div><svg data-hf-id="hf-d4ee-02c" class="rule-line rough2" viewBox="0 0 916 8" preserveAspectRatio="none"><path data-hf-id="hf-d4ee-02d" d="M0,4 Q220,1 450,4 T916,3" fill="none" stroke="var(--ink-navy)" stroke-width="2"/></svg><div data-hf-id="hf-d4ee-01d" class="ledger-row"><b data-hf-id="hf-d4ee-01a">Credit card</b><span data-hf-id="hf-d4ee-01b">22–28%</span><span data-hf-id="hf-d4ee-01c">Yes — every dollar = 24% return</span></div><div data-hf-id="hf-d4ee-021" class="ledger-row"><b data-hf-id="hf-d4ee-01e">Buy-now-pay-later</b><span data-hf-id="hf-d4ee-01f">0–30%</span><span data-hf-id="hf-d4ee-020">Yes if &gt;8%</span></div><div data-hf-id="hf-d4ee-025" class="ledger-row"><b data-hf-id="hf-d4ee-022">Student loan (federal)</b><span data-hf-id="hf-d4ee-023">~5–7%</span><span data-hf-id="hf-d4ee-024">No — invest instead</span></div><div data-hf-id="hf-d4ee-029" class="ledger-row"><b data-hf-id="hf-d4ee-026">Mortgage</b><span data-hf-id="hf-d4ee-027">~6–8%</span><span data-hf-id="hf-d4ee-028">No — invest instead</span></div></div></section>
+        <section data-hf-id="hf-d4ee-036" class="ink"><div data-hf-id="hf-d4ee-02f" class="section-head"><span data-hf-id="hf-d4ee-030" class="num-blob b3 rough" style="color:var(--ink-green)">3</span><h2 data-hf-id="hf-d4ee-031" class="c-green">Roth IRA + S&amp;P 500</h2></div><p data-hf-id="hf-d4ee-032" class="lede">If you have earned income and you're under 50, a Roth IRA is the single best deal in personal finance. Money in after-tax, grows tax-free, comes out tax-free in retirement. Contribution limit is $7,000/year (2024). A low-cost S&amp;P 500 index fund — VOO, VTSAX, or FZROX — gives you the 500 largest US companies for an expense ratio under 0.10%.</p><div data-hf-id="hf-d4ee-033" class="warning-box tip rough"><div data-hf-id="hf-d4ee-034" class="heading">TIP</div><div data-hf-id="hf-d4ee-035" class="text">Put $500 in a Roth IRA, pick a low-fee S&amp;P 500 fund, automate monthly, don't touch for 30 years. Boring on purpose.</div></div></section>
+        <section data-hf-id="hf-d4ee-046" class="ink"><div data-hf-id="hf-d4ee-037" class="section-head"><span data-hf-id="hf-d4ee-038" class="num-blob b4 rough">4</span><h2 data-hf-id="hf-d4ee-039">Rest to Brokerage</h2></div><p data-hf-id="hf-d4ee-03a" class="lede">What's left — the final $0–$500 — goes into a regular taxable brokerage. Same S&amp;P 500 fund, no tax break, but no contribution limit and no 59½ penalty if you need it early. This is the flexible bucket. Future monthly savings live here too.</p><div data-hf-id="hf-d4ee-03b" class="flow-row"><div data-hf-id="hf-d4ee-03c" class="flow-node n1 rough2">$500 cash</div><svg data-hf-id="hf-d4ee-03d" class="flow-arrow rough2" width="48" height="30" viewBox="0 0 48 30"><path data-hf-id="hf-d4ee-03e" d="M0,15 Q13,20 24,12 Q34,17 41,14" fill="none" stroke-width="3" stroke-linecap="round"/><polygon data-hf-id="hf-d4ee-03f" points="39,8 48,15 39,22"/></svg><div data-hf-id="hf-d4ee-040" class="flow-node n2 rough2">$500 debt killed</div><div data-hf-id="hf-d4ee-041" class="flow-label">4–5% yield<br>24% guaranteed</div><svg data-hf-id="hf-d4ee-042" class="flow-arrow rough2" width="48" height="30" viewBox="0 0 48 30"><path data-hf-id="hf-d4ee-043" d="M0,15 Q13,10 24,17 Q34,11 41,15" fill="none" stroke-width="3" stroke-linecap="round"/><polygon data-hf-id="hf-d4ee-044" points="39,8 48,15 39,22"/></svg><div data-hf-id="hf-d4ee-045" class="flow-node n3 rough2">$500 Roth IRA</div></div></section>
+      </main>
+      <footer class="ink">
+        <div class="cta-line cta-signoff">That's i have $1,000.</div>
+        <div class="source-row">
+          <div class="source">Sourced from FDIC, IRS, Federal Reserve, Vanguard, Fidelity, S&amp;P 500</div><a href="https://www.compoundlane.com">compoundlane.com</a>
+        </div>
+      </footer>
+    </div>
+    </div>
+
+    <!-- Flash preview: full finished page visible from 0s, fades out
+         from 1.0s to 1.2s. Lives on top of the whiteboard reveal so
+         the viewer sees the completed notebook briefly, then watches
+         it being written. Track 1 (page-bg is track 0). -->
+    <div id="flash-preview" class="flash-preview clip"
+         data-start="0" data-duration="1.2" data-track-index="1"
+         style="background-image: url('public/flash-preview.png')"></div>
+
+    <!-- ─── AUDIO TRACKS ───────────────────────────────────────
+         Single voiceover track (intro + N concepts + outro,
+         generated as one combined file from tts_script.txt). Track 11.
+         No music bed. Audio is on a separate track from the page
+         clip; framework manages audio visibility directly. -->
+
+    <!-- Voiceover (track 11) — single combined mp3, delayed
+         by 1.0s so it begins as the flash fades out and the
+         whiteboard reveal starts. data-duration is patched by
+         inject-static-sfx.mjs to match the actual MP3. -->
+    <audio id="vo"
+           data-start="1.0" data-duration="139.3" data-track-index="11" data-volume="1"
+           src=".media/voiceover/voiceover.mp3"></audio>
+
+    
+  </div>
+
+  <script src="sound.js"></script>
+  <script>
+    (function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) return;
+
+      // Deterministic per-word rotation from a string hash (replaces Math.random).
+      function hashRot(s) {
+        var h = 0;
+        for (var i = 0; i < s.length; i++) { h = ((h << 5) - h) + s.charCodeAt(i); h |= 0; }
+        return ((h % 60) / 20 - 1.5).toFixed(2) + 'deg';
+      }
+
+      function wrapWords(root) {
+        Array.from(root.childNodes).forEach(function (node) {
+          if (node.nodeType === 3) {
+            if (!node.textContent.trim()) return;
+            var frag = document.createDocumentFragment();
+            var parts = node.textContent.split(/(\s+)/);
+            parts.forEach(function (part) {
+              if (part === '') return;
+              if (/^\s+$/.test(part)) {
+                frag.appendChild(document.createTextNode(part));
+              } else {
+                var span = document.createElement('span');
+                span.className = 'w';
+                span.style.display = 'inline-block';
+                span.style.setProperty('--r', hashRot(part));
+                span.textContent = part;
+                frag.appendChild(span);
+              }
+            });
+            node.parentNode.replaceChild(frag, node);
+          } else if (node.nodeType === 1) {
+            if (node.classList && node.classList.contains('num-blob')) return;
+            wrapWords(node);
+          }
+        });
+      }
+
+      wrapWords(document.querySelector('header'));
+      document.querySelectorAll('main > section').forEach(wrapWords);
+      wrapWords(document.querySelector('footer'));
+
+      // Selector list per group, scoped to the section that should reveal together.
+      // Mirrors the prior flat sequence selector list, partitioned by section.
+      function elementsFor(rootSel) {
+        return Array.from(document.querySelectorAll(
+          rootSel + ' .w, ' + rootSel + ' .num-blob, ' + rootSel + ' .compare-card, ' +
+          rootSel + ' .compare-card *, ' + rootSel + ' .vs-mark, ' + rootSel + ' .flow-node, ' +
+          rootSel + ' .warning-box, ' + rootSel + ' .ledger-row, ' + rootSel + ' .ledger-head, ' +
+          rootSel + ' .kicker svg path, ' + rootSel + ' .ledger .rule-line path, ' +
+          rootSel + ' .flow-arrow path, ' + rootSel + ' .flow-arrow polygon'
+        ));
+      }
+
+      // ── SCHEDULE + GROUPS (generated by build-video.mjs) ──────────
+      // The build script fills this block in based on the JSON spec's
+      // concepts.length. The single source of truth for the per-section
+      // REVEAL durations is projects/{slug}/04-video/timing.mjs; the
+      // inject step (scripts/sound/inject-static-sfx.mjs) rewrites the
+      // var declarations on every build to keep timing.mjs, the inline
+      // schedule, and the static SFX <audio> block in lockstep.
+            var groups = {
+        header: (function () {
+          var hs = 'header';
+          return Array.from(document.querySelectorAll(
+            hs + ' .w, ' + hs + ' .num-blob, ' + hs + ' .kicker svg path, ' + hs + ' h1, ' + hs + ' h1 *'
+          ));
+        })(),
+        c1:     elementsFor('main > section:nth-of-type(1)'),
+        c2:     elementsFor('main > section:nth-of-type(2)'),
+        c3:     elementsFor('main > section:nth-of-type(3)'),
+        c4:     elementsFor('main > section:nth-of-type(4)'),
+        footer: Array.from(document.querySelectorAll('footer .w, footer a'))
+      };
+
+            var FLASH_DURATION = 1.0;   // flash visible 0–1.0s
+            var FLASH_FADE     = 0.2;   // flash fades 1.0–1.2s
+            var VO_DURATION    = 139.3; // voiceover.mp3 length — must match the actual MP3
+            var HEADER_REVEAL  = 10.5;   // intro section reveal duration
+            var C1_REVEAL      = 33.2;  // c1 reveal duration
+            var C2_REVEAL      = 23.9;  // c2 reveal duration
+            var C3_REVEAL      = 22.1;  // c3 reveal duration
+            var C4_REVEAL      = 24.4;  // c4 reveal duration
+            var OUTRO_REVEAL   = 25.2;   // outro section reveal duration
+            var COMPOSITION_DURATION = FLASH_DURATION + HEADER_REVEAL + C1_REVEAL + C2_REVEAL + C3_REVEAL + C4_REVEAL + OUTRO_REVEAL;
+      var schedule = (function () {
+        var keys = ['header','c1','c2','c3','c4','footer'];
+        var durs = [HEADER_REVEAL, C1_REVEAL, C2_REVEAL, C3_REVEAL, C4_REVEAL, OUTRO_REVEAL];
+        var t = FLASH_DURATION, out = [];
+        for (var i = 0; i < keys.length; i++) {
+          out.push({ key: keys[i], start: t, dur: durs[i] });
+          t += durs[i];
+        }
+        return out;
+      })();
+
+      var page = document.querySelector('.notebook-page');
+      var pen = document.createElement('div');
+      pen.className = 'pen-tip';
+      pen.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">   <g transform="translate(500,500) rotate(-45) translate(-500,-500)">         <!-- Silver Clicker -->     <path d="M 780,470 L 860,470 A 20,20 0 0,1 860,530 L 780,530 Z" fill="#c0c0c0" stroke="#1c1c1c" stroke-width="8" stroke-linejoin="round"/>     <!-- Silver Clip -->     <path d="M 700,460 Q 600,380 500,460 A 15,15 0 0,0 520,480 Q 610,410 700,475 Z" fill="#c0c0c0" stroke="#1c1c1c" stroke-width="8" stroke-linejoin="round"/>     <!-- Blue Upper Barrel -->     <path d="M 550,455 L 780,455 L 780,545 L 550,545 Z" fill="#295497" stroke="#1c1c1c" stroke-width="8" stroke-linejoin="round"/>         <!-- Upper Barrel White Highlight -->     <path d="M 560,470 L 770,470" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>         <!-- Upper Barrel Dark Shadow -->     <path d="M 555,532 L 775,532" stroke="#1c1c1c" stroke-width="12" stroke-linecap="round"/>     <!-- Silver Middle Ring -->     <path d="M 490,465 L 550,455 L 550,545 L 490,535 Z" fill="#c0c0c0" stroke="#1c1c1c" stroke-width="8" stroke-linejoin="round"/>     <!-- Blue Lower Barrel -->     <path d="M 150,500 Q 300,470 490,465 L 490,535 Q 300,530 150,500 Z" fill="#295497" stroke="#1c1c1c" stroke-width="8" stroke-linejoin="round"/>         <!-- Lower Barrel White Highlight -->     <path d="M 180,490 Q 300,478 480,478" stroke="#ffffff" stroke-width="8" stroke-linecap="round" fill="none"/>         <!-- Lower Barrel Dark Shadow -->     <path d="M 180,512 Q 300,525 480,525" stroke="#1c1c1c" stroke-width="10" stroke-linecap="round" fill="none"/>     <!-- White/Silver Tip -->     <path d="M 90,500 L 150,480 L 150,520 Z" fill="#ffffff" stroke="#1c1c1c" stroke-width="8" stroke-linejoin="round"/>   </g> </svg> ';
+      page.appendChild(pen);
+
+      // 1. Declare the timeline SYNCHRONOUSLY, paused for HyperFrames' seek-based playback.
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+
+      // 1a. Fade the flash preview out at FLASH_DURATION. Lives at the
+      //     very start of the timeline so the rest of the buildGroup
+      //     tweens (which start at FLASH_DURATION) layer on top of
+      //     a fading-out preview.
+      var flashEl = document.querySelector('.flash-preview');
+      if (flashEl) {
+        tl.to(flashEl, { opacity: 0, duration: FLASH_FADE, ease: 'power2.out' }, FLASH_DURATION);
+      }
+
+      var pageRect = page.getBoundingClientRect();
+      var firstPen = true;
+      var lastElementTime = 0;
+
+      // ── SOUND SCHEDULE ─────────────────────────────────────────────
+      // The sound system (sound.js) reads window.__soundSchedule to know
+      // which animation actions to fire against which timeline range.
+      // Each row is { start, duration, action, seed }. The action is one
+      // of the keys in scripts/sound/profile-paper-explainer.mjs (e.g.
+      // "write", "draw", "cardReveal", "highlight", "drawCircle", etc.).
+      //
+      // We deliberately keep the sound schedule coarse-grained (one row
+      // per visual element-type) — per the spec §8, throttling prevents
+      // every individual letter from making noise, so we pick the
+      // dominant action per element and let the resolver expand
+      // compound actions (e.g. "draw" → drawStart + drawLoop + drawEnd).
+      window.__soundSchedule = [];
+
+      // 2. Build the timeline per-group: each section reveals in turn, paced
+      //    so per-element delay = groupDuration / elementCount. The voiceover
+      //    runs concurrently; the hand writes while the voice speaks.
+      function buildGroup(elements, groupStart, groupDur) {
+        if (!elements.length) return;
+        var per = groupDur / elements.length;
+        elements.forEach(function (el, i) {
+          var t = groupStart + i * per;
+          lastElementTime = Math.max(lastElementTime, t);
+
+          if (el.classList.contains('w')) {
+            var rot = el.style.getPropertyValue('--r') || '-1deg';
+            tl.fromTo(el,
+              { opacity: 0, y: 6, rotation: rot },
+              { opacity: 1, y: 0, rotation: 0, filter: 'blur(0)', duration: 0.42, ease: "power2.out" },
+              t
+            );
+
+            var r = el.getBoundingClientRect();
+            var penX = r.left - pageRect.left + r.width / 2;
+            var penY = r.top - pageRect.top;
+
+            if (firstPen) {
+              // Use x/y transforms (sub-pixel) and xPercent/yPercent for the
+              // tip alignment. GSAP combines: translate(-10%, -90%) translate(x, y).
+              tl.set(pen, { xPercent: -10, yPercent: -90, x: penX, y: penY, opacity: 1 }, t);
+              firstPen = false;
+            } else {
+              tl.to(pen, { x: penX, y: penY, duration: 0.06, ease: "none" }, t);
+            }
+          } else if (el.matches('path')) {
+            var len = el.getTotalLength();
+            tl.fromTo(el,
+              { strokeDasharray: len, strokeDashoffset: len },
+              { strokeDashoffset: 0, duration: 0.5, ease: "power1.inOut" },
+              t
+            );
+          } else if (el.matches('polygon')) {
+            tl.fromTo(el,
+              { opacity: 0, scale: 0.4, transformOrigin: "center" },
+              { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.5)" },
+              t
+            );
+          } else {
+            tl.fromTo(el,
+              { opacity: 0, scale: 0.8, rotation: -4 },
+              { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(1.5)" },
+              t
+            );
+          }
+        });
+      }
+
+      schedule.forEach(function (row) {
+        buildGroup(groups[row.key], row.start, row.dur);
+        // Build a parallel sound schedule for the same group. One sound
+        // event per element-type, throttled to a max of one "write" per
+        // ~1.5s window and one "cardReveal" per concept.
+        var elements = groups[row.key];
+        var dur = row.dur;
+        var per = elements.length ? dur / elements.length : dur;
+        var soundBucket = { write: 0, draw: 0, cardReveal: 0, highlight: 0 };
+        elements.forEach(function (el, i) {
+          var t = row.start + i * per;
+          var action = null;
+          if (el.classList && el.classList.contains('w')) {
+            // Throttle write: skip if a recent write fired in this group.
+            if (t - soundBucket.write < 1.5) return;
+            action = 'write';
+            soundBucket.write = t;
+          } else if (el.matches && el.matches('path')) {
+            // Underline or ledger rule — single draw per element.
+            action = 'draw';
+          } else if (el.classList && el.classList.contains('hl')) {
+            action = 'highlight';
+          } else if (el.classList && (
+            el.classList.contains('compare-card') ||
+            el.classList.contains('warning-box') ||
+            el.classList.contains('flow-node')
+          )) {
+            // One placement per concept (first occurrence only).
+            if (soundBucket.cardReveal === 0) {
+              action = 'cardReveal';
+              soundBucket.cardReveal = t;
+            } else {
+              return;
+            }
+          } else if (el.classList && el.classList.contains('ledger-row')) {
+            // Soft pop for ledger rows.
+            action = 'appear';
+          } else {
+            return;
+          }
+          window.__soundSchedule.push({
+            start: t,
+            duration: 0.6,           // short clip; the resolver will loop
+            action: action,
+            seed: i,                 // deterministic playback-rate jitter
+          });
+        });
+      });
+
+      
+
+      // Pen fades out 0.25s before the composition ends.
+      tl.to(pen, { opacity: 0, duration: 0.25 }, COMPOSITION_DURATION - 0.25);
+
+      // Final emphasis: gentle chime on the closing line ("That's dollar-cost averaging.")
+      var finalText = document.querySelector('.cta-signoff');
+      if (finalText) {
+        window.__soundSchedule.push({
+          start: lastElementTime + 0.3,
+          duration: 1.0,
+          action: 'importantReveal',
+          seed: 99,
+        });
+      }
+
+      // 3. Register the paused timeline on the keyed timeline registry.
+      window.__timelines["one-thousand-decision-tree-video"] = tl;
+    })();
+  </script>
+
+</body>
+
+</html>

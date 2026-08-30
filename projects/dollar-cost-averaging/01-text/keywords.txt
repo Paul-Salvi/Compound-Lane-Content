@@ -1,0 +1,22 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/dollar-cost-averaging/01-source/source.html
+# Every number below traces to projects/dollar-cost-averaging/01-content/dollar-cost-averaging.json
+# or the article sources (SEC, FINRA, Vanguard, Schwab, S&P Dow Jones Indices, 1928–2025).
+
+PRIMARY KEYWORD:
+dollar cost averaging
+
+SECONDARY KEYWORDS (3-5):
+- dollar cost averaging vs lump sum
+- is dollar cost averaging worth it
+- how does dollar cost averaging work
+- dollar cost averaging 10,000 dollars (long-tail variant, 4+ words)
+- lump sum vs dca historical returns
+
+SEARCH INTENT:
+"X vs Y" (comparison) — primary intent is the lump-sum-vs-DCA decision. Secondary intents: "what is X" (definitional, for the first-time DCA reader) and "how to X" (procedural, for the windfall use case).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #dollarcostaveraging, #DCAinvesting, #lumpsumvsDCA, #investmentstrategy, #cashdrag
+- Broad: #investing (use sparingly — oversaturated in 2026)

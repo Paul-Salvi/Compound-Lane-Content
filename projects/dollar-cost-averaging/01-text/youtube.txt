@@ -1,0 +1,38 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/dollar-cost-averaging/01-content/dollar-cost-averaging.json
+# or the cited primary sources (SEC, FINRA, Vanguard, Schwab, S&P 500 1928–2025).
+
+TITLE (target 50-60 chars, hard cap 100):
+Dollar-Cost Averaging: Does It Work? (Lump Sum Wins 68%)
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Lump sum beats dollar-cost averaging about 68% of the time. But DCA wins when markets fall — here's when to use each.
+
+DESCRIPTION FULL (200-500 words):
+Dollar-cost averaging means investing the same dollar amount on a schedule — like $833 a month for 12 months to deploy $10,000 — instead of all at once. When prices are high you buy fewer shares. When they're low, you buy more. Your average cost smooths out.
+
+But does it actually work? Two big studies point the same way. Vanguard tested rolling 12-month periods in U.S., U.K., and Australian markets from the 1920s onward. Charles Schwab tested rolling 12-month windows in U.S. history. Both found lump sum beats 12-month DCA about 68% of the time — roughly two-thirds. The reason: stocks rise more often than they fall, and the longer your money is in the market, the more it compounds.
+
+The math at a steady 7%: $10,000 invested on day one grows to about $10,700 after 12 months. DCA at end-of-month grows to about $10,327. The ~$373 gap is not a fee — it's cash drag, the cost of money waiting in cash while the market grows.
+
+So when does DCA actually help? When the alternative is sitting in cash out of fear, or when markets drop right after you start. It softens the worst outcomes. When does it hurt? Whenever markets rise while your cash waits. That's most years.
+
+The right way to use DCA: automate paycheck investing on payday — there's no drag because the money was never in cash. For windfalls, either invest promptly or DCA a short 3–6 month window. Park waiting cash in a high-yield account so it's at least earning something. Then check your target allocation, not the entry price.
+
+Full notes, the math, and the calculator at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first; #Shorts is for categorization, doesn't count against the content-relevance 3-5):
+#DollarCostAveraging #Investing #DCAvsLumpSum #PersonalFinance #IndexFunds
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+dollar cost averaging, DCA investing, lump sum vs DCA, dollar cost averaging 10k, cash drag investing, time in the market, S&P 500 historical returns, invest paycheck, windfall investing, index fund investing
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

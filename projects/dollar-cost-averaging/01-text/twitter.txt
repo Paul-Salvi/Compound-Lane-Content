@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/dollar-cost-averaging/01-content/dollar-cost-averaging.json
+# or the cited primary sources (Vanguard, Schwab, S&P 1928–2025).
+
+POST (target 70-100 chars, hard cap 280):
+Dollar-cost averaging: lump sum wins 68% of 12-month periods. At 7%, $10k day-one → ~$10,700. DCA end-of-month → ~$10,327.
+
+[Char count: 116 — within 280 cap; over 100-char target, retained for the $10k math contrast which is the core value. Trim to "DCA: lump sum wins 68% of 12-month periods. Same $10k → ~$10,700 lump vs ~$10,327 DCA." (95 chars) if a tighter post is preferred.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+#DCA
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + the math: https://compoundlane.com/what-is-dollar-cost-averaging-and-does-it-work"

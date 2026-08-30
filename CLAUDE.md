@@ -34,6 +34,14 @@ Both lanes are driven by the same per-article JSON spec; the visual is the sourc
     └── {slug}/                    # one folder per article (kebab-case)
         ├── 01-source/             # raw saved HTML of the article
         ├── 01-content/{slug}.json # Stage 1 JSON — single source of truth
+        ├── 01-text/               # platform copy (YouTube/IG/Twitter) + keywords + Spanish subs (post 01-content)
+        │   ├── keywords.txt       # Stage 1 keyword research
+        │   ├── youtube.txt        # Stage 2 YT title/description/tags
+        │   ├── instagram.txt      # Stage 2 IG hook/caption/alt text
+        │   ├── twitter.txt        # Stage 2 tweet + reply-link note
+        │   ├── youtube-problems.txt  # Stage 3 (post-render) timecoded Q&A for YouTube Learning
+        │   ├── spanish-subs.srt   # Stage 4 (post-render) Spanish SRT for YouTube Studio upload
+        │   └── README.md          # per-project pointer to docs/text-prompt-engine-v2.md
         ├── 02-visual/             # rendered notebook HTML + PNG
         │   ├── {slug}.html        # forked from templates/notebook-v2.html
         │   └── {slug}.png         # headless screenshot
@@ -47,6 +55,13 @@ Both lanes are driven by the same per-article JSON spec; the visual is the sourc
         │   ├── public/            # rasterized page background, hand SVG
         │   ├── .media/            # generated TTS + BGM
         │   └── renders/           # output MP4s
+        ├── 03-Video-animate/      # whiteboard-style animation (hand-drawn reveal of visual notes)
+        │   ├── index.html         # main composition (root timeline; static chrome + N section clips)
+        │   ├── package.json       # pinned hyperframes scripts (read from 03-Video/package.json by build)
+        │   ├── meta.json          # computed timeline summary (intro/concept/outro durations + per-section starts)
+        │   ├── .media/music/      # BGM bed (copied from templates/audio/whiteboard-bgm.mp3)
+        │   ├── .media/sfx/        # SFX scribble (copied from templates/audio/sfx/scribble-1.mp3)
+        │   └── renders/           # output MP4s (1080×1920, ~30s, 1-2 MB)
         ├── BRIEF.md               # locked intent (5-line YAML frontmatter)
         ├── STORYBOARD.md          # beat-by-beat plan with anchor map
         ├── frame.md               # design spec (canvas, tokens, audio)
@@ -59,9 +74,12 @@ Both lanes are driven by the same per-article JSON spec; the visual is the sourc
 | You need to… | Read this first | Then this |
 |---|---|---|
 | Produce a static hand-drawn infographic from a new article | `docs/visual-notes-prompt-system.md` (Stage 1) | `GUIDE.md §17` (visual notes recipe) |
+| Generate platform copy (YouTube/IG/Twitter) for a new article | `docs/text-prompt-engine-v2.md` | `node scripts/build-text.mjs <slug>` (then fill the 5 txt files; Stage 3 is post-render) |
+| Generate a Spanish subtitle file for an existing video | `docs/text-prompt-engine-v2.md` §Stage 4 | translate `04-video/tts_script.txt` → `tts_script.es.txt`, then `node scripts/build-subs.mjs <slug>` |
 | Scaffold a `03-Video/` HyperFrames composition from an existing JSON | `AGENTS.md` (skills + commands) | `GUIDE.md §3–§16` (full video workflow) |
 | Add a 20s promo reel from scratch (URL or local file) | `AGENTS.md` → invoke `/product-launch-video` | `GUIDE.md §3–§16` for the contract |
 | Add an animated notebook reel reusing the visual-notes JSON | `AGENTS.md` → `/general-video` companion mode | `GUIDE.md §17.6` (video variant recipe) |
+| Add a whiteboard-style animation (stroke-draw + pop-in reveals, no VO) from an existing visual-notes JSON | run `node scripts/build-animate.mjs [slug]` | template `templates/notebook-v2-animate.html`; per-project config under `01-content/{slug}.json` `animate: { intro_s, concept_s, outro_s }` (defaults 2.0 / 4.5 / 2.0) |
 | Fix a HyperFrames lint error in an existing `index.html` | `AGENTS.md` "Linting — ALWAYS RUN AFTER CHANGES" | `GUIDE.md §10` (contract) + `§15` (pitfalls) |
 | Regenerate TTS or BGM for an existing composition | `AGENTS.md` "Audio setup (Windows)" | `GUIDE.md §8` (TTS / mc CLI music) |
 | Write a voiceover script that won't sound robotic | `AUDIO_STYLE.md` (root — 7 rules + checklist) | `GUIDE.md §18` (full human-likeness recipe) |
@@ -72,6 +90,8 @@ Both lanes are driven by the same per-article JSON spec; the visual is the sourc
 ## Core contract (these rules are enforced by the framework)
 
 These are the load-bearing rules from `AGENTS.md` + `GUIDE.md` §10 that all `03-Video/index.html` compositions must satisfy. If you only have time to read one section, read this one.
+
+**Numbers everywhere.** The "every number sourced" rule that gates `01-content/{slug}.json` (see `GUIDE.md §17.2`) also gates `01-text/*.txt` — the platform copy is a terminal artifact, but every figure in the YouTube description / IG caption / tweet / YouTube Learning Q&A must trace to the same locked JSON, never be invented. Apply the `docs/text-prompt-engine-v2.md` output checklist before considering `01-text/` complete.
 
 ### HyperFrames composition contract
 1. **Every timed element** needs `data-start`, `data-duration`, and `data-track-index`.
@@ -106,6 +126,16 @@ These are the load-bearing rules from `AGENTS.md` + `GUIDE.md` §10 that all `03
 | Both from one article | Both | JSON drives both | PNG + MP4 |
 
 **Decision rule:** screenshotted/saved/pinned → visual notes. Watched with narration → video. The JSON is the contract that lets both come from one source.
+
+### The whiteboard-animation lane (`03-Video-animate/`)
+
+A third, lighter-weight lane: the static visual notes, animated. No voiceover, no camera moves — just the notebook page rendering itself stroke-by-stroke, blob-by-blob. Built from the same `01-content/{slug}.json` that drives the static PNG and the narrated reel, so the per-project content stays one source of truth.
+
+- **Template:** `templates/notebook-v2-animate.html` (fork of `notebook-v2.html`; static chrome stays at z-index 0, each concept becomes a timed `<section class="clip">` clip at z-index 1).
+- **Build:** `node scripts/build-animate.mjs [slug ...]` (auto-discovers all slugs with `01-content/*.json` if no args). Pure ESM, zero npm deps. Reads `animate: { intro_s, concept_s, outro_s }` per JSON, defaults `2.0 / 4.5 / 2.0` (~31 s for 6 concepts).
+- **Animation:** CSS keyframes only — `ink-draw` (SVG stroke via `pathLength="1"`), `pop-in` (`.num-blob` scale-bounce), `fade-in` (text), `arrow-head-pop`. Stagger within each section: 0.00 num-blob + SVG, 0.05 h2, 0.15 lede, 0.25 visual, 0.30 arrowhead. GSAP timeline is audio-only (bed volume envelope).
+- **Audio:** Optional. If `templates/audio/whiteboard-bgm.mp3` and `templates/audio/sfx/scribble-1.mp3` exist, the build copies them to `.media/music/bed.mp3` and `.media/sfx/scribble-1.mp3` and emits `<audio>` tags (BGM track 10, SFX tracks 12..12+N-1). `--with-audio` fails loudly on missing source files; `--skip-audio` disables detection. Default: detect, omit silently if absent.
+- **Render:** `cd projects/{slug}/03-Video-animate && npm run render` — produces a 1080×1920 MP4 (~30 s, 1-2 MB) at `renders/{slug}-animate.mp4`.
 
 ## The visual-notes system (the dominant lane)
 
