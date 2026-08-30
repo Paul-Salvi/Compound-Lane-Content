@@ -2,14 +2,21 @@
 
 > **Canonical rules for every `tts_script.txt` in this repo.** Apply these
 > when writing a voiceover script for any project. The rules exist because
-> our TTS engine (Kokoro 82M, local) does **not** support SSML — no
-> `<break>`, `<emphasis>`, or `<prosody>` tags. With no SSML, **punctuation
-> is the only lever you have for prosody**. These rules are how we make
-> `am_michael` sound like a person rather than a teleprompter.
+> neither of our TTS engines supports SSML — no `<break>`, `<emphasis>`,
+> or `<prosody>` tags. With no SSML, **punctuation is the only lever you
+> have for prosody**. These rules are how we make the voice sound like
+> a person rather than a teleprompter.
 
-Voice default: `am_michael` at speed `1.15`. See `GUIDE.md §8` for the
-generation command and `§18` for the full human-likeness recipe (ffmpeg
-post-processing, voice alternates).
+Voice default: **`Paul`** via VibeVoice 1.5B (local) with playback
+speed **`1.30×`** (ffmpeg `atempo` post-process). The speed default is
+the winner of `samples/paul-speed-audit/` (1.00× / 1.25× / 1.30× / 1.40×
+A/B; 1.30× sounded the most natural for ~30s reels). Override per
+project with `TTS_SPEED=N.NN`. The legacy Kokoro/`am_michael` path
+(`npx hyperframes tts --speed 1.15`) is kept as a fallback in
+`templates/video/regen.{ps1,sh.tpl}` and is also speed-controlled by
+`TTS_SPEED` (now defaulting to `1.30` to match the VibeVoice path).
+See `GUIDE.md §8` for the generation command and `§18` for the full
+human-likeness recipe (ffmpeg post-processing, voice alternates).
 
 ---
 
@@ -177,7 +184,8 @@ Before you commit a `tts_script.txt`, confirm:
 - [ ] No all-caps; emphasis via word choice and pacing
 - [ ] Acronyms (`DCA`, `SEC`, `FINRA`, `ETF`, `IRA`, `S&P`) kept as-is
 - [ ] Total spoken word count in range for the target length
-      (see `GUIDE.md §7` — 20s ≈ 25–30 words at speed 1.15)
+      (see `GUIDE.md §7` — production 30s reels ≈ ~80 words at Paul 1.30×;
+       20s promo ≈ 25–30 words at Kokoro `am_michael` 1.15×)
 - [ ] Read it aloud once. If you stumble, the TTS will too.
 
 ---

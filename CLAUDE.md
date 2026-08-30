@@ -154,7 +154,7 @@ From `AGENTS.md` "Speed workflow (20s promo reel)":
 2. Write `BRIEF.md` (YAML frontmatter, 6–8 lines — see `GUIDE.md §5`)
 3. Write `STORYBOARD.md` (5 frames × 4s — see `GUIDE.md §6`)
 4. Write `SCRIPT.md` (~30 words total, see `GUIDE.md §7`)
-5. Generate TTS: `npx hyperframes tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.15 -o audio/voiceover.wav` (see `AUDIO_STYLE.md` for script-writing rules)
+5. Generate TTS: `npx hyperframes tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.15 -o audio/voiceover.wav` (20s promo lane — Kokoro local TTS. For the production 30s voiceover reels use the VibeVoice/Paul pipeline in `templates/video/regen.{ps1,sh}.tpl` instead; see `AUDIO_STYLE.md` for the current default and `samples/paul-speed-audit/` for the speed selection.)
 6. Copy `index.html` from the guide template; swap content per frame
 7. `npx hyperframes check` → fix all errors → repeat
 8. `npx hyperframes render --fps 30`
@@ -175,11 +175,17 @@ mkdir -p projects/{slug}/{01-source,01-content,02-visual,03-Video}
 
 > **Before writing or editing `tts_script.txt`**, read `AUDIO_STYLE.md` at the
 > repo root and apply the 7 rules + checklist. The rules exist because
-> Kokoro (our TTS engine) doesn't support SSML — punctuation is the only
-> prosody lever.
+> neither TTS engine (Kokoro or VibeVoice) supports SSML — punctuation is
+> the only prosody lever. The production 30s reels use **VibeVoice / Paul**
+> (default speed `1.30×`); the 20s promo recipe below uses **Kokoro /
+> `am_michael`** (speed `1.15`). The script-writing rules are shared
+> across both lanes.
 
 ```powershell
-# Windows / PowerShell
+# Windows / PowerShell — 20s promo recipe (Kokoro / am_michael)
+# For the 30s voiceover reels, use the VibeVoice regen.ps1 / regen.sh in
+# projects/<slug>/04-video/ instead. See AUDIO_STYLE.md for the current
+# Paul + 1.30× default.
 $env:HYPERFRAMES_PYTHON="C:\Users\plslv\AppData\Local\Programs\Python\Python311\python.exe"
 npx --yes hyperframes@0.8.11 tts "$(cat audio/tts_script.txt)" --voice am_michael --speed 1.15 -o audio/voiceover.wav
 # then update <audio id="vo" data-duration="..."> in index.html to match the new length

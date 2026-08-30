@@ -28,6 +28,11 @@ $RepoRoot = (Resolve-Path "$PSScriptRoot\..\..\..").Path
 # ── CONFIG ───────────────────────────────────────────────────────────
 $Backend = if ($env:TTS_BACKEND) { $env:TTS_BACKEND } else { 'vibevoice' }
 $Voice = if ($env:TTS_VOICE) { $env:TTS_VOICE } else { 'Paul' }
+# TTS_SPEED: ffmpeg atempo applied to the VibeVoice output. Default 1.30
+# is the winner of samples/paul-speed-audit/ (1.00/1.25/1.30/1.40 A/B).
+# Valid range: 0.5–2.0 (single atempo filter); chain `atempo=A,atempo=B`
+# for higher. Set TTS_SPEED=1.0 to disable speed-up entirely.
+$Speed = if ($env:TTS_SPEED) { $env:TTS_SPEED } else { '1.30' }
 $env:HYPERFRAMES_PYTHON = 'C:\Users\plslv\AppData\Local\Programs\Python\Python311\python.exe'
 
 New-Item -ItemType Directory -Force -Path .media\voiceover | Out-Null
@@ -44,7 +49,7 @@ if ($Backend -eq 'vibevoice') {
   }
   $VibeVoicePy = Join-Path $VibeVoiceDir '.venv\Scripts\python.exe'
   if (-not (Test-Path $VibeVoicePy)) {
-    Write-Error "!! VibeVoice venv not found at $VibeVoicePy`n   Set VIBEVOICE_DIR or run \`uv sync\` inside VibeVoice."
+    Write-Error "!! VibeVoice venv not found at $VibeVoicePy`n   Set VIBEVOICE_DIR or run 'uv sync' inside VibeVoice."
     exit 1
   }
   $voiceMan = Join-Path $VibeVoiceDir "demo\voices\en-${Voice}_man.wav"
@@ -87,10 +92,12 @@ if ($Backend -eq 'vibevoice') {
     Write-Error "!! VibeVoice did not produce a WAV in $VibeVoiceDir\outputs\"
     exit 1
   }
-  ffmpeg -y -loglevel error -i $generatedWav.FullName -codec:a libmp3lame -qscale:a 4 .media\voiceover\voiceover.mp3
+  ffmpeg -y -loglevel error -i $generatedWav.FullName -filter:a "atempo=$Speed" -codec:a libmp3lame -qscale:a 4 .media\voiceover\voiceover.mp3
 } else {
   # Legacy Kokoro path (`npx hyperframes tts`). Kept for reference / fallback.
-  $Speed = if ($env:TTS_SPEED) { $env:TTS_SPEED } else { '0.97' }
+  # TTS_SPEED default is 1.30 (matches the VibeVoice/Paul default; the
+  # Kokoro engine's --speed maps to the same playback-rate intent).
+  $Speed = if ($env:TTS_SPEED) { $env:TTS_SPEED } else { '1.30' }
   Write-Host "→ tts_script.txt (Kokoro $Voice) → .media\voiceover\voiceover.mp3"
   npx --yes hyperframes@0.8.11 tts tts_script.txt --voice $Voice --speed $Speed -o .media\voiceover\voiceover.mp3 | Out-Null
 }

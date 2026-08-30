@@ -29,6 +29,11 @@ cd "$(dirname "$0")"
 # ── CONFIG ───────────────────────────────────────────────────────────
 BACKEND="${TTS_BACKEND:-vibevoice}"
 VOICE="${TTS_VOICE:-Paul}"
+# TTS_SPEED: ffmpeg atempo applied to the VibeVoice output. Default 1.30
+# is the winner of samples/paul-speed-audit/ (1.00/1.25/1.30/1.40 A/B).
+# Valid range: 0.5–2.0 (single atempo filter); chain `atempo=A,atempo=B`
+# for higher. Set TTS_SPEED=1.0 to disable speed-up entirely.
+: "${TTS_SPEED:=1.30}"
 : "${HYPERFRAMES_PYTHON:=C:\\Users\\plslv\\AppData\\Local\\Programs\\Python\\Python311\\python.exe}"
 export HYPERFRAMES_PYTHON
 
@@ -80,11 +85,13 @@ if [ "$BACKEND" = "vibevoice" ]; then
     exit 1
   fi
   ffmpeg -y -loglevel error -i "$GENERATED_WAV" \
-    -codec:a libmp3lame -qscale:a 4 \
+    -filter:a "atempo=$TTS_SPEED" -codec:a libmp3lame -qscale:a 4 \
     .media/voiceover/voiceover.mp3
 else
   # Legacy Kokoro path (`npx hyperframes tts`). Kept for reference / fallback.
-  : "${TTS_SPEED:-0.97}"
+  # TTS_SPEED default is 1.30 (matches the VibeVoice/Paul default; the
+  # Kokoro engine's --speed maps to the same playback-rate intent).
+  : "${TTS_SPEED:-1.30}"
   echo "→ tts_script.txt (Kokoro $VOICE) → .media/voiceover/voiceover.mp3"
   npx --yes hyperframes@0.8.11 tts tts_script.txt \
     --voice "$VOICE" --speed "$TTS_SPEED" \
