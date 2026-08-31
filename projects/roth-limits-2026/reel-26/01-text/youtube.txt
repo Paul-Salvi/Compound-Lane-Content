@@ -1,0 +1,57 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-26/01-content/roth-and-social-security.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth IRA & Social Security: The Provisional Income Trap
+
+[Char count: 56 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Roth withdrawals don't count toward Social Security's provisional income formula. Trad IRA withdrawals do. Up to 85% of SS can become taxable.
+
+[Char count: 161 — over 150 by 11; trim to "Roth withdrawals don't count toward SS's provisional income formula. Trad IRA withdrawals do. Up to 85% of SS can become taxable." (143 chars)]
+
+DESCRIPTION FULL (200-500 words):
+Most people don't realize: the choice between Roth and Traditional IRA has a second-order effect on Social Security taxation. The Roth shield can save you thousands per year in retirement.
+
+The rule (IRC §86):
+- Provisional income = other income + 50% of SS benefits + tax-exempt interest.
+- Below $34,000 single / $44,000 MFJ: 0% of SS taxable.
+- Above $34,000 / $44,000: up to 50% of SS taxable.
+- Above $44,000 / $64,000: up to 85% of SS taxable.
+- Roth IRA withdrawals are NOT in the formula. Trad IRA withdrawals ARE.
+
+The gap:
+- Same $50,000 withdrawal at age 67.
+- Trad IRA: $50K adds to provisional income. Up to $42,500 of your SS becomes taxable. Effective marginal tax: ~22% on the SS portion = $9,350 extra.
+- Roth IRA: $50K doesn't count. Your SS stays as low-taxed as possible. Effective tax on the withdrawal: $0.
+
+The strategy:
+- Goal in early retirement: keep provisional income under $34K single / $44K MFJ.
+- Use Roth for the dollars you need to spend before age 70 (when RMDs force Trad IRA distributions).
+- Save Trad IRA dollars for age 70+ when SS + RMDs push you over the threshold anyway.
+- The Roth shield compounds: less taxable SS → less provisional income → lower bracket → less capital gains drag → compounding effect over 20+ years.
+
+Common mistakes:
+- Converting Trad to Roth in low-income years and then withdrawing from the Trad in early retirement — you lose the Roth shield.
+- Forgetting that the SS taxation formula is joint, not individual (MFJ thresholds are different).
+- Not accounting for tax-exempt municipal bond interest, which DOES count toward provisional income.
+
+Full threshold math + the conversion ladder at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #SocialSecurity #ProvisionalIncome #RetirementTax #RothConversion
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira social security, roth ira ss tax, provisional income formula, social security taxable, roth ira provisional income, ss 85 percent taxable, roth conversion ss, traditional ira ss, retirement ss taxation, roth shield retirement
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

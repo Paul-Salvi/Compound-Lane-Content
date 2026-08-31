@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-26/01-content/roth-and-social-security.json
+
+PRIMARY KEYWORD:
+roth ira social security
+
+SECONDARY KEYWORDS (3-5):
+- roth withdrawals social security taxation
+- provisional income formula
+- social security taxable income
+- roth ira ss 85 percent
+- 86 social security tax
+
+SEARCH INTENT:
+"does my Roth affect my SS" (decision) — primary intent is whether Roth withdrawals trigger SS taxation.
+Secondary: "what's the provisional income formula" (informational) — the SS taxation thresholds.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #SocialSecurity, #ProvisionalIncome, #RetirementTax, #RothConversion
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

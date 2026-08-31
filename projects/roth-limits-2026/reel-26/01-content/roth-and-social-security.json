@@ -1,0 +1,41 @@
+{
+  "slug": "roth-and-social-security",
+  "title": "Roth IRA and Social Security (Does a Roth Affect SS?)",
+  "subtitle": "Roth IRA withdrawals do not count as provisional income for Social Security taxation. Traditional IRA withdrawals do. Up to 85% of SS can be taxable — Roth keeps that ceiling lower.",
+  "source_irs": "IRS Pub 915; SSA Publication No. 05-10069; IRC §86 (Social Security taxation)",
+  "pillar": 6,
+  "publish_date": "2026-09-24",
+  "concepts": [
+    {
+      "key": "the-rule",
+      "heading": "The Rule",
+      "lede": "Roth IRA withdrawals are not part of the Social Security provisional income formula. Traditional IRA withdrawals are.",
+      "body": [
+        "Provisional income = other income + 50% of SS benefits + tax-exempt interest.",
+        "If provisional income > $34,000 single / $44,000 MFJ, up to 50% of SS becomes taxable.",
+        "If provisional income > $44,000 single / $64,000 MFJ, up to 85% of SS becomes taxable.",
+        "Roth withdrawals don't enter this formula. Trad IRA withdrawals do."
+      ]
+    },
+    {
+      "key": "the-gap",
+      "heading": "The Tax Gap",
+      "lede": "Same $50,000 withdrawal — from a Trad IRA, you owe tax on the SS bump. From a Roth, you don't.",
+      "body": [
+        "Scenario: you're 67, on SS, taking $50K/yr for living expenses.",
+        "Trad IRA: $50K adds to provisional income. Up to $42,500 of your SS becomes taxable. Effective tax: $10,000+ on the SS portion alone.",
+        "Roth IRA: $50K doesn't count. Your SS stays as low-taxed as possible. No SS taxation bump."
+      ]
+    },
+    {
+      "key": "the-strategy",
+      "heading": "The Strategy",
+      "lede": "Build the Roth so you can manage your provisional income in retirement. Trad IRAs force you into higher tax brackets when SS kicks in.",
+      "body": [
+        "Goal: provisional income under $34K single / $44K MFJ in early retirement years.",
+        "Use Roth for the dollars you can convert/withdraw without bumping SS taxation.",
+        "Trad IRA dollars: defer to age 70+ when RMDs force them out anyway."
+      ]
+    }
+  ]
+}

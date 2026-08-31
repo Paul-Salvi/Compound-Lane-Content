@@ -1,0 +1,32 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-26/01-content/roth-and-social-security.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Roth withdrawals don't count toward SS's provisional income. Trad IRA withdrawals do. Up to 85% of SS can become taxable.
+
+[Char count: 125 — at the 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The rule, IRC §86:
+- Provisional income = other income + 50% SS + tax-exempt interest
+- Below $34K single: 0% SS taxable
+- $34K-$44K: up to 50% SS taxable
+- Above $44K: up to 85% SS taxable
+- Roth withdrawals DON'T count. Trad IRA withdrawals DO.
+
+The gap:
+- Same $50K at 67
+- Trad IRA: $50K adds to provisional. Up to $42K SS taxable. ~$9K extra tax.
+- Roth: doesn't count. $0 extra tax on SS.
+
+The strategy:
+- Keep provisional income under $34K single / $44K MFJ
+- Use Roth for early retirement spending
+- Save Trad IRA for 70+ when RMDs force it out
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Roth vs SS" with a side-by-side: "Trad IRA $50K → +$42K SS taxable, +$9K tax" vs "Roth $50K → $0 SS taxable, $0 extra tax". Sticky note: "Use Roth to keep provisional income under $34K single."
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #SocialSecurity #ProvisionalIncome #RetirementTax #RothConversion
