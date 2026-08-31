@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-11/01-content/roth-excise-tax-overcontribute.json
+# or the cited IRC / IRS sources.
+
+POST (target 70-100 chars, hard cap 280):
+Over-contribute to a Roth by $1,000? 6% excise tax — every year. $60/year. Fix: recharacterize or withdraw + Form 5329.
+
+[Char count: 130 — within 280 cap; over 100-char target, retained for the Form 5329 mention which is the fix. Trim to "Over-contribute to a Roth by $1,000? 6% excise tax every year. $60/year on the excess. File Form 5329 to fix." (120 chars) for a tighter post.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + Form 5329 walkthrough: https://compoundlane.com/roth-excise-tax-overcontribute"

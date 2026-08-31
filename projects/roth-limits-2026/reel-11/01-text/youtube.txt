@@ -1,0 +1,52 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-11/01-content/roth-excise-tax-overcontribute.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth IRA Over-Contribution: 6% Excise Tax
+
+[Char count: 40 — within 60 target; under target for a tight, factual title]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Over-contribute to your Roth by $1,000? The IRS hits you with a 6% excise tax — every year. That's $60/year, or $300 if you don't fix it for 5 years.
+
+[Char count: 170 — over 150 target by 20 chars; the 20 extra chars carry the "if you don't fix it for 5 years" / "$300" detail. Trim to "Over-contribute to your Roth by $1,000? The IRS hits you with a 6% excise tax — every year." (107 chars) for a tighter hook.]
+
+DESCRIPTION FULL (200-500 words):
+The 2026 Roth IRA limit is $7,500 per person, per year (per IRS IR-2025-111). Add the $1,100 catch-up at 50+ for $8,600 total. Contribute more, and the excess is hit with a 6% excise tax — every year the excess remains in the account (per IRC §4973).
+
+The $1,000 example:
+- Excess contribution: $1,000
+- Annual excise tax: $1,000 × 0.06 = $60
+- 5-year cumulative tax (if uncorrected): $300
+- Plus: earnings on the excess accrue their own 6% until corrected
+
+The 6% is on the excess only, not the total balance. A $1,000 excess in a $50,000 Roth triggers $60/year, not $3,000.
+
+Two paths to fix an over-contribution:
+
+Path 1: Recharacterize. Convert the excess contribution (plus attributable earnings) to a traditional IRA contribution. This works only if you're otherwise eligible to contribute to a traditional IRA — meaning your income doesn't exceed the deductibility phaseouts (or you accept a non-deductible contribution). Earnings on the recharacterized amount are also moved; you don't owe the 6% on them.
+
+Path 2: Withdraw the excess. Pull the $1,000 excess plus attributable earnings out of the Roth before your tax-filing deadline (including extensions). The earnings on the excess are taxable as ordinary income for the year the contribution was made, and subject to the 10% early-withdrawal penalty if you're under 59½. No 6% excise tax.
+
+Either way, file Form 5329. Path 1 uses Part V to report the recharacterization. Path 2 uses Part III to claim the "withdrawal of excess contribution" exception. Either filing removes the 6% obligation.
+
+The bottom line: the 6% excise tax is a 6% per year, compounding by neglect. Correct the mistake and the tax stops. Leave the excess in for 10 years and you've paid 60% of the excess in excise tax alone.
+
+Full notes and Form 5329 walkthrough at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #ExcessContribution #Form5329 #IRAPenalty #PersonalFinance
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira excess contribution, 6 percent excise tax, form 5329, recharacterize roth, withdraw excess ira, ira 7500 limit, ira 8600 catchup, roth ira penalty, ira corrective distribution, irs form 5329 instructions
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

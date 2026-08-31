@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-11/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 2.0 + 7.5 + 12.0 + 11.5 + 2.0 = 35.0s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  What happens if I over-contribute to my Roth IRA?
+0:03  What is the excise tax rate on excess Roth IRA contributions?
+0:11  How much is the 6% excise tax on a $1,000 excess contribution per year?
+0:23  How do I fix an excess Roth IRA contribution?
+0:34  Which IRS form do I file to report or fix the excess?

@@ -1,0 +1,31 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-11/01-content/roth-excise-tax-overcontribute.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Over-contribute to a Roth by $1,000? The IRS hits you with a 6% excise tax — every year. $60/year. $300 if uncorrected for 5 years.
+
+[Char count: 161 — over 125 limit; trim to "Over-contribute to a Roth by $1,000? IRS hits you with a 6% excise tax — every year. $60/year on the excess." (122 chars) for a tighter hook.]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The 2026 Roth IRA limit is $7,500 ($8,600 at 50+). Contribute more, and the excess is hit with a 6% excise tax — every year the excess stays (IRC §4973).
+
+The $1,000 example:
+- Excess: $1,000
+- Annual excise tax: $60
+- 5-year cumulative: $300
+- Plus earnings on the excess accrue their own 6%
+
+Two fixes:
+1. Recharacterize as a traditional IRA (if eligible).
+2. Withdraw the excess + earnings before your tax-filing deadline.
+
+File Form 5329 either way.
+
+Save this before you max out.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Over-contribute by $1,000 → $60/yr excise tax" with a flow chart: "$1,000 excess → 6% × $1,000 = $60/yr → 5 years = $300". Below, a sticky note reads "Fix: recharacterize or withdraw + Form 5329".
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #ExcessContribution #Form5329 #IRAPenalty #PersonalFinance

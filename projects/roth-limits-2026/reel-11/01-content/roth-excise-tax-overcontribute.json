@@ -1,0 +1,48 @@
+{
+  "slug": "roth-excise-tax-overcontribute",
+  "title": "The 6% excise tax (over-contribute by $1,000)",
+  "hook": "Over-contributed? Six percent a year.",
+  "default_disclaimer": "Educational content, not financial advice.",
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The over-contribution mechanic",
+      "body": "Contributing more than the 2026 limit ($7,500, or $8,600 at 50+) to a Roth IRA is an excess contribution. The IRS penalty for an excess contribution is a 6% excise tax — applied every year the excess remains in the account. The 6% is on the excess amount, not on the total balance.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "6%",
+        "label": "annual excise tax",
+        "color": "ink-navy"
+      }
+    },
+    {
+      "number": 2,
+      "title": "The $1,000 example",
+      "body": "Say you over-contribute by $1,000 — contributed $8,500 instead of $7,500. The 6% excise tax is $1,000 × 0.06 = $60 per year. If you leave the excess in for 5 years, that's $300 in excise tax. Plus the $1,000 of excess is still in the account — and earnings on it are subject to a second 6% tax until corrected.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$60",
+        "label": "per year on $1,000 excess",
+        "color": "ink-maroon"
+      }
+    },
+    {
+      "number": 3,
+      "title": "The fix: recharacterize or withdraw the excess (with earnings)",
+      "body": "Two paths. Path one: recharacterize the excess as a traditional IRA contribution (if you're eligible). Path two: withdraw the excess plus attributable earnings before your tax filing deadline (including extensions). File Form 5329 to report and pay the 6% — or to claim the withdrawal exception. Correct the mistake; the 6% stops.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "Form 5329",
+        "label": "to fix or report",
+        "color": "ink-green"
+      }
+    }
+  ],
+  "sources": [
+    "IRS — IRC §4973 — Excise tax on excess contributions to certain tax-favored accounts",
+    "IRS Form 5329 — Additional Taxes on Qualified Plans (including Section 4973)",
+    "IRS Pub 590-A — Excess Roth IRA contributions",
+    "IRS Notice 2025-67 — 2026 contribution limits",
+    "IRS IR-2025-111 — 401(k) limit increases to $24,500 for 2026, IRA limit increases to $7,500"
+  ]
+}

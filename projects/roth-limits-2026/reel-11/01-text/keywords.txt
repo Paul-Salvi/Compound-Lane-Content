@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-11/01-content/roth-excise-tax-overcontribute.json
+
+PRIMARY KEYWORD:
+roth ira excess contribution 6 percent
+
+SECONDARY KEYWORDS (3-5):
+- form 5329
+- ira excess contribution excise tax
+- recharacterize roth contribution
+- withdraw excess ira contribution
+- ira 7500 limit
+
+SEARCH INTENT:
+"How do I fix" (procedural) — primary intent is the corrective procedure (recharacterize or withdraw).
+Secondary: "what's the penalty" (the 6% tax).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #ExcessContribution, #Form5329, #Recharacterize, #IRAPenalty
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)
