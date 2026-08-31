@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-24/01-content/fall-conversion-deadline.json
+
+PRIMARY KEYWORD:
+roth conversion deadline 2026
+
+SECONDARY KEYWORDS (3-5):
+- december 31 roth conversion
+- roth conversion tax bracket
+- form 8606 part ii 2026
+- roth conversion october
+- 408 d 2 conversion deadline
+
+SEARCH INTENT:
+"when is the deadline to convert" (time-sensitive) — primary intent is the December 31 deadline.
+Secondary: "should I convert this year" (decision) — locking in this year's bracket vs. future years.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothConversion, #RothIRA, #TaxBracket, #Form8606, #YearEndPlanning
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

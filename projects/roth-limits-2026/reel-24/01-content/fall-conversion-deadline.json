@@ -1,0 +1,40 @@
+{
+  "slug": "fall-conversion-deadline",
+  "title": "Fall is the Home Stretch for Roth Conversions",
+  "subtitle": "Today is the autumnal equinox. You have roughly 100 days to convert pre-tax dollars to Roth before December 31 — and lock in this year's tax bracket.",
+  "source_irs": "IRC §408(d)(2); Form 8606 Part II; IRS Pub 590-B",
+  "pillar": 1,
+  "publish_date": "2026-09-22",
+  "concepts": [
+    {
+      "key": "the-window",
+      "heading": "The 100-Day Window",
+      "lede": "From September 22 (autumnal equinox) to December 31, you have about 100 days to convert pre-tax dollars to Roth and count them against this year's income.",
+      "body": [
+        "A conversion is taxed in the calendar year it happens. Convert in 2026, it counts as 2026 income.",
+        "The deadline isn't a specific date — it's 'before midnight on Dec 31'.",
+        "Converting in the last week of December is the most common, and the most likely to be done in a panic."
+      ]
+    },
+    {
+      "key": "the-bracket",
+      "heading": "Lock In This Year's Bracket",
+      "lede": "Markets down? Income down? That's the best time to convert. The lower your bracket this year, the cheaper the conversion.",
+      "body": [
+        "Estimate your 2026 taxable income now. Subtract deductions. Find your bracket.",
+        "If you have room between your projected income and the top of your bracket, convert up to that amount.",
+        "$50,000 converted at 22% saves ~$11,000 vs. converting at 32% in a future year."
+      ]
+    },
+    {
+      "key": "the-tracker",
+      "heading": "Track on Form 8606",
+      "lede": "Every conversion needs to be reported on Form 8606 Part II. Skip it, and the IRS assumes your conversion was 100% earnings (taxable + 10% penalty if early).",
+      "body": [
+        "Form 8606 Part II: each conversion is a line — date, amount, basis carried over.",
+        "The 5-year clock starts on January 1 of the year AFTER the conversion.",
+        "Convert early in the year, before you forget. October is the sweet spot."
+      ]
+    }
+  ]
+}

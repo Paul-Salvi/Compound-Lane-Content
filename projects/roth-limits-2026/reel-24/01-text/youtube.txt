@@ -1,0 +1,56 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-24/01-content/fall-conversion-deadline.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth Conversion Deadline: 100 Days Left in 2026
+
+[Char count: 51 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Today is the autumnal equinox. You have about 100 days to convert pre-tax dollars to Roth before Dec 31 — and lock in this year's tax bracket.
+
+[Char count: 165 — over 150 by 15; trim to "Today is the equinox. About 100 days to convert pre-tax to Roth before Dec 31 — and lock in this year's tax bracket." (132 chars)]
+
+DESCRIPTION FULL (200-500 words):
+Fall is the home stretch for Roth conversions. Here's the calendar math, the tax-bracket logic, and the form-8606 mechanics.
+
+The 100-day window (Sept 22 → Dec 31):
+- A conversion is taxed in the calendar year it happens. Convert in 2026 = 2026 income.
+- The deadline isn't a specific date — it's "before midnight on December 31."
+- Converting in the last week of December is the most common, and the most panic-driven.
+
+Lock in this year's bracket:
+- Estimate your 2026 taxable income now. Subtract deductions. Find your bracket.
+- If you have room between your projected income and the top of your bracket, convert up to that amount.
+- $50,000 converted at 22% saves ~$11,000 vs. converting at 32% in a future year (assuming the same future tax rate, before compounding).
+
+Why fall is the right window:
+- Markets often dip in October — a lower balance means fewer dollars converted to fill your bracket.
+- You have a better read on your 2026 income by Q3 than you do in January.
+- The 5-year conversion clock starts on January 1 of the year AFTER the conversion — converting in 2026 means the clock doesn't expire until Jan 1, 2032.
+
+Track on Form 8606 Part II:
+- Every conversion is a separate line — date, amount, basis carried over.
+- The 5-year clock per conversion (IRC §408A(d)(4)) is non-waivable.
+- October is the sweet spot. Earlier than you think — by December, the broker's customer-service queue is jammed.
+
+The trap: people convert in late December, then realize they blew past their bracket. By then, it's locked. The cure is to convert early in the year, not late.
+
+Full bracket math + Form 8606 walkthrough at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothConversion #RothIRA #TaxBracket #Form8606 #YearEndPlanning
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth conversion deadline, december 31 roth, roth conversion tax bracket, form 8606 part ii, 408a d 4 clock, roth conversion october, year end roth conversion, roth conversion 2026, low income year conversion, roth conversion strategy
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

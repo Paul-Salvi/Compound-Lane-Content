@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-24/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 1.5 + 8.0 + 8.0 + 13.0 + 2.0 = 33.5s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  When is the deadline to do a Roth conversion for 2026?
+0:02  How many days do I have to convert pre-tax dollars to Roth this year?
+0:10  Why does fall matter for Roth conversions?
+0:19  How much can I save by converting at 22% vs 32%?
+0:32  What's the best month to convert?
