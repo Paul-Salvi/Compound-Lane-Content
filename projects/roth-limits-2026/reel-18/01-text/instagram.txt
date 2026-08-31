@@ -1,0 +1,38 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-18/01-content/roth-vs-hsa-triple-tax-free.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Roth: 2x tax-free. HSA: 3x tax-free. After 65, the HSA loses its edge. Here's the account-priority order.
+
+[Char count: 110 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+Roth IRA (per IRC §408A):
+- Tax-free in
+- Tax-free growth
+- Tax-free out (qualified)
+= 2 tax events avoided
+
+HSA (per IRC §223):
+- Tax-free in
+- Tax-free growth
+- Tax-free out (medical)
+- FICA dodge on payroll contributions
+= 3 tax events avoided + 7.65% bonus
+
+After 65, the HSA's edge is gone. Non-medical withdrawals become ordinary income. The Roth has no age cutoff.
+
+Account priority:
+1. HSA (triple tax-free)
+2. Roth IRA
+3. Roth 401(k)
+4. Traditional 401(k)
+
+Save this before your next account decision.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Roth vs HSA" with a 2x vs 3x tax-free comparison: "Roth: in + out" vs "HSA: in + growth + out (medical) + FICA dodge". A sticky note reads "HSA first, Roth second".
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#HSA #RothIRA #TripleTaxFree #HDHP #RetirementAccount

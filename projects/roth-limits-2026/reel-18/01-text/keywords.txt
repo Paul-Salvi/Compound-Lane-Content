@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-18/01-content/roth-vs-hsa-triple-tax-free.json
+
+PRIMARY KEYWORD:
+hsa vs roth ira
+
+SECONDARY KEYWORDS (3-5):
+- hsa triple tax free
+- roth ira hsa priority
+- hsa payroll fica
+- hsa 65 rule
+- ira contribution priority
+
+SEARCH INTENT:
+"which account first" (decision-making) — primary intent is the account-priority ordering.
+Secondary: "is HSA better than Roth" (comparison) — yes, until 65.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #HSA, #RothIRA, #TripleTaxFree, #HDHP, #RetirementAccount
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

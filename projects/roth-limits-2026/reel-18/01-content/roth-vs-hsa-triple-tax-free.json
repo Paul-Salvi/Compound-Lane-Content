@@ -1,0 +1,34 @@
+{
+  "slug": "roth-vs-hsa-triple-tax-free",
+  "pillar": 3,
+  "pillar_name": "vs comparisons",
+  "title": "Roth vs HSA: the triple-tax-free angle",
+  "audience": "High earners with HDHPs who already max a Roth and are looking for the next tax-advantaged account",
+  "thesis": "The Roth is tax-free twice — in and out. The HSA is tax-free three times — in, growth, and out for medical. That's a step the Roth doesn't have.",
+  "concepts": [
+    {
+      "id": "c1",
+      "label": "The Roth is twice tax-free",
+      "body": "The Roth IRA is tax-free on the way in (you contribute after-tax dollars) and tax-free on the way out (qualified withdrawals are tax-free). Two tax events avoided. Growth is also tax-free — counted as the third 'Roth' benefit, but it's the same as the 'way out'.",
+      "source": "IRC §408A; IRS Pub 590-A"
+    },
+    {
+      "id": "c2",
+      "label": "The HSA is three times tax-free",
+      "body": "The HSA is tax-free on the way in (above-the-line deduction), tax-free on growth, and tax-free on the way out for qualified medical expenses. Three tax events avoided. Contributions through payroll also dodge FICA — a 7.65% bonus that the Roth can't match.",
+      "source": "IRC §223; IRS Pub 969"
+    },
+    {
+      "id": "c3",
+      "label": "The Roth beats the HSA after 65",
+      "body": "After 65, the HSA loses its triple-tax advantage. Non-medical withdrawals are taxed as ordinary income — same as a traditional IRA. The Roth stays tax-free at any age, any reason. So: HSA first for triple tax-free, Roth second, traditional 401(k) third.",
+      "source": "IRC §223(f)(2); IRS Pub 969; SECURE 2.0 RMD changes"
+    }
+  ],
+  "sources": [
+    "IRC §408A — Roth IRA rules",
+    "IRC §223 — HSA rules",
+    "IRS Pub 590-A — Roth IRA contributions",
+    "IRS Pub 969 — HSAs and other tax-favored health plans"
+  ]
+}

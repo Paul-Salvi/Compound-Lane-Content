@@ -1,0 +1,58 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-18/01-content/roth-vs-hsa-triple-tax-free.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth vs HSA: The Triple-Tax-Free Angle
+
+[Char count: 38 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Roth: 2x tax-free. HSA: 3x tax-free. After 65, the HSA loses its edge. Here's the account-priority order.
+
+[Char count: 110 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+Two of the most tax-advantaged accounts in the U.S. tax code, side by side.
+
+The Roth IRA (per IRC §408A):
+- Tax-free on the way in (after-tax contributions)
+- Tax-free on growth
+- Tax-free on the way out (qualified withdrawals)
+Two distinct tax events avoided: contribution and distribution.
+
+The HSA (per IRC §223):
+- Tax-free on the way in (above-the-line deduction on Form 8889)
+- Tax-free on growth
+- Tax-free on the way out for qualified medical expenses
+Three distinct tax events avoided: contribution, growth, and qualified medical distribution. Plus: contributions through payroll dodge FICA — a 7.65% bonus (6.2% Social Security + 1.45% Medicare) that the Roth cannot match.
+
+The after-65 rule. The HSA's triple-tax-free edge does not last forever. After 65, non-medical withdrawals are taxed as ordinary income — same as a traditional IRA (per IRC §223(f)(2)). The account still avoids the 20% penalty that applies to non-qualified withdrawals before 65, but the triple-tax benefit is gone.
+
+The Roth, by contrast, has no age cutoff. Qualified withdrawals are tax-free at any age, for any reason. Once you've held the Roth for 5 years and you're 59½, every dollar comes out tax-free.
+
+The account-priority order:
+1. HSA up to the annual limit — triple tax-free, plus FICA dodge.
+2. Roth IRA up to $7,500 — double tax-free, no income limit issues for the Roth 401(k).
+3. Roth 401(k) up to $24,500 — same tax treatment, more room.
+4. Traditional 401(k) — last because the deduction is good but the future tax is uncertain.
+
+The bottom line: HSA first, Roth second. If you have an HDHP, you're leaving real money on the table by skipping the HSA.
+
+Full notes + account-priority calculator at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#HSA #RothIRA #TripleTaxFree #HDHP #RetirementAccount
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+hsa vs roth, triple tax free, hsa payroll fica, hsa after 65, roth ira, account priority, hdhp hsa, irs section 223, irs section 408a, form 8889 hsa
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)
