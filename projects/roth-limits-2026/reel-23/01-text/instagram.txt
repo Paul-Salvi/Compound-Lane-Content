@@ -1,0 +1,33 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-23/01-content/five-year-rule.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Roth conversions start their own 5-year clock. Pull before it expires — even past 59½ — and the 10% penalty hits.
+
+[Char count: 117 — within 125 target]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The two 5-year clocks, IRC §408A(d):
+
+Earnings clock (§408A(d)(2)):
+- One clock, opened at first contribution
+- Governs tax-free earnings withdrawals
+
+Conversion clock (§408A(d)(4)):
+- NEW clock per conversion
+- 10% penalty if pulled before expiry, even after 59½
+
+The trap: $50K converted in 2024. Withdraw $10K in 2026 at age 62. 10% penalty — clock doesn't expire until 2030.
+
+The fix:
+- Convert early in the year
+- Wait until 59½ AND clock expired
+- Stack conversions in low-income years
+- Track on Form 8606 Part II
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Two 5-Year Clocks" with two stopwatches: "Conversion clock (per conversion, IRC §408A(d)(4))" and "Earnings clock (original Roth, IRC §408A(d)(2))". A red X over "Withdraw before expiry, even at 62 → 10% penalty". Sticky note: "Convert early. Track on Form 8606."
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #FiveYearRule #RothConversion #Form8606 #RothClock

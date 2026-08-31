@@ -1,0 +1,40 @@
+{
+  "slug": "five-year-rule",
+  "title": "The 5-Year Rule Trap",
+  "subtitle": "Roth conversions have their own 5-year clock. Pull converted dollars before it expires, even at 59½, and the 10% penalty hits.",
+  "source_irs": "IRC §408A(d)(4); IRS Pub 590-B; Form 8606 Part II",
+  "pillar": 1,
+  "publish_date": "2026-09-21",
+  "concepts": [
+    {
+      "key": "the-trap",
+      "heading": "The Trap",
+      "lede": "Two 5-year clocks run on a Roth. One for contributions, one for each conversion. The IRS tracks them separately.",
+      "body": [
+        "Conversion 5-year rule (IRC §408A(d)(4)): each conversion starts a NEW 5-year clock.",
+        "Earnings 5-year rule (IRC §408A(d)(2)): for the original Roth IRA, one clock — opened when you FIRST contributed.",
+        "Withdraw converted dollars before the 5-year clock expires = 10% penalty, even if you're past 59½."
+      ]
+    },
+    {
+      "key": "the-fix",
+      "heading": "The Fix",
+      "lede": "Three rules of thumb. The penalty clock is forgiving if you plan ahead.",
+      "body": [
+        "1. Convert early in the year (gives you five full calendar years before Jan 1 of the year-after-five).",
+        "2. Wait to withdraw conversions until 59½ AND the 5-year clock has expired.",
+        "3. Stack your conversions — do one large conversion in low-income years, not many small ones."
+      ]
+    },
+    {
+      "key": "the-orders",
+      "heading": "The Withdrawal Order",
+      "lede": "The IRS pulls money out in a fixed order: contributions, then conversions, then earnings.",
+      "body": [
+        "Order: regular contributions → conversions (FIFO, oldest first) → earnings.",
+        "Earnings carry their own 5-year rule on top of the conversion rule.",
+        "Track each conversion's clock separately on Form 8606 Part II."
+      ]
+    }
+  ]
+}

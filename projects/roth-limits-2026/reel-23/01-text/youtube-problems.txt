@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-23/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 2.0 + 8.5 + 7.0 + 7.5 + 4.5 = 30.5s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  How many 5-year clocks run on a Roth IRA?
+0:03  What is the Roth conversion 5-year rule?
+0:11  What is the original Roth IRA 5-year rule?
+0:19  When can I withdraw Roth conversions without the 10% penalty?
+0:26  How do I track each conversion's 5-year clock?

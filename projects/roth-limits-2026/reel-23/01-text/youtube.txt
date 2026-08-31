@@ -1,0 +1,55 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-23/01-content/five-year-rule.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth IRA 5-Year Rule: The Conversion Clock Trap
+
+[Char count: 49 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Roth conversions start their own 5-year clock. Pull before it expires — even past 59½ — and the 10% penalty hits. The IRS tracks each one.
+
+[Char count: 145 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+Most people know the 5-year rule for earnings. Few know there are actually TWO 5-year clocks running on a Roth IRA — and confusing them triggers the 10% penalty even after 59½.
+
+The two clocks (IRC §408A(d)):
+- **Earnings 5-year rule** (§408A(d)(2)): one clock, opened when you first contributed to ANY Roth IRA. It governs qualified (tax-free) earnings withdrawals.
+- **Conversion 5-year rule** (§408A(d)(4)): a NEW clock starts for EACH conversion. Withdraw converted dollars before this clock expires = 10% penalty, even past 59½.
+
+The trap:
+- Convert $50,000 in 2024, then withdraw $10,000 in 2026 (you're 62).
+- You're past 59½, but the conversion clock started in 2024. Five years don't expire until Jan 1, 2030.
+- 10% penalty applies to the $10,000 — even though you're 62.
+
+The fix:
+1. Convert early in the year (gives you five full calendar years before Jan 1 of the year-after-five).
+2. Wait to withdraw conversions until 59½ AND the 5-year clock has expired.
+3. Stack your conversions — one large conversion in a low-income year beats many small ones.
+
+The withdrawal order (FIFO, IRC §408A(d)(4)):
+1. Regular contributions (any time, tax- and penalty-free).
+2. Conversions — oldest first (each one with its own 5-year clock).
+3. Earnings (subject to the original 5-year rule + 59½).
+
+Track each conversion's clock on Form 8606 Part II. The IRS doesn't do this for you.
+
+Full mechanics + the early-year conversion strategy at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #FiveYearRule #RothConversion #Form8606 #RothClock
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira 5 year rule, roth conversion clock, 408a d 4, form 8606 part ii, roth ira early withdrawal, roth ira penalty after 59, conversion 5 year rule, roth earnings withdrawal, roth ira contribution order, roth conversion strategy
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

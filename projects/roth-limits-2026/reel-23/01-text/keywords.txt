@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-23/01-content/five-year-rule.json
+
+PRIMARY KEYWORD:
+roth ira 5 year rule
+
+SECONDARY KEYWORDS (3-5):
+- roth conversion 5 year clock
+- 408a d 4 five year rule
+- form 8606 part ii
+- roth ira early withdrawal penalty
+- roth ira earnings 5 year rule
+
+SEARCH INTENT:
+"can I withdraw my Roth conversion" (decision-making) — primary intent is whether the 10% penalty applies after age 59½.
+Secondary: "how do I track my conversions" (informational) — Form 8606 Part II.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #FiveYearRule, #RothConversion, #Form8606, #RothClock
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)
