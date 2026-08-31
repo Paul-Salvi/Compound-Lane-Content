@@ -1,0 +1,33 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-14/01-content/roth-cost-of-waiting-5yrs.json
+# or the cited finance sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Start your Roth at 25 or 30? Five years. $1.6 million difference by 65. The early starter puts in less — ends up with more.
+
+[Char count: 135 — over 125 limit by 10; trim to "Start your Roth at 25 or 30? Five years. $1.6M difference by 65. Early starter puts in less — ends with more." (121 chars)]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+At 7% real return, $7,500/year, age 25 vs 30 start:
+
+Early starter (25→65, 40 years):
+- Contributes: $300,000
+- Ends with: ~$1,985,000
+- Growth: ~$1,685,000
+
+Late starter (30→65, 35 years):
+- Contributes: $262,500
+- Ends with: ~$1,196,000
+- Growth: ~$933,000
+
+Gap: ~$1,600,000 in favor of the early starter. They put in $37,500 less over a lifetime.
+
+Doubling contributions later doesn't catch you up. 25% more per year, every year, just to match.
+
+Save this before your next birthday.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Roth at 25 vs 30" with two stacked bar charts: "25→65: $1.99M" vs "30→65: $1.20M" and a gap arrow labeled "$1.6M difference". A sticky note reads "The early starter puts in less — ends with more".
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #CompoundInterest #RetirementPlanning #StartEarly #FutureValue

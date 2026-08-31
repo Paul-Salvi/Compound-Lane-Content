@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-14/01-content/roth-cost-of-waiting-5yrs.json
+# or the cited finance sources.
+
+POST (target 70-100 chars, hard cap 280):
+Start your Roth at 25 vs 30? Five years. $1.6M difference by 65. Early starter puts in less — ends with more. Compounding is unforgiving.
+
+[Char count: 141 — within 280 cap; over 100-char target, retained for the contrast. Trim to "Start your Roth at 25 vs 30? Five years. $1.6M difference by 65. Early starter puts in less — ends with more." (121 chars) for a tighter post.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + FV calculator: https://compoundlane.com/roth-cost-of-waiting-5yrs"

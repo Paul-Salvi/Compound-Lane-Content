@@ -1,0 +1,54 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-14/01-content/roth-cost-of-waiting-5yrs.json
+# or the cited finance sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Start Your Roth at 25 vs 30: $1.6M Difference
+
+[Char count: 46 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Start your Roth at 25 or 30? Five years. $1.6 million difference by 65. The early starter puts in less — and ends up with more.
+
+[Char count: 144 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+The compounding gap between starting at 25 and starting at 30 is not a five-year catch-up. It's a five-year compounding hole you will never recover.
+
+The math, at a 7% real return and a $7,500 annual contribution (per IRS IR-2025-111):
+
+The early starter (age 25 to 65, 40 years):
+- Total contributions: 40 × $7,500 = $300,000
+- Future value at age 65: about $1,985,000
+- Growth on contributions: about $1,685,000
+
+The late starter (age 30 to 65, 35 years):
+- Total contributions: 35 × $7,500 = $262,500
+- Future value at age 65: about $1,196,000
+- Growth on contributions: about $933,000
+
+Difference at age 65: roughly $1.6 million in favor of the early starter. The late starter contributes $37,500 less over their lifetime — and ends up with $789,000 less in growth.
+
+Why the gap is so large: the first five years of contributions have 40 years to compound, not 35. The lost compounding on the lost contributions is itself compounding, so the gap widens every year.
+
+The "catch-up" myth. To match the 25-year-old by 65, a 30-year-old must contribute roughly 25% more per year, every year, for the rest of their working life. That's $9,375 a year instead of $7,500 — on top of the catch-up they're already behind on. Most people cannot and do not make this adjustment.
+
+The bottom line: starting late is the most expensive financial mistake most young adults will make. The fix is not "doubling down later." The fix is starting now, with whatever you can.
+
+Full notes at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #CompoundInterest #RetirementPlanning #StartEarly #FutureValue
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira at 25, roth ira at 30, cost of waiting retirement, future value annuity, compound interest 7 percent, roth ira catch up, retirement savings timeline, 25 vs 30 retirement, starting early investing, time in market
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

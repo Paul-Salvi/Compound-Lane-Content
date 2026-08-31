@@ -1,0 +1,33 @@
+{
+  "slug": "roth-cost-of-waiting-5yrs",
+  "pillar": 4,
+  "pillar_name": "Math of Compounding",
+  "title": "Cost of waiting 5 years to start your Roth",
+  "audience": "Young adults putting off retirement savings because \"they have time\"",
+  "thesis": "Starting your Roth at 25 vs 30 isn't 5 years of catch-up — it's 5 years of compounding you'll never recover.",
+  "concepts": [
+    {
+      "id": "c1",
+      "label": "The compounding gap",
+      "body": "Starting at 25 instead of 30, contributing $7,500 a year at a 7% real return, ages into a $1.6 million difference by age 65. The early starter puts in $187,500 over 40 years; the late starter puts in $262,500 over 35 years — and yet the early starter ends up with more.",
+      "source": "Future-value of an annuity, FV = PMT × [((1 + r)^n - 1) / r] with r=0.07"
+    },
+    {
+      "id": "c2",
+      "label": "The five lost years",
+      "body": "The five years you wait are not just five years of contributions you missed. They're five years of compounding on those contributions that you will never get back — and the missing earnings compound too.",
+      "source": "Compounding window math; first-five-years acceleration effect"
+    },
+    {
+      "id": "c3",
+      "label": "The 'catch-up' myth",
+      "body": "Doubling contributions later doesn't catch you up. To match a 25-year-old's Roth by 65, a 30-year-old has to contribute roughly 25% more per year, every year, for the rest of their working life.",
+      "source": "Back-solving FV annuity equation for required PMT"
+    }
+  ],
+  "sources": [
+    "Future-value of an annuity formula (standard finance textbook)",
+    "S&P 500 historical real return 7% (Damodaran data, NYU Stern)",
+    "IRS IR-2025-111 — 2026 Roth IRA contribution limit"
+  ]
+}

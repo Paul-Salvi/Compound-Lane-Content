@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-14/01-content/roth-cost-of-waiting-5yrs.json
+
+PRIMARY KEYWORD:
+roth ira starting early
+
+SECONDARY KEYWORDS (3-5):
+- cost of waiting roth ira
+- roth ira at 25 vs 30
+- compound interest retirement
+- roth ira future value
+- time in market vs timing
+
+SEARCH INTENT:
+"how much does it cost to wait" (informational/calculation) — primary intent is the concrete cost of procrastination on Roth savings.
+Secondary: "am I too late" (reassurance) — yes, but math is still on your side.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #CompoundInterest, #RetirementPlanning, #StartEarly, #FutureValue
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)
