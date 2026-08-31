@@ -1,0 +1,46 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-9/01-content/roth-backdoor-30s.json
+# or the cited IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Backdoor Roth IRA in 30 Seconds (2026)
+
+[Char count: 36 — within 60 target; intentionally under target for a Shorts-style title]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Income too high for a direct Roth? The backdoor is a two-step workaround. Contribute non-deductible to a traditional IRA, then convert.
+
+[Char count: 147 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+The 2026 Roth IRA has a direct-contribution phaseout. Single filers above $168,000 of modified adjusted gross income (MAGI) can't contribute directly. Married filing jointly above $252,000 — same door closed. The IRS counts MAGI, not your salary (per Pub 590-A).
+
+The backdoor Roth is a legal two-step workaround:
+1. Contribute after-tax money to a traditional IRA (a non-deductible contribution — no tax deduction going in).
+2. Convert that traditional IRA to a Roth IRA. The conversion is tax-free because you already paid the tax on the contribution.
+
+The gotcha: the pro-rata rule (IRC §408(d)(2)). If you have other pre-tax IRA money (Traditional, SEP, or SIMPLE IRAs), the IRS aggregates your pre-tax balances when you convert. The conversion becomes partly taxable in proportion to your pre-tax balance. Example: if 30% of your aggregate IRA balance is pre-tax, 30% of the conversion is taxable — even if your $7,000 backdoor contribution was all after-tax.
+
+Workaround to the pro-rata rule: roll all pre-tax IRA balances into your 401(k) first (if the plan accepts rollovers), so your only remaining IRA is the backdoor one. Then the pro-rata aggregation is zero.
+
+The backdoor Roth is one of the few tax arbitrage strategies the IRS has explicitly blessed (PLR 201333416 et seq.). It's not a loophole — it's a deliberate path for high earners who can't contribute directly.
+
+File Form 8606 every year you do a non-deductible contribution or a conversion — that form is the paper trail that proves to the IRS you already paid the tax going in.
+
+Full notes and the IRS-canonical sources at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#BackdoorRoth #RothIRA #ProRataRule #TaxStrategy #PersonalFinance
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+backdoor roth ira, roth ira conversion, pro-rata rule, non-deductible traditional ira, roth ira income limit, form 8606, roth ira 2026, high earner roth, ira rollover 401k, backdoor roth pro rata
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

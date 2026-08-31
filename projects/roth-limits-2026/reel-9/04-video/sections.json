@@ -1,0 +1,9 @@
+{
+  "sections": [
+    { "key": "intro",    "label": "orient" },
+    { "key": "concept1", "label": "warn" },
+    { "key": "concept2", "label": "frame" },
+    { "key": "concept3", "label": "quantify_opportunity_cost" },
+    { "key": "outro",    "label": "cta" }
+  ]
+}

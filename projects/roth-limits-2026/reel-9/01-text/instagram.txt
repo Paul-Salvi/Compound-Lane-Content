@@ -1,0 +1,27 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-9/01-content/roth-backdoor-30s.json
+# or the cited IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Income too high for a direct Roth? The backdoor is a 2-step workaround. Above $168k (single) or $252k (MFJ), the door closes — but the backdoor opens.
+
+[Char count: 153 — over 125 limit; trim to "Income too high for a direct Roth? Backdoor is a 2-step workaround. Above $168k (single) or $252k (MFJ), the direct door closes." (122 chars) for a tighter hook.]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The 2026 Roth IRA direct-contribution phaseout:
+- Single: phaseout starts at $153,000, fully phased out above $168,000
+- Married filing jointly: phaseout starts at $242,000, fully phased out above $252,000
+
+Above those ceilings, you can't contribute directly. But the backdoor Roth is a legal workaround.
+
+Step 1: Contribute after-tax money to a traditional IRA (non-deductible). Step 2: Convert to a Roth. Tax-free conversion, because you already paid the tax.
+
+The gotcha: the pro-rata rule. Other pre-tax IRA money? The IRS aggregates it. Your conversion becomes partly taxable.
+
+Save this before your next raise.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Backdoor Roth in 30 Seconds" with a 2-step arrow: "Step 1: non-deductible trad IRA" → "Step 2: convert to Roth". Below, three stacked rows: "$168k single" (navy), "$252k MFJ" (maroon), "pro-rata rule" (green).
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#BackdoorRoth #RothIRA #ProRataRule #TaxStrategy #PersonalFinance

@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-9/01-content/roth-backdoor-30s.json
+# or the cited IRS sources.
+
+POST (target 70-100 chars, hard cap 280):
+Income too high for a Roth? The backdoor is a 2-step workaround: non-deductible trad IRA → convert to Roth. Watch out for the pro-rata rule.
+
+[Char count: 150 — within 280 cap; over 100-char target, retained for the "pro-rata rule" mention which is the gotcha. Trim to "Income too high for a Roth? Backdoor is 2 steps: non-deductible trad IRA → convert to Roth." (94 chars) if a tighter post is preferred.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #BackdoorRoth in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + Form 8606 walkthrough: https://compoundlane.com/roth-backdoor-30s"

@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-9/01-content/roth-backdoor-30s.json
+
+PRIMARY KEYWORD:
+backdoor roth ira
+
+SECONDARY KEYWORDS (3-5):
+- roth ira income limit
+- roth ira conversion
+- pro-rata rule ira
+- non-deductible traditional ira
+- backdoor roth 2026
+
+SEARCH INTENT:
+"How do I" (procedural) — primary intent is the two-step backdoor procedure (contribute, convert).
+Secondary: "when does it work" (eligibility — the pro-rata rule caveat).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #BackdoorRoth, #RothIRA, #ProRataRule, #IRARollover, #TaxStrategy
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

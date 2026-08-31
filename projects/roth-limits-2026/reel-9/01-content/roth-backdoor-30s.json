@@ -1,0 +1,47 @@
+{
+  "slug": "roth-backdoor-30s",
+  "title": "What is a backdoor Roth (in 30 seconds)",
+  "hook": "Income too high for a Roth? Backdoor.",
+  "default_disclaimer": "Educational content, not financial advice.",
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The problem: direct contribution is phased out",
+      "body": "Single filers above $168,000 in 2026 can't contribute directly to a Roth IRA. Married filing jointly above $252,000 — same door closed. Earned income, no room left.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$168k",
+        "label": "single phaseout ceiling",
+        "color": "ink-navy"
+      }
+    },
+    {
+      "number": 2,
+      "title": "The two-step workaround: non-deductible trad + convert",
+      "body": "Put after-tax money into a traditional IRA — non-deductible contribution, so no tax deduction. Then convert it to a Roth. The conversion is tax-free because you already paid tax on the money going in.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "2 steps",
+        "label": "contribute, then convert",
+        "color": "ink-maroon"
+      }
+    },
+    {
+      "number": 3,
+      "title": "The gotcha: pro-rata rule",
+      "body": "If you have other pre-tax IRA money, the IRS aggregates it. The conversion becomes partly taxable in proportion to your existing pre-tax balance. Zero pre-tax IRAs elsewhere? Backdoor is clean. Otherwise — the pro-rata rule applies.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "pro-rata",
+        "label": "rule on existing IRAs",
+        "color": "ink-green"
+      }
+    }
+  ],
+  "sources": [
+    "IRS — Roth IRA income phaseout limits (IR-2025-111, Nov 13 2025)",
+    "IRS Pub 590-A — Backdoor Roth IRA strategy",
+    "IRS Form 8606 — Nondeductible Traditional IRA contributions and Roth conversions",
+    "IRS Notice 2025-67 — 2026 contribution limits"
+  ]
+}
