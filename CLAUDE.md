@@ -2,10 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-> **Read these three files first, in this order:**
+> **Read these four files first, in this order:**
 > 1. **`GUIDE.md`** — the 50KB production handbook. Rules, palettes, pitfalls, the HyperFrames contract, the visual-notes recipe, the speed workflow. Canonical; if anything in this file conflicts with it, **GUIDE.md wins**.
 > 2. **`AGENTS.md`** — the skill-routing contract for video work. Tells Claude which HyperFrames skill to invoke for each intent (make a video, TTS, capture, animate, etc.) and the project-level lint/render commands.
 > 3. **`docs/visual-notes-prompt-system.md`** — the Stage 1 (article → JSON) + Stage 2 (JSON → image/HTML) prompts. Use it whenever a new article enters the repo.
+> 4. **`docs/pacing-rules-v1.md`** — the canonical pacing contract for any reel (30–40s runtime, 75–100 word VO, 7-beat map, 10-item validation). The regen scripts in `04-video/` call `scripts/check-pacing.mjs` against this spec before every TTS run. If anything in this file or `AUDIO_STYLE.md` conflicts with pacing-rules-v1.md for **delivery-layer** numbers (word count, hook deadline, beat placement, CTA position), pacing-rules-v1.md wins.
 >
 > This file is the **index** that tells future Claude sessions which file to read for which job, plus the load-bearing rules from `AGENTS.md` / `GUIDE.md` that the rest of those documents assume you already know.
 

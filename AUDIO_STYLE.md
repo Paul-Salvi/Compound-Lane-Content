@@ -8,13 +8,21 @@
 > a person rather than a teleprompter.
 
 Voice default: **`Paul`** via VibeVoice 1.5B (local) with playback
-speed **`1.30×`** (ffmpeg `atempo` post-process). The speed default is
-the winner of `samples/paul-speed-audit/` (1.00× / 1.25× / 1.30× / 1.40×
-A/B; 1.30× sounded the most natural for ~30s reels). Override per
-project with `TTS_SPEED=N.NN`. The legacy Kokoro/`am_michael` path
-(`npx hyperframes tts --speed 1.15`) is kept as a fallback in
+speed **`1.20×`** (ffmpeg `atempo` post-process). The speed default is
+calibrated against the 30s floor of `docs/pacing-rules-v1.md` — for
+~90-word scripts, 1.20× lands at ~29.8s, right at the floor. Measured
+ladder for the Roth reel (93 words, 6 segments):
+
+| TTS_SPEED | Duration | Notes |
+|---|---|---|
+| 1.15× | 27.3s | Under 30s floor |
+| **1.20×** | **29.8s** | **Current default** — right at the 30s floor |
+| 1.30× | 25.5s | Over-fast for a 30s target (was the old default) |
+
+Override per project with `TTS_SPEED=N.NN`. The legacy Kokoro/`am_michael`
+path (`npx hyperframes tts --speed 1.15`) is kept as a fallback in
 `templates/video/regen.{ps1,sh.tpl}` and is also speed-controlled by
-`TTS_SPEED` (now defaulting to `1.30` to match the VibeVoice path).
+`TTS_SPEED` (now defaulting to `1.20` to match the VibeVoice path).
 See `GUIDE.md §8` for the generation command and `§18` for the full
 human-likeness recipe (ffmpeg post-processing, voice alternates).
 
@@ -170,6 +178,32 @@ choice (`this`, `exactly`, `the catch`, `the punchline`) and pacing
    return you left on the table while your money sat on the sideline.
 ```
 
+### 8. `tts_script.txt` contains ONLY the spoken words
+
+The regen scripts (`regen.{ps1,sh}`) prepend `Speaker 1:` to every
+non-empty line of `tts_script.txt` before passing it to VibeVoice. That
+means **every line — including comments, section markers, blank-line
+separators, and bottom-of-file checklists — becomes a separate
+inference segment with ~7–15s of fixed overhead.**
+
+- ❌ No `# intro` / `# concept1` / `# outro` markers
+- ❌ No per-line commentary or editor's notes inline
+- ❌ No AUDIO_STYLE.md 9-item checklist at the bottom of the file
+- ❌ No line-wrap at column ~80 (one paragraph = one long line)
+- ❌ No section dividers (`---`, `===`, `* * *`)
+- ✅ Sections separated by a single blank line
+- ✅ Editor's notes live in a sibling file (e.g. `script-notes.md`)
+
+**Why:** the Roth reel came out 23.8s with the markers and 21.9s
+without them — 1.9s of dead air per run, every run. The DCA reel
+ships at 136s for a 90s target for the same reason; the checklist at
+the bottom of its `tts_script.txt` accounts for ~10–15s of that.
+
+**How to apply:** before committing a `tts_script.txt`, mentally run
+the AUDIO_STYLE.md checklist. The regen script also warns loudly if
+any `#`-prefixed line is present, so a stray comment won't ship
+silently.
+
 ---
 
 ## Quick checklist (paste into your PR / commit)
@@ -183,9 +217,16 @@ Before you commit a `tts_script.txt`, confirm:
 - [ ] Hard beats open with a softener ("Look —", "So when —", "How to —")
 - [ ] No all-caps; emphasis via word choice and pacing
 - [ ] Acronyms (`DCA`, `SEC`, `FINRA`, `ETF`, `IRA`, `S&P`) kept as-is
+- [ ] **File contains ONLY the spoken words** (no `# section` markers,
+      no per-line commentary, no bottom-of-file checklist; see rule 8)
+- [ ] **No line-wrap at column ~80** — one paragraph = one long line
+- [ ] **Pacing rules pass** — `node scripts/check-pacing.mjs <slug>` shows
+      all green before regen. The spec is `docs/pacing-rules-v1.md`:
+      75-100 word VO, hook ≤12 words / 2s, largest number in the
+      quantify_opportunity_cost beat, CTA in 38-40s, keyword continuity.
 - [ ] Total spoken word count in range for the target length
-      (see `GUIDE.md §7` — production 30s reels ≈ ~80 words at Paul 1.30×;
-       20s promo ≈ 25–30 words at Kokoro `am_michael` 1.15×)
+      (see `docs/pacing-rules-v1.md` for the canonical 75–100 word range;
+       the older `GUIDE.md §7` numbers have been superseded)
 - [ ] Read it aloud once. If you stumble, the TTS will too.
 
 ---
