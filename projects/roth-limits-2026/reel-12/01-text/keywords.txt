@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-12/01-content/roth-vs-roth-401k-gap.json
+
+PRIMARY KEYWORD:
+roth 401k vs roth ira contribution limits
+
+SECONDARY KEYWORDS (3-5):
+- mega backdoor roth
+- roth 401k income limit
+- after tax 401k contributions
+- 24500 401k limit
+- in-plan roth conversion
+
+SEARCH INTENT:
+"compare" (informational) — primary intent is the side-by-side limit comparison for high earners.
+Secondary: "how do I do the mega backdoor" (procedural).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #Roth401k, #MegaBackdoorRoth, #RothIRA, #401kLimits, #HighEarner
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

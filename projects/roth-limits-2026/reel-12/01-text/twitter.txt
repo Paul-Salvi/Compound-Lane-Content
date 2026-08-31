@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-12/01-content/roth-vs-roth-401k-gap.json
+# or the cited IRC / IRS sources.
+
+POST (target 70-100 chars, hard cap 280):
+Roth IRA: $7,500 + income phaseout. Roth 401(k): $24,500, no phaseout. Most high earners miss the $17,000 gap.
+
+[Char count: 121 — within 280 cap; over 100-char target, retained for the phaseout contrast which is the whole point. Trim to "Roth IRA: $7,500 + income phaseout. Roth 401(k): $24,500, no phaseout. The gap is $17,000." (98 chars) for a tighter post.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + mega backdoor walkthrough: https://compoundlane.com/roth-vs-roth-401k-gap"

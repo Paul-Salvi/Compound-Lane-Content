@@ -1,0 +1,35 @@
+{
+  "slug": "roth-vs-roth-401k-gap",
+  "pillar": 3,
+  "pillar_name": "vs comparisons",
+  "title": "Roth IRA vs Roth 401(k): the gap",
+  "audience": "High earners in jobs with 401(k) plans who think they've maxed their Roth",
+  "thesis": "The Roth IRA is $7,500. The Roth 401(k) is $24,500. Most people miss the gap.",
+  "concepts": [
+    {
+      "id": "c1",
+      "label": "The limit gap",
+      "body": "The 2026 Roth IRA limit is $7,500 — your own money, your own brokerage. The 2026 Roth 401(k) limit is $24,500 — same tax treatment, $17,000 more room.",
+      "source": "IRS Notice 2025-67 (cost-of-living adjustments for 2026); IRC §402A"
+    },
+    {
+      "id": "c2",
+      "label": "Why the Roth 401(k) has no income phaseout",
+      "body": "Unlike the Roth IRA, the Roth 401(k) has no income phaseout. Earn $400,000, $800,000, more — you can still fund it. The phaseout only applies to IRAs.",
+      "source": "IRC §402A; IRS Pub 402-A"
+    },
+    {
+      "id": "c3",
+      "label": "Mega backdoor angle",
+      "body": "The Roth 401(k) is also the only path to the mega backdoor Roth: after-tax 401(k) contributions plus in-plan conversions can push annual Roth savings above $70,000.",
+      "source": "IRC §402A(c); IRS Notice 2014-54"
+    }
+  ],
+  "sources": [
+    "IRS IR-2025-111 (Nov 13, 2025) — 2026 retirement plan limits",
+    "IRS Notice 2025-67 — 2026 cost-of-living adjustments",
+    "IRC §402A — Roth 401(k) rules",
+    "IRC §408A — Roth IRA rules (income phaseouts)",
+    "IRS Pub 402-A — Roth 401(k) FAQ"
+  ]
+}

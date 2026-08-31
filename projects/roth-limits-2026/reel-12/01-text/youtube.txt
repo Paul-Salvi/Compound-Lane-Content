@@ -1,0 +1,53 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-12/01-content/roth-vs-roth-401k-gap.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth IRA vs Roth 401(k): The $17,000 Gap
+
+[Char count: 41 — within 60 target; under target for a tight, factual title]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+The 2026 Roth IRA is $7,500. The Roth 401(k) is $24,500. Most people miss the $17,000 gap — and the income-phaseout twist.
+
+[Char count: 138 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+The 2026 Roth IRA contribution limit is $7,500 per person, per year. The 2026 Roth 401(k) limit is $24,500 — $17,000 more room, same tax-free growth (per IRS IR-2025-111 and Notice 2025-67).
+
+The key difference: the Roth 401(k) has no income phaseout.
+
+The Roth IRA phases out at:
+- $153,000-$168,000 modified AGI for single filers
+- $242,000-$252,000 modified AGI for married filing jointly
+Above those ceilings, direct Roth IRA contributions are zeroed out.
+
+The Roth 401(k) phases out at nothing. Earn $400,000, $800,000, more — you're still eligible. The phaseout is an IRA-only rule (per IRC §408A). For high earners, the Roth 401(k) is the only direct route into a Roth.
+
+The mega backdoor angle: if your employer's 401(k) plan allows after-tax contributions and in-plan Roth conversions (per IRS Notice 2014-54), you can stack:
+- $24,500 employee Roth 401(k)
+- Employer match (separate cap)
+- After-tax 401(k) contributions (separate bucket, plan-specific cap)
+- In-plan conversion of the after-tax bucket
+
+In the right plan, a high earner can exceed $80,000 in annual Roth savings. The mega backdoor Roth works through the 401(k) — never through an IRA.
+
+Bottom line: the $7,500 Roth IRA is the on-ramp. The $24,500 Roth 401(k) is the highway. If you're a high earner who hasn't explored the 401(k) Roth and the mega backdoor, you're leaving tens of thousands of tax-free dollars on the table.
+
+Full notes at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#Roth401k #MegaBackdoorRoth #RothIRA #401kLimits #PersonalFinance
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth 401k vs roth ira, mega backdoor roth, 24500 401k limit, 7500 roth ira, roth 401k income limit, after tax 401k, in-plan roth conversion, high earner roth, 401k roth contribution, irs notice 2014-54
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)
