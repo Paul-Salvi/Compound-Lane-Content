@@ -1,0 +1,33 @@
+{
+  "slug": "roth-sept-15-myth",
+  "pillar": 5,
+  "pillar_name": "Pitfalls",
+  "title": "The Sept 15 deadline you think exists doesn't",
+  "audience": "People who believe Roth IRA contributions must be made by Sept 15 of the following year",
+  "thesis": "The Roth IRA contribution deadline is the same as the tax-filing deadline — April 15 — not Sept 15 of the year after.",
+  "concepts": [
+    {
+      "id": "c1",
+      "label": "The deadline is April 15, not Sept 15",
+      "body": "Roth IRA contributions for tax year 2025 are due by April 15, 2026 — the same as your tax return. Sept 15 is the deadline for estimated tax payments and certain business returns, not IRA contributions.",
+      "source": "IRS Pub 590-A; IRC §219(f)(3)"
+    },
+    {
+      "id": "c2",
+      "label": "Extensions push to October 15",
+      "body": "If you file for an extension on your tax return, your IRA contribution deadline also extends to October 15 of the year after the contribution year. After October 15, the contribution is barred.",
+      "source": "IRC §219(f)(3); IRS Pub 590-A chapter 1"
+    },
+    {
+      "id": "c3",
+      "label": "The 'lose the room' trap",
+      "body": "The deadline is a hard cutoff. Contribute $7,500 on October 16, 2026 and the IRS treats it as a 2027 contribution, not a 2025 one. You lose 12 months of compounding on $7,500 — and the 2026 contribution room is gone forever.",
+      "source": "IRC §219(f)(3); IRS Pub 590-A"
+    }
+  ],
+  "sources": [
+    "IRC §219(f)(3) — time of contribution",
+    "IRS Pub 590-A — Contributions to Individual Retirement Arrangements (IRAs)",
+    "IRS Form 4868 — extension of time to file"
+  ]
+}

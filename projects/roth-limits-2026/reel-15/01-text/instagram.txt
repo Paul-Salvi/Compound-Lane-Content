@@ -1,0 +1,32 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-15/01-content/roth-sept-15-myth.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+The Roth IRA deadline is April 15, 2026 — same as your tax return. Sept 15 is for estimated taxes, not IRAs.
+
+[Char count: 121 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+Roth IRA contribution deadline for tax year 2025: April 15, 2026 (per IRC §219(f)(3) + Pub 590-A).
+
+Where the Sept 15 myth comes from:
+- Sept 15 = quarterly estimated tax payment deadline
+- Sept 15 = certain business returns on extension
+- Both are unrelated to IRAs
+
+The actual rules:
+1. April 15 of the year after
+2. October 15 with Form 4868 extension
+3. After Oct 15 = contribution barred
+4. Late contribution = next year, not the year you meant
+
+Lose the room: $7,500 of 2025 room expires on the calendar. Gone forever.
+
+Set a reminder for April 15.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "IRA Deadline" with a calendar marked "April 15, 2026 — fund 2025 Roth" and a crossed-out "Sept 15" with the note "estimated taxes only". A sticky note reads "$7,500 of 2025 room expires — gone forever".
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #IRADeadline #April15 #Form4868 #ContributionDeadline

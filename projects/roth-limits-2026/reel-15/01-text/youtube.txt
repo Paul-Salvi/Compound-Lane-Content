@@ -1,0 +1,53 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-15/01-content/roth-sept-15-myth.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth IRA Deadline: April 15, Not Sept 15
+
+[Char count: 43 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+The Roth IRA contribution deadline is April 15, 2026 — same as your tax return. Sept 15 is for estimated taxes, not IRAs. Miss the room, lose it forever.
+
+[Char count: 163 — over 150 target by 13; trim to "The Roth IRA contribution deadline is April 15, 2026 — same as your tax return. Sept 15 is for estimated taxes, not IRAs." (132 chars)]
+
+DESCRIPTION FULL (200-500 words):
+The Roth IRA contribution deadline for tax year 2025 is April 15, 2026 — the same as your federal tax return. Not September 15. (Per IRC §219(f)(3) and IRS Pub 590-A.)
+
+Where the Sept 15 myth comes from:
+- Sept 15 is the deadline for quarterly estimated tax payments (Q2 installment for the current year).
+- Sept 15 is also the deadline for certain business returns — partnerships (Form 1065) and S-corporations (Form 1120-S) on extension.
+- These deadlines are unrelated to IRA contributions.
+
+The actual IRA rules, in plain English:
+
+Rule 1: The deadline is April 15 of the year following the tax year for which you're contributing. Tax year 2025 contributions are due April 15, 2026.
+
+Rule 2: File an extension (Form 4868) and your IRA contribution deadline extends to October 15 of the year after. This is automatic — you don't have to make a separate election for the IRA extension.
+
+Rule 3: After October 15, the contribution is barred. There is no further extension. The IRS will not accept a 2025 contribution on October 16, 2026 or later.
+
+Rule 4: A late contribution is treated as a contribution for the next tax year. If you try to contribute $7,500 for 2025 on October 16, 2026, the IRS treats it as a 2026 contribution. You lose the 2025 contribution room forever — it does not roll forward.
+
+The "lose the room" trap. The 2025 contribution room of $7,500 expires when the calendar hits April 15, 2026 (or October 15, 2026 with an extension). Anything contributed after that date is a 2026 contribution, not 2025. The 2025 room is gone — and you cannot recharacterize or otherwise reclaim it.
+
+Bottom line: the deadline is April 15 (or October 15 with an extension), not Sept 15. Set a calendar reminder for April 15, 2026 to fund your 2025 Roth.
+
+Full notes at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #IRADeadline #April15 #Form4868 #ContributionDeadline
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira deadline, ira contribution april 15, sept 15 deadline myth, irs form 4868, roth ira extension, october 15 ira, irs pub 590-a, irs section 219, ira deadline myth, contribution room
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

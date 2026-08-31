@@ -1,0 +1,7 @@
+[
+  { "key": "header", "label": "orient" },
+  { "key": "c1",     "label": "frame" },
+  { "key": "c2",     "label": "warn" },
+  { "key": "c3",     "label": "quantify_opportunity_cost" },
+  { "key": "footer", "label": "cta" }
+]

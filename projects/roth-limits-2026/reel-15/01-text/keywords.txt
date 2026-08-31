@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-15/01-content/roth-sept-15-myth.json
+
+PRIMARY KEYWORD:
+roth ira contribution deadline
+
+SECONDARY KEYWORDS (3-5):
+- irs sept 15 deadline myth
+- roth ira april 15 deadline
+- ira extension october 15
+- irs form 4868 ira
+- ira contribution tax year
+
+SEARCH INTENT:
+"what's the deadline" (factual) — primary intent is correcting a common misconception about the Sept 15 deadline.
+Secondary: "can I get an extension" (procedural).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #IRADeadline, #April15, #Form4868, #ContributionDeadline
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)
