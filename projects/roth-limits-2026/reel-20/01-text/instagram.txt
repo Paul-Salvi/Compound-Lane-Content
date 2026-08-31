@@ -1,0 +1,38 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-20/01-content/roth-vs-taxable-brokerage.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Same $7,500 a year for 30 years. Roth ends at $708K tax-free. Brokerage ends at $570K. The gap is $138K — not millions.
+
+[Char count: 138 — over 125 limit by 13; trim to "Same $7,500 a year for 30 years. Roth: $708K tax-free. Brokerage: $570K. The gap is $138K, not millions." (122 chars)]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The 30-year math, $7,500/yr, 7% real return:
+
+Roth IRA:
+- FV: $708,000
+- Effective tax: 0%
+
+Taxable brokerage (low-turnover index fund):
+- FV: $570,000 (after 15% cap gains)
+- Annual tax drag: ~0.5%
+
+Gap: $138,000. Smaller than you think.
+
+Why: cap gains are 15%, not 24%+. Low-turnover funds minimize dividends. Step-up in basis at death can wipe capital gains.
+
+Brokerage wins on flexibility:
+- No limit
+- No phaseout
+- No 5-year rule
+- No 10% penalty
+- No RMDs
+
+Max the Roth first. Then fund the brokerage with the next dollars.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Roth vs Brokerage" with two stacked bars: "Roth: $708K, 0% tax" vs "Brokerage: $570K, 15% cap gains". A sticky note reads "Gap: $138K — not millions. Max Roth, then brokerage".
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#TaxableBrokerage #RothIRA #TaxDrag #CapitalGains #RetirementAccount

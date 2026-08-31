@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-20/01-content/roth-vs-taxable-brokerage.json
+
+PRIMARY KEYWORD:
+roth ira vs taxable brokerage
+
+SECONDARY KEYWORDS (3-5):
+- roth ira tax free growth
+- taxable brokerage tax drag
+- long term capital gains 15 percent
+- roth ira after max
+- brokerage account retirement
+
+SEARCH INTENT:
+"should I also invest in a brokerage" (decision-making) — primary intent is whether to add a brokerage after maxing the Roth.
+Secondary: "is the gap really that big" (skeptical) — no, $138K, not millions.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #TaxableBrokerage, #RothIRA, #TaxDrag, #CapitalGains, #RetirementAccount
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

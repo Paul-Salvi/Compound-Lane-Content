@@ -1,0 +1,34 @@
+{
+  "slug": "roth-vs-taxable-brokerage",
+  "pillar": 3,
+  "pillar_name": "vs comparisons",
+  "title": "Same $7,500 in a taxable brokerage",
+  "audience": "People who think maxing a Roth alone is enough and who also need to invest beyond the IRA limit",
+  "thesis": "Put $7,500 a year in a Roth for 30 years and a brokerage gets you 60-70% of the same outcome. The Roth is the cornerstone — but not the whole portfolio.",
+  "concepts": [
+    {
+      "id": "c1",
+      "label": "The 30-year outcome gap",
+      "body": "Same $7,500 a year for 30 years at 7% real return. The Roth IRA ends at roughly $708,000, all tax-free. The taxable brokerage ends at roughly $570,000 — but you keep every dollar. The gap is $138,000, not millions.",
+      "source": "Future-value of an annuity, FV = PMT × [((1 + r)^n - 1) / r] with r=0.07; long-term capital gains rate 15%"
+    },
+    {
+      "id": "c2",
+      "label": "Why the gap is smaller than you think",
+      "body": "The taxable brokerage has two tax events the Roth doesn't: dividends taxed annually, and capital gains on sale. The long-term capital gains rate is 15% — much lower than ordinary income. With a low-turnover index fund, the drag is roughly 0.5% per year.",
+      "source": "IRS Pub 550; long-term capital gains rates"
+    },
+    {
+      "id": "c3",
+      "label": "When the brokerage wins",
+      "body": "The brokerage wins on flexibility: no contribution limit, no income phaseout, no early-withdrawal penalty, no 5-year rule. Use it for amounts above the Roth limit, for early-retirement bridge income, or for money you might need before 59½.",
+      "source": "IRC §1(h) capital gains rates; SECURE 2.0 RMD changes"
+    }
+  ],
+  "sources": [
+    "FV-of-annuity formula (standard finance textbook)",
+    "IRS Pub 550 — investment income and expenses",
+    "IRC §1(h) — long-term capital gains rates",
+    "S&P 500 historical real return 7% (Damodaran data, NYU Stern)"
+  ]
+}

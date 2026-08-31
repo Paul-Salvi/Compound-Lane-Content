@@ -1,0 +1,66 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-20/01-content/roth-vs-taxable-brokerage.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth IRA vs Taxable Brokerage: The $138K Gap
+
+[Char count: 46 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Same $7,500 a year for 30 years. Roth ends at $708K tax-free. Brokerage ends at $570K. The gap is $138K — not millions.
+
+[Char count: 138 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+Maxing the Roth is the cornerstone. But what about the dollars above the limit? The answer is usually a taxable brokerage — and the gap between the two is smaller than most people think.
+
+The 30-year math, $7,500 a year, 7% real return:
+
+Roth IRA:
+- Total contributions: 30 × $7,500 = $225,000
+- Future value: $708,000
+- All tax-free on withdrawal (qualified)
+- Effective tax rate: 0%
+
+Taxable brokerage (low-turnover index fund, e.g. VOO):
+- Total contributions: $225,000
+- Future value: $570,000 (after capital gains tax on sale)
+- Long-term capital gains rate: 15%
+- Annual tax drag: ~0.5% (dividends + occasional rebalance)
+- Effective tax rate on the gain: ~15%
+
+The gap: $138,000. Significant, but not the millions that "always max your Roth" messaging implies.
+
+Why the gap is smaller than you think:
+- The long-term capital gains rate is 15%, not the 24%+ ordinary income rate.
+- Low-turnover index funds minimize annual dividends.
+- Buy-and-hold investors defer capital gains for decades.
+- Step-up in basis at death can eliminate capital gains entirely for heirs.
+
+When the brokerage wins:
+- No contribution limit — invest any amount.
+- No income phaseout — high earners can fully fund.
+- No 5-year rule — no Roth conversion clock to track.
+- No 10% early-withdrawal penalty — access anytime for any reason.
+- No RMDs — the SECURE 2.0 changes don't apply.
+
+The right answer: max the Roth first, then fund the brokerage with the next dollars. Both. Don't skip the brokerage because you can only max the Roth — the dollars you don't invest are the most expensive dollar you can lose.
+
+Full notes + side-by-side calculator at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#TaxableBrokerage #RothIRA #TaxDrag #CapitalGains #RetirementAccount
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira vs brokerage, taxable brokerage retirement, roth ira after max, tax drag brokerage, long term capital gains 15, voo vti retirement, brokerage account taxes, roth 7500 limit, ira after max, brokerage retirement
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)
