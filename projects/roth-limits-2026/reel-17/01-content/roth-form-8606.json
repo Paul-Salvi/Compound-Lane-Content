@@ -1,0 +1,34 @@
+{
+  "slug": "roth-form-8606",
+  "pillar": 1,
+  "pillar_name": "Roth Rules",
+  "title": "Form 8606: the form that does the work",
+  "audience": "Anyone who has done a Roth conversion or backdoor Roth without filing Form 8606",
+  "thesis": "Form 8606 is the IRS form that tracks your non-deductible IRA contributions and Roth conversions year by year. Skip it and the IRS assumes every dollar in your Roth is earnings — and taxes every withdrawal.",
+  "concepts": [
+    {
+      "id": "c1",
+      "label": "What Form 8606 does",
+      "body": "Form 8606 Part I tracks non-deductible traditional IRA contributions. Part II tracks Roth conversions. Without Part II, the IRS has no record of the year-by-year basis — and reverts to assuming every dollar in the Roth is pre-tax earnings.",
+      "source": "IRS Form 8606 instructions; IRC §408(d)(2)"
+    },
+    {
+      "id": "c2",
+      "label": "The cost of skipping it",
+      "body": "Skip Form 8606 for a $7,500 backdoor Roth conversion — and 30 years later, when you withdraw $400,000, the IRS treats the entire amount as taxable. Tax at 24%: $96,000 owed. The form costs nothing; the cost of skipping it is six figures.",
+      "source": "IRS Form 8606 instructions; IRC §408(d)(1)"
+    },
+    {
+      "id": "c3",
+      "label": "When to file",
+      "body": "File Form 8606 every year you do a non-deductible traditional IRA contribution or a Roth conversion. Attach it to your Form 1040. You can amend prior years with Form 8606 + 1040-X — there's no statute of limitations on tracking your own basis.",
+      "source": "IRS Form 8606 instructions; IRS Form 1040-X"
+    }
+  ],
+  "sources": [
+    "IRS Form 8606 — Nondeductible IRAs",
+    "IRC §408(d)(2) — Roth conversion mechanics",
+    "IRC §408(d)(1) — basis tracking rules",
+    "IRS Form 1040-X — amended return"
+  ]
+}

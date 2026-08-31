@@ -1,0 +1,30 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-17/01-content/roth-form-8606.json
+# or the cited IRS / IRC sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Skip Form 8606 on a $7,500 backdoor Roth. 30 years later: $400K withdrawal, $96K tax bill. The form is free.
+
+[Char count: 124 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+Form 8606 is the IRS form that tracks your IRA basis. Without it, the IRS treats every dollar in your Roth as taxable earnings.
+
+Part I: nondeductible traditional IRA contributions
+Part II: Roth conversions
+
+Skip it on a $7,500 backdoor Roth:
+- 30 years later, Roth is worth $400,000
+- Withdraw it
+- Without 8606: $400,000 treated as taxable income
+- At 24% federal: $96,000 tax bill
+
+File it every year. Attach to your 1040. Skipped years? File 1040-X.
+
+The form costs nothing. The cost of skipping is six figures.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Form 8606" with two boxes: "Part I — nondeductible contributions" and "Part II — Roth conversions". Below, a flow chart: "skip 8606 → $7,500 backdoor → 30 yr → $400,000 → 24% tax → $96,000 owed". A sticky note reads "The form is free".
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#Form8606 #BackdoorRoth #RothIRA #NondeductibleIRA #TaxBasis

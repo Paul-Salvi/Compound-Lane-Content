@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-17/01-content/roth-form-8606.json
+
+PRIMARY KEYWORD:
+form 8606 roth conversion
+
+SECONDARY KEYWORDS (3-5):
+- irs form 8606 instructions
+- nondeductible ira form 8606
+- backdoor roth form 8606
+- form 8606 part 2
+- roth conversion tax basis
+
+SEARCH INTENT:
+"do I need to file 8606" (procedural) — primary intent is whether to file and how to fill it out.
+Secondary: "what happens if I skip it" (risk) — the $96K trap.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #Form8606, #BackdoorRoth, #RothIRA, #NondeductibleIRA, #TaxBasis
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

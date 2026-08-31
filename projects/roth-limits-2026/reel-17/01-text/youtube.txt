@@ -1,0 +1,48 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-17/01-content/roth-form-8606.json
+# or the cited IRS / IRC sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Form 8606: The Form That Does the Work
+
+[Char count: 41 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Skip Form 8606 on a $7,500 backdoor Roth. Thirty years later: $400,000 withdrawal, $96,000 tax bill. The form is free. The cost of skipping is six figures.
+
+[Char count: 168 — over 150 target; trim to "Skip Form 8606 on a $7,500 backdoor Roth. Thirty years later: $400,000 withdrawal, $96,000 tax bill. The form is free." (134 chars) for a tighter hook.]
+
+DESCRIPTION FULL (200-500 words):
+Form 8606 is the IRS form that tracks your IRA basis. Without it, the IRS has no record of what you put in — and treats every dollar that comes out as taxable earnings (per IRC §408(d)(1)).
+
+What Form 8606 does:
+
+Part I — Nondeductible traditional IRA contributions. Track the after-tax dollars you put into a traditional IRA, year by year. This basis carries forward to the year of conversion.
+
+Part II — Roth conversions. Track the year, the amount, and the basis. This is the part that backdoor Roth filers routinely skip. Without Part II, the IRS assumes the conversion was 100% pre-tax money — and your $7,500 conversion becomes fully taxable on withdrawal.
+
+The cost of skipping. You do a $7,500 backdoor Roth conversion in 2026 and skip Form 8606. Thirty years later, the Roth is worth $400,000. You withdraw it. Without 8606 on file, the IRS treats the entire $400,000 as taxable income. At 24% federal: $96,000 owed. The form costs nothing. The cost of skipping is six figures.
+
+When to file. File Form 8606 every year you do a non-deductible traditional IRA contribution or a Roth conversion. Attach it to your Form 1040. There is no statute of limitations on tracking your own basis — so if you skipped prior years, file Form 1040-X (amended return) with Form 8606 for each missed year.
+
+The 5-year rule. Form 8606 also tracks the start of your Roth's 5-year clock for the 10% penalty on converted amounts. Without it, the IRS cannot verify the clock — and the penalty applies indefinitely.
+
+The bottom line: Form 8606 is the form that does the work. Most tax software will not generate it for you. You must add it to your return yourself.
+
+Full notes + Form 8606 walkthrough at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#Form8606 #BackdoorRoth #RothIRA #NondeductibleIRA #TaxBasis
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+form 8606, roth conversion basis, nondeductible ira, form 8606 part 2, backdoor roth, irs form 1040-x, roth ira tax basis, irs section 408, 8606 instructions, roth conversion tax
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-17/01-content/roth-form-8606.json
+# or the cited IRS / IRC sources.
+
+POST (target 70-100 chars, hard cap 280):
+Form 8606 is the IRS form that tracks your Roth basis. Skip it on a $7,500 backdoor — 30 years later, $96,000 tax bill on $400K withdrawal.
+
+[Char count: 144 — within 280 cap; over 100-char target, retained for the dollar contrast. Trim to "Form 8606 tracks your Roth basis. Skip it on a $7,500 backdoor — 30 years later: $96,000 tax bill on $400K withdrawal." (131 chars) for a tighter post.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + Form 8606 walkthrough: https://compoundlane.com/roth-form-8606"

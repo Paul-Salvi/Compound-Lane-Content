@@ -1,0 +1,9 @@
+Form 8606 does the work.
+
+Form 8606 Part One tracks non-deductible traditional IRA contributions. Part Two tracks Roth conversions. Without it, the IRS assumes every dollar in your Roth is pre-tax earnings.
+
+File it every year you do a non-deductible contribution or a Roth conversion. Attach to your 1040. Skipped years can be amended with 1040-X.
+
+Skip it for a $7,500 backdoor Roth — and thirty years later, when you withdraw $400,000, the IRS treats the entire amount as taxable. At 24% federal tax: $96,000 owed. The form costs nothing.
+
+Save this before your next backdoor.
