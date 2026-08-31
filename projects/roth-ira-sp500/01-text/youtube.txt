@@ -1,0 +1,62 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Critical rule: PRIMARY KEYWORD from keywords.txt must appear in the TITLE.
+# Every number must trace to projects/roth-ira-sp500/01-content/roth-ira-sp500.json — no fabrication.
+# See docs/text-prompt-engine-v2.md §2a for full per-field guidance.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth IRA: the best deal in personal finance (here's why)
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Seven thousand a year for thirty years at seven percent turns into
+over a million — and the IRS never takes a cut. The Roth IRA is
+the single best tax shelter most people will ever use.
+
+DESCRIPTION FULL (200-500 words):
+The Roth IRA is the single best deal in personal finance — and almost
+nobody talks about why it beats every other account on the menu.
+
+You put in money you've already paid taxes on. It grows for decades.
+And on the way out, you never owe a penny of tax on the growth. Not
+on dividends. Not on capital gains. Not on withdrawal. That's not a
+fee structure — that's a tax shelter, and it's the most generous one
+the IRS offers to working Americans.
+
+But there's a catch. The contribution limit is seven thousand dollars
+a year for 2024, and it's earned income only. No 1099, no Roth.
+Side gigs, salary, and self-employment all count.
+
+So is it worth maxing out? Here's the math. Seven thousand a year,
+compounded at seven percent for thirty years, lands at roughly a
+million dollars. Tax free. That's the compounding engine no taxable
+account can match — because every dollar of growth in a taxable
+account gets taxed every year, and the drag compounds.
+
+How to set it up in three steps:
+1. Open a Vanguard account (skip the trading apps — the fee difference
+   is real).
+2. Fund it with VOO — the S and P 500 at 0.03 percent expense ratio.
+3. Set it on autopilot and don't touch it till fifty nine and a half.
+
+Educational content, not financial advice.
+
+Sources: IRS Publication 590-A (2024), Vanguard VOO expense ratio
+disclosure, S&P 500 historical returns 1928-2025.
+
+HASHTAGS (3-5, placed at end of description; first 3 will auto-display
+above the title — order accordingly, most important first.
+#Shorts is for categorization, doesn't count against the content-relevance 3-5):
+#RothIRA
+#RetirementPlanning
+#TaxFreeGrowth
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+Roth IRA, Roth IRA contribution limit, tax free retirement, VOO,
+Vanguard, S&P 500, retirement planning, personal finance, beginner investing
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

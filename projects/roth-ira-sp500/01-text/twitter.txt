@@ -1,0 +1,15 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Critical rule: PRIMARY KEYWORD from keywords.txt must lead the POST.
+# Every number must trace to projects/roth-ira-sp500/01-content/roth-ira-sp500.json — no fabrication.
+# See docs/text-prompt-engine-v2.md §2c for full per-field guidance.
+
+POST (target 70-100 chars, hard cap 280):
+Roth IRA: best deal in personal finance. $7,000/yr × 30yrs at 7% = $1M+ tax free.
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen
+educational content, this isn't event/trend-based):
+[leave blank — evergreen educational content, no trend signal needed]
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet
+cut reach ~50%. Put it in a reply.

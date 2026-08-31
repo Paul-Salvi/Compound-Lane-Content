@@ -1,0 +1,23 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Every number in the platform copy (youtube/instagram/twitter) traces back
+# to the PRIMARY KEYWORD's topic and to projects/roth-ira-sp500/01-content/roth-ira-sp500.json.
+
+PRIMARY KEYWORD:
+Roth IRA
+
+SECONDARY KEYWORDS (3-5):
+- Roth IRA contribution limit
+- Roth IRA tax-free growth
+- Roth IRA Vanguard VOO
+- how to open a Roth IRA
+- Roth IRA vs taxable brokerage
+
+SEARCH INTENT:
+"what is X" (definitional) + "how to X" (procedural) — the reel both
+defines why a Roth is the best deal and walks through the three-step
+setup (Vanguard → VOO → autopilot).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA #RothIRAContributionLimit #VOO #Vanguard #TaxFreeRetirement
+- Broad: #PersonalFinance #RetirementPlanning

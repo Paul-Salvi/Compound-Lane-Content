@@ -1,0 +1,10 @@
+{
+  "sections": [
+    { "key": "intro",    "label": "orient" },
+    { "key": "concept1", "label": "frame" },
+    { "key": "concept2", "label": "warn" },
+    { "key": "concept3", "label": "quantify_opportunity_cost" },
+    { "key": "concept4", "label": "closing_edge_case" },
+    { "key": "outro",    "label": "cta" }
+  ]
+}

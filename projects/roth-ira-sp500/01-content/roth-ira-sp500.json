@@ -1,0 +1,61 @@
+{
+  "handle": "@compoundlane",
+  "title": "ROTH IRA: BEST DEAL IN PERSONAL FINANCE",
+  "series_label": "ROTH IRA: 4 THINGS TO KNOW",
+  "page_label": "",
+  "total_pages": 1,
+  "concepts": [
+    {
+      "number": 1,
+      "title": "Tax-Free Growth",
+      "body": "You put in money you've already paid taxes on. It grows for decades, and you never owe a penny of tax on the growth. Not on the way in. Not on the way out.",
+      "visual_type": "comparison",
+      "visual_spec": {
+        "left_label": "ON THE WAY IN",
+        "left_points": ["You pay tax now", "Money is post-tax", "Growth tracked separately"],
+        "right_label": "ON THE WAY OUT",
+        "right_points": ["No tax on withdrawal", "No tax on dividends", "Compounding stays whole"]
+      }
+    },
+    {
+      "number": 2,
+      "title": "The Catch",
+      "body": "But there's a cap. Seven thousand dollars a year — that's the limit for 2024. And it's earned income only — you can't deposit gifted money or returns from other investments.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "callout_heading": "$7,000 / YEAR CAP",
+        "callout_text": "Plus an income floor: you can only contribute what you earned this year. No 1099 income, no Roth contribution. Side gigs, salary, and self-employment count."
+      }
+    },
+    {
+      "number": 3,
+      "title": "The Payoff",
+      "body": "Max out your Roth for thirty years at seven percent. You retire with over a million dollars — tax free. That's the compounding engine no taxable account can match.",
+      "visual_type": "big_number",
+      "visual_spec": {
+        "amount": "$1,000,000+",
+        "label": "over 30 years, tax free",
+        "sub": "$7,000/year × 30 years @ 7% ≈ $1.05M"
+      }
+    },
+    {
+      "number": 4,
+      "title": "Set It And Forget It",
+      "body": "Skip the trading apps. Open a Vanguard. Fund it with VOO — the S and P 500 at 0.03 percent expense. Set it on autopilot. Don't touch it till fifty nine and a half.",
+      "visual_type": "diagram",
+      "visual_spec": {
+        "nodes": ["Open Vanguard", "Fund with VOO", "Autopilot to 59½"],
+        "arrow_labels": [],
+        "expense_ratio": "0.03%",
+        "withdrawal_age": "59½"
+      }
+    }
+  ],
+  "sources": [
+    {"label": "IRS Publication 590-A (2024)", "url": "https://www.irs.gov/publications/p590a"},
+    {"label": "Vanguard VOO ETF expense ratio", "url": "https://investor.vanguard.com/investment-products/etfs/profile/voo"},
+    {"label": "S&P 500 historical returns 1928-2025", "url": "https://www.slickcharts.com/sp500/returns"}
+  ],
+  "sources_footer": "Sourced from IRS Pub 590-A, Vanguard, S&P 500 1928-2025.",
+  "default_disclaimer": "Educational content, not financial advice."
+}

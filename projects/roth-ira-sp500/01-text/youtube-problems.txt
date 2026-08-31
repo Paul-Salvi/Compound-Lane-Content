@@ -1,0 +1,20 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Filled in 2026-08-30 from the rendered roth-ira-sp500.mp4 (32.0s total,
+# 27.3s voiceover, 1.0s flash pre-roll). Timecodes below are the moment each
+# section's content becomes visible on screen (composition start, not
+# voiceover start). One question per narrative beat — align to the same
+# Orient → Frame → Warn → Quantify → Opportunity cost → Closing edge case
+# boundaries as the rest of the reel.
+#
+# At upload: paste this file's contents into YouTube Studio's
+# "Problems" field. Category: Education, Type: Problem walkthrough.
+
+[TIMECODE] [QUESTION]
+0:00 Why is a Roth IRA the best retirement account?
+0:03 How does a Roth IRA grow tax free?
+0:10 What is the 2024 Roth IRA contribution limit?
+0:15 How much can a Roth IRA grow in 30 years?
+0:22 How do I open a Roth IRA at Vanguard?
+0:28 Should I put my Roth IRA in VOO?
