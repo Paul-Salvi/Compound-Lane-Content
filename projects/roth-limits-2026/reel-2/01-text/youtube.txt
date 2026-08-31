@@ -1,0 +1,47 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-2/01-content/roth-ira-catchup-50.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Notice 2025-67).
+
+TITLE (target 50-60 chars, hard cap 100):
+Turn 50? Your Roth IRA Gets an Extra $1,100 (2026)
+
+[Char count: 51 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+If you turn 50 in 2026, you get an extra $1,100 in your Roth IRA. The IRS calls it a catch-up contribution. Here's the math and the one rule that decides if you qualify.
+
+[Char count: 169 — within 150 target + 19-char pad; the 19 extra chars carry the "one rule" tease, which is the reel's differentiator. Trim to "If you turn 50 in 2026, you get an extra $1,100 in your Roth IRA. Here's the math." if a tighter hook is preferred.]
+
+DESCRIPTION FULL (200-500 words):
+The 2026 IRS retirement-plan limits include a Roth IRA catch-up contribution for anyone who is 50 or older. For 2026, the catch-up is $1,100. That is on top of the $7,500 base contribution limit. The total for a single eligible filer is $8,600.
+
+The catch-up is a flat add-on, not a multiplier. You do not get 1.15 times the base — you get $7,500 plus $1,100, period. The IRS Notice that released the 2026 numbers (Notice 2025-67) and IRS News Release IR-2025-111 both confirm the $1,100 figure.
+
+The math, lined up:
+- Base contribution: $7,500
+- Catch-up (50+): $1,100
+- Total per eligible spouse: $8,600
+
+If you are married, both spouses can do this — if both are 50 by year-end. The catch-up is per eligible spouse, not per household.
+
+The one rule that decides if you qualify: you must turn 50 by December 31 of the contribution year. If you turn 50 on December 31 itself, you qualify for the full calendar year. The IRS measures the age by the end of the year, not on the day you contribute.
+
+This is the cheapest "free money" in the IRA system. The $1,100 grows tax-free for decades. If you are 49, set a calendar reminder for your 50th birthday year and fund the catch-up on January 2.
+
+Full notes, the contribution calculator, and the IRS-canonical sources at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #RetirementPlanning #IRSLimits #PersonalFinance #CatchUpContribution
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira catch up, roth ira 50, roth ira 2026 limit, roth ira age 50, irs 401k limit increase, irs notice 2025-67, retirement contribution limits, catch up contribution, roth ira 8600, 50 and roth ira
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

@@ -1,0 +1,50 @@
+{
+  "slug": "roth-ira-catchup-50",
+  "title": "The $1,100 catch-up at 50",
+  "hook": "Turn 50 this year? You get an extra $1,100 in your Roth.",
+  "default_disclaimer": "Educational content, not financial advice.",
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The catch-up itself",
+      "body": "Roth IRA catch-up contributions are $1,100 in 2026. If you turn 50 by December 31, the IRS lets you put in $1,100 extra, on top of the $7,500 base. That total is $8,600 per spouse, per year.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$1,100",
+        "label": "extra at 50",
+        "color": "ink-maroon"
+      }
+    },
+    {
+      "number": 2,
+      "title": "The math, lined up",
+      "body": "Base $7,500 + catch-up $1,100 = $8,600 total per year. The catch-up is a flat add-on, not a multiplier. Same Roth account, more dollars in.",
+      "visual_type": "ledger",
+      "visual_spec": {
+        "rows": [
+          "base ........... $7,500",
+          "catch-up ....... $1,100",
+          "total .......... $8,600"
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Who qualifies (the 50-by-Dec-31 rule)",
+      "body": "If you're married, both of you can do it — if you're both 50. The catch-up is a flat add-on per eligible spouse. If you turn 50 by December 31, you qualify for the whole calendar year, even if you turn 50 on December 31.",
+      "visual_type": "callout",
+      "visual_spec": {
+        "lead_text": "Turn 50 by Dec 31?",
+        "subtext": "You qualify for the full year"
+      }
+    }
+  ],
+  "sources": [
+    "IRS — 401(k) limit increases to $24,500 for 2026, IRA limit increases to $7,500 (IR-2025-111, Nov 13 2025)",
+    "IRS Notice 2025-67",
+    "Forbes — IRS announces 2026 retirement plan contribution limits (Oct 22 2025)",
+    "Fidelity — Roth IRA contribution limits 2026",
+    "Schwab — Roth IRA contribution rules",
+    "Vanguard — How Roth IRA contributions work"
+  ]
+}

@@ -1,0 +1,18 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-2/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block — aligns to the
+# same section boundaries as the narrative arc.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 2.0 + 11.0 + 6.5 + 7.0 + 2.0 = 29.5s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field for
+# the LearningVideo structured data. Then set Category: Education and
+# Type: Problem walkthrough.
+
+0:01  What is the 2026 Roth IRA catch-up contribution for someone 50 or older?
+0:03  How much extra can a 50-year-old contribute to a Roth IRA in 2026?
+0:14  When do you have to turn 50 to qualify for the Roth IRA catch-up?
+0:21  How is the catch-up contribution calculated — is it a multiplier?
+0:24  How much can a married couple both 50 contribute to their Roth IRAs in 2026?

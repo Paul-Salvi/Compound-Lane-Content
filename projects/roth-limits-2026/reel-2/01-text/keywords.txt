@@ -1,0 +1,23 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-2/01-content/roth-ira-catchup-50.json
+# Every number below traces to the Stage 1 JSON or the cited IRS sources.
+
+PRIMARY KEYWORD:
+roth ira catch up contribution 50
+
+SECONDARY KEYWORDS (3-5):
+- roth ira catch up contribution 2026
+- 50 and roth ira extra contribution
+- roth ira age 50 limit
+- irs 401k limit increase 2026
+- roth ira 8600 limit (long-tail variant, 4+ words)
+
+SEARCH INTENT:
+"how much can I contribute" (procedural) — primary intent is the 50-year-old's
+question: "do I get extra, and how much?". Secondary intent: "is the catch-up
+a multiplier" (definitional).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #CatchUpContribution, #RetirementPlanning, #IRSLimits, #Age50
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

@@ -1,0 +1,23 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-2/01-content/roth-ira-catchup-50.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Notice 2025-67).
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Turn 50 in 2026? Your Roth IRA gets an extra $1,100 on top of the $7,500 base. That's $8,600 total.
+
+[Char count: 110 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The 2026 IRS catch-up contribution for age 50+ is $1,100. It's a flat add-on, not a multiplier — so on top of the $7,500 base Roth IRA limit, your total is $8,600. Per spouse, per year, if both of you are 50 by year-end.
+
+The rule that decides if you qualify: you must turn 50 by December 31. Even on December 31 itself, you qualify for the whole calendar year. The IRS measures age at year-end, not on the day you contribute.
+
+This $1,100 grows tax-free for decades. Set a reminder for your 50th birthday year and fund it January 2.
+
+Educational content, not financial advice.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Roth IRA: The $1,100 Catch-Up at 50" with a big maroon "$1,100" callout, a three-line ledger (base $7,500 + catch-up $1,100 = total $8,600), and a yellow callout reminding viewers they qualify for the whole year if they turn 50 by Dec 31.
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #CatchUpContribution #RetirementPlanning #IRSLimits #PersonalFinance

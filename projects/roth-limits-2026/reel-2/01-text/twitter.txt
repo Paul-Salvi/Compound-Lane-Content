@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-2/01-content/roth-ira-catchup-50.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Notice 2025-67).
+
+POST (target 70-100 chars, hard cap 280):
+Turn 50 in 2026? Your Roth IRA gets $7,500 + $1,100 catch-up = $8,600 total. Per eligible spouse. IRS Notice 2025-67.
+
+[Char count: 124 — within 280 cap; over 100-char target, retained for the IRS Notice citation which is the credibility hook. Trim to "Turn 50? Your Roth gets $7,500 + $1,100 catch-up = $8,600. Per eligible spouse." (84 chars) if a tighter post is preferred.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + the IRS Notice: https://compoundlane.com/roth-ira-catch-up-50"
