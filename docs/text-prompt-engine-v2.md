@@ -4,6 +4,8 @@ Generates `01-text/` for a reel: keyword research → platform-specific copy (Yo
 
 > **Pipeline position:** `01-source/` → `01-content/` (Stage 1 JSON — locked) → **`01-text/` (this doc)** → `02-visual/` → `04-video/`. Run `node scripts/build-text.mjs <slug>` to scaffold the five txt files plus the scaffolded `spanish-subs.srt`; then paste this doc's Stage 1 prompt into Claude against the saved `01-source/` file (Variant B — preferred, no web fetch) or the live URL (Variant A), fill the output into the txt files, run the output checklist before considering the project done. Stage 3 (the `youtube-problems.txt` file) and Stage 4 (the `spanish-subs.srt` file) are pre-created with TODO blocks and only get filled after the `04-video/` render produces section timecodes (and, for Stage 4, a human-translated `tts_script.es.txt` exists).
 
+> **Pacing numbers are governed by `docs/pacing-rules-v1.md` — not this doc.** Runtime, words-per-second, hook deadline, beat map, mid-video reset, CTA position, and keyword continuity all live in that file. If anything in this doc conflicts with pacing-rules-v1.md, **pacing-rules-v1.md wins.** This doc handles platform-copy; pacing-rules-v1.md handles delivery.
+
 **Brand constraints (always apply):**
 - Tone: plain-English, beginner-friendly, "every number sourced"
 - Never state a number that isn't in the source article's extracted JSON (`01-content/{slug}.json` is the locked source of truth — the fact-check gate from `GUIDE.md §17.2` applies here too)
@@ -153,9 +155,11 @@ Example:
 
 ```
 You are translating a Compound Lane voiceover script from English to
-Spanish. Section markers (`# intro`, `# concept1`, etc.) and `# TODO`
-comments must be preserved. Output every section, even if the Spanish
-is a single line. Apply:
+Spanish. Section structure is given by a sibling 04-video/sections.json
+file (keys: intro, concept1..N, outro — see docs/pacing-rules-v1.md);
+do NOT embed `# intro` markers in the translated file. Output every
+section as its own paragraph, separated by a single blank line, even
+if the Spanish is a single sentence. Apply:
 - Plain Spanish, beginner-friendly, neutral Latin American register
 - Numbers stay as digits (Spanish viewers can read them faster than words)
 - Keep brand names in English ("Vanguard", "S&P 500", "DCA", "Roth IRA")
@@ -174,7 +178,7 @@ node scripts/build-subs.mjs <slug>            # auto-discovers if no args
 ```
 
 The build script:
-- Parses both `tts_script.txt` (English) and `tts_script.es.txt` (Spanish) by `# section` markers — keys must match 1:1.
+- Parses both `tts_script.txt` (English) and `tts_script.es.txt` (Spanish) — new-format projects (post-pacing-rules-v1.md) use blank-line paragraph breaks + a sibling `04-video/sections.json` for section keys; legacy projects (DCA, OTDT) still use `# intro` / `# conceptN` / `# outro` markers and will print a one-time migration warning. Keys must match 1:1.
 - Loads `voiceover.json` (faster-whisper per-word timings) and re-uses the same probe-based section alignment as `scripts/measure-vo-timing.mjs`, so the Spanish SRT aligns to the same section boundaries the video's visuals use.
 - Within each section, walks the English word stream to find each English sentence's first/last word. The matching Spanish sentence gets `cue.start = firstWord.start`, `cue.end = lastWord.end`. Word-order drift is absorbed at the sentence level (clause-aligned, not word-aligned).
 - Auto-merges cues shorter than 1.0s forward into the next cue; auto-splits cues longer than 7.0s at the nearest `,` `;` `:` boundary. Cue count and total duration are printed in the build summary.

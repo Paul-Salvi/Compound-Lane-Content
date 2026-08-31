@@ -47,27 +47,74 @@ const REPO = resolve(__dirname, "..");
 // ── helpers ─────────────────────────────────────────────────────────
 
 /**
- * Parse projects/{slug}/04-video/tts_script.txt into the 8 sections.
- * Splits on lines matching `# intro` / `# conceptN` / `# outro`,
- * strips `# TODO` comments, collapses whitespace. Returns an ordered
- * array: [header, c1, c2, c3, c4, c5, c6, footer].
+ * Parse projects/{slug}/04-video/tts_script.txt into N sections.
+ *
+ * Two formats are supported (see docs/pacing-rules-v1.md for context):
+ *
+ *   1. New (recommended): tts_script.txt contains ONLY the spoken
+ *      words, separated by blank lines. Section keys come from a
+ *      sibling 04-video/sections.json — `sections: [{key,label}, …]`
+ *      in the same order as the script's paragraphs. This is the
+ *      AUDIO_STYLE.md rule 8 + pacing-rules-v1.md convention: every
+ *      non-empty line in tts_script.txt is fed to VibeVoice as a
+ *      separate Speaker 1: segment, and `# section` markers cost
+ *      ~7-15s of dead air per marker (see memory/vibevoice-segment-cost.md).
+ *
+ *   2. Legacy (still supported, will be removed): tts_script.txt has
+ *      `# intro` / `# conceptN` / `# outro` markers, body follows each
+ *      marker until the next. Used by projects/dollar-cost-averaging
+ *      and projects/one-thousand-decision-tree. Detected when no
+ *      sections.json is present; prints a warning so it can be
+ *      migrated to format 1.
+ *
+ * Returns an ordered array of { key, text } — keys are 'intro',
+ * 'concept1..6', 'outro' (or whatever the caller provided in
+ * sections.json / the legacy markers).
  */
-function parseTtsScript(text) {
+function parseTtsScript(text, sectionsFromJson) {
   // Strip # TODO lines; they're authoring notes for the human.
   const cleaned = text.split(/\r?\n/)
     .filter((l) => !/^\s*#\s*TODO/i.test(l))
     .join("\n");
 
-  // Split into sections by the section markers. Capture the section key
-  // in the same pass. Order: intro → concept1..6 → outro.
-  const sectionRe = /^\s*#\s*(intro|concept[1-6]|outro)\s*$/gm;
+  if (sectionsFromJson && Array.isArray(sectionsFromJson) && sectionsFromJson.length > 0) {
+    // New format: split by blank-line paragraph breaks. Each paragraph
+    // maps to sectionsFromJson[i] in order. AUDIO_STYLE.md rule 8 means
+    // tts_script.txt is just spoken words, no markers — so blank lines
+    // are the only section delimiter.
+    const paragraphs = cleaned
+      .split(/\r?\n\s*\r?\n/)     // blank-line split
+      .map((p) => p.trim())
+      .filter((p) => p.length > 0);
+    if (paragraphs.length !== sectionsFromJson.length) {
+      throw new Error(
+        `tts_script.txt has ${paragraphs.length} paragraph(s) but sections.json declares ` +
+        `${sectionsFromJson.length} section(s). Either fix tts_script.txt (one paragraph per ` +
+        `section) or fix sections.json. (See docs/pacing-rules-v1.md.)`,
+      );
+    }
+    return sectionsFromJson.map((s, i) => ({ key: s.key, text: paragraphs[i] }));
+  }
+
+  // Legacy format: split by # section markers. Print a one-time
+  // warning so legacy reels get migrated to sections.json.
+  console.warn(
+    "!! tts_script.txt uses legacy # intro / # conceptN / # outro markers. " +
+    "Migrate to 04-video/sections.json (see docs/pacing-rules-v1.md) — markers cost " +
+    "~7-15s of dead air per VibeVoice segment.",
+  );
+  const sectionRe = /^\s*#\s*(intro|concept[0-9]+|outro)\s*$/gm;
   const matches = [...cleaned.matchAll(sectionRe)];
   if (matches.length === 0) {
-    throw new Error("tts_script.txt has no # intro / # conceptN / # outro markers — cannot align");
+    throw new Error(
+      "tts_script.txt has no # intro / # conceptN / # outro markers AND no 04-video/sections.json. " +
+      "Create sections.json with one entry per blank-line-separated paragraph. " +
+      "(See docs/pacing-rules-v1.md.)",
+    );
   }
-  // The tail of tts_script.txt (after the last # section) is a long
-  // comment explaining the file; strip everything after the last
-  // section header's body, not after a `# ────...` divider.
+  // Strip the long # ──── comment block at the end of tts_script.txt
+  // (anything from a line of dashes to end-of-file) from each section
+  // body's tail.
   const sections = [];
   for (let i = 0; i < matches.length; i++) {
     const m = matches[i];
@@ -75,13 +122,8 @@ function parseTtsScript(text) {
     const start = m.index + m[0].length;
     const end = next ? next.index : cleaned.length;
     const body = cleaned.slice(start, end);
-    // Strip the long # ──── comment block at the end of tts_script.txt
-    // (anything from a line of dashes to end-of-file).
     const cleanedBody = body.replace(/# ─+[\s\S]*$/m, "").trim();
     sections.push({ key: m[1].toLowerCase(), text: cleanedBody });
-  }
-  if (sections.length !== 8) {
-    throw new Error(`tts_script.txt has ${sections.length} section(s) (expected 8: intro + 6 concepts + outro)`);
   }
   return sections;
 }
@@ -402,7 +444,19 @@ async function main() {
 
   console.log(`[1/5] parsing tts_script.txt…`);
   const tts = await readFile(ttsPath, "utf8");
-  const sections = parseTtsScript(tts);
+  // New-format projects ship a 04-video/sections.json with one entry
+  // per blank-line-separated paragraph in tts_script.txt. Legacy
+  // projects (DCA, OTDT) still use # section markers — parseTtsScript
+  // will fall back to those and print a one-time migration warning.
+  const sectionsJsonPath = join(projectDir, "sections.json");
+  let sectionsFromJson = null;
+  if (await stat(sectionsJsonPath).then(() => true).catch(() => false)) {
+    const raw = await readFile(sectionsJsonPath, "utf8");
+    const parsed = JSON.parse(raw);
+    sectionsFromJson = (parsed.sections || []).map((s) => ({ key: s.key, label: s.label }));
+    console.log(`      loaded ${sectionsFromJson.length} section keys from sections.json`);
+  }
+  const sections = parseTtsScript(tts, sectionsFromJson);
   console.log(`      found ${sections.length} sections: ${sections.map((s) => s.key).join(", ")}`);
 
   console.log(`[2/5] running faster-whisper on voiceover.mp3…`);

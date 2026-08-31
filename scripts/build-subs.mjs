@@ -46,16 +46,58 @@ const MIN_GAP = 0.4;
 const PROBE_LEN = 4;
 const PROBE_FLOOR = 0.5;
 
-// ─── shared parser (mirrors scripts/measure-vo-timing.mjs:55-87) ────────────
-// Splits tts_script.txt into sections by the `# intro` / `# conceptN` /
-// `# outro` markers, strips `# TODO` lines, collapses whitespace. Used for
-// both English and Spanish scripts so they share the same structure.
-function parseTtsScript(text) {
+// ─── shared parser (mirrors scripts/measure-vo-timing.mjs) ─────────────────
+// Splits tts_script.txt into sections. Two formats are supported (see
+// docs/pacing-rules-v1.md):
+//
+//   1. New: tts_script.txt is just spoken words, blank-line-separated.
+//      Section keys come from a sibling 04-video/sections.json. This is
+//      the AUDIO_STYLE.md rule 8 + pacing-rules-v1.md convention —
+//      markers cost ~7-15s of dead air per VibeVoice segment.
+//
+//   2. Legacy: tts_script.txt has `# intro` / `# conceptN` / `# outro`
+//      markers (DCA, OTDT). Detected when no sections.json is present;
+//      prints a one-time migration warning.
+//
+// `sectionsFromJson` is an array of { key, label } in the same order
+// as the script's paragraphs. When omitted, the function falls back to
+// the legacy regex.
+function parseTtsScript(text, sectionsFromJson) {
   const cleaned = text.split(/\r?\n/).filter((l) => !/^\s*#\s*TODO/i.test(l)).join("\n");
+
+  if (sectionsFromJson && Array.isArray(sectionsFromJson) && sectionsFromJson.length > 0) {
+    // New format: blank-line paragraph split. AUDIO_STYLE.md rule 8
+    // means tts_script.txt has no markers, so blank lines are the only
+    // section delimiter.
+    const paragraphs = cleaned
+      .split(/\r?\n\s*\r?\n/)
+      .map((p) => p.trim())
+      .filter((p) => p.length > 0);
+    if (paragraphs.length !== sectionsFromJson.length) {
+      throw new Error(
+        `tts_script.txt has ${paragraphs.length} paragraph(s) but sections.json declares ` +
+        `${sectionsFromJson.length} section(s). Either fix tts_script.txt (one paragraph per ` +
+        `section) or fix sections.json. (See docs/pacing-rules-v1.md.)`,
+      );
+    }
+    return sectionsFromJson.map((s, i) => ({ key: s.key, text: paragraphs[i] }));
+  }
+
+  // Legacy format: # section markers. Print a one-time warning so
+  // legacy reels get migrated to sections.json.
+  console.warn(
+    "!! tts_script.txt uses legacy # intro / # conceptN / # outro markers. " +
+    "Migrate to 04-video/sections.json (see docs/pacing-rules-v1.md) — markers cost " +
+    "~7-15s of dead air per VibeVoice segment.",
+  );
   const sectionRe = /^\s*#\s*(intro|concept[0-9]+|outro)\b[^\n]*$/gm;
   const matches = [...cleaned.matchAll(sectionRe)];
   if (matches.length === 0) {
-    throw new Error("no # intro / # conceptN / # outro markers in tts_script.txt");
+    throw new Error(
+      "no # intro / # conceptN / # outro markers in tts_script.txt AND no 04-video/sections.json. " +
+      "Create sections.json with one entry per blank-line-separated paragraph. " +
+      "(See docs/pacing-rules-v1.md.)",
+    );
   }
   const sections = [];
   for (let i = 0; i < matches.length; i++) {
@@ -64,8 +106,6 @@ function parseTtsScript(text) {
     const start = m.index + m[0].length;
     const end = next ? next.index : cleaned.length;
     const body = cleaned.slice(start, end);
-    // Strip the long `# ────` comment block at the tail of tts_script.txt
-    // (mirrors measure-vo-timing.mjs:80).
     const cleanedBody = body.replace(/# ─+[\s\S]*$/m, "").trim();
     sections.push({ key: m[1].toLowerCase(), text: cleanedBody });
   }
@@ -465,10 +505,24 @@ async function buildOne(slug, { force }) {
   // Parse both scripts into parallel section arrays. The keys must match
   // 1:1 (intro / concept1..N / outro); we throw if either side has a
   // different count, since the cue text is paired sentence-by-sentence.
-  const enSections = parseTtsScript(enText);
-  const esSections = parseTtsScript(esText);
+  //
+  // New-format projects (docs/pacing-rules-v1.md): section keys come
+  // from 04-video/sections.json and tts_script.txt / tts_script.es.txt
+  // are blank-line-separated paragraphs with no `# section` markers.
+  // Legacy projects (DCA, OTDT): parseTtsScript falls back to the
+  // `# intro` / `# conceptN` / `# outro` markers and prints a one-time
+  // migration warning.
+  const sectionsJsonPath = join(projectDir, "sections.json");
+  let sectionsFromJson = null;
+  if (await stat(sectionsJsonPath).then(() => true).catch(() => false)) {
+    const raw = await readFile(sectionsJsonPath, "utf8");
+    const parsed = JSON.parse(raw);
+    sectionsFromJson = (parsed.sections || []).map((s) => ({ key: s.key, label: s.label }));
+  }
+  const enSections = parseTtsScript(enText, sectionsFromJson);
+  const esSections = parseTtsScript(esText, sectionsFromJson);
   if (enSections.length !== esSections.length) {
-    throw new Error(`${slug}: section count mismatch — English has ${enSections.length} sections, Spanish has ${esSections.length}. Re-translate tts_script.txt preserving every # section header.`);
+    throw new Error(`${slug}: section count mismatch — English has ${enSections.length} sections, Spanish has ${esSections.length}. Re-translate tts_script.txt preserving every section (one paragraph per section, no extra or missing).`);
   }
   for (let i = 0; i < enSections.length; i++) {
     if (enSections[i].key !== esSections[i].key) {
