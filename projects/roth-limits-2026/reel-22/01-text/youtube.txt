@@ -1,0 +1,61 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-22/01-content/mega-backdoor-roth.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Mega Backdoor Roth: Up to $72,000 a Year
+
+[Char count: 43 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+The Roth IRA caps at $7,500 a year. The mega backdoor Roth can shovel up to $72,000 a year into Roth. Same tax-free growth — at 10x the limit.
+
+[Char count: 167 — over 150 by 17; trim to "Roth IRA caps at $7,500. The mega backdoor Roth can shovel up to $72,000 a year into Roth. Same tax-free growth, 10x the limit." (143 chars)]
+
+DESCRIPTION FULL (200-500 words):
+Most people know the $7,500 Roth IRA limit. Few know about the after-tax 401(k) trick that can shovel up to $72,000 a year into Roth — the mega backdoor Roth.
+
+What it is:
+- An after-tax contribution to your 401(k), then an in-plan conversion to Roth.
+- Same tax-free growth as a Roth IRA — but at ~10x the annual limit.
+- Bypasses the Roth IRA income phaseout entirely (no $153K / $242K cliffs).
+
+The three things that must line up:
+1. Your 401(k) plan must allow after-tax (non-Roth) contributions.
+2. Your 401(k) plan must allow in-plan Roth conversions.
+3. Your 401(k) plan must allow in-service rollovers (or automatic conversions).
+- About 70% of large 401(k) plans support the mega backdoor. Most small plans do not.
+
+The math (IRC §415(c) limit = $72,000 for 2025):
+- Employee deferral: $24,500 (2026) — pre-tax.
+- Employer match: ~$5,000-$10,000 — pre-tax.
+- After-tax contribution: the remainder, up to the $72,000 cap.
+- Convert the after-tax dollars to Roth weekly to minimize pre-conversion earnings.
+
+How to start:
+- Ask HR these three questions at your next open enrollment.
+- If all three are yes: contribute the max, then automate weekly conversions.
+- If no: you can roll after-tax 401(k) dollars to a Roth IRA — a slightly slower but equivalent path.
+
+Common mistakes:
+- Not knowing whether your plan supports after-tax contributions.
+- Forgetting to convert (the after-tax dollars grow pre-tax until converted).
+- Letting the after-tax dollars sit for years, then converting a large balance with significant earnings — those earnings get pro-rated (basis recovery first).
+
+Full mechanics + the HR-question script at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#MegaBackdoorRoth #RothIRA #401k #AfterTax #HighIncome
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+mega backdoor roth, after tax 401k, in plan roth conversion, 415c limit, 72000 roth, backdoor roth high income, in service rollover, roth ira phaseout, employer match roth, mega backdoor mechanics
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

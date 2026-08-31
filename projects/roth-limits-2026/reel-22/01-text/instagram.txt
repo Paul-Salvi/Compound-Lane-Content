@@ -1,0 +1,35 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-22/01-content/mega-backdoor-roth.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Roth IRA caps at $7,500. The mega backdoor can shovel up to $72,000 a year into Roth. Same tax-free growth, 10x the limit.
+
+[Char count: 125 — at the 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The mega backdoor Roth, IRC §415(c):
+- After-tax 401(k) → in-plan Roth conversion
+- Bypasses the $153K / $242K income phaseout
+- $72,000 combined 2025 limit
+
+3 things must line up:
+1. After-tax 401(k) contributions allowed
+2. In-plan Roth conversions allowed
+3. In-service rollovers allowed
+
+~70% of large 401(k) plans support this. Most small plans do not.
+
+The math:
+- Deferral: $24,500 (2026)
+- Match: $5K-$10K typical
+- After-tax: rest, up to $72,000
+- Convert weekly
+
+Ask HR at open enrollment.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Mega Backdoor Roth: $72,000/yr" with three checkboxes ("After-tax ✓, In-plan conversion ✓, In-service rollover ✓") and a stacked-bar showing deferral + match + after-tax = $72,000. Sticky note: "Ask HR three questions. Fund the full $72K."
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#MegaBackdoorRoth #RothIRA #401k #AfterTax #HighIncome

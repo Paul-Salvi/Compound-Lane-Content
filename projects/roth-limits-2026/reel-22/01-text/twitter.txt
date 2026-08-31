@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-22/01-content/mega-backdoor-roth.json
+# or the cited IRC / IRS sources.
+
+POST (target 70-100 chars, hard cap 280):
+Roth IRA: $7,500/yr. Mega backdoor Roth: up to $72,000/yr. Same tax-free growth, 10x the limit. 3 HR questions decide.
+
+[Char count: 124 — within 280 cap; over 100-char target, retained for the priority tip. Trim to "Roth IRA: $7,500/yr. Mega backdoor: up to $72K/yr. Same tax-free growth, 10x the limit." (98 chars)]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #MegaBackdoorRoth is niche enough; the contrast itself is the hook)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"The 3 HR questions + the math: https://compoundlane.com/mega-backdoor-roth"

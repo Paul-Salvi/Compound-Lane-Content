@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-22/01-content/mega-backdoor-roth.json
+
+PRIMARY KEYWORD:
+mega backdoor roth
+
+SECONDARY KEYWORDS (3-5):
+- after tax 401k to roth
+- 415c limit 72000
+- in plan roth conversion
+- in service rollover 401k
+- backdoor roth high income
+
+SEARCH INTENT:
+"how do I put more in my Roth" (action) — primary intent is the mega backdoor mechanics for high earners.
+Secondary: "is my 401k plan eligible" (decision) — the three HR questions.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #MegaBackdoorRoth, #RothIRA, #401k, #AfterTax, #HighIncome
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

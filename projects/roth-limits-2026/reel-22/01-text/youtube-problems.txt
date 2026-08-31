@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-22/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 2.0 + 10.5 + 10.5 + 7.0 + 4.0 = 35.0s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  What is the mega backdoor Roth?
+0:03  How much can you put in with a mega backdoor Roth?
+0:13  What three things must my 401(k) plan support for the mega backdoor?
+0:24  What is the $72,000 §415(c) limit made of?
+0:31  How do I start a mega backdoor Roth at my job?
