@@ -1,0 +1,57 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-21/01-content/early-withdrawal-penalty.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth IRA Early Withdrawal: The 10% Penalty & 5 Exceptions
+
+[Char count: 56 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Pull earnings from your Roth before 59½ and the IRS takes 10% — on top of ordinary income tax. There are 5 exceptions that wipe it.
+
+[Char count: 130 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+The 10% early-withdrawal penalty is one of the most-misunderstood parts of a Roth IRA. It's not a blanket rule — there are five IRS-recognized exceptions that erase the penalty entirely.
+
+The basics (IRC §72(t)):
+- The 10% penalty applies to EARNINGS only, not to your contributions.
+- Your contributions can come out any time, for any reason, tax- and penalty-free.
+- The penalty is on top of ordinary income tax.
+
+The five exceptions:
+1. First-time home purchase — up to $10,000 lifetime per person.
+2. Qualified higher education expenses.
+3. Unreimbursed medical expenses above 7.5% of AGI.
+4. Health insurance premiums while unemployed.
+5. Birth or adoption expense — up to $5,000 per child.
+
+The strategy:
+- Max the Roth. The penalty is what makes the tax-free growth possible.
+- Stack 6-12 months of expenses in a taxable brokerage for true emergencies.
+- The 5 exceptions cover most "qualified" emergencies — use them when they apply.
+- The Roth is for retirement. The brokerage is for everything else.
+
+Common mistakes:
+- Pulling earnings before 59½ for non-qualified reasons and paying 10% + 24%+ tax.
+- Not knowing that the first-time home buyer exception is a lifetime $10K cap.
+- Forgetting that the 5-year rule still applies to earnings on conversions.
+
+Full exceptions list + Form 5329 walkthrough at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #EarlyWithdrawal #IRSPenalty #RetirementPlanning #72tExceptions
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira early withdrawal, 10 percent penalty ira, roth ira exceptions, 72t exceptions, first time home purchase roth, roth ira birth adoption, ira medical expense exception, roth ira unemployment, ira early withdrawal exceptions, roth 59 and a half
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

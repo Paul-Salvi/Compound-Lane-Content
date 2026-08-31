@@ -1,0 +1,42 @@
+{
+  "slug": "early-withdrawal-penalty",
+  "title": "The 10% Early-Withdrawal Penalty (and the 5 Exceptions)",
+  "subtitle": "Pull earnings from your Roth before 59½ and the IRS takes ten percent. But there are five exceptions that erase the penalty.",
+  "source_irs": "IRC §72(t); IRS Topic No. 557 — Additional Tax on Early Distributions",
+  "pillar": 5,
+  "publish_date": "2026-09-19",
+  "concepts": [
+    {
+      "key": "the-penalty",
+      "heading": "The 10% Penalty",
+      "lede": "Take your gains out before 59½ — there's a 10% tax on the earnings, on top of regular income tax.",
+      "body": [
+        "Earnings pulled early = 10% penalty + ordinary income tax.",
+        "Contributions can come out anytime, tax- and penalty-free. You already paid tax on them.",
+        "The penalty applies to the EARNINGS only, not the principal."
+      ]
+    },
+    {
+      "key": "five-exceptions",
+      "heading": "The 5 Exceptions",
+      "lede": "Five IRS-recognized exceptions waive the 10% penalty, even before 59½.",
+      "body": [
+        "1. First-time home purchase — up to $10,000 lifetime.",
+        "2. Qualified higher education expenses.",
+        "3. Medical expenses above 7.5% of AGI.",
+        "4. Health insurance premiums while unemployed.",
+        "5. Birth or adoption expense — up to $5,000 per child."
+      ]
+    },
+    {
+      "key": "the-strategy",
+      "heading": "The Strategy",
+      "lede": "Max the Roth. The 5 exceptions cover most emergencies. The penalty is a guardrail, not a trap.",
+      "body": [
+        "Stack 6-12 months of expenses in a brokerage for true emergencies.",
+        "Keep the Roth untouched until 59½ (and the 5-year rule).",
+        "The 10% penalty is what makes the Roth's tax-free growth possible."
+      ]
+    }
+  ]
+}

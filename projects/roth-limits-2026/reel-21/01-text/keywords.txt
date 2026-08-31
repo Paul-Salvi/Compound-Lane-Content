@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-21/01-content/early-withdrawal-penalty.json
+
+PRIMARY KEYWORD:
+roth ira early withdrawal penalty
+
+SECONDARY KEYWORDS (3-5):
+- 10 percent penalty ira
+- roth ira exceptions 72t
+- first time home purchase roth
+- roth ira birth adoption exception
+- ira medical expense exception
+
+SEARCH INTENT:
+"can I pull money from my Roth" (decision-making) — primary intent is understanding when the 10% penalty applies and how to avoid it.
+Secondary: "what are the exceptions" (informational) — five specific IRS-recognized carve-outs.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #EarlyWithdrawal, #IRSPenalty, #RetirementPlanning, #72tExceptions
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

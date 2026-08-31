@@ -1,0 +1,34 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-21/01-content/early-withdrawal-penalty.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Pull earnings from your Roth before 59½ and the IRS takes 10% — on top of regular income tax. 5 exceptions wipe it.
+
+[Char count: 125 — at the 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The 10% penalty, IRC §72(t):
+- Applies to EARNINGS only
+- On top of ordinary income tax
+- Before age 59½
+
+The 5 exceptions:
+1. First-time home purchase — $10K lifetime
+2. Qualified higher education
+3. Medical > 7.5% of AGI
+4. Health insurance while unemployed
+5. Birth or adoption — $5K per child
+
+The strategy:
+- Max the Roth
+- Stack 6-12 months in a brokerage for emergencies
+- The penalty is what makes the tax-free growth possible
+
+Contributions can come out any time, tax- and penalty-free.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "10% Penalty + 5 Exceptions" with a red "10%" stamp at top, then five numbered items listing each exception, ending with a sticky note "Max the Roth. Brokerage for emergencies. The penalty is the price of tax-free growth."
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #EarlyWithdrawal #IRSPenalty #RetirementPlanning #72tExceptions
