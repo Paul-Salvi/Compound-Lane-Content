@@ -25,14 +25,30 @@ Set-Location -Path $PSScriptRoot
 # 04-video/ is at projects/{slug}/04-video/, so the repo root is 3 levels up.
 $RepoRoot = (Resolve-Path "$PSScriptRoot\..\..\..").Path
 
+# ── PACING-RULES-V1.MD VALIDATION (pre-render, non-blocking) ────────
+# Check tts_script.txt against docs/pacing-rules-v1.md before calling
+# VibeVoice. Surfaces word count, hook deadline, largest-number
+# placement, CTA, and keyword continuity. Non-strict by default; the
+# regen still produces a voiceover.mp3 if checks fail.
+$Slug = Split-Path -Leaf (Split-Path -Parent $PSScriptRoot)
+Write-Host "→ checking tts_script.txt against docs/pacing-rules-v1.md"
+node "$RepoRoot/scripts/check-pacing.mjs" $Slug
+if ($LASTEXITCODE -ne 0) {
+  Write-Host "  (validation failed but proceeding — pass --strict to fail builds)"
+}
+
 # ── CONFIG ───────────────────────────────────────────────────────────
 $Backend = if ($env:TTS_BACKEND) { $env:TTS_BACKEND } else { 'vibevoice' }
 $Voice = if ($env:TTS_VOICE) { $env:TTS_VOICE } else { 'Paul' }
-# TTS_SPEED: ffmpeg atempo applied to the VibeVoice output. Default 1.30
-# is the winner of samples/paul-speed-audit/ (1.00/1.25/1.30/1.40 A/B).
+# TTS_SPEED: ffmpeg atempo applied to the VibeVoice output. Default 1.20
+# is the empirical sweet spot for ~90-word scripts (lands at 30s — the floor
+# of pacing-rules-v1.md). Measured ladder (Roth, 93 words, 6 segments):
+#   1.15× → 27.3s (under floor)
+#   1.20× → 29.8s ← current default (right at 30s floor)
+#   1.30× → 25.5s (was the old default; over-fast for 30s target)
 # Valid range: 0.5–2.0 (single atempo filter); chain `atempo=A,atempo=B`
 # for higher. Set TTS_SPEED=1.0 to disable speed-up entirely.
-$Speed = if ($env:TTS_SPEED) { $env:TTS_SPEED } else { '1.30' }
+$Speed = if ($env:TTS_SPEED) { $env:TTS_SPEED } else { '1.20' }
 $env:HYPERFRAMES_PYTHON = 'C:\Users\plslv\AppData\Local\Programs\Python\Python311\python.exe'
 
 New-Item -ItemType Directory -Force -Path .media\voiceover | Out-Null
@@ -61,8 +77,19 @@ if ($Backend -eq 'vibevoice') {
   }
   # VibeVoice expects `Speaker N:` line prefixes; add `Speaker 1:` to every
   # non-empty line in the script so it parses as a single-speaker script.
-  $tmpScript = [System.IO.Path]::GetTempFileName() + '.txt'
+  # NOTE: tts_script.txt must contain ONLY the spoken words. Comments
+  # (`# intro`, audit checklists, etc.) become segments of dead air —
+  # see the per-project script-notes.md (if present) and
+  # memory/vibevoice-segment-cost.md for the measured cost. Warn loudly
+  # if any `#`-prefixed or comment-like lines are present so this isn't
+  # silent.
   $lines = Get-Content 'tts_script.txt'
+  $commentLines = $lines | Where-Object { $_.Trim() -match '^\s*#' }
+  if ($commentLines) {
+    Write-Warning "!! tts_script.txt contains $($commentLines.Count) comment line(s) — VibeVoice will treat each as a 'Speaker 1:' segment of dead air. Move editor's notes to a sibling file (e.g. script-notes.md) and strip these from tts_script.txt."
+    $commentLines | ForEach-Object { Write-Warning "     | $_" }
+  }
+  $tmpScript = [System.IO.Path]::GetTempFileName() + '.txt'
   $sb = [System.Text.StringBuilder]::new()
   foreach ($line in $lines) {
     if ($line.Trim()) { [void]$sb.AppendLine("Speaker 1: $line") }

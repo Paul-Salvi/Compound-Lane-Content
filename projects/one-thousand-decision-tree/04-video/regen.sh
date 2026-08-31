@@ -29,11 +29,18 @@ cd "$(dirname "$0")"
 # ── CONFIG ───────────────────────────────────────────────────────────
 BACKEND="${TTS_BACKEND:-vibevoice}"
 VOICE="${TTS_VOICE:-Paul}"
-# TTS_SPEED: ffmpeg atempo applied to the VibeVoice output. Default 1.30
-# is the winner of samples/paul-speed-audit/ (1.00/1.25/1.30/1.40 A/B).
+# TTS_SPEED: ffmpeg atempo applied to the VibeVoice output. Default 1.20
+# is the empirical sweet spot for ~90-word scripts (lands at 30s — the floor
+# of pacing-rules-v1.md). Measured ladder (Roth, 93 words, 6 segments):
+#   1.15× → 27.3s (under floor)
+#   1.20× → 29.8s ← current default (right at 30s floor)
+#   1.30× → 25.5s (was the old default; over-fast for 30s target)
+# Note: OTDT reel is 139s for a 90s target — it uses the legacy `# section`
+# markers and ~10 segments, so 1.20× is the default but OTDT will need a
+# future re-cut to actually hit its 90s target.
 # Valid range: 0.5–2.0 (single atempo filter); chain `atempo=A,atempo=B`
 # for higher. Set TTS_SPEED=1.0 to disable speed-up entirely.
-: "${TTS_SPEED:=1.30}"
+: "${TTS_SPEED:=1.20}"
 : "${HYPERFRAMES_PYTHON:=C:\\Users\\plslv\\AppData\\Local\\Programs\\Python\\Python311\\python.exe}"
 export HYPERFRAMES_PYTHON
 

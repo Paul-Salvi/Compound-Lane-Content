@@ -7,7 +7,7 @@
 > `04-video/.media/voiceover/voiceover.mp3`. The voice is now `Paul`
 > (VibeVoice 1.5B) at speed `1.30×` (see
 > [`AUDIO_STYLE.md`](../../../AUDIO_STYLE.md) and
-> [`samples/paul-speed-audit/`](../../../samples/paul-speed-audit/)).
+> [`samples/paul-speed-audit/`](../../../samples/paul-speed-audit/) — winner is **1.20×** for ~90-word scripts (lands at 30s floor of pacing-rules-v1.md).
 > This README is the legacy Kokoro/`am_michael` documentation; it is
 > kept for historical reference but the regen commands below do not
 > reflect the current path. **To regenerate, use `04-video/regen.ps1`

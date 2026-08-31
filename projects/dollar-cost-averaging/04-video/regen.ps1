@@ -28,11 +28,18 @@ $RepoRoot = (Resolve-Path "$PSScriptRoot\..\..\..").Path
 # ── CONFIG ───────────────────────────────────────────────────────────
 $Backend = if ($env:TTS_BACKEND) { $env:TTS_BACKEND } else { 'vibevoice' }
 $Voice = if ($env:TTS_VOICE) { $env:TTS_VOICE } else { 'Paul' }
-# TTS_SPEED: ffmpeg atempo applied to the VibeVoice output. Default 1.30
-# is the winner of samples/paul-speed-audit/ (1.00/1.25/1.30/1.40 A/B).
+# TTS_SPEED: ffmpeg atempo applied to the VibeVoice output. Default 1.20
+# is the empirical sweet spot for ~90-word scripts (lands at 30s — the floor
+# of pacing-rules-v1.md). Measured ladder (Roth, 93 words, 6 segments):
+#   1.15× → 27.3s (under floor)
+#   1.20× → 29.8s ← current default (right at 30s floor)
+#   1.30× → 25.5s (was the old default; over-fast for 30s target)
+# Note: DCA reel is 136s for a 90s target — it uses the legacy `# section`
+# markers and ~10 segments, so 1.20× is the default but DCA will need a
+# future re-cut to actually hit its 90s target.
 # Valid range: 0.5–2.0 (single atempo filter); chain `atempo=A,atempo=B`
 # for higher. Set TTS_SPEED=1.0 to disable speed-up entirely.
-$Speed = if ($env:TTS_SPEED) { $env:TTS_SPEED } else { '1.30' }
+$Speed = if ($env:TTS_SPEED) { $env:TTS_SPEED } else { '1.20' }
 $env:HYPERFRAMES_PYTHON = 'C:\Users\plslv\AppData\Local\Programs\Python\Python311\python.exe'
 
 New-Item -ItemType Directory -Force -Path .media\voiceover | Out-Null
