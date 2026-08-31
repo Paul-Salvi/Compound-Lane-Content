@@ -1,0 +1,49 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-16/01-content/roth-conversion-3-numbers.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth Conversion: 3 Numbers That Decide
+
+[Char count: 39 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+A Roth conversion is a one-way bet on your future tax rate. Three numbers decide: current bracket, future bracket, conversion size.
+
+[Char count: 142 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+A Roth conversion is a one-way bet on your future tax rate. Once converted, you cannot undo it (per IRC §408(d)(2)). The IRS treats the converted amount as ordinary income in the year of conversion. Get the size wrong and you either overpay tax now or leave Roth money on the table.
+
+Three numbers decide:
+
+Number 1: Your current marginal tax bracket. This is the cost. A conversion of $50,000 from the 24% bracket adds $12,000 in federal tax — $50,000 × 0.24. That tax is due April 15 of the year after the conversion, regardless of whether you extend the return.
+
+Number 2: Your expected future marginal tax bracket. The conversion wins if your future rate is higher than today's. Three forces push future rates up:
+- Required Minimum Distributions (RMDs) start at age 73 (per SECURE 2.0).
+- Social Security becomes taxable once provisional income exceeds $34,000 single / $44,000 MFJ.
+- Concentrated equity vesting (RSUs, ISO exercises) is taxed as ordinary income.
+
+Number 3: The conversion size. Convert up to the top of your current bracket — not a penny more. A single filer in the 24% bracket (taxable income $103,350 to $197,300 in 2025) can convert up to ~$94,000 without spilling into the 32% bracket. Convert $94,000 today at 24%, and the entire $94,000 grows tax-free forever.
+
+The bracket-fill strategy. Most planners recommend a multi-year conversion ladder: convert $50,000-$100,000 per year, each year filling up to the top of the current bracket. Five years of $80,000 conversions at 24% removes $400,000 from the traditional IRA at known rates — versus an unknown future rate when RMDs force distribution.
+
+The bottom line: a Roth conversion is one of the few tax-planning moves that turns uncertainty (future rates) into a known today-cost. Three numbers, one decision.
+
+Full notes + bracket-fill calculator at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothConversion #TaxBracket #RetirementTax #BracketFill #RothIRA
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth conversion strategy, roth conversion bracket, roth conversion ladder, roth conversion tax, convert traditional ira, 24 percent bracket, 32 percent bracket, roth conversion tax bracket, irs section 408, secure act 2.0 rmd
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

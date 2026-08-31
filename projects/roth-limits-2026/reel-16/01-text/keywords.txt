@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-16/01-content/roth-conversion-3-numbers.json
+
+PRIMARY KEYWORD:
+roth conversion strategy
+
+SECONDARY KEYWORDS (3-5):
+- roth conversion bracket fill
+- roth conversion tax bracket
+- 24 percent bracket conversion
+- roth conversion ladder
+- convert traditional ira to roth
+
+SEARCH INTENT:
+"how much should I convert" (decision-making) — primary intent is the bracket-fill size.
+Secondary: "is a conversion worth it" (analysis) — current vs future bracket.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothConversion, #TaxBracket, #RetirementTax, #BracketFill, #RothIRA
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

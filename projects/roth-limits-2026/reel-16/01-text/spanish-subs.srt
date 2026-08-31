@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:01,600
+¿Convertir? Tres números deciden.
+
+2
+00:00:02,100 --> 00:00:10,600
+Una conversión Roth es una apuesta unidireccional sobre tu tasa de impuestos futura. El IRS trata el monto convertido como ingreso ordinario este año.
+
+3
+00:00:11,100 --> 00:00:19,100
+Número uno: tu tramo marginal actual. Ese es el costo. Número dos: tu tramo futuro esperado. RMDs a los setenta y tres, Seguro Social, vesting de RSU — todo empuja los ingresos futuros hacia arriba.
+
+4
+00:00:19,600 --> 00:00:31,100
+Número tres: el tamaño de la conversión. Convierte hasta el tope de tu tramo actual — ni un centavo más. Un contribuyente en el tramo del 24% puede convertir $50,000 este año — esos $50,000 nunca se vuelven a gravar.
+
+5
+00:00:31,600 --> 00:00:33,600
+Guarda esto antes de tu próxima conversión.
