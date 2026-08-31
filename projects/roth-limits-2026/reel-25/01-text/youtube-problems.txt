@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-25/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 1.5 + 8.5 + 10.5 + 10.0 + 3.5 = 35.0s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  How much is $7,500/yr for 40 years in a Roth IRA worth?
+0:02  How much total is contributed in 40 years at $7,500/year?
+0:11  How much does the last decade of Roth contributions add?
+0:22  When should I start a Roth to get to 40 years of compounding?
+0:32  What's the pre-tax equivalent of $300K of Roth contributions?

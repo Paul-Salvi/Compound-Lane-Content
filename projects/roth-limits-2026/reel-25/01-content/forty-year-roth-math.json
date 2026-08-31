@@ -1,0 +1,42 @@
+{
+  "slug": "forty-year-roth-math",
+  "title": "$7,500/yr for 40 Years (The Number Gets Ridiculous)",
+  "subtitle": "Most people max the Roth for 30 years. Almost nobody for 40. The difference: $1.5 million vs $708K. The last decade does the work.",
+  "source_irs": "Compound math; contribution phaseout (no phaseout) under IRC §219(g)",
+  "pillar": 4,
+  "publish_date": "2026-09-23",
+  "concepts": [
+    {
+      "key": "the-math",
+      "heading": "The Math",
+      "lede": "Put $7,500 a year into a Roth for 40 years at 7% real return. The end value: $1,497,000, all tax-free.",
+      "body": [
+        "Annual contribution: $7,500. Total contributed: 40 × $7,500 = $300,000.",
+        "Real return: 7% per year. Compounded annually.",
+        "FV factor at year 40: ((1.07^40 - 1) / 0.07) = ~199.6.",
+        "End balance: $300,000 × 199.6 / 40 = $1,497,000."
+      ]
+    },
+    {
+      "key": "the-decade",
+      "heading": "The Last Decade Does the Work",
+      "lede": "From year 30 to year 40, the balance more than doubles. The last ten years add $789,000 — more than the first 30 added combined.",
+      "body": [
+        "Year-30 balance: $708,000 (the 30-year math from Reel #8).",
+        "Year-40 balance: $1,497,000.",
+        "Years 30-40 add: $789,000 — more than the $708,000 the first 30 years added.",
+        "The last decade is more than the first three combined. Compounding is back-loaded."
+      ]
+    },
+    {
+      "key": "the-trade",
+      "heading": "The Trade",
+      "lede": "To get 40 years of $7,500, you have to start at 22 and not stop until 62. The cost: $300,000 of post-tax dollars over 40 years.",
+      "body": [
+        "Pre-tax equivalent: $300K Roth ≈ $400K pre-tax at 25% bracket.",
+        "Cost vs benefit: $400K pre-tax → $1,497,000 Roth.",
+        "That's ~3.7× growth on the pre-tax dollars, vs. ~3× in a brokerage after cap-gains drag."
+      ]
+    }
+  ]
+}

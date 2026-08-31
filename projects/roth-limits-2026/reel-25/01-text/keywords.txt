@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-25/01-content/forty-year-roth-math.json
+
+PRIMARY KEYWORD:
+roth ira 40 year return
+
+SECONDARY KEYWORDS (3-5):
+- roth ira compounding 40 years
+- 7500 per year roth 40 years
+- roth ira future value
+- long term roth ira growth
+- roth ira 1.5 million
+
+SEARCH INTENT:
+"how much will my Roth be worth" (informational) — primary intent is the 40-year compound math.
+Secondary: "should I keep contributing after 30" (decision) — the back-loaded decade argument.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #CompoundInterest, #RetirementMath, #LongTermInvesting, #Compounding
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

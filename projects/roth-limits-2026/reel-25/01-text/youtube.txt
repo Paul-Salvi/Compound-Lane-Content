@@ -1,0 +1,66 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-25/01-content/forty-year-roth-math.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+$7,500/yr for 40 Years: The Roth Number Gets Wild
+
+[Char count: 51 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+$7,500/yr for 40 years at 7% real return. The end value: $1,497,000, all tax-free. The last decade does the work.
+
+[Char count: 134 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+Most people think about the Roth IRA in 30-year terms. The 40-year math is where compounding goes from impressive to absurd.
+
+The 40-year math ($7,500/yr, 7% real return):
+- Total contributed: 40 × $7,500 = $300,000
+- FV factor at year 40: ((1.07^40 - 1) / 0.07) ≈ 199.6
+- End balance: ~$1,497,000
+- Effective growth multiple on contributions: ~5.0×
+
+The 30-year comparison (from Reel #8):
+- Same $7,500/yr, 7% real return, 30 years
+- End balance: ~$708,000
+- Effective growth multiple: ~3.1×
+
+The last decade does the work:
+- From year 30 to year 40, the balance goes from $708K to $1,497K.
+- That decade alone adds $789,000 — more than the entire first 30 years added combined.
+- Compounding is back-loaded. The early years are just the foundation.
+
+The trade to get to 40 years:
+- Start at 22, run until 62 — 40 years uninterrupted.
+- $300,000 of post-tax dollars over 40 years ($7,500 × 40).
+- Pre-tax equivalent at a 25% bracket: $400,000.
+- The engine: $400,000 pre-tax turns into $1,497,000 Roth = ~3.7× growth.
+- In a brokerage, the same $400K (after cap-gains drag) would compound to ~$1.2M pre-tax equivalent.
+
+Why most people stop at 30:
+- Kids. Mortgages. Career changes. College. Life happens.
+- The "save 30 years" Roth advice is correct — but the 10-year extension is where the magic is.
+
+What to do:
+- If you're under 30: plan for 40. The discipline now is the gift.
+- If you're at 30: don't stop. Year 31-40 is the biggest chunk.
+- If you're past 30 and stopped: restart. The 5-year clock resets per contribution.
+
+Full 30/40/50-year math table at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #CompoundInterest #RetirementMath #LongTermInvesting #Compounding
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira 40 years, roth ira 1.5 million, roth ira future value, roth ira compound interest, 7500 per year roth, long term roth growth, roth ira compounding, roth ira 30 vs 40 years, roth ira back loaded, roth ira 40 year math
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)
