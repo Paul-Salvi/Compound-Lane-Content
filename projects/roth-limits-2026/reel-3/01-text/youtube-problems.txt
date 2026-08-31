@@ -1,0 +1,14 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-3/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 2.5 + 8.0 + 14.0 + 10.0 + 2.5 = 38.0s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  What three numbers decide a teen's first Roth IRA contribution?
+0:03  What counts as earned income for a Roth IRA contribution?
+0:11  What is the 2026 Roth IRA contribution limit for a minor?
+0:25  What happens to a custodial Roth IRA when the teen turns 18?

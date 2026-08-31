@@ -1,0 +1,50 @@
+{
+  "slug": "roth-ira-teen-three-numbers",
+  "title": "3 numbers for a teen's first Roth",
+  "hook": "Three numbers decide your teen's first Roth contribution.",
+  "default_disclaimer": "Educational content, not financial advice.",
+  "concepts": [
+    {
+      "number": 1,
+      "title": "Number one: earned income",
+      "body": "Number one is earned income. The teen needs to have actually been paid — W-2 wages, tips, or self-employment income. Allowance and investment gains don't count. The Roth contribution can't exceed what the teen actually earned.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "1",
+        "label": "earned income",
+        "color": "ink-navy"
+      }
+    },
+    {
+      "number": 2,
+      "title": "Number two: the 2026 limit",
+      "body": "Number two is the 2026 limit — seven thousand five hundred dollars. But the contribution can't exceed their earned income. So a sixteen-year-old with a three-thousand-dollar summer job can put in three thousand. Not seven-five. Earned income is the binding cap.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$7,500",
+        "label": "2026 limit (or income, whichever is lower)",
+        "color": "ink-maroon"
+      }
+    },
+    {
+      "number": 3,
+      "title": "Number three: age 18",
+      "body": "Number three is the year they turn eighteen. A custodial Roth — what minors use — converts to a regular Roth on the teen's eighteenth birthday. The five-year clock for tax-free withdrawals of earnings also starts on that date.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "18",
+        "label": "custodial Roth converts",
+        "color": "ink-green"
+      }
+    }
+  ],
+  "sources": [
+    "IRS — 401(k) limit increases to $24,500 for 2026, IRA limit increases to $7,500 (IR-2025-111, Nov 13 2025)",
+    "IRS Pub 590-A — Contributions to Individual Retirement Arrangements (IRAs)",
+    "IRC §408A — Roth IRAs",
+    "IRS Notice 2025-67",
+    "Schwab — Roth IRA contribution rules for minors",
+    "Fidelity — Roth IRA for teens and minors",
+    "Vanguard — Custodial Roth IRA"
+  ]
+}

@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-4/01-content/roth-ira-phaseout-single.json
+
+PRIMARY KEYWORD:
+roth ira income limits 2026
+
+SECONDARY KEYWORDS (3-5):
+- roth ira phase out single
+- roth ira magi 2026
+- roth ira income limit 153000
+- roth ira modified adjusted gross income
+- backdoor roth ira (long-tail variant, 4+ words)
+
+SEARCH INTENT:
+"How much" (definitional) — primary intent is the 2026 single-filer phase-out range.
+Secondary: "what if I'm over" (workaround, the backdoor Roth tease).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #BackdoorRoth, #MAGI, #IncomeLimits, #PhaseOut
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

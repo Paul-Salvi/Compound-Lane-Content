@@ -1,0 +1,46 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-6/01-content/roth-vs-traditional.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Pub 590-A, IRS Pub 590-B).
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth vs Traditional IRA: One Number Decides (2026)
+
+[Char count: 51 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Roth vs Traditional: same $7,500 limit, different tax timing. The decision comes down to one number — your tax rate now vs your tax rate in retirement.
+
+[Char count: 159 — over 150 target by 9 chars; the 9 extra chars carry the "your tax rate now vs your tax rate in retirement" tease which is the reel's differentiator. Trim to "Roth vs Traditional: same $7,500 limit, different tax timing. The decision is your tax rate now vs retirement." (122 chars) if a tighter hook is preferred.]
+
+DESCRIPTION FULL (200-500 words):
+The 2026 IRA contribution limit is the same for both account types: $7,500 per person, per year (per IRS IR-2025-111). The only difference between Roth and Traditional is when you pay tax. That's the whole decision.
+
+Traditional IRA: you contribute pre-tax dollars (deductible), the money grows tax-deferred, and you pay ordinary income tax on withdrawals in retirement. The deduction saves you your marginal tax rate today.
+
+Roth IRA: you contribute after-tax dollars (not deductible), the money grows tax-free, and qualified withdrawals are tax-free. The trade is paying tax today at your marginal rate.
+
+The decision rule: compare your marginal tax rate today to your expected marginal tax rate in retirement. If retirement rate is higher, Roth wins — you locked in today's lower rate. If retirement rate is lower, Traditional wins — the deduction saves you today's higher rate, and withdrawals are taxed at the lower retirement rate.
+
+Most young workers in the 12%–24% bracket today should lean Roth — they're likely to retire in a similar or higher bracket, and the tax-free compounding on a 30-40 year horizon is massive. High earners in the 32%–35% bracket who expect to retire in a lower bracket should lean Traditional — the deduction is worth more than the tax-free withdrawal.
+
+The math: $7,500 per year for 30 years at 7% real return is roughly $708,000 contributed. In a Traditional at 24% retirement rate, you keep $538,000 after tax. In a Roth, you keep the full $708,000. The $170,000 gap is the Roth's tax-free compounding.
+
+Same limit, different timing. The decision is yours.
+
+Full notes, the decision tree, and the IRS-canonical sources at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #TraditionalIRA #TaxStrategy #RetirementPlanning #PersonalFinance
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth vs traditional, roth or traditional, traditional ira vs roth, roth ira 7500, roth ira decision, roth ira tax rate, tax bracket retirement, roth vs traditional 2026, roth ira tax free, traditional ira deductible
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

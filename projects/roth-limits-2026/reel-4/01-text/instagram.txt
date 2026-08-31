@@ -1,0 +1,25 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-4/01-content/roth-ira-phaseout-single.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Notice 2025-67, IRS Pub 590-A).
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Single Roth phase-out for 2026: $153,000 to $168,000 of MAGI. Above $168k, the direct door closes.
+
+[Char count: 108 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The 2026 single-filer Roth phase-out runs from $153,000 to $168,000 of modified adjusted gross income (MAGI). That's a $15,000 window. Inside it, IRS Pub 590-A Worksheet 2-2 reduces your allowed contribution. Above $168,000, you cannot contribute directly. Zero.
+
+The line that matters is MAGI, not your salary. AGI plus a few add-backs = MAGI for Roth purposes.
+
+Above the ceiling? The backdoor Roth is the workaround — non-deductible traditional IRA, then convert. Pro-rata rule applies (separate reel).
+
+Estimate MAGI before December 31. If you're inside the window, decide what to put in. If you're above, plan for January.
+
+Educational content, not financial advice.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Single-Filer Roth Phase-Out 2026" with a horizontal arrow from "$153,000" to "$168,000" in maroon, captioned "MAGI — not salary". Below, three stacked rows: "MAGI = AGI + add-backs" (navy), "Inside window: reduced contribution" (maroon), "Above $168,000: zero direct" (maroon).
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #MAGI #BackdoorRoth #IncomeLimits #PersonalFinance

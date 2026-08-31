@@ -1,0 +1,27 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-5/01-content/roth-ira-phaseout-mfj.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Notice 2025-67, IRS Pub 590-A).
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Married Roth phase-out 2026: $242,000 to $252,000 MAGI. Above $252k, both spouses lose direct Roth access.
+
+[Char count: 113 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+Married filing jointly gets a smaller window than single filers. The 2026 MFJ Roth phase-out runs $242,000 to $252,000 of MAGI — a $10,000 window, vs the single filer's $15,000 window.
+
+Inside it, IRS Pub 590-A Worksheet 2-2 reduces your allowed contribution. Above $252,000, neither spouse can contribute directly. Zero.
+
+The line that matters is joint MAGI, not household salary. AGI plus a few add-backs = MAGI for Roth purposes.
+
+Above the ceiling? The spousal backdoor Roth is the workaround — each spouse opens a non-deductible traditional IRA, then converts. Pro-rata rule applies (separate reel).
+
+Estimate joint MAGI before December 31. If you're inside the window, decide what each spouse puts in. If you're above, plan the backdoor for January.
+
+Educational content, not financial advice.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "MFJ Roth Phase-Out 2026" with a horizontal arrow from "$242,000" to "$252,000" in maroon, captioned "MAGI — not salary". Below, three stacked rows: "Joint MAGI = combined AGI + add-backs" (navy), "Inside window: reduced per spouse" (maroon), "Above $252,000: zero direct, both spouses" (maroon).
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #MFJ #BackdoorRoth #MarriedFinance #PersonalFinance

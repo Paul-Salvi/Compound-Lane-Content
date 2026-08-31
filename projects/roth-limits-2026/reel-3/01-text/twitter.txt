@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-3/01-content/roth-ira-teen-three-numbers.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Pub 590-A, IRC §408A).
+
+POST (target 70-100 chars, hard cap 280):
+A teen's first Roth needs three numbers: earned income, the $7,500 2026 limit, and the year they turn 18. Custodial Roth, IRS Pub 590-A.
+
+[Char count: 137 — within 280 cap; over 100-char target, retained for the IRS Pub 590-A citation which is the credibility hook. Trim to "A teen's first Roth needs 3 numbers: earned income, the $7,500 limit, and age 18. Custodial Roth." (107 chars) if a tighter post is preferred.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + the IRS sources: https://compoundlane.com/roth-ira-teens-three-numbers"

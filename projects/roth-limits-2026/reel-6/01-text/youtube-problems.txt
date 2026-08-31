@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-6/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 2.5 + 10.0 + 8.5 + 8.5 + 2.5 + 2.5 = 35.5s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  What is the only difference between a Roth IRA and a Traditional IRA?
+0:03  How do you decide between Roth and Traditional?
+0:13  When does Roth win the tax-rate decision?
+0:22  When does Traditional win the tax-rate decision?
+0:31  Same limit, different timing — what's the takeaway?

@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-5/01-content/roth-ira-phaseout-mfj.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Notice 2025-67, IRS Pub 590-A).
+
+POST (target 70-100 chars, hard cap 280):
+Married Roth phase-out 2026: $242k to $252k MAGI. Above $252k, both spouses lose direct Roth. Spousal backdoor is the workaround. IRS Pub 590-A.
+
+[Char count: 145 — within 280 cap; over 100-char target, retained for the IRS Pub 590-A citation which is the credibility hook. Trim to "Married Roth phase-out 2026: $242k to $252k MAGI. Above $252k, both lose direct Roth. Spousal backdoor." (108 chars) if a tighter post is preferred.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + the IRS MAGI worksheet: https://compoundlane.com/roth-ira-phaseout-mfj"

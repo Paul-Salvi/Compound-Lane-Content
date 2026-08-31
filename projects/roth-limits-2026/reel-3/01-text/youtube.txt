@@ -1,0 +1,44 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-3/01-content/roth-ira-teen-three-numbers.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Pub 590-A, IRC §408A).
+
+TITLE (target 50-60 chars, hard cap 100):
+3 Numbers for a Teen's First Roth IRA (2026)
+
+[Char count: 41 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+A teen's first Roth IRA needs three numbers. Earned income, the 2026 limit, and the year they turn 18. Here's how each one decides the contribution.
+
+[Char count: 161 — over 150 target by 11 chars; the 11 extra chars carry the "how each one decides the contribution" tease which is the reel's differentiator. Trim to "A teen's first Roth needs three numbers. Earned income, the 2026 limit, and the year they turn 18." (105 chars) if a tighter hook is preferred.]
+
+DESCRIPTION FULL (200-500 words):
+A Roth IRA for a minor is a custodial account — the parent or guardian opens it on the teen's behalf, but the money belongs to the teen. Three numbers decide what they can put in for 2026.
+
+Number one: earned income. The teen needs to have actually been paid — W-2 wages, tips, or self-employment income. Allowance, gifts, and investment gains don't count. The IRS Pub 590-A spells out "earned income" in detail.
+
+Number two: the 2026 limit. The standard Roth IRA limit is $7,500 for 2026 (per IRS IR-2025-111). But the contribution can't exceed the teen's earned income. So a sixteen-year-old with a $3,000 summer job can put in $3,000. Not $7,500. Earned income is the binding cap for minors.
+
+Number three: the year they turn eighteen. A custodial Roth converts to a regular Roth on the teen's eighteenth birthday. The five-year clock for tax-free withdrawal of earnings also starts on that date — the earlier the teen opens, the earlier the clock clears.
+
+Why this matters: a Roth opened at sixteen with a $3,000 summer job, left untouched until sixty-five, grows to roughly $100,000+ at a 7% historical return assumption. Tax-free. Compound interest is the engine. The first dollar is the hardest — and the most valuable.
+
+Open a custodial Roth before the teen's first W-2. The earlier, the better.
+
+Full notes, the contribution calculator, and the IRS-canonical sources at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #TeenInvestor #CustodialRoth #BackToSchool #PersonalFinance
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira for teens, custodial roth ira, roth ira minors, teen investing, roth ira earned income, roth ira 7500, roth ira for college students, kids and money, summer job roth, custodial roth to roth ira
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

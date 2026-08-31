@@ -1,0 +1,42 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-4/01-content/roth-ira-phaseout-single.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Notice 2025-67, IRS Pub 590-A).
+
+TITLE (target 50-60 chars, hard cap 100):
+Make $153k? Your Roth Just Started Shrinking (2026)
+
+[Char count: 53 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Single-filer Roth phase-out starts at $153,000 in 2026. The direct-contribution door closes at $168,000. Here's the MAGI line that decides.
+
+[Char count: 144 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+Single filers don't get a flat "no" at a specific income. They get a sliding window. For 2026, that window is $153,000 to $168,000 of modified adjusted gross income (MAGI). Inside the window, the IRS Pub 590-A Worksheet 2-2 reduces your allowed Roth contribution. Above $168,000, the door closes — you cannot contribute directly to a Roth IRA at all. Zero.
+
+The line that matters is MAGI, not salary. The IRS worksheet takes your AGI, adds back a few items (student-loan deduction, foreign-earned-income exclusion, and a handful of others), and that's the MAGI for Roth contribution purposes. The phase-out is computed on MAGI, not on what your W-2 says.
+
+What if you're above the ceiling? The backdoor Roth is the workaround. Contribute to a non-deductible traditional IRA, then convert to Roth. Same end account, different on-ramp. The pro-rata rule can complicate this — that's a separate reel.
+
+How to estimate your MAGI before year-end: take last year's AGI, add back the items on Worksheet 2-2, add expected raises and bonus income, subtract expected pre-tax 401(k) contributions. If you're inside the $15,000 window, decide how much Roth to put in before December 31. If you're above, plan the backdoor for January.
+
+Why this matters: a Roth at $153,000 of MAGI gets a partial contribution, capped at a sliding-fraction of the $7,500 limit. A Roth at $168,000+ of MAGI gets nothing directly. Plan ahead — the IRS doesn't prorate after the fact.
+
+Full notes, the MAGI worksheet walkthrough, and the IRS-canonical sources at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #MAGI #BackdoorRoth #IncomeLimits #PersonalFinance
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira income limits 2026, roth ira phase out single, roth ira magi, roth ira 153000, roth ira 168000, backdoor roth ira, modified adjusted gross income, irs worksheet 2-2, roth ira reduced contribution, roth ira direct contribution limit
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

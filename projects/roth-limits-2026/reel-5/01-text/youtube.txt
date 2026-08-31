@@ -1,0 +1,44 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-5/01-content/roth-ira-phaseout-mfj.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Notice 2025-67, IRS Pub 590-A).
+
+TITLE (target 50-60 chars, hard cap 100):
+Married? Your Roth Cliff Is $242,000 (2026)
+
+[Char count: 49 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Married filing jointly? The 2026 Roth phase-out runs $242,000 to $252,000 of MAGI. Above $252k, the direct door closes. Spousal backdoor is the workaround.
+
+[Char count: 165 — over 150 target by 15 chars; the 15 extra chars carry the "spousal backdoor is the workaround" tease which is the reel's differentiator. Trim to "Married filing jointly? The 2026 Roth phase-out runs $242,000 to $252,000 of MAGI. Above $252k, the direct door closes." (134 chars) if a tighter hook is preferred.]
+
+DESCRIPTION FULL (200-500 words):
+Married couples don't get the single-filer window. They get a smaller one. For 2026, the MFJ phase-out runs from $242,000 to $252,000 of modified adjusted gross income (MAGI). That's a $10,000 window — about two-thirds the width of the single filer's $15,000 window.
+
+The line that matters is MAGI, not household salary. The IRS Pub 590-A Worksheet 2-2 takes your combined AGI, adds back a few items, and that's the MAGI for Roth contribution purposes. The phase-out is computed on joint MAGI.
+
+Inside the window, the IRS worksheet reduces your allowed Roth contribution. Above $252,000, the door closes — neither spouse can contribute directly to a Roth IRA. Zero. The phase-out ends, the direct-contribution door closes for both of you.
+
+What if you're both above the ceiling? The spousal backdoor Roth is the workaround. Each spouse opens a non-deductible traditional IRA, then each converts to a Roth. Same end account, separate on-ramps. The pro-rata rule can complicate this — see that separate reel.
+
+Why this matters: a couple at $242,000 of MAGI gets a partial contribution per spouse, capped at a sliding fraction of the $7,500 limit. A couple at $252,000+ of MAGI gets nothing directly — but they still have the backdoor path. Plan ahead; the IRS doesn't prorate after the fact.
+
+Why the smaller window? The MFJ range is narrower than single because the IRS gives partial credit for the second earner in the standard deduction but doesn't fully credit the second earner in the Roth phase-out. A single filer at the same income gets a wider glide path; a couple gets a shorter one.
+
+Full notes, the MAGI worksheet walkthrough, and the IRS-canonical sources at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #MFJ #BackdoorRoth #MarriedFinance #PersonalFinance
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira married filing jointly, roth ira mfj phase out, roth ira 242000, roth ira 252000, spousal backdoor roth, married couples roth ira limits, modified adjusted gross income, irs worksheet 2-2, roth ira reduced contribution mfj, roth ira direct contribution limit mfj
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

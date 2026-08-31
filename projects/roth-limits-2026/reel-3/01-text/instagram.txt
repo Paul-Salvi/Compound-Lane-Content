@@ -1,0 +1,25 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-3/01-content/roth-ira-teen-three-numbers.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Pub 590-A, IRC §408A).
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+A teen's first Roth needs three numbers. Earned income, the $7,500 limit, and the year they turn 18.
+
+[Char count: 105 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+A Roth IRA for a minor is a custodial account. The parent or guardian opens it, the teen owns it. Three numbers decide the 2026 contribution:
+
+1. Earned income. W-2 wages, tips, or self-employment. Allowance and investment gains don't count.
+2. The 2026 limit: $7,500. But the contribution can't exceed earned income. A 16-year-old with a $3,000 summer job can put in $3,000.
+3. The year they turn 18. A custodial Roth converts to a regular Roth on that birthday. The 5-year clock for tax-free earnings withdrawal starts that day.
+
+Open a custodial Roth before the first W-2. The earlier, the better.
+
+Educational content, not financial advice.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "3 Numbers for a Teen's First Roth" with three stacked rows: "1. Earned income" (navy), "2. ≤ $7,500 (2026)" (maroon), and "3. Year they turn 18" (green). A ledger line below: "$3,000 summer job → $3,000 Roth".
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #TeenInvestor #CustodialRoth #BackToSchool #PersonalFinance

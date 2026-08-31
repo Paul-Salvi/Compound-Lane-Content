@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-3/01-content/roth-ira-teen-three-numbers.json
+
+PRIMARY KEYWORD:
+roth ira for teens
+
+SECONDARY KEYWORDS (3-5):
+- roth ira for minors
+- roth ira for college students
+- custodial roth ira
+- roth ira earned income requirement
+- can a 16 year old open a roth ira (long-tail variant, 4+ words)
+
+SEARCH INTENT:
+"can X do Y" (eligibility) — primary intent is whether a minor/teen can
+open a Roth. Secondary: "how much" (definitional, the 2026 limit).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #TeenInvestor, #CustodialRoth, #KidsAndMoney, #BackToSchool
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

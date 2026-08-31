@@ -1,0 +1,51 @@
+{
+  "slug": "roth-vs-traditional",
+  "title": "Roth vs Traditional: one decision",
+  "hook": "Roth or Traditional? One number decides.",
+  "default_disclaimer": "Educational content, not financial advice.",
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The only question: tax rate now or later?",
+      "body": "Both accounts have the same $7,500 contribution limit for 2026. The only difference is when you pay tax. Traditional: deduct now, pay at withdrawal. Roth: pay now, withdraw tax-free.",
+      "visual_type": "vs_split",
+      "visual_spec": {
+        "left_label": "Traditional",
+        "right_label": "Roth",
+        "left_subtitle": "deduct now",
+        "right_subtitle": "withdraw tax-free",
+        "color": "ink-navy"
+      }
+    },
+    {
+      "number": 2,
+      "title": "Pay now if you expect a higher tax rate later",
+      "body": "If your tax rate in retirement will be higher than today's, Roth wins. The dollars you contribute are after-tax, so a 24% marginal rate today is locked in. Retire at 35%? Roth pays you back.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "24% → 35%",
+        "label": "rate rises — Roth wins",
+        "color": "ink-maroon"
+      }
+    },
+    {
+      "number": 3,
+      "title": "Deduct now if your rate drops in retirement",
+      "body": "If your tax rate in retirement will be lower than today's, Traditional wins. The deduction saves you today's higher rate, and the lower retirement rate applies to withdrawals.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "35% → 24%",
+        "label": "rate drops — Traditional wins",
+        "color": "ink-green"
+      }
+    }
+  ],
+  "sources": [
+    "IRS — IRA contribution limits 2026 (IR-2025-111, Nov 13 2025)",
+    "IRS Pub 590-A — Roth vs Traditional decision rules",
+    "IRS Pub 590-B — Distribution rules for Traditional and Roth IRAs",
+    "Investor.gov — Traditional and Roth IRAs",
+    "Fidelity — Roth vs Traditional IRA",
+    "Vanguard — Roth vs Traditional decision tree"
+  ]
+}

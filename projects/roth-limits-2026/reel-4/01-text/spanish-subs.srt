@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:02,000
+Ingresos $153,000? Roth se encogió.
+
+2
+00:00:02,500 --> 00:00:11,500
+El ingreso bruto ajustado modificado es la línea que importa — no tu salario. La hoja de trabajo del IRS toma tu AGI, añade algunos conceptos, y ese es tu MAGI para fines Roth.
+
+3
+00:00:12,000 --> 00:00:22,500
+Los declarantes individuales salen de fase de $153,000 a $168,000 en 2026. Esa es una ventana de quince mil dólares. Dentro de la ventana, la hoja de trabajo del IRS reduce tu contribución permitida.
+
+4
+00:00:23,000 --> 00:00:28,000
+Por encima de $168,000, no puedes contribuir directamente. Cero. La puerta de contribución directa se cierra.
+
+5
+00:00:28,500 --> 00:00:34,000
+El Roth de puerta trasera es la solución — mediante una conversión de IRA tradicional no deducible. Eso es el reel de mañana.
+
+6
+00:00:34,500 --> 00:00:36,500
+Guarda esto si tus ingresos están subiendo.

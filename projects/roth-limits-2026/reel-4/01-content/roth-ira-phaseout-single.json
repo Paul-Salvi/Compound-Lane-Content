@@ -1,0 +1,49 @@
+{
+  "slug": "roth-ira-phaseout-single",
+  "title": "Make $153k? Your Roth just started shrinking",
+  "hook": "Make $153,000? Your Roth contribution just started shrinking.",
+  "default_disclaimer": "Educational content, not financial advice.",
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The line that matters: MAGI",
+      "body": "Modified adjusted gross income is the line that matters — not your salary. The IRS worksheet in Pub 590-A takes your AGI, adds back a few items, and that's the MAGI for Roth contribution purposes.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "MAGI",
+        "label": "not salary",
+        "color": "ink-navy"
+      }
+    },
+    {
+      "number": 2,
+      "title": "Single phase-out: $153,000 to $168,000",
+      "body": "Single filers phase out from $153,000 to $168,000 in 2026. The phase-out window is fifteen thousand dollars wide. The IRS worksheet reduces your allowed contribution inside that window.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$153k–$168k",
+        "label": "single phase-out, 2026",
+        "color": "ink-maroon"
+      }
+    },
+    {
+      "number": 3,
+      "title": "Above $168,000: zero direct contribution",
+      "body": "Above $168,000 in 2026, you cannot contribute directly to a Roth IRA. Zero. The phase-out ends, the direct-contribution door closes. The backdoor Roth is the workaround — through a non-deductible traditional IRA conversion. That's tomorrow's reel.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$168,000",
+        "label": "zero direct above this",
+        "color": "ink-maroon"
+      }
+    }
+  ],
+  "sources": [
+    "IRS — 401(k) limit increases to $24,500 for 2026, IRA limit increases to $7,500 (IR-2025-111, Nov 13 2025)",
+    "IRS Notice 2025-67",
+    "IRS Pub 590-A — Worksheet 2-2 (Reduced Roth IRA Contribution Limit)",
+    "Schwab — Roth IRA income and contribution limits 2026",
+    "Vanguard — Roth IRA income limits",
+    "Fidelity — Roth IRA contribution phase-out"
+  ]
+}

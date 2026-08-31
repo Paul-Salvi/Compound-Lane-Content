@@ -1,0 +1,29 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-6/01-content/roth-vs-traditional.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Pub 590-A, IRS Pub 590-B).
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Roth or Traditional? Same $7,500 limit. Different tax timing. Your rate today vs retirement decides.
+
+[Char count: 105 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The 2026 IRA contribution limit is the same for both account types: $7,500. The only difference between Roth and Traditional is when you pay tax. That's the whole decision.
+
+Traditional: deduct now, pay at withdrawal. Roth: pay now, withdraw tax-free.
+
+The rule: compare your marginal rate today to your expected retirement rate. If retirement rate is higher, Roth wins. If retirement rate is lower, Traditional wins.
+
+Most young workers in the 12%–24% bracket lean Roth. High earners in the 32%–35% bracket who expect a lower retirement rate lean Traditional.
+
+$7,500/yr × 30yr × 7% = ~$708k. Roth keeps the full $708k. Traditional keeps ~$538k after 24% retirement tax. The $170k gap is tax-free compounding.
+
+Same limit, different timing. The decision is yours.
+
+Educational content, not financial advice.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Roth vs Traditional" with a vertical split: left side "Traditional — deduct now, pay later" in navy, right side "Roth — pay now, withdraw tax-free" in maroon. Below, two stacked rows: "24% → 35% Roth wins" (maroon), "35% → 24% Traditional wins" (green).
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #TraditionalIRA #TaxStrategy #RetirementPlanning #PersonalFinance

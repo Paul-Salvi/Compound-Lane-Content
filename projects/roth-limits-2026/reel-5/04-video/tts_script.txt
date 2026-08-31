@@ -1,0 +1,11 @@
+Married? Roth cliff at $242,000.
+
+Same MAGI line as single filers — modified adjusted gross income, not salary. The IRS Pub 590-A worksheet takes your AGI, adds back a few items, and that's the MAGI for Roth purposes.
+
+Married filing jointly phases out from $242,000 to $252,000 in 2026. A ten-thousand-dollar window — narrower than single. The worksheet reduces your allowed contribution.
+
+Above $252,000, you cannot contribute directly. Zero. The direct-contribution door closes.
+
+The spousal backdoor Roth is the workaround — through a non-deductible traditional IRA, then convert. Per spouse, same end account.
+
+Save this before tax season.

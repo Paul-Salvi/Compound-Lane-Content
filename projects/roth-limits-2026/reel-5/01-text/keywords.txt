@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-5/01-content/roth-ira-phaseout-mfj.json
+
+PRIMARY KEYWORD:
+roth ira income limits married filing jointly
+
+SECONDARY KEYWORDS (3-5):
+- roth ira phase out mfj
+- roth ira 242000
+- roth ira 252000
+- married couples roth ira limits
+- spousal backdoor roth ira (long-tail variant, 4+ words)
+
+SEARCH INTENT:
+"How much" (definitional) — primary intent is the 2026 MFJ phase-out range.
+Secondary: "what if we're both over" (workaround, the spousal backdoor Roth tease).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #MFJ, #BackdoorRoth, #MarriedFinance, #PhaseOut
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

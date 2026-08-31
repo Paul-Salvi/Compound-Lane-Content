@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-5/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 2.5 + 9.0 + 9.0 + 5.0 + 7.5 + 2.5 = 36.5s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  At what MAGI does the 2026 MFJ Roth phase-out start?
+0:03  What is MAGI for Roth IRA purposes for a married couple?
+0:13  How wide is the 2026 MFJ Roth phase-out window, and how does it compare to single?
+0:23  What happens if your joint MAGI is above $252,000 in 2026?
+0:29  What is the spousal backdoor Roth workaround?
