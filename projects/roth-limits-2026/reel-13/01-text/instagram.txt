@@ -1,0 +1,31 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-13/01-content/roth-withdrawal-order.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Withdraw $20,000 from your Roth. The first $15,000 is yours. The next $5,000? Earnings — and the 10% penalty can apply.
+
+[Char count: 144 — over 125 limit; trim to "Withdraw $20,000 from your Roth. First $15,000 is yours, no tax. Next $5,000 is earnings — 10% penalty under 59½." (130 chars) for a tighter hook.]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+Roth IRA withdrawals follow a fixed order (IRC §408A(d)(4)):
+
+1. Regular contributions first — always tax-free.
+2. Conversions on a first-in, first-out basis.
+3. Earnings last.
+
+The $20,000 example:
+- Roth holds: $15,000 contributions + $5,000 earnings
+- Withdraw $20,000
+- First $15,000: no tax, no penalty
+- Next $5,000: ordinary income + 10% penalty under 59½
+
+Each conversion starts its own 5-year clock. Convert in 2023, withdraw in 2025 — under 5 years. 10% penalty applies.
+
+Track it on Form 8606.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Roth Withdrawal Order" with a stacked diagram: bottom layer "Contributions — always free", middle "Conversions — 5-yr clock each", top "Earnings — taxable + 10% under 59½". A sticky note reads "Form 8606 tracks it all".
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #WithdrawalOrder #FiveYearRule #Form8606 #RothConversion

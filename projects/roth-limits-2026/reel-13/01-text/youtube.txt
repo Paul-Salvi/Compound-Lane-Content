@@ -1,0 +1,47 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-13/01-content/roth-withdrawal-order.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth IRA Withdrawal Order: Contributions, Conversions, Earnings
+
+[Char count: 62 — within 60 target by 2; tight, factual title]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Withdraw $20,000 from your Roth. The first $15,000 is yours. The next $5,000? Earnings — and the 10% penalty can apply.
+
+[Char count: 144 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+Roth IRA withdrawals follow a fixed, IRS-mandated order. The order is:
+1. Regular contributions first — always tax-free, always penalty-free.
+2. Conversions on a first-in, first-out (FIFO) basis, oldest first.
+3. Earnings last.
+
+The order matters because of two separate 5-year rules (per IRC §408A(d)) and the 10% early-withdrawal penalty.
+
+The $20,000 example. Say your Roth holds $15,000 in regular contributions and $5,000 in earnings. You withdraw $20,000. The first $15,000 is treated as a return of your contributions — no tax, no penalty, no question. The next $5,000 is treated as earnings. If you're under 59½ and no exception applies, that $5,000 is hit with ordinary income tax plus the 10% early-withdrawal penalty. On a 24% marginal bracket, that's $1,200 income tax + $500 penalty = $1,700 gone.
+
+The 5-year rule for conversions. Each Roth conversion starts its own 5-year clock. The clock is per-conversion, not per-Roth. Convert in 2023, withdraw the converted amount in 2025 — that's under 5 years. If you're under 59½, the 10% penalty applies even though the conversion itself was tax-free. The age-59½ exception does not waive the 5-year rule.
+
+Track it on Form 8606. Form 8606 Part III tracks your non-deductible contributions and conversions year by year. Without it, the IRS assumes every dollar in your Roth is earnings — which means every withdrawal is taxable until proven otherwise. File 8606 every year you do a conversion or a non-deductible contribution.
+
+The bottom line: contributions are always free. Conversions are free if you wait 5 years and you're 59½. Earnings are last, and they're the bucket that triggers tax and penalty.
+
+Full notes + Form 8606 walkthrough at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #WithdrawalOrder #FiveYearRule #Form8606 #RothConversion
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira withdrawal order, roth ira 5 year rule, roth conversion 5 year clock, roth ira earnings withdrawal, roth ira contributions first, form 8606, roth ira 10 percent penalty, ira ordering rules, roth ira fifo, irs pub 590-b distributions
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-13/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 1.5 + 9.0 + 10.0 + 13.5 + 2.0 = 37.0s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  What is the order of withdrawals from a Roth IRA?
+0:02  Are Roth IRA contributions always tax-free to withdraw?
+0:12  Does each Roth conversion have its own 5-year clock?
+0:22  How is a $20,000 Roth withdrawal split between contributions and earnings?
+0:36  What form tracks Roth conversions and non-deductible contributions?

@@ -1,0 +1,34 @@
+{
+  "slug": "roth-withdrawal-order",
+  "pillar": 1,
+  "pillar_name": "Roth Rules",
+  "title": "Roth withdrawal order: contributions, conversions, earnings",
+  "audience": "Anyone with a multi-year Roth who thinks all withdrawals are tax-free",
+  "thesis": "Roth withdrawals come out in a fixed order — and the order matters for the 5-year rule and the 10% penalty.",
+  "concepts": [
+    {
+      "id": "c1",
+      "label": "The ordering rule",
+      "body": "Roth IRA withdrawals follow a fixed order: regular contributions come out first, then conversions on a first-in-first-out basis, then earnings last. The IRS treats the buckets separately (IRC §408A(d)(4)).",
+      "source": "IRC §408A(d)(4); IRS Pub 590-B"
+    },
+    {
+      "id": "c2",
+      "label": "Why the order matters",
+      "body": "If you withdraw $20,000 from a Roth that holds $15,000 contributions and $5,000 earnings, the first $15,000 is always tax-and-penalty-free. The next $5,000 is earnings — which can trigger the 10% penalty if you're under 59½ and no exception applies.",
+      "source": "IRS Pub 590-B distributions; Form 8606 ordering"
+    },
+    {
+      "id": "c3",
+      "label": "Conversions have their own 5-year clock",
+      "body": "Each Roth conversion starts its own 5-year clock for the 10% penalty. Convert in 2023, withdraw converted amount in 2025 — that's under 5 years, 10% penalty applies unless an age-based exception kicks in.",
+      "source": "IRC §408A(d)(3)(F); IRS Form 8606 instructions"
+    }
+  ],
+  "sources": [
+    "IRC §408A(d)(4) — ordering rules for Roth distributions",
+    "IRC §408A(d)(3)(F) — 5-year rule for converted amounts",
+    "IRS Pub 590-B — Distributions from Individual Retirement Arrangements",
+    "IRS Form 8606 instructions — non-deductible IRA / Roth conversion tracking"
+  ]
+}
