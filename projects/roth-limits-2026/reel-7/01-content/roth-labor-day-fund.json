@@ -1,0 +1,49 @@
+{
+  "slug": "roth-labor-day-fund",
+  "title": "While you're off Monday, fund a Roth",
+  "hook": "Off Monday? Fund a Roth today.",
+  "default_disclaimer": "Educational content, not financial advice.",
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The weekend timing: payroll gaps",
+      "body": "If you're getting paid biweekly, three-day weekends are a hidden funding opportunity. The Labor Day paycheck still lands. The Roth contribution can be timed to coincide.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "3 days",
+        "label": "of compound interest",
+        "color": "ink-navy"
+      }
+    },
+    {
+      "number": 2,
+      "title": "The 2026 limit: $7,500 ($8,600 at 50+)",
+      "body": "The 2026 Roth IRA contribution limit is $7,500. Plus the $1,100 catch-up if you're fifty or older — total $8,600. The IRS deadline is your tax-filing deadline the following April, but funding early locks in the year's tax-free growth.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$7,500",
+        "label": "2026 limit (+$1,100 at 50)",
+        "color": "ink-maroon"
+      }
+    },
+    {
+      "number": 3,
+      "title": "Time in market beats timing the market",
+      "body": "Three days of growth on $7,500 at 7% real return is roughly $4.31. The dollar amount is small. The habit is everything — open the account, fund it, automate it. Don't touch it till fifty-nine and a half.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$4.31",
+        "label": "3 days at 7% real return",
+        "color": "ink-green"
+      }
+    }
+  ],
+  "sources": [
+    "IRS — 401(k) limit increases to $24,500 for 2026, IRA limit increases to $7,500 (IR-2025-111, Nov 13 2025)",
+    "IRS Notice 2025-67",
+    "IRS Pub 590-A — Roth IRA contribution limits",
+    "S&P 500 historical real return — 7% (Damodaran, NYU Stern, 2026 update)",
+    "Vanguard — Roth IRA contribution timing",
+    "Fidelity — Roth IRA deadline"
+  ]
+}

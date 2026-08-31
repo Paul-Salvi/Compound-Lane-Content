@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-8/01-content/roth-30yr-compound.json
+
+PRIMARY KEYWORD:
+roth ira 30 year growth
+
+SECONDARY KEYWORDS (3-5):
+- roth ira compound interest
+- roth ira long term growth
+- 7500 a year for 30 years
+- future value roth ira
+- roth ira compounding calculator (long-tail variant, 4+ words)
+
+SEARCH INTENT:
+"How much" (definitional) — primary intent is the future value of $7,500/yr compounded over 30 years.
+Secondary: "is it worth it" (decision framework, the time-vs-tradeoff test).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #CompoundInterest, #FutureValue, #LongTermInvesting, #RothMath
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

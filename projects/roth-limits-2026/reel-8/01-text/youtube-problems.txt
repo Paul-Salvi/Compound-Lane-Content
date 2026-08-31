@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-8/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 2.0 + 8.0 + 10.0 + 9.5 + 2.0 + 2.5 = 35.0s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  What is the 2026 Roth IRA contribution limit?
+0:03  What is the future value of $7,500 per year for 30 years at 7% real return?
+0:11  How much of that $708,000 is your contribution vs tax-free growth?
+0:22  Why is 7% the right baseline for a 30-year horizon?
+0:32  What's the broader principle for Roth compounding?

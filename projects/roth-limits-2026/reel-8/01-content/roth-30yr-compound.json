@@ -1,0 +1,49 @@
+{
+  "slug": "roth-30yr-compound",
+  "title": "$7,500 a year for 30 years. The Roth math.",
+  "hook": "$7,500 a year. Thirty years. Watch.",
+  "default_disclaimer": "Educational content, not financial advice.",
+  "concepts": [
+    {
+      "number": 1,
+      "title": "The inputs: $7,500 × 30 years",
+      "body": "The 2026 Roth IRA limit is $7,500. Compound that over thirty years at a 7% real return. Future-value of an annuity formula. The math is unforgiving — and the result is staggering.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$7,500",
+        "label": "× 30 years",
+        "color": "ink-navy"
+      }
+    },
+    {
+      "number": 2,
+      "title": "The result: ~$708,000",
+      "body": "Future value of $7,500 per year for 30 years at 7% real return is roughly $708,000. Of that, you contributed $225,000. The remaining $483,000 is tax-free compound growth. That's the Roth's compounding engine.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$708,000",
+        "label": "future value (7% real)",
+        "color": "ink-maroon"
+      }
+    },
+    {
+      "number": 3,
+      "title": "The split: $225k in, $483k growth",
+      "body": "Your contributions: $225,000 over 30 years. Tax-free growth: roughly $483,000. The growth is more than double your contributions. The Roth is a tax-free compounding engine — that's the whole point.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$225k → $483k",
+        "label": "in → growth",
+        "color": "ink-green"
+      }
+    }
+  ],
+  "sources": [
+    "IRS — IRA contribution limits 2026 (IR-2025-111, Nov 13 2025)",
+    "S&P 500 historical real return — 7% (Damodaran, NYU Stern, 2026 update)",
+    "Future-value-of-annuity formula: FV = PMT × [((1 + r)^n - 1) / r]",
+    "Investor.gov — Power of compounding",
+    "Fidelity — Roth IRA long-term growth",
+    "Vanguard — Roth IRA compounding calculator"
+  ]
+}

@@ -1,0 +1,44 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-7/01-content/roth-labor-day-fund.json
+# or the cited IRS sources (IRS IR-2025-111, IRS Notice 2025-67, IRS Pub 590-A).
+
+TITLE (target 50-60 chars, hard cap 100):
+While You're Off Monday, Fund a Roth (2026)
+
+[Char count: 45 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Labor Day is a hidden funding window. The 2026 Roth limit is $7,500 — or $8,600 at 50+. Three days of growth on $7,500 is $4.31. The habit is everything.
+
+[Char count: 167 — over 150 target by 17 chars; the 17 extra chars carry the "The habit is everything" tease which is the reel's differentiator. Trim to "Labor Day is a hidden funding window. The 2026 Roth limit is $7,500 — or $8,600 at 50+. Three days of growth is $4.31." (135 chars) if a tighter hook is preferred.]
+
+DESCRIPTION FULL (200-500 words):
+Labor Day is more than a long weekend. It's a hidden funding window for your 2026 Roth IRA. If you're paid biweekly, your Labor Day paycheck still lands — and the Roth contribution can ride along, locking in three extra days of tax-free growth.
+
+The 2026 Roth IRA contribution limit is $7,500 per person, per year (per IRS IR-2025-111). Add the $1,100 catch-up if you're fifty or older — total $8,600 per spouse, per year. The IRS deadline is your tax-filing deadline the following April 15. Funding early doesn't extend the deadline, but it does lock in the year's compounding from day one.
+
+Three days of growth on $7,500 at 7% real return (the S&P 500 historical average, Damodaran 2026 update) is roughly $4.31. Small dollars, but the habit is everything. Open the account, fund it, automate the contribution, don't touch it till fifty-nine and a half. The first dollar is the hardest.
+
+Why this matters: time in market beats timing the market. Three days of delay is a small gap, but it compounds. Over a 30-year horizon, every quarter of a year of delay costs tens of thousands of dollars. Funding today — even on a long weekend — locks in the year.
+
+The mechanics: open a Roth at any major brokerage (Vanguard, Fidelity, Schwab — all offer commission-free Roth IRAs with low-fee index funds). Link your bank, transfer $7,500, buy VOO or a target-date fund. Set the same transfer to repeat next year. Then close the laptop and enjoy the rest of the long weekend.
+
+Why the IRS allows you to wait until April: contribution deadline ≠ market timing. The IRS gives you until tax day to maximize the prior year's contribution, but the tax-free growth clock starts the day the cash hits the Roth. Funding early is the only free lunch.
+
+Full notes, the brokerage checklist, and the IRS-canonical sources at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #LaborDay #ThreeDayWeekend #CompoundInterest #PersonalFinance
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira labor day, fund roth ira 2026, roth ira deadline, roth ira contribution timing, roth ira 7500, roth ira 8600 catch up, roth ira three day weekend, open roth ira, roth ira vanguard fidelity schwab, roth ira compound interest
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

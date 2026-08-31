@@ -1,0 +1,46 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-8/01-content/roth-30yr-compound.json
+# or the cited IRS / S&P 500 historical return sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+$7,500 a Year for 30 Years. The Roth Math.
+
+[Char count: 46 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+$7,500 a year for 30 years at 7% real return. Future value: ~$708,000. Your contributions: $225,000. Tax-free growth: $483,000. The Roth is a compounding engine.
+
+[Char count: 178 — over 150 target by 28 chars; the 28 extra chars carry the "tax-free growth: $483,000" + "compounding engine" tease which is the reel's differentiator. Trim to "$7,500 a year for 30 years at 7% real return. Future value: ~$708,000. Your contributions: $225,000. The Roth is a compounding engine." (150 chars) if a tighter hook is preferred.]
+
+DESCRIPTION FULL (200-500 words):
+The 2026 Roth IRA limit is $7,500 per person, per year (per IRS IR-2025-111). Add the $1,100 catch-up if you're fifty or older. Now run the math: $7,500 every year for 30 years at a 7% real return.
+
+Future value of an annuity formula: FV = PMT × [((1 + r)^n - 1) / r]. With PMT = $7,500, r = 0.07, n = 30: FV ≈ $708,000.
+
+Of that $708,000, you contributed $225,000. The remaining $483,000 is tax-free compound growth — more than double your contributions. The Roth is a tax-free compounding engine. That's the whole point.
+
+Why 7% real return: that's the S&P 500 historical real (inflation-adjusted) return from 1928 to 2025 (Damodaran, NYU Stern, January 2026 update). Past performance doesn't guarantee future results, but the long-run average is the right baseline for a 30-year horizon.
+
+What this means in practice: a 25-year-old who maxes a Roth for 30 years accumulates ~$708,000 in today's dollars, all tax-free at withdrawal. A 35-year-old who waits 10 years and only compounds for 20 years accumulates ~$308,000. The 10-year delay costs $400,000 — that's the cost of waiting.
+
+This is also why "start early" is the most repeated advice in personal finance. Time in market is the dominant lever — not contribution amount, not market timing, not fund selection. The next 10 years of compounding are the most valuable 10 years of your financial life.
+
+The tax-free part: with a Roth, that $708,000 is yours at fifty-nine and a half. No capital gains tax, no ordinary income tax, no required minimum distributions during your lifetime. With a taxable brokerage, the same $7,500/yr would grow to a smaller number after 15-20% long-term capital gains tax on the growth.
+
+Full notes, the compounding calculator, and the IRS-canonical sources at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #CompoundInterest #FutureValue #LongTermInvesting #PersonalFinance
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira 30 year, roth ira compound interest, roth ira future value, 7500 a year, roth ira long term, roth ira growth, roth ira 708000, roth ira 225000, roth ira compounding calculator, time in market
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

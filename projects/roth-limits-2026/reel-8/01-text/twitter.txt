@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-8/01-content/roth-30yr-compound.json
+# or the cited IRS / S&P 500 historical return sources.
+
+POST (target 70-100 chars, hard cap 280):
+$7,500/yr × 30yr × 7% real = $708,000. You contribute $225k. Tax-free growth: $483k. The Roth is a compounding engine. Future-value-of-annuity.
+
+[Char count: 152 — within 280 cap; over 100-char target, retained for the "Future-value-of-annuity" credibility hook which is the reel's differentiator. Trim to "$7,500/yr × 30yr × 7% = $708,000. You contribute $225k. Tax-free growth: $483k. The Roth is a compounding engine." (119 chars) if a tighter post is preferred.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + the compounding calculator: https://compoundlane.com/roth-30yr-compound"

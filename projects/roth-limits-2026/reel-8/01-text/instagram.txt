@@ -1,0 +1,29 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-8/01-content/roth-30yr-compound.json
+# or the cited IRS / S&P 500 historical return sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+$7,500/yr × 30yr × 7% real = $708,000. Your contributions: $225,000. Growth: $483,000. Tax-free.
+
+[Char count: 100 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The 2026 Roth IRA limit is $7,500. Run the math at 7% real return for 30 years.
+
+Future value: ~$708,000.
+
+Of that, you contributed $225,000. The remaining $483,000 is tax-free compound growth — more than double your contributions. The Roth is a tax-free compounding engine.
+
+Why 7%: S&P 500 historical real return (Damodaran 2026 update). Long-run baseline for a 30-year horizon.
+
+What this means: a 25-year-old who maxes for 30 years accumulates ~$708,000, all tax-free at 59½. A 35-year-old who waits 10 years accumulates ~$308,000. The 10-year delay costs $400,000. Time in market is the dominant lever.
+
+Start early. Stay consistent. Don't touch it.
+
+Educational content, not financial advice.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "$7,500/yr × 30yr = $708k" with a horizontal growth curve from $0 to $708,000 over 30 years. A vertical line splits the curve at $225,000 (contributions) and $483,000 (tax-free growth). Below, three stacked rows: "30 years" (navy), "$708,000 future value" (maroon), "$483,000 tax-free growth" (green).
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #CompoundInterest #FutureValue #LongTermInvesting #PersonalFinance

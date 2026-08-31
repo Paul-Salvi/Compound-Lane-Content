@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-7/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 2.5 + 6.5 + 10.5 + 10.5 + 3.0 + 2.5 = 36.5s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  Why is Labor Day a hidden Roth funding window?
+0:03  What is the 2026 Roth IRA contribution limit?
+0:11  What is the 50+ catch-up amount and the total at fifty?
+0:21  How much is three days of growth on $7,500 at 7% real return?
+0:32  What's the broader principle for long-term Roth contributions?

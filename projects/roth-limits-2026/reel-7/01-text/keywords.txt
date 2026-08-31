@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-7/01-content/roth-labor-day-fund.json
+
+PRIMARY KEYWORD:
+roth ira labor day
+
+SECONDARY KEYWORDS (3-5):
+- fund roth ira 2026
+- roth ira contribution timing
+- roth ira deadline 2026
+- labor day weekend investing
+- roth ira three day weekend (long-tail variant, 4+ words)
+
+SEARCH INTENT:
+"When" (timing) — primary intent is the timing of the 2026 Roth contribution.
+Secondary: "how much" (definitional, the 2026 limit), Labor Day trend hook.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #LaborDay, #ThreeDayWeekend, #CompoundInterest, #OpenARoth
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)
