@@ -1,0 +1,29 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-19/01-content/roth-inherited-10yr-rule.json
+# or the cited SECURE Act / IRS / IRC sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Inherited a Roth? You have 10 years to empty it. Withdrawals are tax-free. But the empty-by rule is hard.
+
+[Char count: 117 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+SECURE Act 2.0 §401 + IRC §401(a)(9): non-spouse beneficiaries must empty an inherited IRA by Dec 31 of the 10th year following the original owner's death.
+
+For the Roth: tax-free on the way out — but the empty-by rule is hard. Miss it, 25% excise tax (10% if corrected).
+
+Exempt: spouses, minor children, disabled, <10 years younger.
+
+Two strategies:
+1. Lump sum in year 9: max tax-free growth
+2. Spread years 1-10: $500K Roth → $50K/yr, all tax-free
+
+The Roth's tax-free nature is the killer advantage over a traditional IRA inheritance.
+
+Talk to your CPA before year 1, not year 9.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Inherited Roth: 10-Year Rule" with a 10-year timeline. Two strategy boxes: "Strategy 1 — Lump sum year 9" and "Strategy 2 — Spread $50K/yr × 10 yrs". A sticky note reads "Talk to CPA before year 1".
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#InheritedIRA #RothIRA #SECUREAct #10YearRule #EstatePlanning

@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-19/01-content/roth-inherited-10yr-rule.json
+# or the cited SECURE Act / IRS / IRC sources.
+
+POST (target 70-100 chars, hard cap 280):
+Inherited a Roth? You have 10 years to empty it. Withdrawals are tax-free. Two strategies: lump sum year 9, or spread $50K/yr × 10.
+
+[Char count: 138 — within 280 cap; over 100-char target, retained for both strategies. Trim to "Inherited a Roth? 10 years to empty it. Withdrawals are tax-free. Lump sum year 9, or spread $50K/yr × 10." (107 chars) for a tighter post.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full breakdown + decision flowchart: https://compoundlane.com/roth-inherited-10yr-rule"

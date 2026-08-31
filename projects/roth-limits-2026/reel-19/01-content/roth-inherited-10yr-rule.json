@@ -1,0 +1,34 @@
+{
+  "slug": "roth-inherited-10yr-rule",
+  "pillar": 1,
+  "pillar_name": "Roth Rules",
+  "title": "Inherited Roth IRA: the 10-year rule",
+  "audience": "Adult children of retirees with Roth IRAs, and retirees planning their beneficiary designations",
+  "thesis": "Most non-spouse beneficiaries must empty an inherited Roth IRA within 10 years. The Roth's tax-free growth makes the timing decision consequential.",
+  "concepts": [
+    {
+      "id": "c1",
+      "label": "The 10-year rule",
+      "body": "Per SECURE Act 2.0 (effective 2020), most non-spouse beneficiaries must empty an inherited IRA by the end of the 10th year following the original owner's death. Withdrawals are still tax-free for a Roth — but the empty-by rule is hard.",
+      "source": "SECURE Act 2.0 §401; IRC §401(a)(9)"
+    },
+    {
+      "id": "c2",
+      "label": "Strategy: wait until year 10",
+      "body": "Strategy 1: wait until year 9, then withdraw everything in one lump sum. Tax-free for the Roth. Captures the maximum tax-free growth window. Drawback: one year of large income could push the beneficiary into a higher tax bracket for unrelated income (Social Security, dividends).",
+      "source": "IRS Notice 2022-53; SECURE 2.0 transition rules"
+    },
+    {
+      "id": "c3",
+      "label": "Strategy: spread over years 1-10",
+      "body": "Strategy 2: spread withdrawals over years 1 through 10, taking ~10% per year. Smooths the tax impact, but loses some of the tax-free growth. The Roth stays tax-free either way — the only cost is opportunity cost on withdrawn dollars.",
+      "source": "IRS Notice 2022-53; SECURE 2.0 transition rules"
+    }
+  ],
+  "sources": [
+    "SECURE Act 2.0 (December 2022) §401 — 10-year rule",
+    "IRC §401(a)(9) — minimum distribution rules",
+    "IRC §408A(d) — Roth distribution rules",
+    "IRS Notice 2022-53 — proposed regulations on the 10-year rule"
+  ]
+}

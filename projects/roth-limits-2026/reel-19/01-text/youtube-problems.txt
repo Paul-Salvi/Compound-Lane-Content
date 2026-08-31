@@ -1,0 +1,15 @@
+# 01-text/youtube-problems.txt — Stage 3: YouTube Learning structured data
+# Source: docs/text-prompt-engine-v2.md §Stage 3
+#
+# Timecodes extracted from projects/roth-limits-2026/reel-19/04-video/timing.mjs
+# (FLASH_DURATION + REVEALs). One Q&A per concept block.
+#
+# Total COMPOSITION_DURATION = 1.0 (flash) + 1.5 + 8.0 + 8.0 + 10.0 + 2.0 = 30.5s.
+# At upload, paste the Q&A lines below (everything from "0:01" onward, NOT
+# the comment block above) into the YouTube Studio "Problems" field.
+
+0:01  What is the inherited Roth IRA 10-year rule?
+0:02  How long do non-spouse beneficiaries have to empty an inherited Roth?
+0:10  What is Strategy 1 for an inherited Roth?
+0:18  What is Strategy 2 for an inherited Roth?
+0:28  Who is exempt from the inherited IRA 10-year rule?

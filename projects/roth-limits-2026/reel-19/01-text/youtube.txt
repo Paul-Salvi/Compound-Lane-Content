@@ -1,0 +1,52 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-19/01-content/roth-inherited-10yr-rule.json
+# or the cited SECURE Act / IRS / IRC sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Inherited Roth IRA: The 10-Year Rule
+
+[Char count: 36 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Inherited a Roth? You have 10 years to empty it. Withdrawals are tax-free, but the empty-by rule is hard. Two strategies to choose between.
+
+[Char count: 152 — over 150 target by 2; trim to "Inherited a Roth? You have 10 years to empty it. Withdrawals are tax-free, but the empty-by rule is hard." (118 chars) for a tighter hook.]
+
+DESCRIPTION FULL (200-500 words):
+The SECURE Act (Dec 2019) and SECURE Act 2.0 (Dec 2022) changed the rules for non-spouse beneficiaries of inherited IRAs. The 10-year rule is now the default (per SECURE 2.0 §401 and IRC §401(a)(9)):
+
+If you inherit a Roth IRA from someone other than your spouse, you must empty the account by December 31 of the 10th year following the original owner's death. The Roth is still tax-free on the way out — but the empty-by deadline is hard. Miss it, and the IRS imposes a 25% excise tax on the amount that should have been withdrawn (reduced to 10% if corrected timely — per SECURE 2.0).
+
+Who is exempt from the 10-year rule:
+- Surviving spouses (can roll to their own IRA, use their own RMD age)
+- Minor children of the account owner (until they reach the age of majority)
+- Disabled or chronically ill beneficiaries
+- Beneficiaries who are less than 10 years younger than the deceased
+
+Two strategies for everyone else:
+
+Strategy 1 — Lump sum in year 9. Wait until year 9, then withdraw the entire balance in one distribution. Maximum tax-free growth window. Drawback: one year of large income could push you into a higher tax bracket for unrelated income (Social Security, dividends, RSU vest).
+
+Strategy 2 — Spread over years 1-10. Take ~10% per year. A $500,000 inherited Roth becomes $50,000 annual withdrawals, all tax-free. Smooths the tax impact. Loses some tax-free growth on the withdrawn dollars, but avoids the year-9 spike.
+
+The Roth's tax-free nature is a major advantage here. A $500,000 traditional IRA inherited under the same rule would create the same tax bill — but the $50,000 annual withdrawal is fully taxable as ordinary income, not tax-free.
+
+The bottom line: pull together a strategy with your CPA before year 1, not year 9.
+
+Full notes + decision flowchart at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#InheritedIRA #RothIRA #SECUREAct #10YearRule #EstatePlanning
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+inherited roth ira, 10 year rule, secure act 2.0, non spouse beneficiary, inherited ira beneficiary, roth ira inheritance, 25 percent excise tax, ira empty by 10 years, roth ira death, irs section 401 a 9
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)
