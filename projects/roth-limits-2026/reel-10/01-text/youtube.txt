@@ -1,0 +1,54 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-10/01-content/roth-prorata-90k.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Pro-Rata Rule: The Backdoor Roth Trap (in 30s)
+
+[Char count: 45 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+The pro-rata rule can make your backdoor Roth almost entirely taxable. A $90,000 pre-tax IRA + $7,000 backdoor → $6,495 taxable. Here's the fix.
+
+[Char count: 156 — over 150 target by 6 chars; the 6 extra chars carry the "$6,495 taxable" punchline. Trim to "The pro-rata rule can make your backdoor Roth almost entirely taxable. $90k pre-tax + $7k backdoor → $6,495 taxable." (121 chars) for a tighter hook.]
+
+DESCRIPTION FULL (200-500 words):
+The backdoor Roth has one serious gotcha: the pro-rata rule (IRC §408(d)(2)).
+
+The pro-rata rule says: when you convert a traditional IRA to a Roth, the IRS treats the conversion as a proportional mix of pre-tax and after-tax money — based on your aggregate traditional, SEP, and SIMPLE IRA balances on December 31 of the conversion year. The IRS does not look at the specific account you convert.
+
+The $90,000 example:
+- Pre-tax traditional IRA: $90,000
+- After-tax backdoor contribution: $7,000
+- Total IRA balance: $97,000
+- Pro-rata pre-tax ratio: 90,000 / 97,000 = ~92.78%
+- Pro-rata after-tax ratio: 7,000 / 97,000 = ~7.22%
+
+You convert the $7,000 to a Roth. Under pro-rata, the conversion is 92.78% pre-tax — so $7,000 × 0.9278 = $6,495 is taxable as ordinary income (at your marginal rate). The "non-deductible" part vanishes. The backdoor saves you $505 of tax on a $7,000 conversion — instead of the full $7,000 × marginal rate.
+
+The fix:
+1. Roll the $90,000 pre-tax IRA into your 401(k) — most plans accept incoming rollovers (verify with HR).
+2. Wait until the rollover settles (this can take 1-2 weeks; the December 31 measurement date is critical).
+3. Now your only remaining IRA is the $7,000 after-tax one. Pro-rata aggregation finds 100% after-tax. The full $7,000 conversion is tax-free.
+
+The 401(k) trick works because 401(k) balances are NOT aggregated into the pro-rata formula. Only Traditional, SEP, and SIMPLE IRAs count. 401(k)s and Roth IRAs are ignored.
+
+File Form 8606 every year. That form is the paper trail that proves to the IRS you already paid the tax on the $7,000.
+
+Full notes, the math, and the Form 8606 walkthrough at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#BackdoorRoth #ProRataRule #RothIRA #Form8606 #PersonalFinance
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+backdoor roth pro rata, pro-rata rule ira, roth conversion tax, form 8606, rollover 401k, pre-tax traditional ira, after-tax ira contribution, backdoor roth trap, ira aggregation, roth ira 2026
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

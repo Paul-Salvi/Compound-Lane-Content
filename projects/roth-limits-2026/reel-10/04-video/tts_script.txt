@@ -1,0 +1,9 @@
+Pro-rata: the backdoor trap.
+
+When you convert a traditional IRA to a Roth, the pro-rata rule treats it as a proportional mix of pre-tax and after-tax money — based on aggregate IRA balances, not the specific account.
+
+The $90,000 example. You have $90,000 pre-tax in a traditional IRA. You contribute $7,000 after-tax, then convert it. Pro-rata makes the conversion 90/97 pre-tax — of the $7,000, about $6,495 is taxable.
+
+The fix: roll the $90,000 pre-tax IRA into your 401(k) first — if the plan accepts rollovers. Pro-rata finds zero pre-tax. The conversion is tax-free.
+
+Save before your first backdoor.

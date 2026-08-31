@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-10/01-content/roth-prorata-90k.json
+
+PRIMARY KEYWORD:
+backdoor roth pro rata rule
+
+SECONDARY KEYWORDS (3-5):
+- pro-rata rule ira conversion
+- backdoor roth trap
+- roth ira pre-tax ira
+- form 8606 prorata
+- rollover pre-tax ira to 401k
+
+SEARCH INTENT:
+"How is it calculated" (procedural-math) — primary intent is the pro-rata math (90/97 → $6,495 of $7,000 taxable).
+Secondary: "how do I avoid it" (the rollover-to-401k fix).
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #ProRataRule, #BackdoorRoth, #RothConversion, #Form8606, #IRARollover
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

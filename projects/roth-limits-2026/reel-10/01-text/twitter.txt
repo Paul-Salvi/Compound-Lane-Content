@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-10/01-content/roth-prorata-90k.json
+# or the cited IRC / IRS sources.
+
+POST (target 70-100 chars, hard cap 280):
+The pro-rata rule can wreck your backdoor Roth. $90k pre-tax + $7k backdoor → $6,495 of the $7k is taxable. Fix: roll the pre-tax IRA to a 401(k) first.
+
+[Char count: 167 — within 280 cap; over 100-char target, retained for the "$6,495" punchline. Trim to "Pro-rata trap: $90k pre-tax + $7k backdoor → $6,495 of $7k is taxable. Fix: roll pre-tax to 401(k)." (113 chars) for a tighter post.]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #ProRataRule in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Full math + Form 8606 walkthrough: https://compoundlane.com/roth-prorata-90k"

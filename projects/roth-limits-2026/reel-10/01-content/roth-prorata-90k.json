@@ -1,0 +1,47 @@
+{
+  "slug": "roth-prorata-90k",
+  "title": "The pro-rata rule (with a $90,000 example)",
+  "hook": "Pro-rata: the backdoor trap.",
+  "default_disclaimer": "Educational content, not financial advice.",
+  "concepts": [
+    {
+      "number": 1,
+      "title": "What the pro-rata rule does",
+      "body": "The pro-rata rule says: when you convert a traditional IRA to a Roth, the IRS treats the conversion as a proportional mix of pre-tax and after-tax money — based on your aggregate IRA balances on December 31 of the conversion year. It does not look at the specific account you convert.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "§408(d)(2)",
+        "label": "the pro-rata statute",
+        "color": "ink-navy"
+      }
+    },
+    {
+      "number": 2,
+      "title": "The $90,000 example",
+      "body": "Say you have $90,000 in a pre-tax traditional IRA. You contribute $7,000 after-tax to a second traditional IRA, then convert the $7,000 to a Roth. Under the pro-rata rule, the $7,000 conversion is 7/97 pre-tax and 7,000/97,000 = ~7.2% pre-tax — the rest is taxable. Of the $7,000 converted, about $7,000 × (90,000/97,000) = $6,495 is taxable as ordinary income. The 'non-deductible' part vanishes.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "$6,495",
+        "label": "of $7,000 is taxable",
+        "color": "ink-maroon"
+      }
+    },
+    {
+      "number": 3,
+      "title": "The fix: roll the pre-tax balance to a 401(k) first",
+      "body": "Move the $90,000 pre-tax IRA into your 401(k) — if the plan accepts rollovers. Now your only IRA is the new $7,000 after-tax one. The pro-rata aggregation finds zero pre-tax, and the entire $7,000 conversion is tax-free. The backdoor Roth works as advertised.",
+      "visual_type": "num_blob",
+      "visual_spec": {
+        "lead_number": "roll over",
+        "label": "to a 401(k) first",
+        "color": "ink-green"
+      }
+    }
+  ],
+  "sources": [
+    "IRS — IRC §408(d)(2) — Nondeductible Traditional IRA contributions and Roth conversions",
+    "IRS Form 8606 — instructions and worksheet",
+    "IRS Pub 590-A — Backdoor Roth IRA strategy and pro-rata aggregation",
+    "IRS Notice 2025-67 — 2026 contribution limits"
+  ]
+}
