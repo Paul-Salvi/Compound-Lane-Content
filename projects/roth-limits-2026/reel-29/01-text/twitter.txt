@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-29/01-content/roth-at-60.md
+# or the cited IRC / IRS sources.
+
+POST (target 70-100 chars, hard cap 280):
+Two clocks on every Roth. Age 59½. And the 5-year rule. $50K conversion at 60, 2 years early = $5K penalty. At 63 = $0.
+
+[Char count: 134 — within 280 cap; over 100-char target, retained for the priority tip. Trim to "Two clocks on every Roth: age 59½ + 5-year rule. $50K conversion at 60, 2 years early = $5K penalty." (112 chars)]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Per-conversion clock map + the 5-year rule: https://compoundlane.com/roth-at-60"

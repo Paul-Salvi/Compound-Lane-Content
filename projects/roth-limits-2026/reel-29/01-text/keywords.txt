@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-29/01-content/roth-at-60.md
+
+PRIMARY KEYWORD:
+roth ira 5 year rule
+
+SECONDARY KEYWORDS (3-5):
+- roth ira conversion 5 year clock
+- roth ira age 59 and a half
+- roth ira qualified distribution
+- roth conversion penalty 5 years
+- 72t roth ira
+
+SEARCH INTENT:
+"does age 59½ unlock my Roth earnings" (decision) — primary intent is whether age alone unlocks penalty-free withdrawals.
+Secondary: "what is the 5-year rule for Roth conversions" (informational) — the per-conversion clock.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #FiveYearRule, #RothConversion, #RetirementWithdrawals, #Age59AndAHalf
+- Broad: #RetirementPlanning (use sparingly — oversaturated in 2026)

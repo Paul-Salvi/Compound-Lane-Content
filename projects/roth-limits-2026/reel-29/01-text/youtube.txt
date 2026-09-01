@@ -1,0 +1,58 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-29/01-content/roth-at-60.md
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth at 60: The 5-Year Rule That Bites After 59½
+
+[Char count: 55 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Two clocks control every Roth. Age 59½. And the 5-year rule. Hit only the first and you pay a 10% penalty on earnings — even past 59½.
+
+[Char count: 148 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+Most people think turning 59½ unlocks a Roth. It doesn't. Two clocks must be met for earnings to come out tax- and penalty-free. The first is age 59½. The second is the 5-year rule.
+
+The two clocks (IRC §408A(d)):
+- Clock 1 (age 59½): you've reached age 59½.
+- Clock 2 (5-year rule): the Roth has been open for at least 5 tax years. The clock starts January 1 of the tax year you first contributed.
+- Both met → all withdrawals (contributions, conversions, earnings) are tax- and penalty-free.
+- Only Clock 1 met → contributions are still free, but earnings trigger the 10% early-withdrawal penalty (IRC §72(t)).
+
+The conversion clock:
+- Every Roth conversion starts its OWN 5-year clock. The clocks don't consolidate, don't reset, and don't disappear at 59½.
+- If you converted $50,000 in 2024 and turn 60 in 2026, the conversion clock started in 2024.
+- Withdraw the converted $50,000 in 2026 (age 60): only 2 years old → 10% penalty = $5,000.
+- Withdraw the converted $50,000 in 2029 (age 63): 5 years old → penalty-free.
+
+The cost:
+- A $50,000 conversion withdrawn 2 years early = $5,000 penalty.
+- Same $50,000 at the 5-year mark = $0 penalty.
+- The 5-year clock applies per-conversion, not per-account.
+
+The strategy at 60:
+- Step 1: Identify the oldest Roth on your account list. The 5-year clock starts January 1 of the tax year you first contributed.
+- Step 2: Map every conversion year. Use a spreadsheet: year, amount, clock-mature date.
+- Step 3: Withdraw contributions first (always penalty-free, regardless of age or 5-year status).
+- Step 4: Withdraw conversions in order of clock-maturity — oldest first.
+- Step 5: Only touch earnings after both clocks are met for that specific Roth.
+
+Full conversion clock + 5-year rule map at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #FiveYearRule #RothConversion #RetirementWithdrawals #Age59AndAHalf
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira 5 year rule, roth ira age 59 and a half, roth conversion 5 year clock, roth qualified distribution, roth ira withdrawal rules, 72t roth ira, roth conversion penalty, roth ira earnings withdrawal, roth ira per conversion clock, 408a d 2
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)
