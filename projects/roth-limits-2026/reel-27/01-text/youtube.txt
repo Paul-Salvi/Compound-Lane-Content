@@ -1,0 +1,59 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-27/01-content/self-employed-accounts.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Self-Employed? 4 Retirement Accounts (Only 3 Allow Roth)
+
+[Char count: 58 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Self-employed people have four retirement accounts. Three allow Roth. One is pre-tax only. The funding order changes everything.
+
+[Char count: 145 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+Most self-employed workers default to a SEP IRA because it's the easiest to set up. But SEP is pre-tax only. Skipping the Solo 401(k) means skipping the Roth deferral and the mega-backdoor — and leaving a six-figure tax loss on the table over thirty years.
+
+The four accounts (2026):
+- Solo 401(k) — up to $72,000/yr (IRC §415(c)). Employee deferral $24,500 + employer profit-sharing + after-tax. Has Roth.
+- SEP IRA — up to ~25% of net SE income, max ~$70,000. Pre-tax only. No Roth option.
+- SIMPLE IRA — up to ~$16,500 (2026). Pre-tax or Roth (since 2023 SECURE 2.0).
+- Roth IRA — $7,500. Income phaseout at $153K-$168K single.
+
+The funding order:
+1. Solo 401(k) employee deferral: $24,500 (pre-tax OR Roth).
+2. Roth IRA: $7,500 (if income allows).
+3. Solo 401(k) employer profit-sharing: up to 25% of net SE income. Pre-tax by default, can be designated Roth if the plan allows.
+4. SEP IRA as backup if no Solo 401(k) (simpler admin, lower limit).
+
+The trap:
+- Solo 401(k) = $24,500 deferral + ~$47,500 profit-sharing = $72,000.
+- SEP IRA = ~$70,000 max, but ALL pre-tax.
+- The $24,500 employee deferral has the Roth option. SEP does not.
+- Skipping the Solo 401(k) means skipping the Roth deferral. That's a six-figure tax loss over 30 years.
+
+The strategy:
+- Open the Solo 401(k) by Sept 30 of the year you want to start.
+- Max the employee deferral first (Roth if your tax rate is rising).
+- Then fund the Roth IRA.
+- Then sweep employer profit-sharing into the Solo 401(k) (Roth if the plan document allows).
+- Use SEP IRA only if the Solo 401(k) isn't available (e.g., no full-time employees other than spouse, or you have employees and don't want the Roth conversion complications).
+
+Full account comparison + 2026 contribution limits at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#Solo401k #SelfEmployedRetirement #RothIRA #SEPIRA #MegaBackdoorRoth
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+self employed retirement accounts, solo 401k roth, sep ira vs solo 401k, self employed roth ira, mega backdoor roth, self employed 401k contribution limit, self employed retirement plan, 415c contribution limit, simple ira roth option, freelance retirement account
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

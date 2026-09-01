@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-27/01-content/self-employed-accounts.json
+
+PRIMARY KEYWORD:
+self employed retirement accounts
+
+SECONDARY KEYWORDS (3-5):
+- solo 401k vs sep ira
+- roth solo 401k contribution
+- self employed roth ira
+- sep ira vs solo 401k
+- self employed retirement plan roth
+
+SEARCH INTENT:
+"best self-employed retirement account" (decision) — primary intent is choosing between Solo 401k, SEP, SIMPLE, and Roth IRA.
+Secondary: "can a self-employed person do roth" (informational) — whether Roth options exist outside the Roth IRA.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #Solo401k, #SEPIRA, #SelfEmployedRetirement, #RothSolo401k, #MegaBackdoorRoth
+- Broad: #SelfEmployed (use sparingly — oversaturated in 2026)

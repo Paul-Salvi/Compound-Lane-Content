@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-27/01-content/self-employed-accounts.json
+# or the cited IRC / IRS sources.
+
+POST (target 70-100 chars, hard cap 280):
+Self-employed? 4 retirement accounts. 3 allow Roth. 1 is pre-tax only. Most pick SEP and leave the Roth mega-backdoor on the table.
+
+[Char count: 138 — within 280 cap; over 100-char target, retained for the priority tip. Trim to "Self-employed? 4 retirement accounts. 3 allow Roth. Most pick SEP and leave the Roth mega-backdoor on the table." (114 chars)]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"Solo 401k vs SEP comparison + 2026 limits: https://compoundlane.com/self-employed-accounts"

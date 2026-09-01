@@ -1,0 +1,43 @@
+{
+  "slug": "self-employed-accounts",
+  "title": "Self-Employed? Roth is One of Four Accounts",
+  "subtitle": "If you work for yourself, you have four retirement accounts to choose from. Only one is Roth-by-default. Here's the order to fund them.",
+  "source_irs": "IRC §401(k) (Solo 401k); IRC §408(k) (SIMPLE IRA); IRC §408(p) (SEP IRA); IRC §219 (Roth IRA)",
+  "pillar": 6,
+  "publish_date": "2026-09-25",
+  "concepts": [
+    {
+      "key": "the-four",
+      "heading": "The Four Accounts",
+      "lede": "Self-employed people get four accounts. Three are pre-tax (with a Roth option), one is Roth-only.",
+      "body": [
+        "1. Solo 401(k) — up to $72,000/yr (2025 §415(c) limit). Has employee deferral + employer profit-sharing + after-tax.",
+        "2. SEP IRA — up to ~25% of net self-employment income, max ~$70,000. Pre-tax only.",
+        "3. SIMPLE IRA — up to ~$16,500 (2026). Pre-tax or Roth option since 2023.",
+        "4. Roth IRA — $7,500. Income phaseout at $153K-$168K single."
+      ]
+    },
+    {
+      "key": "the-order",
+      "heading": "The Funding Order",
+      "lede": "Solo 401(k) employee deferral is the cornerstone. Then the Roth IRA. Then the employer-side match/profit-sharing as Roth.",
+      "body": [
+        "Step 1: Solo 401(k) employee deferral, $24,500 (2026), pre-tax OR Roth.",
+        "Step 2: Roth IRA, $7,500 (if income allows).",
+        "Step 3: Solo 401(k) employer profit-sharing, up to 25% of net SE income. Pre-tax by default, but can designate as Roth if the plan allows.",
+        "Step 4: SEP IRA as backup if no Solo 401(k) (simpler admin, lower limit)."
+      ]
+    },
+    {
+      "key": "the-trap",
+      "heading": "The Trap",
+      "lede": "Most self-employed people only use SEP IRA. They leave 30-50% of their retirement tax shelter on the table.",
+      "body": [
+        "Solo 401(k) contribution = $24,500 deferral + ~$47,500 profit-sharing = $72,000.",
+        "SEP IRA contribution = ~$70,000 max, but ALL pre-tax.",
+        "The $24,500 employee deferral has the Roth option. SEP does not.",
+        "If you skip the Solo 401(k), you skip the Roth mega-backdoor and the Roth deferral. That's a 6-figure tax loss over 30 years."
+      ]
+    }
+  ]
+}

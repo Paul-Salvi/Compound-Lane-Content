@@ -1,0 +1,29 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-27/01-content/self-employed-accounts.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Self-employed? You have 4 retirement accounts. 3 allow Roth. 1 is pre-tax only. Funding order changes everything.
+
+[Char count: 122 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The four (2026):
+- Solo 401k: $72,000 cap. Has Roth deferral.
+- SEP IRA: ~$70,000 max. Pre-tax only.
+- SIMPLE IRA: $16,500. Roth since 2023.
+- Roth IRA: $7,500.
+
+The funding order:
+1. Solo 401k employee deferral $24,500 (Roth)
+2. Roth IRA $7,500
+3. Solo 401k profit-sharing up to $72,000
+
+The trap:
+Most self-employed only use SEP. They leave the Roth mega-backdoor on the table. Solo 401k has Roth, SEP doesn't. Skipping Solo 401k is a six-figure tax loss over 30 years.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Self-Employed: 4 Accounts" listing Solo 401k, SEP IRA, SIMPLE IRA, and Roth IRA in a column, with a sticky note showing the funding order: "$24,500 → $7,500 → up to $72,000 cap" and a warning: "SEP is pre-tax only — no Roth".
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#Solo401k #SelfEmployedRetirement #RothIRA #SEPIRA #MegaBackdoorRoth
