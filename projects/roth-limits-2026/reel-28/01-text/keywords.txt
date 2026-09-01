@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-28/01-content/roth-at-22-mistakes.json
+
+PRIMARY KEYWORD:
+first roth ira mistakes
+
+SECONDARY KEYWORDS (3-5):
+- roth ira over contribution
+- roth ira money market
+- 22 year old roth ira
+- first year roth ira errors
+- roth ira contribution limit
+
+SEARCH INTENT:
+"first roth ira mistakes" (decision) — primary intent is what to avoid when opening a first Roth.
+Secondary: "how much can a Roth grow" (informational) — the 45-year compounding window from age 22.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #FirstRoth, #RetirementMistakes, #RothForBeginners, #CompoundInvesting
+- Broad: #PersonalFinance (use sparingly — oversaturated in 2026)

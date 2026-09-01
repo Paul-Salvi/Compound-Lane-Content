@@ -1,0 +1,42 @@
+{
+  "slug": "roth-at-22-mistakes",
+  "title": "Roth at 22: 3 Mistakes I Made",
+  "subtitle": "Three costly mistakes I made when I opened my first Roth at 22. Compounding works in reverse when you start wrong.",
+  "source_irs": "IRC §219 (Roth IRA eligibility); IRC §408A(d)(1) (qualified distribution); IRC §4973 (6% excise tax)",
+  "pillar": 6,
+  "publish_date": "2026-09-26",
+  "concepts": [
+    {
+      "key": "the-three",
+      "heading": "The 3 Mistakes",
+      "lede": "I opened a Roth at 22. Three mistakes in the first year cost me compounding I won't recover.",
+      "body": [
+        "1. Contributing to a Roth while earning over the income limit. The fix is a backdoor Roth, not skipping the contribution.",
+        "2. Investing the entire balance in a money market. The 2026 contribution limit is $7,500, but the cap on lost growth is uncapped.",
+        "3. Withdrawing contributions at 23 for a trip. The contributions come out tax-free, but the opportunity cost at 7% real return over 40 years is roughly 5x the withdrawal."
+      ]
+    },
+    {
+      "key": "the-cost",
+      "heading": "The Compounding Cost",
+      "lede": "Mistake 1: $7,500 in a money market for 1 year costs $525 in real return (7%). Mistake 2: $7,500 in cash for 40 years costs $1,489,500.",
+      "body": [
+        "$7,500 in cash for 40 years at 7% real return = $1,497,000 in growth lost.",
+        "A $7,500 contribution withdrawn at 23 = $7,500 today vs $1,497,000 at 67 (40-year compounding at 7% real).",
+        "The 6% excise tax applies if you over-contribute and don't fix it by the tax deadline (IRC §4973).",
+        "The fix for mistake 1: do a recharacterization + backdoor Roth, not skip the year."
+      ]
+    },
+    {
+      "key": "the-fix",
+      "heading": "The Fix at 22",
+      "lede": "If you're 22 and opening a Roth this week, do these four things in order. The first one is the only one that can't be undone later.",
+      "body": [
+        "Step 1: Open the Roth at Fidelity, Vanguard, or Schwab. Don't optimize — pick the lowest-fee S&P 500 index fund (FXAIX, VOO, or SWPPX).",
+        "Step 2: Contribute the full $7,500 the day you open it, not in monthly dribbles. Time in market beats dollar-cost averaging at this age.",
+        "Step 3: Set the dividend reinvestment on. Don't take cash distributions. The 40-year compounding engine needs every dollar working.",
+        "Step 4: Add a calendar reminder for January 1, 2027 to contribute again. The deadline isn't December 31 — it's April 15 of the following year for the prior year."
+      ]
+    }
+  ]
+}

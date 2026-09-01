@@ -1,0 +1,31 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-28/01-content/roth-at-22-mistakes.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+3 Roth mistakes at 22. $7,500 in cash for 45 years at 7% real = $1M+ in lost growth. The cap on lost growth is uncapped.
+
+[Char count: 125 — at the 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The three mistakes:
+
+1. Over the income limit. Fix: backdoor Roth, not skipping.
+2. Parking in cash or money market. $7,500 in cash for 45 years at 7% real = $1M+ lost.
+3. Withdrawing at 23 for a trip. The contributions come out free — but the 40 years of compounding don't.
+
+The compounding math:
+- $1 at 22, left to 67, 7% real = ~$32
+- $7,500 at 22, S&P 500, 45 years = ~$240K tax-free
+
+The fix:
+- Open at Fidelity/Vanguard/Schwab
+- Contribute the full $7,500 the day you open
+- Lowest-fee S&P 500 index (VOO, FXAIX, SWPPX)
+- Dividend reinvestment ON
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Roth at 22: 3 Mistakes" with three sticky notes: "1. Over income limit → backdoor", "2. Cash → $1M+ lost", "3. Withdraw at 23 → lose 5x". Bottom strip: "Open. Contribute. S&P 500. Reinvest."
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #FirstRoth #RetirementMistakes #RothForBeginners #CompoundInvesting

@@ -1,0 +1,52 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-28/01-content/roth-at-22-mistakes.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Roth at 22: 3 Mistakes I Made (and the $1M Cost)
+
+[Char count: 51 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Three mistakes in year one cost compounding I'll never recover. $7,500 parked in cash for 45 years at 7% real return = $1M+ in lost growth.
+
+[Char count: 152 — over 150 by 2; trim to "Three mistakes in year one cost compounding I'll never recover. $7,500 in cash for 45 years at 7% real = $1M+ in lost growth." (136 chars)]
+
+DESCRIPTION FULL (200-500 words):
+Most first-year Roth mistakes are recoverable. Three aren't. Here's what to skip if you're opening a Roth at 22 (or any age).
+
+The three mistakes:
+
+1. Contributing over the income limit. If you earn above the phaseout ($153K-$168K single in 2026), your contribution is excess and triggers the 6% excise tax per year it sits (IRC §4973). The fix isn't skipping — it's a backdoor Roth: contribute to a Traditional IRA, then convert. Earnings grow tax-free; the excess-contribution problem goes away.
+
+2. Parking the balance in cash or a money market. The 2026 contribution cap is $7,500. The cap on lost growth is uncapped. A dollar at 22 left to 67 at 7% real return becomes roughly $32. Parked in cash, it stays a dollar.
+
+3. Withdrawing contributions at 23 for a trip. Roth contributions can come out any time, tax- and penalty-free. But the opportunity cost at 7% real over 40 years is roughly 5x the withdrawal. $7,500 withdrawn at 23 = $7,500 today vs ~$300,000 at 67.
+
+The compounding math:
+- $7,500 in cash for 45 years at 7% real = $1,000,000+ in growth lost.
+- $7,500 in S&P 500 for 45 years at 7% real = ~$240,000 contribution balance (8x), all tax-free.
+
+The fix:
+- Step 1: Open the Roth at Fidelity, Vanguard, or Schwab. Don't optimize — pick the lowest-fee S&P 500 index fund (FXAIX, VOO, or SWPPX).
+- Step 2: Contribute the full $7,500 the day you open it. Time in market beats dollar-cost averaging at this age.
+- Step 3: Set dividend reinvestment on. Don't take cash distributions. The 40-year compounding engine needs every dollar working.
+- Step 4: Add a calendar reminder for January 1, 2027. The deadline for 2026 contributions is April 15, 2027.
+
+Full first-year checklist at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #FirstRoth #RetirementMistakes #RothForBeginners #CompoundInvesting
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+first roth ira mistakes, roth ira at 22, roth ira over contribution, roth ira money market, roth ira compounding, roth ira for beginners, backdoor roth ira, roth ira income limit, roth ira early withdrawal, roth ira index fund
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)
