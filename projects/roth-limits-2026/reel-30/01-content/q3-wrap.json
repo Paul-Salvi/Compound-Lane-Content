@@ -1,0 +1,42 @@
+{
+  "slug": "q3-wrap",
+  "title": "Q3 Wrap: 92 Days to Max Your 2026 Roth",
+  "subtitle": "Q3 ends Sept 30. Q4 starts Oct 1. 92 days remain to fund your 2026 Roth — the deadline isn't Dec 31, it's April 15, 2027.",
+  "source_irs": "IRC §219(c) (Roth IRA contribution deadline); IRC §219(f)(3) (spousal IRA); IRC §4973 (6% excise tax)",
+  "pillar": 4,
+  "publish_date": "2026-09-28",
+  "concepts": [
+    {
+      "key": "the-clock",
+      "heading": "The 92-Day Clock",
+      "lede": "Q3 ends Sept 30. Q4 starts Oct 1. You have 92 days left to max your 2026 Roth — and the deadline isn't Dec 31.",
+      "body": [
+        "Today: Sept 28, 2026. Q3 ends Wed, Sept 30, 2026.",
+        "Q4 starts Thu, Oct 1, 2026 and runs 92 days to Dec 31, 2026.",
+        "The 2026 Roth IRA contribution deadline is April 15, 2027 — not Dec 31.",
+        "Most people think Dec 31 is the deadline. It's not. You have until tax day of the following year."
+      ]
+    },
+    {
+      "key": "the-room",
+      "heading": "The Room You Have",
+      "lede": "If you've contributed $0 so far in 2026, you have the full $7,500 of room. If you've contributed $3,000, you have $4,500 left.",
+      "body": [
+        "$7,500 — 2026 individual Roth limit (IRC §219(b)(5)).",
+        "$8,500 — 2026 catch-up for age 50+ (IRA age-50 catch-up).",
+        "$15,000 — 2026 spousal Roth if both spouses contribute the max (Roth + spousal Roth).",
+        "The 6% excise tax (IRC §4973) applies to ANY excess — including contributions over the cap."
+      ]
+    },
+    {
+      "key": "the-action",
+      "heading": "The 3-Step Action",
+      "lede": "Three steps in Q4 max the 2026 Roth. Step 1 takes ten minutes. Step 2 takes an hour. Step 3 is a calendar reminder.",
+      "body": [
+        "Step 1: Log into your Roth account today. Note the year-to-date contribution. Subtract from $7,500. That's your remaining room.",
+        "Step 2: Fund the remaining room in one lump sum on Oct 1, 2026. Time in market beats dollar-cost averaging in Q4.",
+        "Step 3: Set a calendar reminder for April 1, 2027 to do a final 2026 contribution if you have leftover room from a bonus or side income."
+      ]
+    }
+  ]
+}

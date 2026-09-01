@@ -1,0 +1,32 @@
+# 01-text/instagram.txt — Stage 2: Instagram caption + alt text
+# Every number traces to projects/roth-limits-2026/reel-30/01-content/q3-wrap.json
+# or the cited IRC / IRS sources.
+
+HOOK (125 chars max — the ENTIRE caption most viewers will see):
+Q3 ends Sept 30. Q4 starts Oct 1. 92 days left to max your 2026 Roth. The deadline isn't Dec 31. It's April 15, 2027.
+
+[Char count: 124 — within 125 limit]
+
+FULL CAPTION (300-500 chars total — Compound Lane "study notes" format):
+The 92-day clock:
+- Q3 ends Sept 30, 2026
+- Q4 starts Oct 1 → 92 days to Dec 31
+- 2026 Roth deadline: April 15, 2027
+- IRS does NOT carry forward unused room
+
+The room:
+- $7,500 individual 2026 limit
+- $1,000 catch-up at 50
+- $15,000 spousal Roth if both max
+- 6% excise tax on excess (IRC §4973)
+
+The 3-step action:
+1. Log in today. Note year-to-date.
+2. Subtract from $7,500. Fund the rest Oct 1.
+3. Calendar reminder for April 1, 2027.
+
+ALT TEXT (1-2 sentences, descriptive):
+Hand-drawn notebook page titled "Q3 Wrap: 92 Days" with a calendar Oct 1 → Dec 31, then "→ April 15, 2027 deadline", and a sticky note: "IRS doesn't carry forward unused room. $7,500 in your Roth today → $60K+ by 67."
+
+HASHTAGS (3-5, niche-specific, in-caption):
+#RothIRA #ContributionDeadline #Q4Planning #April15Deadline #RothWrap

@@ -1,0 +1,17 @@
+# 01-text/twitter.txt — Stage 2: tweet (and reply link note)
+# Every number traces to projects/roth-limits-2026/reel-30/01-content/q3-wrap.json
+# or the cited IRC / IRS sources.
+
+POST (target 70-100 chars, hard cap 280):
+Q3 ends Sept 30. Q4 starts Oct 1. 92 days left to max your 2026 Roth. The deadline isn't Dec 31 — it's April 15, 2027. IRS doesn't carry forward.
+
+[Char count: 152 — within 280 cap; over 100-char target, retained for the priority tip. Trim to "Q3 ends Sept 30. Q4 starts Oct 1. 92 days left to max your 2026 Roth. Deadline: April 15, 2027 — not Dec 31." (127 chars)]
+
+HASHTAGS (0-1, only if genuinely relevant — skip by default for evergreen educational content):
+(skip — #RothIRA in main post is a tag-bait magnet)
+
+LINK PLACEMENT NOTE:
+Do not put the article link in the main post — links in the first tweet cut reach ~50%. Put it in a reply.
+
+Suggested reply (paste as a reply to the main post, not as a separate tweet):
+"2026 Roth deadline calendar + Q4 action plan: https://compoundlane.com/q3-wrap"

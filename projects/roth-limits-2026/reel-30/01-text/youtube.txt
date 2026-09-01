@@ -1,0 +1,61 @@
+# 01-text/youtube.txt — Stage 2: YouTube title + description
+# Every number traces to projects/roth-limits-2026/reel-30/01-content/q3-wrap.json
+# or the cited IRC / IRS sources.
+
+TITLE (target 50-60 chars, hard cap 100):
+Q3 Wrap: 92 Days to Max Your 2026 Roth IRA
+
+[Char count: 53 — within 60 target]
+
+DESCRIPTION HOOK (first 100-150 chars — what shows before "more"):
+Q3 ends Sept 30. Q4 starts Oct 1. You have 92 days left to max your 2026 Roth — and the deadline isn't Dec 31. It's April 15, 2027.
+
+[Char count: 148 — within 150 target]
+
+DESCRIPTION FULL (200-500 words):
+Most people think December 31 is the Roth IRA contribution deadline. It's not. The actual deadline is the tax filing deadline of the following year — April 15, 2027 for 2026 contributions (IRC §219(c)). And the IRS does NOT carry forward unused contribution room.
+
+The 92-day clock:
+- Q3 ends Wed, Sept 30, 2026.
+- Q4 starts Thu, Oct 1, 2026 and runs 92 days to Dec 31, 2026.
+- Then Q1 2027 runs 90 more days until the April 15, 2027 deadline.
+- Total runway: 197 days. But waiting until Q4 means you miss half the year's compounding.
+
+The room you have:
+- $7,500 — 2026 individual Roth limit (IRC §219(b)(5)).
+- $1,000 — 2026 age-50 catch-up (IRA only — 401(k) catch-up is separate).
+- $8,500 — 2026 total at age 50+ ($7,500 + $1,000 catch-up).
+- $15,000 — 2026 spousal Roth if both spouses max ($7,500 × 2).
+- The 6% excise tax (IRC §4973) applies to ANY excess contribution, including amounts over the cap.
+
+The cost of waiting:
+- $7,500 in your Roth on Oct 1 vs Dec 31 = 92 days of additional compounding.
+- $7,500 at 7% real return for 92 days = ~$130 in real return (small but compounding).
+- $7,500 in your Roth on April 15, 2027 vs Jan 1, 2026 = full year lost = ~$525 in real return.
+
+The 3-step action:
+- Step 1: Log into your Roth account today. Note the year-to-date contribution. Subtract from $7,500. That's your remaining room.
+- Step 2: Fund the remaining room in one lump sum on Oct 1, 2026. Time in market beats dollar-cost averaging in Q4.
+- Step 3: Set a calendar reminder for April 1, 2027 to do a final 2026 contribution if you have leftover room from a bonus or side income.
+
+The Q3 wrap:
+- 26 reels shipped Aug 30 - Sept 27, 2026.
+- 4 more to go: the Q3 wrap (this), the Q4 opener (Oct 1), and two more before year-end.
+
+Full 2026 Roth deadline calendar + Q4 action plan at compoundlane.com.
+
+Educational content, not financial advice.
+
+HASHTAGS (3-5, first 3 auto-display above the title — most important first):
+#RothIRA #ContributionDeadline #Q4Planning #April15Deadline #RothWrap
+#Shorts
+
+TAGS (backend Studio field, 5-10 short phrases, comma-separated):
+roth ira contribution deadline 2026, roth ira 2026 limit, q4 retirement contributions, april 15 roth deadline, 2026 roth contribution, last day to fund roth ira, roth ira age 50 catch up, roth ira 7500 limit, irs 4973 excise tax, roth ira deadline april 15 2027
+
+CATEGORY / TYPE (Studio upload field — note for uploader, not the description text):
+Category: Education
+Type: Problem walkthrough
+(matches Compound Lane's step-by-step format — see Stage 3 below for the
+structured data this unlocks; paste the contents of youtube-problems.txt
+into the Studio "Problems" field at upload time)

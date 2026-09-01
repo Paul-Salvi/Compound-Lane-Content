@@ -1,0 +1,21 @@
+# 01-text/keywords.txt — Stage 1: keyword research
+# Source: docs/text-prompt-engine-v2.md (Stage 1 prompt)
+# Variant B run against projects/roth-limits-2026/reel-30/01-content/q3-wrap.json
+
+PRIMARY KEYWORD:
+roth ira contribution deadline 2026
+
+SECONDARY KEYWORDS (3-5):
+- roth ira 2026 limit
+- q4 retirement contributions
+- april 15 roth deadline
+- 2026 roth contribution
+- last day to fund roth ira
+
+SEARCH INTENT:
+"when is the 2026 roth deadline" (decision) — primary intent is whether Dec 31 is the actual deadline.
+Secondary: "how much can I contribute to a roth in 2026" (informational) — the $7,500 limit + age-50 catch-up.
+
+HASHTAG CANDIDATES (tagged by specificity):
+- Niche: #RothIRA, #ContributionDeadline, #Q4Planning, #April15Deadline, #RothWrap
+- Broad: #YearEndPlanning (use sparingly — oversaturated in 2026)
